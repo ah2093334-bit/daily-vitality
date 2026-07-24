@@ -42,5 +42,8 @@ const SITE_ARTICLES = [
   { title: "Liver Health", url: "liver-health.html", category: "chronic" },
   { title: "Prostate Health", url: "prostate-health.html", category: "chronic" },
   { title: "Menopause Basics", url: "menopause-basics.html", category: "chronic" },
-  { title: "Child Nutrition and Growth", url: "child-nutrition-growth.html", category: "nutrition" }
+  { title: "Child Nutrition and Growth", url: "child-nutrition-growth.html", category: "nutrition" },
+  { title: "Superfoods and Antioxidants", url: "superfoods-antioxidants.html", category: "nutrition" },
+  { title: "Healthy Snacking", url: "healthy-snacking.html", category: "nutrition" },
+  { title: "Herbs and Spices for Health", url: "herbs-spices-health.html", category: "nutrition" }
 ];
