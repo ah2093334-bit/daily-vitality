@@ -35,25 +35,46 @@
   .kicker::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block;}
 
   /* NAV */
-  header{background:#fff; position:sticky; top:0; z-index:50; border-bottom:2px solid var(--navy);}
-  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:22px;}
+  header{background:#fff; position:sticky; top:0; z-index:100; border-bottom:2px solid var(--navy);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:16px;}
   .logo{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:700; font-size:20px;}
   .logo-mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--gold));display:inline-block; flex-shrink:0;}
-  .logo-text{background:linear-gradient(90deg,var(--navy),var(--teal),var(--gold),var(--navy)); background-size:300% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:hueShift 8s linear infinite;}
-  @keyframes hueShift{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
-  nav ul{list-style:none; display:flex; gap:26px; margin:0; padding:0;}
-  nav ul li a{color:var(--navy); font-size:14px; font-weight:500; transition:color .2s;}
-  nav ul li a:hover{color:var(--teal);}
-  .search-box{display:flex; align-items:center; background:var(--teal-light); border:1px solid var(--line); border-radius:999px; padding:7px 14px; gap:8px; flex:1; max-width:220px;}
+  .logo-text{background:linear-gradient(90deg,var(--navy),var(--teal),#4CAF7D,var(--gold),#C0392B,#8E6FA2,var(--navy)); background-size:500% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:hueShift 9s linear infinite;}
+  @keyframes hueShift{0%{background-position:0% 50%;}100%{background-position:500% 50%;}}
+
+  .nav-left, .nav-right{display:flex; align-items:center; gap:12px;}
+  .icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--navy);cursor:pointer;flex-shrink:0;}
+  .icon-btn:hover{border-color:var(--teal); color:var(--teal);}
+  .search-box{display:none; align-items:center; background:var(--teal-light); border:1px solid var(--line); border-radius:999px; padding:7px 14px; gap:8px; flex:1; max-width:280px;}
+  .search-box.open{display:flex;}
   .search-box input{border:none; background:none; outline:none; font-size:13.5px; color:var(--navy); width:100%; font-family:'Inter',sans-serif;}
   .search-box svg{flex-shrink:0;}
-  .lang-globe{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--navy); flex-shrink:0; cursor:pointer;}
   .nav-cta{background:var(--teal); color:#fff !important; padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:600; white-space:nowrap;}
-  .nav-toggle{display:none; color:var(--navy); font-size:22px; background:none; border:none;}
-  .nav-right{display:flex; align-items:center; gap:14px;}
+
+  /* HAMBURGER + MENU PANEL */
+  #menuToggle{display:none;}
+  .menu-overlay{display:none; position:fixed; inset:0; background:rgba(15,36,56,.45); z-index:98;}
+  .menu-panel{
+    position:fixed; top:0; left:0; height:100vh; width:300px; max-width:85vw; background:#fff;
+    z-index:99; transform:translateX(-100%); transition:transform .3s ease; overflow-y:auto;
+    box-shadow:8px 0 30px rgba(0,0,0,.15);
+  }
+  #menuToggle:checked ~ .menu-overlay{display:block;}
+  #menuToggle:checked ~ .menu-panel{transform:translateX(0);}
+  .menu-panel-head{background:var(--navy); color:#fff; padding:22px 24px; display:flex; align-items:center; justify-content:space-between;}
+  .menu-panel-head span{font-family:'Fraunces',serif; font-weight:700; font-size:18px;}
+  .menu-close{color:#fff; font-size:22px; cursor:pointer; line-height:1;}
+  .menu-section{padding:18px 24px 6px;}
+  .menu-section-title{font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--grey); font-weight:700; margin-bottom:8px;}
+  .menu-panel a.menu-link{display:block; padding:9px 0; font-size:15px; color:var(--navy); font-weight:500; border-bottom:1px solid var(--line);}
+  .menu-panel a.menu-link:hover{color:var(--teal);}
+  .menu-cats{display:flex; flex-wrap:wrap; gap:8px; padding-bottom:14px;}
+  .menu-cats a{font-size:12.5px; padding:6px 12px; border-radius:999px; border:1px solid var(--line); color:var(--navy);}
+  .menu-lang{display:flex; align-items:center; gap:8px; padding:16px 24px; margin-top:8px; border-top:1px solid var(--line);}
+  .menu-lang select{border:1px solid var(--line); border-radius:6px; padding:6px 8px; font-size:13px; color:var(--navy); font-family:'Inter',sans-serif;}
 
   /* HERO */
-  .hero{background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--cream) 100%); color:#fff; padding:20px 0 90px; position:relative; overflow:hidden;}
+  .hero{background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-deep) 35%, var(--navy) 62%, var(--cream) 100%); color:#fff; padding:20px 0 90px; position:relative; overflow:hidden;}
   .hero::after{
     content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px;
     border-radius:50%; background:radial-gradient(circle, rgba(42,157,143,.35), transparent 70%);
@@ -130,8 +151,7 @@
   .foot-bottom{font-size:12.5px; border-top:1px solid rgba(255,255,255,.08); padding-top:18px;}
 
   @media(max-width:860px){
-    nav ul{display:none;}
-    .search-box{display:none;}
+    .search-box{position:absolute; left:0; right:0; top:100%; margin:0; max-width:none; border-radius:0; padding:12px 20px; z-index:60;}
     .hero h1{font-size:36px;}
     .featured{grid-template-columns:1fr;}
     .grid{grid-template-columns:1fr 1fr;}
@@ -145,28 +165,64 @@
 </head>
 <body>
 
+<input type="checkbox" id="menuToggle">
+
 <header>
   <div class="wrap nav">
-    <div class="logo"><span class="logo-mark"></span> <span class="logo-text">Daily Vitality</span></div>
-    <nav><ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Body</a></li>
-      <li><a href="#">Mind</a></li>
-      <li><a href="#">Nutrition</a></li>
-      <li><a href="#">Guides</a></li>
-    </ul></nav>
-    <div class="search-box">
+    <div class="nav-left">
+      <label for="menuToggle" class="icon-btn" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </label>
+      <div class="logo"><span class="logo-mark"></span> <span class="logo-text">Daily Vitality</span></div>
+    </div>
+    <div class="search-box" id="searchBox">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#66768A" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input type="text" placeholder="Search articles...">
     </div>
     <div class="nav-right">
-      <div class="lang-globe" title="Change language">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
-      </div>
+      <button class="icon-btn" aria-label="Search" onclick="document.getElementById('searchBox').classList.toggle('open')">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
       <a href="#" class="nav-cta">Shop Guides</a>
     </div>
   </div>
 </header>
+
+<label for="menuToggle" class="menu-overlay"></label>
+<div class="menu-panel">
+  <div class="menu-panel-head">
+    <span>Daily Vitality</span>
+    <label for="menuToggle" class="menu-close">✕</label>
+  </div>
+
+  <div class="menu-section">
+    <div class="menu-section-title">Menu</div>
+    <a href="#" class="menu-link">Home</a>
+    <a href="#articles" class="menu-link">Latest Articles</a>
+    <a href="#guides" class="menu-link">Shop / Guides</a>
+    <a href="#" class="menu-link">Contact Us</a>
+  </div>
+
+  <div class="menu-section">
+    <div class="menu-section-title">Categories</div>
+    <div class="menu-cats">
+      <a href="#">Mind</a><a href="#">Body</a><a href="#">Sleep</a><a href="#">Nutrition</a>
+      <a href="#">Fitness</a><a href="#">Skin &amp; Senses</a><a href="#">Immunity</a><a href="#">Chronic Health</a>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="menu-section-title">Policies</div>
+    <a href="#" class="menu-link">Privacy Policy</a>
+    <a href="#" class="menu-link">Terms of Use</a>
+    <a href="#" class="menu-link">Medical Disclaimer</a>
+  </div>
+
+  <div class="menu-lang">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16324F" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+    <select><option>English</option><option>اردو</option><option>हिंदी</option><option>Español</option></select>
+  </div>
+</div>
 
 <section class="hero">
   <div class="stars" id="starField"></div>
