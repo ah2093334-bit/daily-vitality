@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Vitality — Simple Wellness for Everyday People</title>
+<meta name="description" content="Practical wellness tips, morning routines, and everyday habits for a calmer life — plus in-depth guides you can keep.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16324F;
+    --navy-deep:#0F2438;
+    --teal:#2A9D8F;
+    --teal-light:#EAF6F4;
+    --gold:#D4A24C;
+    --cream:#FBF9F4;
+    --ink:#22303F;
+    --grey:#66768A;
+    --line:#E4E0D4;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+  .kicker{
+    font-size:12px; letter-spacing:3px; font-weight:700; text-transform:uppercase;
+    color:var(--gold); display:flex; align-items:center; gap:10px;
+  }
+  .kicker::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block;}
+
+  /* NAV */
+  header{background:#fff; position:sticky; top:0; z-index:50; border-bottom:2px solid var(--navy);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:22px;}
+  .logo{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:700; font-size:20px;}
+  .logo-mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--gold));display:inline-block; flex-shrink:0;}
+  .logo-text{background:linear-gradient(90deg,var(--navy),var(--teal),var(--gold),var(--navy)); background-size:300% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:hueShift 8s linear infinite;}
+  @keyframes hueShift{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
+  nav ul{list-style:none; display:flex; gap:26px; margin:0; padding:0;}
+  nav ul li a{color:var(--navy); font-size:14px; font-weight:500; transition:color .2s;}
+  nav ul li a:hover{color:var(--teal);}
+  .search-box{display:flex; align-items:center; background:var(--teal-light); border:1px solid var(--line); border-radius:999px; padding:7px 14px; gap:8px; flex:1; max-width:220px;}
+  .search-box input{border:none; background:none; outline:none; font-size:13.5px; color:var(--navy); width:100%; font-family:'Inter',sans-serif;}
+  .search-box svg{flex-shrink:0;}
+  .lang-globe{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--navy); flex-shrink:0; cursor:pointer;}
+  .nav-cta{background:var(--teal); color:#fff !important; padding:9px 18px; border-radius:999px; font-size:13.5px; font-weight:600; white-space:nowrap;}
+  .nav-toggle{display:none; color:var(--navy); font-size:22px; background:none; border:none;}
+  .nav-right{display:flex; align-items:center; gap:14px;}
+
+  /* HERO */
+  .hero{background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--cream) 100%); color:#fff; padding:20px 0 90px; position:relative; overflow:hidden;}
+  .hero::after{
+    content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px;
+    border-radius:50%; background:radial-gradient(circle, rgba(42,157,143,.35), transparent 70%);
+  }
+  .stars{position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:1;}
+  .stars span{position:absolute; top:-10px; width:2px; height:2px; background:#fff; border-radius:50%; opacity:.85; animation:fall linear infinite;}
+  @keyframes fall{to{transform:translateY(110vh);}}
+  .welcome-badge{
+    display:inline-block; position:relative; z-index:2; padding:9px 22px; border-radius:999px;
+    font-size:13px; font-weight:700; letter-spacing:1px; color:#fff; margin-bottom:22px;
+    background:linear-gradient(90deg,#2A9D8F,#D4A24C,#C0392B,#6C5CE7,#2A9D8F);
+    background-size:400% 100%; animation:welcomeShift 10s linear infinite;
+  }
+  @keyframes welcomeShift{0%{background-position:0% 50%;}100%{background-position:400% 50%;}}
+  .hero-inner{position:relative; z-index:2; max-width:640px;}
+  .hero h1{font-size:52px; line-height:1.08; margin:18px 0 22px; font-weight:600;}
+  .hero h1 em{font-style:italic; color:var(--teal);}
+  .hero p{font-size:17px; line-height:1.7; color:#D7DEE6; max-width:520px; margin:0 0 32px;}
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{padding:13px 26px; border-radius:8px; font-weight:600; font-size:14.5px; display:inline-block;}
+  .btn-primary{background:var(--gold); color:var(--navy-deep);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.35); color:#fff;}
+  .btn-primary:hover{background:#e3b567;}
+  .btn-ghost:hover{border-color:#fff;}
+
+  /* CATEGORY STRIP */
+  .cat-strip{background:#fff; border-bottom:1px solid var(--line);}
+  .cat-row{display:flex; gap:10px; padding:18px 0; overflow-x:auto;}
+  .pill{white-space:nowrap; font-size:13.5px; font-weight:600; padding:8px 16px; border-radius:999px; border:1px solid var(--line); color:var(--navy); transition:.2s;}
+  .pill.active, .pill:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+  /* SECTION HEAD */
+  .section{padding:64px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:32px; gap:20px; flex-wrap:wrap;}
+  .section-head h2{font-size:30px; color:var(--navy); margin:8px 0 0; font-weight:600;}
+  .see-all{font-size:14px; font-weight:600; color:var(--teal); border-bottom:1.5px solid var(--teal); padding-bottom:2px;}
+
+  /* FEATURED */
+  .featured{display:grid; grid-template-columns:1.1fr .9fr; gap:0; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-bottom:44px;}
+  .featured-img{background:linear-gradient(135deg,var(--teal-light),#fff); display:flex; align-items:center; justify-content:center; padding:40px;}
+  .featured-img .ring{width:180px;height:180px;border-radius:50%;border:14px solid var(--teal); display:flex;align-items:center;justify-content:center; color:var(--navy); font-family:'Fraunces',serif; font-size:15px; text-align:center; padding:20px;}
+  .featured-body{padding:44px 40px;}
+  .featured-body .kicker{margin-bottom:14px;}
+  .featured-body h3{font-size:27px; color:var(--navy); margin:0 0 12px; line-height:1.25;}
+  .featured-body p{color:var(--grey); font-size:15.5px; line-height:1.7; margin:0 0 20px;}
+  .read-link{color:var(--navy); font-weight:600; font-size:14px; border-bottom:2px solid var(--gold); padding-bottom:2px;}
+
+  /* GRID */
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; transition:.25s; display:flex; flex-direction:column;}
+  .card:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(22,50,79,.1); border-color:transparent;}
+  .card-img{height:150px; background:linear-gradient(135deg,var(--navy),var(--teal)); position:relative;}
+  .card-tag{position:absolute; top:12px; left:12px; background:rgba(255,255,255,.92); color:var(--navy); font-size:11px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; padding:5px 10px; border-radius:999px;}
+  .card-body{padding:20px 20px 22px; flex:1; display:flex; flex-direction:column;}
+  .card-date{font-size:12px; color:var(--grey); margin-bottom:8px;}
+  .card h3{font-size:18px; color:var(--navy); margin:0 0 8px; line-height:1.35; font-weight:600;}
+  .card p{font-size:14px; color:var(--grey); line-height:1.6; margin:0; flex:1;}
+
+  /* PRODUCT PROMO */
+  .promo{background:var(--navy); border-radius:16px; padding:52px 44px; color:#fff; display:grid; grid-template-columns:1fr auto; align-items:center; gap:30px;}
+  .promo h2{font-size:28px; margin:10px 0 12px;}
+  .promo p{color:#C9D3DD; font-size:15px; max-width:460px; line-height:1.7; margin:0;}
+  .promo .btn-primary{white-space:nowrap;}
+
+  /* FOUNDER */
+  .founder{display:flex; align-items:center; gap:28px; background:var(--teal-light); border-radius:16px; padding:36px 40px;}
+  .founder-avatar{width:76px;height:76px;border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--teal)); flex-shrink:0;}
+  .founder h3{margin:0 0 4px; color:var(--navy); font-size:19px;}
+  .founder p{margin:0; color:var(--grey); font-size:14.5px; line-height:1.6; max-width:560px;}
+
+  footer{background:var(--navy-deep); color:#9FADBB; padding:44px 0 30px; margin-top:40px;}
+  .foot-links{display:flex; gap:22px; flex-wrap:wrap; font-size:13px; margin-bottom:18px;}
+  .foot-links a:hover{color:#fff;}
+  .foot-bottom{font-size:12.5px; border-top:1px solid rgba(255,255,255,.08); padding-top:18px;}
+
+  @media(max-width:860px){
+    nav ul{display:none;}
+    .search-box{display:none;}
+    .hero h1{font-size:36px;}
+    .featured{grid-template-columns:1fr;}
+    .grid{grid-template-columns:1fr 1fr;}
+    .promo{grid-template-columns:1fr; text-align:left;}
+  }
+  @media(max-width:560px){
+    .grid{grid-template-columns:1fr;}
+    .founder{flex-direction:column; text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="logo-mark"></span> <span class="logo-text">Daily Vitality</span></div>
+    <nav><ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Body</a></li>
+      <li><a href="#">Mind</a></li>
+      <li><a href="#">Nutrition</a></li>
+      <li><a href="#">Guides</a></li>
+    </ul></nav>
+    <div class="search-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#66768A" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Search articles...">
+    </div>
+    <div class="nav-right">
+      <div class="lang-globe" title="Change language">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+      </div>
+      <a href="#" class="nav-cta">Shop Guides</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="stars" id="starField"></div>
+  <div class="wrap hero-inner">
+    <div class="welcome-badge">👋 Welcome to Daily Vitality</div><br>
+    <div class="kicker">Wellness, Simplified</div>
+    <h1>Small habits for a<br><em>calmer</em>, healthier life.</h1>
+    <p>Practical wellness tips, morning routines, and everyday habits — no fads, no extremes, just simple things backed by how your body actually works.</p>
+    <div class="btn-row">
+      <a href="#articles" class="btn btn-primary">Read the Latest</a>
+      <a href="#guides" class="btn btn-ghost">Browse Guides →</a>
+    </div>
+  </div>
+</section>
+
+<div class="cat-strip">
+  <div class="wrap cat-row">
+    <a class="pill active" href="#">All</a>
+    <a class="pill" href="#">Mind</a>
+    <a class="pill" href="#">Body</a>
+    <a class="pill" href="#">Sleep</a>
+    <a class="pill" href="#">Nutrition</a>
+    <a class="pill" href="#">Chronic Health</a>
+    <a class="pill" href="#">Skin &amp; Senses</a>
+    <a class="pill" href="#">Immunity</a>
+  </div>
+</div>
+
+<section class="section" id="articles">
+  <div class="wrap">
+
+    <div class="featured">
+      <div class="featured-img"><div class="ring">Illustrated<br>Guide</div></div>
+      <div class="featured-body">
+        <div class="kicker">Featured &nbsp;·&nbsp; Body</div>
+        <h3>Understanding Your Heart: A Simple Guide to Heart Health</h3>
+        <p>How your heart actually works, the warning signs worth knowing, and the everyday habits that keep it strong for decades — explained without the jargon.</p>
+        <a class="read-link" href="#">Read the full guide →</a>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">Latest</div>
+        <h2>Fresh from the blog</h2>
+      </div>
+      <a class="see-all" href="#">See all articles →</a>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Sleep</span></div>
+        <div class="card-body">
+          <div class="card-date">July 11, 2026</div>
+          <h3>How to Actually Wind Down at Night</h3>
+          <p>The habits that help your body recognize it's time to rest — beyond just "put your phone away."</p>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Mind</span></div>
+        <div class="card-body">
+          <div class="card-date">July 17, 2026</div>
+          <h3>Understanding Anxiety: What's Actually Happening in Your Body</h3>
+          <p>What anxiety physiologically is, common triggers, and techniques that genuinely help.</p>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Chronic Health</span></div>
+        <div class="card-body">
+          <div class="card-date">July 20, 2026</div>
+          <h3>Migraines and Headaches: What's Actually Different</h3>
+          <p>The real difference between tension headaches and migraines, and what helps.</p>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Nutrition</span></div>
+        <div class="card-body">
+          <div class="card-date">July 25, 2026</div>
+          <h3>Superfoods and Antioxidants: What the Science Says</h3>
+          <p>What antioxidants really do, and which everyday foods actually deliver them.</p>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Body</span></div>
+        <div class="card-body">
+          <div class="card-date">July 23, 2026</div>
+          <h3>Your Liver: The Body's Quiet Workhorse</h3>
+          <p>What damages the liver, and the habits that support long-term health.</p>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card-img"><span class="card-tag">Skin &amp; Senses</span></div>
+        <div class="card-body">
+          <div class="card-date">July 23, 2026</div>
+          <h3>Digital Eye Strain: Why Screens Exhaust Your Eyes</h3>
+          <p>Why long screen sessions cause fatigue, and habits that reduce strain.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guides" style="padding-top:0;">
+  <div class="wrap">
+    <div class="promo">
+      <div>
+        <div class="kicker" style="color:var(--gold);">Go Deeper</div>
+        <h2>In-depth guides you can keep, download, and actually use.</h2>
+        <p>Beyond the free articles — full illustrated guides on sleep, common conditions, healing foods, and anxiety, built to go further than a single blog post.</p>
+      </div>
+      <a class="btn btn-primary" href="#">Browse All Guides →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="founder">
+      <div class="founder-avatar"></div>
+      <div>
+        <div class="kicker" style="margin-bottom:6px;">Founder</div>
+        <h3>Wafadar</h3>
+        <p>Writing Daily Vitality to share simple, honest wellness habits that actually fit into everyday life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="#">Contact</a><a href="#">Feedback</a><a href="#">Support</a>
+      <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Medical Disclaimer</a>
+    </div>
+    <div class="foot-bottom">© 2026 Daily Vitality. Simple wellness, one habit at a time.</div>
+  </div>
+</footer>
+
+<script>
+  const field = document.getElementById('starField');
+  const n = 45;
+  for(let i=0;i<n;i++){
+    const s = document.createElement('span');
+    s.style.left = Math.random()*100 + '%';
+    const size = (Math.random()*2 + 1).toFixed(1);
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.animationDuration = (4 + Math.random()*6).toFixed(1) + 's';
+    s.style.animationDelay = (Math.random()*8).toFixed(1) + 's';
+    field.appendChild(s);
+  }
+</script>
+</body>
+</html>
