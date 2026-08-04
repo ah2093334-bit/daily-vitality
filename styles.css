@@ -242,6 +242,24 @@ nav.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   0%, 100% { margin-left: 0; }
   50% { margin-left: 40px; }
 }
+.listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin: 10px 0 20px;
+  transition: background 0.15s ease;
+}
+
+.listen-btn:hover { background: var(--accent-deep); }
+
 /* Table of contents */
 .toc-box {
   background: var(--bg-card);
