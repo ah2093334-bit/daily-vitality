@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kidney Warning Signs: What Your Body Is Trying to Tell You | Daily Vitality</title>
+<meta name="description" content="Recognize early kidney trouble warning signs, understand what damages the kidneys, and learn daily habits that protect them — explained simply.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1120; --panel:#111a2e; --coral:#FF4D6D; --amber:#FFB347;
+    --mint:#4ADE80; --off:#F1F5F9; --muted:#93a0b8;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ background:var(--ink); color:var(--off); font-family:'Inter', sans-serif; line-height:1.7; overflow-x:hidden; }
+  h1,h2,h3,.display{ font-family:'Fraunces', serif; }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 24px; }
+  nav{ display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:920px; margin:0 auto; }
+  .brand{ font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem; }
+  .brand span{ color:var(--coral); }
+  nav .tag{ font-size:.75rem; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); border:1px solid #24304a; padding:6px 14px; border-radius:999px; }
+
+  .hero{ position:relative; padding:50px 24px 30px; text-align:center; }
+  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-size:.78rem; text-transform:uppercase; letter-spacing:.16em; color:var(--coral); margin-bottom:20px; }
+  .eyebrow::before{ content:''; width:8px; height:8px; border-radius:50%; background:var(--coral); box-shadow:0 0 12px 3px var(--coral); animation:pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:.4; transform:scale(1.4);} }
+  h1.display{ font-size:clamp(2.1rem, 5.5vw, 3.6rem); font-weight:700; line-height:1.08; letter-spacing:-.01em; max-width:760px; margin:0 auto 18px; }
+  h1.display em{ font-style:normal; color:var(--coral); text-shadow:0 0 28px rgba(255,77,109,.55); }
+  .hero p.sub{ color:var(--muted); font-size:1.08rem; max-width:560px; margin:0 auto; }
+
+  .ecg-wrap{ margin:30px auto 0; max-width:700px; }
+  .ecg-wrap svg{ width:100%; height:60px; display:block; }
+  .ecg-path{ fill:none; stroke:var(--coral); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 8px rgba(255,77,109,.7)); stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 3.2s ease-in-out infinite; }
+  @keyframes draw{ 0%{stroke-dashoffset:1000;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:-1000;} }
+
+  .carousel{ width:100%; overflow:hidden; margin:36px 0; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+  .carousel-track{ display:flex; gap:14px; width:max-content; animation:scrollTrack 30s linear infinite; }
+  .carousel:hover .carousel-track{ animation-play-state:paused; }
+  .carousel.reverse .carousel-track{ animation-direction:reverse; }
+  @keyframes scrollTrack{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .carousel-track figure{ margin:0; flex:none; }
+  .carousel-track img{
+    height:200px; width:280px; object-fit:cover; border-radius:14px;
+    box-shadow:0 8px 26px rgba(0,0,0,.45); border:1px solid #24304a;
+    background:#1a2440; display:block;
+  }
+
+  section.block{ padding:44px 0 8px; border-top:1px solid #1b263f; }
+  section.block:first-of-type{ border-top:none; }
+  .kicker{ display:inline-block; font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; padding:5px 12px; border-radius:999px; margin-bottom:16px; font-weight:600; }
+  .kicker.coral{ background:rgba(255,77,109,.12); color:var(--coral); }
+  .kicker.amber{ background:rgba(255,179,71,.12); color:var(--amber); }
+  .kicker.mint{ background:rgba(74,222,128,.12); color:var(--mint); }
+  h2.display{ font-size:clamp(1.5rem, 3.4vw, 2.1rem); font-weight:600; margin-bottom:16px; }
+  p{ color:#cbd5e1; margin-bottom:16px; font-size:1.02rem; }
+  p strong{ color:var(--off); }
+
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0; }
+  @media(max-width:640px){ .grid{ grid-template-columns:1fr; } }
+  .card{ background:var(--panel); border:1px solid #24304a; border-radius:16px; padding:22px; position:relative; overflow:hidden; }
+  .card::before{ content:''; position:absolute; top:-40%; right:-40%; width:180px; height:180px; border-radius:50%; filter:blur(50px); opacity:.35; }
+  .card.coral::before{ background:var(--coral); } .card.amber::before{ background:var(--amber); }
+  .card h3{ font-size:1.05rem; font-weight:600; margin-bottom:8px; position:relative; }
+  .card p{ font-size:.94rem; margin-bottom:0; position:relative; color:#b8c3d9; }
+
+  .stat-row{ display:flex; gap:14px; flex-wrap:wrap; margin:24px 0; }
+  .stat{ flex:1; min-width:140px; background:var(--panel); border:1px solid #24304a; border-radius:14px; padding:18px; text-align:center; }
+  .stat .num{ font-family:'Fraunces', serif; font-size:1.9rem; font-weight:700; color:var(--amber); }
+  .stat .lbl{ font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-top:4px; }
+
+  ol.steps{ list-style:none; margin:18px 0; }
+  ol.steps li{ display:flex; gap:16px; margin-bottom:16px; padding-bottom:16px; border-bottom:1px dashed #24304a; }
+  ol.steps li:last-child{ border-bottom:none; }
+  ol.steps .n{ font-family:'Fraunces', serif; font-weight:700; font-size:1.3rem; color:var(--coral); min-width:34px; }
+
+  .callout{ background:linear-gradient(135deg, rgba(255,77,109,.14), rgba(255,179,71,.08)); border:1px solid rgba(255,77,109,.35); border-radius:16px; padding:24px; margin:26px 0; }
+  .callout h3{ color:var(--coral); margin-bottom:8px; font-size:1.1rem; }
+
+  .faq-item{ border-bottom:1px solid #1b263f; padding:16px 0; }
+  .faq-item h3{ font-size:1rem; font-weight:600; margin-bottom:6px; color:var(--off); }
+  .faq-item p{ margin-bottom:0; }
+
+  footer{ padding:46px 24px; text-align:center; color:var(--muted); font-size:.85rem; border-top:1px solid #1b263f; margin-top:20px; }
+  footer .disclaimer{ max-width:600px; margin:0 auto 14px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Daily <span>Vitality</span></div>
+  <div class="tag">Body &middot; Chronic Health</div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">7-minute read &middot; Medically reviewed format</div>
+  <h1 class="display">Kidney Warning Signs: <em>What Your Body Is Trying to Tell You</em></h1>
+  <p class="sub">Kidney damage often builds quietly for years before it's caught. Here's what actually happens, the early signs people miss, and the habits that protect your kidneys long-term.</p>
+  <div class="ecg-wrap">
+    <svg viewBox="0 0 700 60" preserveAspectRatio="none">
+      <path class="ecg-path" d="M0,30 L100,30 L120,30 L135,8 L150,52 L165,18 L180,30 L220,30 L240,30 L255,12 L270,48 L285,22 L300,30 L700,30" />
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="carousel">
+    <div class="carousel-track" data-track>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1712232415633-095dc9e03c5d?auto=format&fit=crop&w=560&q=70" alt="Health monitoring equipment"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=560&q=70" alt="Glass of water for hydration"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=560&q=70" alt="Doctor reviewing results"></figure>
+    </div>
+  </div>
+
+  <section class="block">
+    <span class="kicker coral">The Basics</span>
+    <h2 class="display">What your kidneys actually do, every single day</h2>
+    <p>Your two kidneys filter your entire blood supply roughly 40 times a day, removing waste, balancing fluid levels, and regulating key minerals like sodium and potassium. They also help control blood pressure and produce a hormone that signals your body to make red blood cells.</p><p>Because kidneys have significant reserve capacity, they can lose a large share of their function before any symptom appears — which is exactly why warning signs, once they do show up, deserve attention rather than being brushed off.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">~180 L</div><div class="lbl">filtered by your kidneys daily</div></div><div class="stat"><div class="num">Up to 90%</div><div class="lbl">of function can be lost silently</div></div><div class="stat"><div class="num">2</div><div class="lbl">kidneys, but 1 can sustain you</div></div>
+    </div>
+  </section>
+
+  <div class="carousel reverse">
+    <div class="carousel-track" data-track>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=560&q=70" alt="Blood pressure monitoring device"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=560&q=70" alt="Smartwatch tracking vitals"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1682706841289-9d7ddf5eb999?auto=format&fit=crop&w=560&q=70" alt="Vitals monitor screen"></figure>
+    </div>
+  </div>
+
+  <section class="block">
+    <span class="kicker amber">Recognize It</span>
+    <h2 class="display">The warning signs people miss</h2>
+    <p>Kidney trouble rarely announces itself loudly. It tends to show up as a cluster of vague, easy-to-dismiss changes rather than one obvious symptom.</p>
+    <div class="grid">
+      <div class="card coral"><h3>💧 Changes in urination</h3><p>Foamy urine, urinating more or less than usual, or getting up multiple times at night to go.</p></div><div class="card amber"><h3>🦵 Swelling</h3><p>Puffiness in the legs, ankles, feet, or around the eyes, from fluid the kidneys aren't clearing properly.</p></div><div class="card coral"><h3>😴 Persistent fatigue</h3><p>A buildup of toxins the kidneys would normally filter out can leave you feeling constantly drained.</p></div><div class="card amber"><h3>🤢 Nausea and poor appetite</h3><p>Waste buildup in the blood can cause a metallic taste, nausea, or loss of interest in food.</p></div><div class="card coral"><h3>🧠 Trouble concentrating</h3><p>Reduced kidney function can affect oxygen delivery and toxin clearance, both of which affect mental clarity.</p></div><div class="card amber"><h3>🥶 Feeling cold</h3><p>Anemia linked to reduced kidney function can leave you feeling cold even in a warm room.</p></div>
+    </div>
+    <div class="callout">
+      <h3>⚠️ If several of these overlap</h3>
+      <p style="margin-bottom:0;">See a doctor for a simple blood and urine test. Kidney function tests are quick, inexpensive, and catch problems long before symptoms would otherwise force the issue.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <span class="kicker mint">Why It Happens</span>
+    <h2 class="display">What actually damages the kidneys over time</h2>
+    <p>Kidney damage is rarely caused by one dramatic event — it's usually the slow result of a few well-known risk factors compounding over years.</p>
+    <ol class="steps">
+      <li><span class="n">01</span><div><strong>Uncontrolled high blood pressure</strong> &mdash; constant extra force damages the tiny blood vessels inside the kidneys' filtering units.</div></li><li><span class="n">02</span><div><strong>Poorly managed diabetes</strong> &mdash; high blood sugar over years is one of the leading causes of kidney damage worldwide.</div></li><li><span class="n">03</span><div><strong>Chronic dehydration</strong> &mdash; consistently low fluid intake makes the kidneys work harder to concentrate urine.</div></li><li><span class="n">04</span><div><strong>Overuse of certain pain medications</strong> &mdash; frequent, long-term use of some over-the-counter painkillers can strain kidney function.</div></li><li><span class="n">05</span><div><strong>Untreated kidney stones or infections</strong> &mdash; recurrent, unaddressed issues can gradually scar kidney tissue.</div></li><li><span class="n">06</span><div><strong>Family history</strong> &mdash; a parent or sibling with kidney disease raises your own baseline risk.</div></li>
+    </ol>
+  </section>
+
+  <div class="carousel">
+    <div class="carousel-track" data-track>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554244933-d876deb6b2ff?auto=format&fit=crop&w=560&q=70" alt="Person exercising outdoors"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=560&q=70" alt="Fresh vegetables"></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?auto=format&fit=crop&w=560&q=70" alt="Calm restful moment"></figure>
+    </div>
+  </div>
+
+  <section class="block">
+    <span class="kicker mint">Protect It</span>
+    <h2 class="display">Daily habits that genuinely protect your kidneys</h2>
+    <p><strong>Stay consistently hydrated.</strong> Adequate water intake helps kidneys flush waste efficiently without overworking.</p><p><strong>Manage blood pressure and blood sugar.</strong> These two factors alone account for the majority of preventable kidney damage.</p><p><strong>Go easy on sodium.</strong> High-sodium diets make kidneys work harder to maintain fluid balance.</p><p><strong>Use pain medication carefully.</strong> Follow dosing guidance and avoid regular long-term use without medical guidance.</p><p><strong>Get an annual check-up.</strong> A simple blood and urine test can catch declining kidney function years before symptoms would.</p>
+  </section>
+
+  <section class="block">
+    <span class="kicker coral">Good to Know</span>
+    <h2 class="display">Frequently asked questions</h2>
+    <div class="faq-item"><h3>Can kidney function come back once it's reduced?</h3><p>Some causes are reversible if caught early and treated; long-term damage is often managed rather than fully reversed, which is why early detection matters so much.</p></div><div class="faq-item"><h3>Is foamy urine always a kidney problem?</h3><p>Not always — but persistent foaminess, especially with other symptoms, is worth mentioning to a doctor.</p></div><div class="faq-item"><h3>Do I need to drink extra water to protect my kidneys?</h3><p>Consistent, adequate hydration helps, but drastically excessive water intake isn't necessary or beneficial — moderate and steady is the goal.</p></div><div class="faq-item"><h3>What's the simplest way to check kidney health?</h3><p>A routine blood test (creatinine/eGFR) and urine test, both quick and widely available at any check-up.</p></div>
+  </section>
+
+</div>
+
+<footer>
+  <p class="disclaimer">This article is for general education and does not replace medical advice. If you notice persistent or worsening symptoms, please see a doctor.</p>
+  <p>&copy; 2026 Daily Vitality &mdash; Simple wellness, one habit at a time.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-track]').forEach(function(track){
+    track.innerHTML += track.innerHTML;
+  });
+</script>
+
+</body>
+</html>
