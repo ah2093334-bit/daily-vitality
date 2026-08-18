@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free BMI calculator — check your Body Mass Index instantly and understand what it means for your health.">
+<title>Free BMI Calculator — Daily Vitality</title>
+<link rel="canonical" href="https://ah2093334-bit.github.io/daily-vitality/bmi-calculator.html">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .calc-box { background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px; padding: 30px; margin: 24px 0; }
+  .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  .calc-box label { display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 6px; }
+  .calc-box input, .calc-box select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--line); font-family: var(--body); font-size: 1rem; box-sizing: border-box; }
+  .calc-btn { background: var(--ink); color: #fff; border: none; padding: 14px 30px; border-radius: 999px; font-family: var(--mono); font-size: 0.9rem; cursor: pointer; width: 100%; margin-top: 8px; }
+  .calc-btn:hover { background: var(--accent-deep); }
+  #bmiResult { display:none; margin-top:24px; text-align:center; padding:24px; border-radius:14px; }
+  #bmiNumber { font-family: var(--display); font-size: 2.6rem; font-weight: 700; }
+  #bmiCategory { font-family: var(--mono); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="falling-particles" id="fallingParticles"></div>
+
+<header class="site">
+  <div class="wrap brand-row">
+    <div class="dots-menu">
+      <button class="dots-btn" onclick="document.getElementById('dotsDropdown').classList.toggle('open')">&#9776;</button>
+      <div class="dots-dropdown" id="dotsDropdown">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+    <a href="index.html" class="brand"><img src="logo.png" alt="Daily Vitality logo" class="logo" onerror="this.style.display='none'">Daily Vitality</a>
+  </div>
+</header>
+
+<nav class="sub-nav">
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="index.html#categories">Categories</a>
+    <a href="products.html">Products / Shop</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="support.html">Tools &amp; Support</a>
+  </div>
+</nav>
+
+<main>
+<div class="article-header">
+  <div class="wrap">
+    <span class="page-label">Free Tool</span>
+    <h1>BMI Calculator</h1>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="wrap">
+    <p class="lead">Check your Body Mass Index instantly — completely free, no sign-up, nothing stored.</p>
+
+    <div class="calc-box">
+      <div class="calc-row">
+        <div>
+          <label>UNITS</label>
+          <select id="units" onchange="toggleUnits()">
+            <option value="metric">Metric (kg / cm)</option>
+            <option value="imperial">Imperial (lb / in)</option>
+          </select>
+        </div>
+        <div></div>
+      </div>
+      <div class="calc-row">
+        <div>
+          <label id="weightLabel">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 70">
+        </div>
+        <div>
+          <label id="heightLabel">Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 170">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calculateBMI()">Calculate My BMI</button>
+
+      <div id="bmiResult">
+        <div id="bmiNumber"></div>
+        <div id="bmiCategory"></div>
+      </div>
+    </div>
+
+    <h2>What your BMI category means</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;">
+      <div style="background:#E9F3EA;border-radius:12px;padding:14px 18px;"><strong>Under 18.5</strong><br>Underweight</div>
+      <div style="background:#E9F3EA;border-radius:12px;padding:14px 18px;"><strong>18.5 – 24.9</strong><br>Healthy weight range</div>
+      <div style="background:#FBF3E7;border-radius:12px;padding:14px 18px;"><strong>25 – 29.9</strong><br>Overweight range</div>
+      <div style="background:#F8EAEA;border-radius:12px;padding:14px 18px;"><strong>30 and above</strong><br>Obesity range</div>
+    </div>
+
+    <div class="disclaimer" style="background:#FBF3E7;border:1px solid #E8C99A;border-radius:12px;padding:16px 20px;font-size:0.92rem;color:#6B4E23;margin:20px 0;">
+      ⚠️ BMI is a general screening tool, not a diagnosis. It doesn't account for muscle mass, bone density, or body composition. Athletes and very muscular individuals often show a higher BMI despite being healthy. Always discuss your results with a doctor for personal guidance.
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to home</a>
+  </div>
+</div>
+</main>
+
+<section class="founder-section">
+  <div class="wrap">
+    <img src="founder.jpg" alt="Founder photo" onerror="this.style.display='none'">
+    <div class="role">Founder</div>
+    <h3>Wafadar</h3>
+    <p>Writing Daily Vitality to share simple, honest wellness habits that actually fit into everyday life.</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    © 2026 Daily Vitality. Simple wellness, one habit at a time.<br>
+    <a href="contact.html">Contact</a> · <a href="feedback.html">Feedback</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Medical Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+function toggleUnits() {
+  const units = document.getElementById('units').value;
+  if (units === 'metric') {
+    document.getElementById('weightLabel').textContent = 'Weight (kg)';
+    document.getElementById('heightLabel').textContent = 'Height (cm)';
+  } else {
+    document.getElementById('weightLabel').textContent = 'Weight (lb)';
+    document.getElementById('heightLabel').textContent = 'Height (in)';
+  }
+}
+
+function calculateBMI() {
+  const units = document.getElementById('units').value;
+  let weight = parseFloat(document.getElementById('weight').value);
+  let height = parseFloat(document.getElementById('height').value);
+  if (!weight || !height) { alert('Please enter both weight and height.'); return; }
+
+  let bmi;
+  if (units === 'metric') {
+    bmi = weight / ((height/100) * (height/100));
+  } else {
+    bmi = (weight / (height*height)) * 703;
+  }
+  bmi = Math.round(bmi * 10) / 10;
+
+  let category, color;
+  if (bmi < 18.5) { category = 'Underweight'; color = '#E9F3EA'; }
+  else if (bmi < 25) { category = 'Healthy Weight'; color = '#E9F3EA'; }
+  else if (bmi < 30) { category = 'Overweight'; color = '#FBF3E7'; }
+  else { category = 'Obesity Range'; color = '#F8EAEA'; }
+
+  document.getElementById('bmiNumber').textContent = bmi;
+  document.getElementById('bmiCategory').textContent = category;
+  const resultBox = document.getElementById('bmiResult');
+  resultBox.style.display = 'block';
+  resultBox.style.background = color;
+}
+
+(function() {
+  const container = document.getElementById('fallingParticles');
+  const colors = ['#FFFFFF'];
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 5 + 3;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    p.style.animationDuration = (Math.random() * 6 + 6) + 's';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    container.appendChild(p);
+  }
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8L1LKGGNXW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8L1LKGGNXW');
+</script>
+</body>
+</html>
