@@ -1,0 +1,99 @@
+<!-- =====================================================================
+     DAILY VITALITY — VOICE WELCOME WIDGET
+     =====================================================================
+     Kahan lagayen: apni index.html ki </body> tag se thodi pehle paste
+     kar do. Free hai — browser ki apni built-in "US English" awaaz
+     istemal hoti hai, koi API cost nahi.
+
+     ZAROORI: Chrome/Safari kisi bhi website ko site khulte hi khud-b-khud
+     awaaz ke sath bolna shuru nahi karne dete (yeh sab browsers ka
+     built-in security rule hai). Isi liye yeh widget ek chota banner
+     dikhata hai jo khud fade-in hota hai, aur pehla click hi (chahe
+     kahin bhi ho) awaaz shuru kar deta hai — is se bilkul "automatic"
+     jaisa hi feel aata hai.
+====================================================================== -->
+
+<div id="dvWelcomeBanner" style="
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(30px);
+  background: linear-gradient(135deg, #845ef7, #339af0);
+  color: #fff; padding: 14px 22px; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(132,94,247,0.4);
+  font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 14px;
+  display: flex; align-items: center; gap: 12px; max-width: 90vw;
+  z-index: 9999; opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease;
+  cursor: pointer;
+">
+  <span style="font-size: 20px;">🔊</span>
+  <span>Welcome to Daily Vitality — tap to hear a quick message</span>
+  <span id="dvCloseBanner" style="margin-left: 6px; opacity: 0.8; font-weight: bold;">✕</span>
+</div>
+
+<script>
+(function () {
+  const banner = document.getElementById('dvWelcomeBanner');
+  const closeBtn = document.getElementById('dvCloseBanner');
+  let hasSpoken = false;
+
+  // Show the banner shortly after page load
+  setTimeout(() => {
+    banner.style.opacity = '1';
+    banner.style.transform = 'translateX(-50%) translateY(0)';
+  }, 900);
+
+  const welcomeScript =
+    "Welcome to Daily Vitality. I just wanted to remind you of something important: " +
+    "your health matters, and nobody will take care of it for you. " +
+    "In today's world, it's easy to get busy and forget yourself. But if something ever feels off, " +
+    "you're the one who feels it, not anyone else — so please, value yourself, and keep working on it " +
+    "every single day. " +
+    "On this site, you'll find everything you need to protect and improve your health — simple, honest " +
+    "articles and guides on nutrition, sleep, fitness, and more. " +
+    "We also have in-depth digital books you can purchase if you'd like to go deeper into a specific topic. " +
+    "And if you'd like to earn from this website yourself, click on the Contribute option and start " +
+    "sharing your own articles. " +
+    "If you'd like to stay updated, you can follow along or sign up with your email. " +
+    "Thanks for visiting, and take good care of yourself.";
+
+  function speakWelcome() {
+    if (hasSpoken) return;
+    hasSpoken = true;
+    if (!('speechSynthesis' in window)) return;
+
+    const utter = new SpeechSynthesisUtterance(welcomeScript);
+    utter.lang = 'en-US';
+    utter.rate = 0.98;
+    utter.pitch = 1.0;
+
+    // Try to pick a natural-sounding US English voice
+    function pickVoice() {
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find(v => v.lang === 'en-US' && /female|natural|zira|samantha/i.test(v.name))
+                      || voices.find(v => v.lang === 'en-US')
+                      || voices[0];
+      if (preferred) utter.voice = preferred;
+      window.speechSynthesis.speak(utter);
+    }
+
+    if (window.speechSynthesis.getVoices().length) {
+      pickVoice();
+    } else {
+      window.speechSynthesis.onvoiceschanged = pickVoice;
+    }
+
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-50%) translateY(30px)';
+  }
+
+  // First interaction anywhere on the page triggers speech (satisfies browser autoplay rules)
+  ['click', 'touchstart'].forEach(evt => {
+    document.addEventListener(evt, speakWelcome, { once: true });
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-50%) translateY(30px)';
+    window.speechSynthesis.cancel();
+  });
+})();
+</script>
