@@ -890,3 +890,254 @@ footer.site a:hover {
   .article-cover { aspect-ratio: 16/10; border-radius: 14px; }
   .read-next-grid { grid-template-columns: 1fr; }
 }
+
+/* ================================================
+   Magazine-Style Article Additions (v2)
+   Hero meta, quick summary, TOC, highlight boxes,
+   FAQ, auto-scroll carousel, ebook + newsletter promo.
+   ================================================ */
+
+.article-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+
+.article-meta-row .dot { opacity: 0.5; }
+
+.quick-summary {
+  margin: 26px 0;
+  padding: 22px 26px;
+  background: linear-gradient(135deg, rgba(78,168,222,0.10), rgba(46,204,113,0.07));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.quick-summary .qs-label {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-deep);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.quick-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.quick-summary li {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.toc-box {
+  margin: 26px 0 34px;
+  padding: 20px 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.toc-box .toc-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+
+.toc-box ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.toc-box li { margin: 5px 0; }
+
+.toc-box a {
+  text-decoration: none;
+  color: var(--accent-deep);
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+.toc-box a:hover { text-decoration: underline; }
+
+.highlight-box {
+  margin: 26px 0;
+  padding: 18px 22px;
+  border-radius: 14px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.highlight-box .icon { font-size: 1.25rem; line-height: 1.4; }
+
+.highlight-box.tip { background: rgba(46,204,113,0.08); border: 1px solid rgba(46,204,113,0.3); }
+.highlight-box.warning { background: rgba(196,69,59,0.08); border: 1px solid rgba(196,69,59,0.28); }
+.highlight-box.note { background: rgba(78,168,222,0.09); border: 1px solid rgba(78,168,222,0.28); }
+
+.highlight-box strong { display: block; margin-bottom: 3px; }
+
+.faq-section { margin-top: 44px; }
+
+.faq-section h2 { margin-bottom: 18px; }
+
+.faq-section .faq-item h3 {
+  font-family: var(--body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.faq-section .faq-item p { margin: 0; font-size: 0.96rem; }
+
+/* Auto-scrolling image carousel */
+.img-carousel {
+  overflow: hidden;
+  margin: 30px 0;
+  border-radius: 16px;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.img-carousel-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: carouselScroll 32s linear infinite;
+}
+
+.img-carousel:hover .img-carousel-track { animation-play-state: paused; }
+
+.img-carousel-track img {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(15,76,129,0.14);
+}
+
+@keyframes carouselScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ebook-promo {
+  margin: 44px 0;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #0B1626 0%, #10203A 60%, #17335A 100%);
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ebook-promo img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+
+.ebook-promo .ep-text { flex: 1; min-width: 200px; }
+
+.ebook-promo .ep-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8FC7F2;
+  margin-bottom: 6px;
+}
+
+.ebook-promo h3 {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.ebook-promo p { color: #C7D3E3; margin: 0 0 14px; font-size: 0.94rem; }
+
+.ebook-promo a.buy-btn {
+  display: inline-block;
+  background: var(--sage);
+  color: #06331d;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.ebook-promo a.buy-btn:hover { background: var(--sage-deep); color: #fff; }
+
+.newsletter-box {
+  margin: 40px 0 10px;
+  padding: 30px 28px;
+  border-radius: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.newsletter-box h3 {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.newsletter-box p { color: var(--ink-soft); margin: 0 0 18px; font-size: 0.95rem; }
+
+.newsletter-box form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-box input[type="email"] {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  font-family: var(--body);
+  font-size: 0.95rem;
+  min-width: 240px;
+}
+
+.newsletter-box button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.newsletter-box button:hover { background: var(--accent-deep); }
+
+@media (max-width: 520px) {
+  .img-carousel-track img { width: 220px; height: 150px; }
+  .ebook-promo { flex-direction: column; text-align: center; }
+  .ebook-promo .ep-text { text-align: left; }
+}
