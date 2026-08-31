@@ -514,58 +514,44 @@ nav.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .hero-carousel {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/5;
+  height: 560px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(27,46,34,0.18);
   background: #0B1626;
+  mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent);
 }
 
-.hero-carousel img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
+.hero-carousel-track {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  width: max-content;
+  height: 100%;
+  animation: heroCarouselScroll 120s linear infinite;
+}
+
+.hero-carousel:hover .hero-carousel-track { animation-play-state: paused; }
+
+.hero-carousel-track img {
+  width: auto;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transform: scale(1.06) translateX(3%);
-  transition: opacity 0.8s ease, transform 6s ease;
-  z-index: 1;
+  border-radius: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(11,22,38,0.25);
 }
 
-.hero-carousel img.active {
-  opacity: 1;
-  transform: scale(1) translateX(0);
-  z-index: 2;
-}
-
-.hero-carousel .carousel-dots {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 3;
-}
-
-.hero-carousel .carousel-dots span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.4);
-  transition: background 0.3s ease, width 0.3s ease;
-}
-
-.hero-carousel .carousel-dots span.active {
-  background: #fff;
-  width: 18px;
-  border-radius: 3px;
+@keyframes heroCarouselScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; padding-top: 44px; }
-  .hero-image, .hero-carousel { aspect-ratio: 16/9; order: -1; }
+  .hero-image { aspect-ratio: 16/9; order: -1; }
+  .hero-carousel { height: 260px; order: -1; }
 }
 
 /* Trust line under hero intro */

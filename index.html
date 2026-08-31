@@ -108,20 +108,15 @@
   </div>
 
   <!--
-    HERO CAROUSEL
-    Drop your own generated images into an /images/hero-carousel/ folder using the
-    filenames below (nutrition-01.webp, fitness-01.webp, etc). Until a file exists,
-    each <img> falls back automatically to a placeholder so the carousel already
-    works today. See the image prompt list for what to generate for each filename.
+    HERO IMAGE MARQUEE
+    Continuously auto-scrolls left, exactly like the article image rows.
+    Reads its image list from the HERO_IMAGES array in the script below —
+    all 145 files live in one folder: images/hero-carousel/
+    To add/remove/replace images later, just edit that array (or ask to
+    have it regenerated) and re-upload the matching files.
   -->
   <div class="hero-carousel" id="heroCarousel">
-    <img class="active" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20colorful%20healthy%20breakfast%20bowl%20with%20fruit%20and%20oats%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/nutrition-01.webp" alt="Healthy breakfast" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20jogging%20outdoors%20at%20sunrise%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/fitness-01.webp" alt="Morning jog" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20calm%20bedroom%20with%20soft%20morning%20light%2C%20person%20stretching%20after%20waking%20up%2C%20premium%20editorial%20health%20magazine%20style%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/sleep-01.webp" alt="Restful morning" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20meditating%20peacefully%20in%20soft%20natural%20light%2C%20premium%20editorial%20health%20magazine%20style%2C%20calming%20atmosphere%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/mind-01.webp" alt="Meditation" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20glass%20of%20water%20with%20lemon%20and%20mint%20on%20a%20clean%20kitchen%20counter%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/hydration-01.webp" alt="Hydration" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20walking%20in%20a%20quiet%20green%20park%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20calming%20atmosphere%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/nature-01.webp" alt="Nature walk" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-    <div class="carousel-dots" id="heroCarouselDots"></div>
+    <div class="hero-carousel-track" id="heroCarouselTrack"></div>
   </div>
 </section>
 
@@ -153,23 +148,34 @@
 
 <script>
 (function(){
-  var slides = document.querySelectorAll('#heroCarousel img');
-  var dotsWrap = document.getElementById('heroCarouselDots');
-  if (!slides.length) return;
-  slides.forEach(function(_, i){
-    var d = document.createElement('span');
-    if (i === 0) d.className = 'active';
-    dotsWrap.appendChild(d);
+  var HERO_IMAGES = [];
+  for (var i = 1; i <= 145; i++) {
+    HERO_IMAGES.push('images/hero-carousel/hero-' + String(i).padStart(3, '0') + '.webp');
+  }
+
+  var track = document.getElementById('heroCarouselTrack');
+  if (!track) return;
+
+  var fallback = "https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20healthy%20lifestyle%20scene%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=500&height=640&q=70&fm=webp&auto=format";
+
+  // Render the list twice back-to-back so the marquee can loop seamlessly at -50%
+  function buildImg(src){
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Daily Vitality wellness photo';
+    img.loading = 'lazy';
+    img.dataset.fallback = fallback;
+    img.onerror = function(){ this.onerror = null; this.src = this.dataset.fallback; };
+    return img;
+  }
+
+  HERO_IMAGES.concat(HERO_IMAGES).forEach(function(src){
+    track.appendChild(buildImg(src));
   });
-  var dots = dotsWrap.querySelectorAll('span');
-  var current = 0;
-  setInterval(function(){
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }, 4000);
+
+  // Scale animation duration to the number of images so speed stays consistent
+  var duration = Math.max(60, HERO_IMAGES.length * 3.2);
+  track.style.animationDuration = duration + 's';
 })();
 </script>
 
