@@ -510,9 +510,196 @@ nav.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   box-shadow: 0 20px 40px rgba(27,46,34,0.18);
 }
 
+/* Hero auto-rotating wellness image carousel (replaces static hero photo) */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(27,46,34,0.18);
+  background: #0B1626;
+}
+
+.hero-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06) translateX(3%);
+  transition: opacity 0.8s ease, transform 6s ease;
+  z-index: 1;
+}
+
+.hero-carousel img.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 2;
+}
+
+.hero-carousel .carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.hero-carousel .carousel-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.hero-carousel .carousel-dots span.active {
+  background: #fff;
+  width: 18px;
+  border-radius: 3px;
+}
+
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; padding-top: 44px; }
-  .hero-image { aspect-ratio: 16/9; order: -1; }
+  .hero-image, .hero-carousel { aspect-ratio: 16/9; order: -1; }
+}
+
+/* Trust line under hero intro */
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: #C7D3E3;
+}
+
+.hero-trust span { white-space: nowrap; }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-primary-hero, .btn-secondary-hero {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .92rem;
+}
+
+.btn-primary-hero {
+  background: var(--accent);
+  color: #0B1626;
+}
+
+.btn-secondary-hero {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Why Daily Vitality section */
+.why-section { padding: 10px 0 50px; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.why-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: left;
+}
+
+.why-card .why-icon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+.why-card h3 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 8px; color: var(--ink); }
+.why-card p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* Rotating "hook line" engagement banner, auto-inserted every 4 articles */
+.hook-banner {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(11,22,38,0.25);
+}
+
+.hook-banner .hook-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 5s ease;
+}
+
+.hook-banner .hook-bg.active { opacity: 1; transform: scale(1); }
+
+.hook-banner .hook-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,22,38,0.35) 0%, rgba(11,22,38,0.72) 100%);
+}
+
+.hook-banner .hook-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px 24px;
+  max-width: 560px;
+}
+
+.hook-banner .hook-line {
+  font-family: var(--display);
+  font-weight: 600;
+  color: #fff;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.hook-banner a.hook-cta {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--accent);
+  color: #0B1626;
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
 }
 
 /* Post list */
@@ -710,6 +897,70 @@ footer.site a {
 footer.site a:hover {
   color: var(--accent-deep);
   text-decoration: underline;
+}
+
+/* Write for Daily Vitality CTA (moved down, away from hero) */
+.write-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.write-section h2 {
+  font-family: var(--display);
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.write-section p {
+  color: #C7D3E3;
+  max-width: 50ch;
+  margin: 0 auto 18px;
+  font-size: 0.98rem;
+}
+
+.write-section a {
+  display: inline-block;
+  background: var(--accent);
+  color: #0B1626;
+  padding: 11px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* Footer columns */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 24px;
+  text-align: left;
+  padding: 40px 0 20px;
+}
+
+.footer-grid h4 {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+}
+
+.footer-grid ul { list-style: none; margin: 0; padding: 0; }
+.footer-grid li { margin-bottom: 8px; }
+.footer-grid p { color: #9FB3CC; font-size: 0.85rem; max-width: 32ch; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* Article / static page */

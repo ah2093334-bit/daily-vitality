@@ -48,9 +48,11 @@
       <button class="dots-btn" onclick="document.getElementById('dotsDropdown').classList.toggle('open')">&#9776;</button>
       <div class="dots-dropdown" id="dotsDropdown">
         <a href="index.html">Home</a>
+        <a href="index.html#categories">Wellness Topics</a>
         <a href="about.html">About</a>
         <a href="products.html">Products</a>
         <a href="contribute.html">Contribute</a>
+        <a href="bmi-calculator.html">BMI Calculator</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
         <a href="feedback.html">Feedback</a>
@@ -67,15 +69,10 @@
 <nav class="sub-nav">
   <div class="wrap">
     <a href="index.html">Home</a>
-    <a href="index.html#categories">Categories</a>
-    <a href="products.html">Products / Shop</a>
-    <a href="contribute.html">Contribute</a>
+    <a href="index.html#categories">Wellness</a>
+    <a href="products.html">Products</a>
     <a href="about.html">About</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
     <a href="bmi-calculator.html">BMI Calculator</a>
-    <a href="support.html">Tools &amp; Support</a>
-    <a href="privacy.html">Privacy Policy</a>
   </div>
 </nav>
 
@@ -99,15 +96,107 @@
     <div class="eyebrow">Wellness, Simplified</div>
     <h1>Small habits for a calmer, healthier life.</h1>
     <p>Practical wellness tips, morning routines, and everyday habits — no fads, no extremes, just simple things that actually work.</p>
-    <a href="contribute.html" style="display:inline-block;margin-top:14px;background:var(--accent,#6c8f5f);color:#fff;padding:11px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.92rem;">✍️ Become a Contributor</a>
+    <div class="hero-trust">
+      <span>🌿 Practical wellness for everyday life</span>
+      <span>📚 Clear, easy-to-understand guides</span>
+      <span>⚖️ No extreme health claims</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="index.html#categories" class="btn-primary-hero">Explore Articles</a>
+      <a href="index.html#categories" class="btn-secondary-hero">Start Your Wellness Journey</a>
+    </div>
   </div>
-  <!-- Replace this with your own photo once uploaded: <img src="images/hero.jpg" class="hero-image" alt="Calm morning scene"> -->
-  <img src="banner.jpg" class="hero-image" alt="Daily Vitality">
+
+  <!--
+    HERO CAROUSEL
+    Drop your own generated images into an /images/hero-carousel/ folder using the
+    filenames below (nutrition-01.webp, fitness-01.webp, etc). Until a file exists,
+    each <img> falls back automatically to a placeholder so the carousel already
+    works today. See the image prompt list for what to generate for each filename.
+  -->
+  <div class="hero-carousel" id="heroCarousel">
+    <img class="active" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20colorful%20healthy%20breakfast%20bowl%20with%20fruit%20and%20oats%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/nutrition-01.webp" alt="Healthy breakfast" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20jogging%20outdoors%20at%20sunrise%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/fitness-01.webp" alt="Morning jog" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20calm%20bedroom%20with%20soft%20morning%20light%2C%20person%20stretching%20after%20waking%20up%2C%20premium%20editorial%20health%20magazine%20style%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/sleep-01.webp" alt="Restful morning" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20meditating%20peacefully%20in%20soft%20natural%20light%2C%20premium%20editorial%20health%20magazine%20style%2C%20calming%20atmosphere%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/mind-01.webp" alt="Meditation" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20glass%20of%20water%20with%20lemon%20and%20mint%20on%20a%20clean%20kitchen%20counter%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/hydration-01.webp" alt="Hydration" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <img data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20walking%20in%20a%20quiet%20green%20park%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20calming%20atmosphere%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=900&height=1125&q=80&fm=webp&auto=format" src="images/hero-carousel/nature-01.webp" alt="Nature walk" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+    <div class="carousel-dots" id="heroCarouselDots"></div>
+  </div>
 </section>
+
+<section class="why-section wrap">
+  <h2 class="page-label">Why Daily Vitality</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">🌿</span>
+      <h3>Simple</h3>
+      <p>Easy wellness tips for everyday life.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">📚</span>
+      <h3>Practical</h3>
+      <p>Clear information without unnecessary complexity.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">⚖️</span>
+      <h3>Balanced</h3>
+      <p>No extreme diets or unrealistic promises.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🧠</span>
+      <h3>Everyday Focus</h3>
+      <p>Small habits that support a healthier lifestyle.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('#heroCarousel img');
+  var dotsWrap = document.getElementById('heroCarouselDots');
+  if (!slides.length) return;
+  slides.forEach(function(_, i){
+    var d = document.createElement('span');
+    if (i === 0) d.className = 'active';
+    dotsWrap.appendChild(d);
+  });
+  var dots = dotsWrap.querySelectorAll('span');
+  var current = 0;
+  setInterval(function(){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }, 4000);
+})();
+</script>
 
 <section class="posts">
   <div class="wrap">
     <h2>Latest Articles</h2>
+
+    <!--
+      Rotating "hook line" banner template — JS below clones this and inserts
+      it after every 4th article automatically, so you never have to place it
+      by hand as new articles get added.
+      Background photos: reuse the "healthy-lifestyle" batch from the image
+      prompt file (healthy-lifestyle-01.webp ... -04.webp). Swap the src/
+      fallback list in the script below if you want different images here.
+    -->
+    <template id="hookBannerTemplate">
+      <div class="hook-banner">
+        <img class="hook-bg active" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20happy%20person%20enjoying%20a%20healthy%20active%20lifestyle%20outdoors%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-01.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20family%20preparing%20a%20healthy%20meal%20together%20at%20home%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-02.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20smiling%20while%20stretching%20in%20soft%20morning%20sunlight%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-03.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <div class="hook-overlay"></div>
+        <div class="hook-content">
+          <div class="hook-line"></div>
+          <a href="index.html#categories" class="hook-cta">Explore Wellness Articles</a>
+        </div>
+      </div>
+    </template>
 
 
     <a href="Eczema and Psoriasis Whats Actually Happening in Your Skin.html" class="post-card cat-skin">
@@ -695,21 +784,116 @@
 
 </main>
 
+<section class="write-section wrap">
+  <h2>Write for Daily Vitality</h2>
+  <p>Do you have valuable wellness knowledge or practical lifestyle insights to share?</p>
+  <a href="contribute.html">✍️ Become a Contributor</a>
+</section>
+
 <section class="founder-section">
   <div class="wrap">
     <img src="founder.jpg" alt="Founder photo" onerror="this.style.display='none'">
     <div class="role">Founder</div>
     <h3>Wafadar</h3>
-    <p>Writing Daily Vitality to share simple, honest wellness habits that actually fit into everyday life.</p>
+    <p>Daily Vitality is focused on making wellness information simpler, clearer, and easier to apply in everyday life.</p>
   </div>
 </section>
 
 <footer class="site">
   <div class="wrap">
-    © 2026 Daily Vitality. Simple wellness, one habit at a time.<br>
-    <a href="contact.html">Contact</a> · <a href="feedback.html">Feedback</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Medical Disclaimer</a>
+    <div class="footer-grid">
+      <div>
+        <h4>Daily Vitality</h4>
+        <p>Practical, no-fad wellness guidance for mind, body, and sleep — simple habits for everyday life.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#categories">Nutrition</a></li>
+          <li><a href="index.html#categories">Fitness</a></li>
+          <li><a href="index.html#categories">Sleep</a></li>
+          <li><a href="index.html#categories">Mind</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Medical Disclaimer</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Daily Vitality. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var hookLines = [
+    "You were born once. How you live today is your choice.",
+    "Your health today shapes your tomorrow — start now.",
+    "One small habit today. A stronger you tomorrow.",
+    "Follow Daily Vitality — because your health deserves attention.",
+    "Don't wait for a warning sign to start caring for yourself.",
+    "Your body is the only home you'll always live in — take care of it.",
+    "Small changes today. A healthier life ahead.",
+    "Read. Learn. Apply. Your future self will thank you.",
+    "Visit Daily Vitality daily — because your health can't wait.",
+    "Every good habit you build today adds up over a lifetime."
+  ];
+
+  var template = document.getElementById('hookBannerTemplate');
+  var postsWrap = document.querySelector('.posts .wrap');
+  if (!template || !postsWrap) return;
+
+  var cards = Array.prototype.slice.call(postsWrap.querySelectorAll('.post-card'));
+  var lineIndex = 0;
+
+  cards.forEach(function(card, i){
+    if ((i + 1) % 4 === 0) {
+      var clone = template.content.cloneNode(true);
+      card.parentNode.insertBefore(clone, card.nextSibling);
+    }
+  });
+
+  // Set up each inserted banner: independent image crossfade + rotating hook line
+  document.querySelectorAll('.hook-banner').forEach(function(banner){
+    var imgs = banner.querySelectorAll('.hook-bg');
+    var lineEl = banner.querySelector('.hook-line');
+    lineEl.textContent = hookLines[lineIndex % hookLines.length];
+    lineIndex++;
+
+    var imgCurrent = 0;
+    if (imgs.length > 1) {
+      setInterval(function(){
+        imgs[imgCurrent].classList.remove('active');
+        imgCurrent = (imgCurrent + 1) % imgs.length;
+        imgs[imgCurrent].classList.add('active');
+      }, 4000);
+    }
+
+    var textPos = hookLines.indexOf(lineEl.textContent);
+    setInterval(function(){
+      lineEl.style.opacity = '0';
+      setTimeout(function(){
+        textPos = (textPos + 1) % hookLines.length;
+        lineEl.textContent = hookLines[textPos];
+        lineEl.style.opacity = '1';
+      }, 500);
+    }, 4000);
+  });
+})();
+</script>
 
 <script>
   document.querySelectorAll('.filter-btn').forEach(btn => {
