@@ -123,26 +123,36 @@
 <section class="why-section wrap">
   <h2 class="page-label">Why Daily Vitality</h2>
   <div class="why-grid">
-    <div class="why-card">
+    <a href="index.html#categories" class="why-card">
       <span class="why-icon">🌿</span>
       <h3>Simple</h3>
       <p>Easy wellness tips for everyday life.</p>
-    </div>
-    <div class="why-card">
+    </a>
+    <a href="index.html#categories" class="why-card">
       <span class="why-icon">📚</span>
       <h3>Practical</h3>
       <p>Clear information without unnecessary complexity.</p>
-    </div>
-    <div class="why-card">
+    </a>
+    <a href="index.html#categories" class="why-card">
       <span class="why-icon">⚖️</span>
       <h3>Balanced</h3>
       <p>No extreme diets or unrealistic promises.</p>
-    </div>
-    <div class="why-card">
+    </a>
+    <a href="index.html#categories" class="why-card">
       <span class="why-icon">🧠</span>
       <h3>Everyday Focus</h3>
       <p>Small habits that support a healthier lifestyle.</p>
-    </div>
+    </a>
+    <a href="about.html" class="why-card">
+      <span class="why-icon">🛡️</span>
+      <h3>Trustworthy</h3>
+      <p>Written to be checked, not just believed.</p>
+    </a>
+    <a href="products.html" class="why-card">
+      <span class="why-icon">🌱</span>
+      <h3>Built to Last</h3>
+      <p>Habits designed to stick for years, not weeks.</p>
+    </a>
   </div>
 </section>
 
@@ -150,7 +160,7 @@
 (function(){
   var HERO_IMAGES = [];
   for (var i = 1; i <= 145; i++) {
-    HERO_IMAGES.push('images/hero-carousel/hero-' + String(i).padStart(3, '0') + '.webp');
+    HERO_IMAGES.push('hero-' + String(i).padStart(3, '0') + '.webp');
   }
 
   var track = document.getElementById('heroCarouselTrack');
@@ -193,9 +203,9 @@
     -->
     <template id="hookBannerTemplate">
       <div class="hook-banner">
-        <img class="hook-bg active" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20happy%20person%20enjoying%20a%20healthy%20active%20lifestyle%20outdoors%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-01.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20family%20preparing%20a%20healthy%20meal%20together%20at%20home%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-02.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
-        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20smiling%20while%20stretching%20in%20soft%20morning%20sunlight%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="images/hero-carousel/healthy-lifestyle-03.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <img class="hook-bg active" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20happy%20person%20enjoying%20a%20healthy%20active%20lifestyle%20outdoors%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="hero-012.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20family%20preparing%20a%20healthy%20meal%20together%20at%20home%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="hero-040.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
+        <img class="hook-bg" data-fallback="https://image.pollinations.ai/prompt/ultra%20realistic%20professional%20wellness%20photography%2C%20person%20smiling%20while%20stretching%20in%20soft%20morning%20sunlight%2C%20premium%20editorial%20health%20magazine%20style%2C%20natural%20lighting%2C%20soft%20cinematic%20composition%2C%20modern%20american%20lifestyle%2C%20no%20text?width=1200&height=500&q=80&fm=webp&auto=format" src="hero-100.webp" alt="" onerror="this.onerror=null;this.src=this.dataset.fallback;">
         <div class="hook-overlay"></div>
         <div class="hook-content">
           <div class="hook-line"></div>
@@ -204,6 +214,27 @@
       </div>
     </template>
 
+    <!--
+      EXPLORE MORE ARTICLES — horizontal auto-scrolling belt
+      JS below clones every .post-card already on this page into a slow,
+      continuous left-scrolling row (thumbnail + title), so it always matches
+      whatever articles are actually published — nothing to update by hand.
+    -->
+    <h2 class="explore-belt-heading">Explore More Wellness Reads</h2>
+    <div class="explore-belt" id="exploreBelt">
+      <div class="explore-belt-track" id="exploreBeltTrack"></div>
+    </div>
+
+
+    <a href="magnesium-guide.html" class="post-card cat-nutrition">
+      <img src="https://image.pollinations.ai/prompt/magnesium%20mineral%20supplement%20wellness%20illustration%2C%20clean%20medical%20style%2C%20calming%20colors?width=1000&q=60&fm=webp&auto=format" class="post-thumb" alt="Magnesium supplement trend">
+      <div class="post-card-body">
+        <div class="date">September 1, 2026</div>
+        <span class="category-tag nutrition">Nutrition</span>
+        <h3>Magnesium: The Trending Supplement Everyone's Talking About</h3>
+        <p>What magnesium actually does, food sources, supplement forms, and who should check with a doctor first.</p>
+      </div>
+    </a>
 
     <a href="Eczema and Psoriasis Whats Actually Happening in Your Skin.html" class="post-card cat-skin">
       <img src="https://image.pollinations.ai/prompt/healthy%20skin%20cross%20section%20illustration%2C%20dermatology%20medical%20style%2C%20clean%20background?width=1000&q=60&fm=webp&auto=format" class="post-thumb" alt="Eczema and psoriasis skin conditions">
@@ -864,6 +895,34 @@
 
   var cards = Array.prototype.slice.call(postsWrap.querySelectorAll('.post-card'));
   var lineIndex = 0;
+
+  // Build the "Explore More Wellness Reads" belt from the same articles already on the page
+  var beltTrack = document.getElementById('exploreBeltTrack');
+  if (beltTrack && cards.length) {
+    function buildBeltItem(card){
+      var link = document.createElement('a');
+      link.className = 'explore-belt-item';
+      link.href = card.getAttribute('href');
+      var img = card.querySelector('img.post-thumb');
+      if (img) {
+        var beltImg = document.createElement('img');
+        beltImg.src = img.src;
+        beltImg.alt = img.alt || '';
+        beltImg.loading = 'lazy';
+        link.appendChild(beltImg);
+      }
+      var titleEl = card.querySelector('h3');
+      var label = document.createElement('span');
+      label.textContent = titleEl ? titleEl.textContent : '';
+      link.appendChild(label);
+      return link;
+    }
+    cards.concat(cards).forEach(function(card){
+      beltTrack.appendChild(buildBeltItem(card));
+    });
+    var beltDuration = Math.max(40, cards.length * 6);
+    beltTrack.style.animationDuration = beltDuration + 's';
+  }
 
   cards.forEach(function(card, i){
     if ((i + 1) % 4 === 0) {
