@@ -83,6 +83,11 @@ body.article-page .highlight-box.note { background: rgba(78,168,222,0.14); }
   padding: 0 24px;
 }
 
+/* Article pages get a wider content column so it doesn't look narrow on large screens */
+body.article-page .wrap {
+  max-width: 1100px;
+}
+
 /* Header */
 header.site {
   padding: 20px 0;
@@ -599,22 +604,62 @@ nav.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
   margin-top: 20px;
 }
 
 .why-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 22px 18px;
+  padding: 22px 16px;
   text-align: left;
+  text-decoration: none;
+  animation: whyFloat 4.5s ease-in-out infinite;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 6px 16px rgba(15,76,129,0.06);
 }
 
-.why-card .why-icon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
-.why-card h3 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 8px; color: var(--ink); }
-.why-card p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.why-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(15,76,129,0.14);
+  border-color: var(--accent);
+}
+
+.why-card:nth-child(1) { animation-delay: 0s; }
+.why-card:nth-child(2) { animation-delay: 0.4s; }
+.why-card:nth-child(3) { animation-delay: 0.8s; }
+.why-card:nth-child(4) { animation-delay: 1.2s; }
+.why-card:nth-child(5) { animation-delay: 1.6s; }
+.why-card:nth-child(6) { animation-delay: 2s; }
+
+@keyframes whyFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+.why-card:hover { animation-play-state: paused; }
+
+.why-card .why-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.why-card:nth-child(6n+1) .why-icon { background: rgba(78,168,222,0.16); }
+.why-card:nth-child(6n+2) .why-icon { background: rgba(46,204,113,0.16); }
+.why-card:nth-child(6n+3) .why-icon { background: rgba(255,183,77,0.18); }
+.why-card:nth-child(6n+4) .why-icon { background: rgba(155,109,255,0.16); }
+.why-card:nth-child(6n+5) .why-icon { background: rgba(78,168,222,0.16); }
+.why-card:nth-child(6n+6) .why-icon { background: rgba(46,204,113,0.16); }
+
+.why-card h3 { font-family: var(--display); font-size: 1.02rem; margin: 0 0 6px; color: var(--ink); }
+.why-card p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; line-height: 1.5; }
 
 @media (max-width: 900px) {
   .why-grid { grid-template-columns: 1fr 1fr; }
@@ -690,6 +735,67 @@ nav.site a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* Post list */
 .posts { padding: 30px 0 80px; }
+
+/* "Explore More Wellness Reads" auto-scrolling belt */
+.explore-belt-heading {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin: 36px 0 14px;
+}
+
+.explore-belt {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.explore-belt-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: exploreBeltScroll linear infinite;
+}
+
+.explore-belt:hover .explore-belt-track { animation-play-state: paused; }
+
+.explore-belt-item {
+  display: block;
+  width: 190px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-belt-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(15,76,129,0.14);
+}
+
+.explore-belt-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.explore-belt-item span {
+  display: block;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+@keyframes exploreBeltScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 .posts h2, .page-label {
   display: inline-block;
@@ -1286,7 +1392,9 @@ footer.site a:hover {
 .img-carousel {
   overflow: hidden;
   margin: 30px 0;
-  border-radius: 16px;
+  border-radius: 18px;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(78,168,222,0.08), rgba(46,204,113,0.06));
   mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
 }
@@ -1301,13 +1409,17 @@ footer.site a:hover {
 .img-carousel:hover .img-carousel-track { animation-play-state: paused; }
 
 .img-carousel-track img {
-  width: 280px;
-  height: 190px;
+  width: 300px;
+  height: 205px;
   object-fit: cover;
   border-radius: 14px;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(15,76,129,0.14);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 10px 24px rgba(15,76,129,0.16);
+  transition: transform 0.3s ease;
 }
+
+.img-carousel-track img:hover { transform: translateY(-3px) scale(1.015); }
 
 @keyframes carouselScroll {
   from { transform: translateX(0); }
