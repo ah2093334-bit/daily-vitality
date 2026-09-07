@@ -1,5 +1,6 @@
 const SITE_ARTICLES = [
-      { title: "Mindful Eating vs. Dieting: Why One Works Better for Long-Term Health", url: "mindful-eating-vs-dieting-why-one-works-better-for-long-term.html", category: "mind" },
+        { title: "Understanding Your Body's Hunger Cues: A Step Towards Mindful Eating", url: "understanding-your-body-s-hunger-cues-a-step-towards-mindful.html", category: "mind" },
+{ title: "Mindful Eating vs. Dieting: Why One Works Better for Long-Term Health", url: "mindful-eating-vs-dieting-why-one-works-better-for-long-term.html", category: "mind" },
 { title: "Protein + Fiber Meals: The Nutrition Combination Taking Over 2026", url: "protein-fiber-meals-the-nutrition-combination-taking-over-20.html", category: "nutrition" },
 { title: "Eczema and Psoriasis: What's Actually Happening in Your Skin", url: "Eczema and Psoriasis Whats Actually Happening in Your Skin.html", category: "skin" },
   { title: "Collagen: What It Actually Does and Do Supplements Work?", url: "Collagen What It Actually Does and Do Supplements Work.html", category: "skin" },
