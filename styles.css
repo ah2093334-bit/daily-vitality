@@ -1837,3 +1837,10 @@ footer.site a:hover {
   font-weight: 700;
   font-size: 0.88rem;
 }
+
+/* DV FINAL V2 LIBRARY */
+.dv-library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+.dv-library-grid a{display:flex;flex-direction:column;gap:7px;padding:20px;border:1px solid rgba(30,80,120,.14);border-radius:16px;background:#fff;text-decoration:none;box-shadow:0 8px 28px rgba(20,50,80,.07)}
+.dv-library-grid b{font-size:1.05rem}.dv-library-grid span{font-size:.9rem;opacity:.75}.dv-library-note{opacity:.75;margin:18px 0}
+@media(max-width:800px){.dv-library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.dv-library-grid a{padding:15px}.why-grid{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:10px}.why-card{min-width:155px;scroll-snap-align:start}}
+@media(max-width:480px){.dv-library-grid b{font-size:.92rem}.dv-library-grid span{font-size:.78rem}}
