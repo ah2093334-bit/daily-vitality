@@ -1,64 +1,174 @@
-// SINGLE SOURCE OF TRUTH for every product/asset sold on Daily Vitality.
-//
-// Each "id" is PERMANENT — generated once, never reused, never reassigned,
-// even if the product is later removed. The "slug" maps permanently to a
-// generated static page in /shop/ (see scripts/build-product-pages.py).
-//
-// NOTE: keys below are double-quoted on purpose (valid JS, and lets
-// scripts/build-product-pages.py parse this file directly as JSON without
-// fragile regex conversion). Keep new entries in this same quoted style.
-//
-// To add a new product:
-//   1. Add its files (thumbnail, preview, download) to the repo root or a
-//      dedicated folder.
-//   2. Add one entry below with the next sequential ID for its type
-//      (DV-PH-###### photos, DV-VD-###### videos, DV-EB-###### eBooks,
-//      DV-PDF-###### PDF books, DV-TMP-###### templates, DV-DOC-######
-//      documents, DV-SOC-###### social packs, DV-SCR-###### scripts,
-//      DV-BND-###### bundles, DV-SW-###### software/tools).
-//   3. Run: python3 scripts/build-product-pages.py
-//      This generates the static product detail page; the shop grid
-//      (products.html via shop.js) reads this file directly at runtime.
-//
-// status: "draft" | "pending_review" | "approved" | "published" | "unpublished"
-// Only "published" items appear in the live shop.
-
+// Daily Vitality product catalog — public published products only.
 const SITE_PRODUCTS = [
   {
-    "id": "DV-EB-000001",
-    "title": "Bone Strength Blueprint",
-    "slug": "bone-strength-blueprint",
-    "shortDescription": "A practical, science-based guide to building and protecting strong bones for life.",
-    "description": "A practical, science-based guide to building and protecting strong bones for life. Covers what actually affects bone density, everyday habits that help, and how to build a sustainable routine, written in plain language, with no unsupported medical claims.",
-    "category": "ebooks",
-    "subcategory": "health",
-    "price": 9.99,
+    "id": "DV-PDF-000001",
+    "title": "30-Day Grocery Budget Meal Plan",
+    "slug": "30-day-grocery-budget-meal-plan",
+    "shortDescription": "A practical 30-day meal-planning guide built around grocery budgeting and everyday meals.",
+    "description": "Daily Vitality digital meal-planning resource.",
+    "category": "pdf-books",
+    "subcategory": "nutrition",
+    "price": 19.9,
     "currency": "USD",
-    "thumbnail": "ebook-cover.jpg",
-    "previewFile": "Bone_Strength_Blueprint_Chapter1_Dark-1.pdf",
+    "thumbnail": "",
+    "previewFile": "",
     "downloadFile": "",
-    "buyUrl": "",
-    "keywords": ["bone health", "bone density", "calcium", "osteoporosis prevention", "healthy aging"],
-    "tags": ["ebook", "bone health", "wellness guide"],
-    "seoTitle": "Bone Strength Blueprint — Premium eBook | Daily Vitality",
-    "metaDescription": "A practical, science-based eBook on building and protecting strong bones for life. Read the free sample chapter.",
-    "altText": "Bone Strength Blueprint eBook cover",
+    "buyUrl": "https://6517409126048.gumroad.com/l/30-day-grocery-budget-meal-plan",
+    "keywords": [
+      "grocery budget",
+      "meal plan",
+      "healthy meals"
+    ],
+    "tags": [
+      "meal plan",
+      "budget",
+      "PDF"
+    ],
+    "seoTitle": "30-Day Grocery Budget Meal Plan | Daily Vitality",
+    "metaDescription": "A practical 30-day grocery budget meal plan from Daily Vitality.",
+    "altText": "30-Day Grocery Budget Meal Plan",
     "aiGenerated": false,
-    "license": "Personal Use — Single Reader",
+    "license": "Personal Use",
     "quality": "Premium",
     "format": "PDF",
-    "width": 1024,
-    "height": 1536,
-    "resolution": "",
-    "orientation": "portrait",
-    "duration": "",
-    "fps": "",
-    "pageCount": "",
     "featured": true,
     "status": "published",
-    "whatsIncluded": [
-      "Full eBook (PDF, optimized for phone, tablet and desktop reading)",
-      "Free sample — Chapter 1 preview"
-    ]
+    "detailPage": false
+  },
+  {
+    "id": "DV-PDF-000002",
+    "title": "The Complete Gut Health Blueprint",
+    "slug": "gut-health-blueprint",
+    "shortDescription": "A practical digestion and gut-health guide for everyday wellness.",
+    "description": "Daily Vitality digital gut-health guide.",
+    "category": "pdf-books",
+    "subcategory": "health",
+    "price": 7.99,
+    "currency": "USD",
+    "thumbnail": "",
+    "previewFile": "",
+    "downloadFile": "",
+    "buyUrl": "https://6517409126048.gumroad.com/l/gut-health-blueprint",
+    "keywords": [
+      "gut health",
+      "digestion",
+      "wellness"
+    ],
+    "tags": [
+      "gut health",
+      "PDF"
+    ],
+    "seoTitle": "The Complete Gut Health Blueprint | Daily Vitality",
+    "metaDescription": "A practical digestion and gut-health guide from Daily Vitality.",
+    "altText": "The Complete Gut Health Blueprint",
+    "aiGenerated": false,
+    "license": "Personal Use",
+    "quality": "Premium",
+    "format": "PDF",
+    "featured": true,
+    "status": "published",
+    "detailPage": false
+  },
+  {
+    "id": "DV-EB-000001",
+    "title": "Understanding Your Body: 10 Common Health Conditions Explained",
+    "slug": "10-health-conditions-explained",
+    "shortDescription": "A premium plain-language guide to understanding ten common health conditions.",
+    "description": "Daily Vitality premium health education guide.",
+    "category": "ebooks",
+    "subcategory": "health",
+    "price": 14.99,
+    "currency": "USD",
+    "thumbnail": "",
+    "previewFile": "",
+    "downloadFile": "",
+    "buyUrl": "https://6517409126048.gumroad.com/l/10-health-conditions-explained",
+    "keywords": [
+      "health conditions",
+      "body",
+      "wellness education"
+    ],
+    "tags": [
+      "ebook",
+      "health"
+    ],
+    "seoTitle": "Understanding Your Body | Daily Vitality",
+    "metaDescription": "A premium guide explaining ten common health conditions in plain language.",
+    "altText": "Understanding Your Body eBook",
+    "aiGenerated": false,
+    "license": "Personal Use",
+    "quality": "Premium",
+    "format": "PDF",
+    "featured": true,
+    "status": "published",
+    "detailPage": false
+  },
+  {
+    "id": "DV-EB-000002",
+    "title": "The Complete Sleep Reset: 30-Day Guide to Better Sleep, More Energy & Healthier Habits",
+    "slug": "simple-sleep-reset-guide",
+    "shortDescription": "A structured 30-day guide for building healthier sleep habits and routines.",
+    "description": "Daily Vitality sleep-reset digital guide.",
+    "category": "ebooks",
+    "subcategory": "sleep",
+    "price": 12.99,
+    "currency": "USD",
+    "thumbnail": "",
+    "previewFile": "",
+    "downloadFile": "",
+    "buyUrl": "https://6517409126048.gumroad.com/l/simple-sleep-reset-guide",
+    "keywords": [
+      "sleep",
+      "sleep habits",
+      "30 day guide"
+    ],
+    "tags": [
+      "ebook",
+      "sleep"
+    ],
+    "seoTitle": "The Complete Sleep Reset | Daily Vitality",
+    "metaDescription": "A 30-day Daily Vitality guide to healthier sleep habits and routines.",
+    "altText": "The Complete Sleep Reset eBook",
+    "aiGenerated": false,
+    "license": "Personal Use",
+    "quality": "Premium",
+    "format": "PDF",
+    "featured": true,
+    "status": "published",
+    "detailPage": false
+  },
+  {
+    "id": "DV-EB-000003",
+    "title": "Simple Habits for a Healthier Life",
+    "slug": "simple-habits-healthier-life",
+    "shortDescription": "Simple, practical habits designed to support a healthier everyday lifestyle.",
+    "description": "Daily Vitality practical wellness habits guide.",
+    "category": "ebooks",
+    "subcategory": "wellness",
+    "price": 9.99,
+    "currency": "USD",
+    "thumbnail": "",
+    "previewFile": "",
+    "downloadFile": "",
+    "buyUrl": "https://6517409126048.gumroad.com/l/simple-habits-healthier-life",
+    "keywords": [
+      "healthy habits",
+      "wellness",
+      "lifestyle"
+    ],
+    "tags": [
+      "ebook",
+      "habits"
+    ],
+    "seoTitle": "Simple Habits for a Healthier Life | Daily Vitality",
+    "metaDescription": "A practical Daily Vitality guide to simple habits for a healthier life.",
+    "altText": "Simple Habits for a Healthier Life eBook",
+    "aiGenerated": false,
+    "license": "Personal Use",
+    "quality": "Premium",
+    "format": "PDF",
+    "featured": true,
+    "status": "published",
+    "detailPage": false
   }
 ];
