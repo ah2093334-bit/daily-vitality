@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ah2093334-bit.github.io/daily-vitality/sitemap.xml
+Sitemap: https://dailyvitality.xyz/sitemap.xml

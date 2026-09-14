@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{META_DESCRIPTION}}">
+<title>{{SEO_TITLE}}</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<meta property="og:title" content="{{SEO_TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:type" content="product">
+<script type="application/ld+json">
+{{STRUCTURED_DATA}}
+</script>
+</head>
+<body>
+<div class="falling-particles" id="fallingParticles"></div>
+
+<header class="site">
+  <div class="wrap brand-row">
+    <a href="../index.html" class="brand"><img src="../logo.png" alt="Daily Vitality logo" class="logo" onerror="this.style.display='none'">Daily Vitality</a>
+    <div class="dots-menu">
+      <button class="dots-btn" onclick="document.getElementById('dotsDropdown').classList.toggle('open')">&#9776;</button>
+      <div class="dots-dropdown" id="dotsDropdown">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../products.html">Products</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../feedback.html">Feedback</a>
+        <a href="../support.html">Support</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Use</a>
+        <a href="../disclaimer.html">Medical Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="sub-nav">
+  <div class="wrap">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#categories">Categories</a>
+    <a href="../products.html">Products / Shop</a>
+    <a href="../about.html">About</a>
+    <a href="../faq.html">FAQ</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../support.html">Tools &amp; Support</a>
+    <a href="../privacy.html">Privacy Policy</a>
+  </div>
+</nav>
+
+<main>
+<div class="article-body">
+  <div class="wrap">
+
+    <a href="../products.html" class="back-link">&larr; Back to shop</a>
+
+    <div class="product-detail" data-field="product-detail" data-asset-id="{{ASSET_ID}}">
+      <div class="product-detail-media">
+        <img src="{{THUMBNAIL}}" alt="{{ALT_TEXT}}" data-field="thumbnail">
+      </div>
+      <div class="product-detail-info">
+        <div class="asset-id" data-field="asset-id">{{ASSET_ID}}</div>
+        <h1 data-field="title">{{TITLE}}</h1>
+        <div class="product-badges" style="position:static;margin-bottom:10px;">
+          <span class="badge type">{{CATEGORY_LABEL}}</span>
+          <span class="badge quality">{{QUALITY}}</span>
+          {{AI_BADGE}}
+        </div>
+        <div class="product-detail-price" data-field="price">{{PRICE}}</div>
+
+        <a href="{{BUY_URL}}" class="buy-now-btn {{BUY_STATE_CLASS}}" data-field="buy-url" data-action="buy" {{BUY_DISABLED_ATTR}}>{{BUY_LABEL}}</a>
+        {{PREVIEW_LINK}}
+
+        <div class="product-detail-section">
+          <h2>Description</h2>
+          <p data-field="description">{{DESCRIPTION}}</p>
+        </div>
+
+        <div class="product-detail-section">
+          <h2>What's Included</h2>
+          <ul data-field="whats-included">
+{{WHATS_INCLUDED}}
+          </ul>
+        </div>
+
+        <div class="product-detail-section">
+          <h2>Technical Information</h2>
+          <table class="product-tech-table">
+{{TECH_ROWS}}
+          </table>
+        </div>
+
+        <div class="product-detail-section">
+          <h2>License</h2>
+          <p data-field="license">{{LICENSE}}</p>
+        </div>
+
+        <div class="product-detail-section">
+          <h2>Keywords &amp; Tags</h2>
+          <div class="product-tags" data-field="tags">
+{{TAGS}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="../products.html" class="back-link">&larr; Back to shop</a>
+  </div>
+</div>
+</main>
+
+<section class="founder-section">
+  <div class="wrap">
+    <img src="../founder.jpg" alt="Founder photo" onerror="this.style.display='none'">
+    <div class="role">Founder</div>
+    <h3>Wafadar</h3>
+    <p>Writing Daily Vitality to share simple, honest wellness habits that actually fit into everyday life.</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    © 2026 Daily Vitality. Simple wellness, one habit at a time.<br>
+    <a href="../contact.html">Contact</a> · <a href="../feedback.html">Feedback</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Use</a> · <a href="../disclaimer.html">Medical Disclaimer</a>
+  </div>
+</footer>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8L1LKGGNXW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8L1LKGGNXW');
+</script>
+<script>
+  (function() {
+    const container = document.getElementById('fallingParticles');
+    const colors = ['#FFFFFF'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 5 + 3;
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.left = Math.random() * 100 + 'vw';
+      const c = colors[Math.floor(Math.random() * colors.length)];
+      p.style.background = c;
+      p.style.color = c;
+      p.style.animationDuration = (Math.random() * 6 + 6) + 's, ' + (Math.random() * 2 + 2) + 's';
+      p.style.animationDelay = (Math.random() * 8) + 's';
+      container.appendChild(p);
+    }
+  })();
+</script>
+</body>
+</html>
