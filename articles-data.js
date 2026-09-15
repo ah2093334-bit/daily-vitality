@@ -6,7 +6,8 @@
 // scripts/build-homepage-cards.py — run that script after adding/editing
 // entries here instead of hand-editing index.html's card markup.
 const SITE_ARTICLES = [
-                                              { title: "Why Height Differs: Growth Plates, Genetics, and What Determines It", url: "why-height-differs.html", category: "chronic" },
+                                                { title: "Simple Desk Stretches to Improve Posture and Reduce Pain", url: "simple-desk-stretches-to-improve-posture-and-reduce-pain.html", category: "fitness" },
+{ title: "Why Height Differs: Growth Plates, Genetics, and What Determines It", url: "why-height-differs.html", category: "chronic" },
 { title: "Why Hair Turns Gray: The Science of Melanin and Aging", url: "why-hair-turns-gray.html", category: "skin" },
 { title: "voice_welcome_widget", url: "voice_welcome_widget.html", category: "chronic" },
 { title: "Stomach Warning Signs: When Indigestion Is Something More", url: "stomach-warning-signs.html", category: "chronic" },
