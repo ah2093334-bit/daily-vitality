@@ -1,0 +1,16 @@
+const hooks=["Stronger days.","Calmer nights.","Smarter habits.","Better energy.","Wellness that fits real life."];
+let hi=0,ci=0,deleting=false;const typed=document.getElementById("typedHook");
+function typeLoop(){if(!typed)return;const t=hooks[hi];typed.textContent=t.slice(0,ci);if(!deleting&&ci<t.length){ci++;setTimeout(typeLoop,55)}else if(!deleting){deleting=true;setTimeout(typeLoop,1300)}else if(ci>0){ci--;setTimeout(typeLoop,28)}else{deleting=false;hi=(hi+1)%hooks.length;setTimeout(typeLoop,250)}} typeLoop();
+const drawer=document.getElementById("drawer");document.getElementById("menuBtn")?.addEventListener("click",()=>drawer.classList.toggle("open"));
+document.addEventListener("click",e=>{if(drawer&&!e.target.closest(".v4-header"))drawer.classList.remove("open")});
+const hero=document.getElementById("heroRail");if(hero){let imgs=[];for(let i=1;i<=145;i++)imgs.push(`hero-${String(i).padStart(3,"0")}.webp`);[...imgs,...imgs].forEach((s,i)=>{const im=new Image();im.src=s;im.alt="Daily Vitality wellness visual";im.loading=i<8?"eager":"lazy";im.onerror=()=>im.remove();hero.appendChild(im)})}
+const bad=/voice_welcome|template|homepage|library|contribut|calculator|new-article/i;
+const all=(window.SITE_ARTICLES||[]).filter(a=>a&&a.url&&a.title&&!bad.test(a.title+" "+a.url)&&!a.title.includes("{{"));
+const cats=[...new Set(all.map(a=>a.category).filter(Boolean))];
+const chips=document.getElementById("topicChips"),rail=document.getElementById("articleRail");
+function titleCase(s){return String(s||"Wellness").replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase())}
+function render(filter="all"){if(!rail)return;const arr=filter==="all"?all:all.filter(a=>a.category===filter);rail.innerHTML="";arr.slice(0,48).forEach((a,i)=>{const card=document.createElement("a");card.className="article-card";card.href=a.url;const thumb=a.thumbnail||`hero-${String((i%145)+1).padStart(3,"0")}.webp`;card.innerHTML=`<div class="visual"><img src="${thumb}" alt="${a.title}" loading="lazy" onerror="this.src='hero-${String((i%37)+1).padStart(3,"0")}.webp'"></div><div class="body"><small>${titleCase(a.category)}</small><h3>${a.title}</h3><p>${a.description||"Practical, evidence-aware wellness guidance from Daily Vitality."}</p></div>`;rail.appendChild(card)})}
+if(chips){["all",...cats].forEach((c,i)=>{const b=document.createElement("button");b.textContent=c==="all"?"All Topics":titleCase(c);b.className=i===0?"active":"";b.onclick=()=>{[...chips.children].forEach(x=>x.classList.remove("active"));b.classList.add("active");render(c)};chips.appendChild(b)})}render();
+document.querySelectorAll(".rail-arrow").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.target)?.scrollBy({left:(b.classList.contains("right")?1:-1)*620,behavior:"smooth"}));
+window.openJoin=()=>{document.getElementById("joinModal").classList.add("show");document.getElementById("joinModal").setAttribute("aria-hidden","false")};window.closeJoin=()=>{document.getElementById("joinModal").classList.remove("show");localStorage.setItem("dv_join_dismissed",Date.now())};
+setTimeout(()=>{const d=Number(localStorage.getItem("dv_join_dismissed")||0);if(Date.now()-d>1000*60*60*24*7)openJoin()},9000);
