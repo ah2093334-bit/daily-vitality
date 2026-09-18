@@ -2,7 +2,7 @@
 <title>Daily Vitality — Practical Wellness for Everyday Life</title>
 <meta name="description" content="Practical health and wellness articles, premium blogs, free wellness tools, and downloadable Daily Vitality resources.">
 <meta name="google-site-verification" content="mEezSv5oefnisWMchZvFSkKp8ahn7cLnGKrXEfe7Ukk"><link rel="canonical" href="https://dailyvitality.xyz/">
-<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="dv-premium-v5.css"></head><body>
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="dv-premium-v5.css"><meta name="theme-color" content="#19b7ad"><link rel="manifest" href="site.webmanifest"></head><body>
 
 <header class="top"><div class="wrap brandrow"><a class="brand" href="index.html"><img class="dv-logo" src="assets/brand/daily-vitality-logo.svg" alt="Daily Vitality logo">Daily Vitality</a>
 <nav class="desktop-nav"><a href="index.html">Home</a><a href="#articles">Articles</a><a href="blogs.html">Blogs</a><a href="products.html">Products</a>
@@ -50,9 +50,10 @@
 <footer class="footer"><div class="wrap footer-grid"><div><h3>Daily Vitality</h3><p>Practical wellness for everyday life — articles, blogs, tools and premium digital resources.</p><small>Educational information only. Not medical advice.</small></div><div><b>Explore</b><p><a href="#articles">Articles</a><br><a href="blogs.html">Blogs</a><br><a href="tools.html">Tools</a><br><a href="products.html">Shop</a></p></div><div><b>Company</b><p><a href="about.html">About</a><br><a href="contact.html">Contact</a><br><a href="contribute.html">Contribute</a><br><a href="privacy.html">Privacy</a><br><a href="terms.html">Terms</a></p></div></div></footer>
 
 <div id="joinModal" class="modal"><div class="modal-card"><button id="closeJoin" class="closex">×</button>
-<span class="eyebrow">DAILY VITALITY ACCOUNT</span><h2>Save your place in wellness.</h2>
-<p>Create an account to save tools, follow new resources, and prepare for contributor features. Secure Google/email sign-in is Firebase-ready; it activates after the site owner adds the public Firebase web configuration.</p>
-<button class="auth-btn" data-auth-not-ready>Continue with Google</button><button class="auth-btn primary-auth" data-auth-not-ready>Create Account with Email</button>
-<div id="authToast" class="toast"></div><div class="auth-note">Daily Vitality should never collect account passwords directly in static HTML.</div></div></div>
+<span class="eyebrow">DAILY VITALITY ACCOUNT</span><h2>Create your wellness account</h2>
+<p>Create an account to save tools, follow new resources, and grow the Daily Vitality email list. Firebase login activates after you paste your public web config into <b>firebase-config.js</b>.</p>
+<div class="auth-fields"><input id="authEmail" type="email" placeholder="Enter your email"><input id="authPassword" type="password" placeholder="Create a password"></div>
+<button class="auth-btn" id="googleAuthBtn">Continue with Google</button><button class="auth-btn primary-auth" id="emailSignupBtn">Create Account with Email</button><button class="auth-btn" id="emailSigninBtn">Sign In with Email</button><button class="auth-btn" id="signOutBtn">Sign Out</button>
+<div id="authUserBadge" class="auth-note">Not signed in yet</div><div id="authToast" class="toast"></div><div class="auth-note">If you do not want Firebase yet, leave it unconfigured and use the newsletter box for email capture.</div></div></div>
 
-<script src="dv-content-v5.js"></script><script src="auto-articles.js"></script><script src="dv-home-v5.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script></body></html>
+<script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-content-v5.js"></script><script src="auto-articles.js"></script><script src="dv-home-v5.js"></script><script src="dv-v9-extras.js"></script></body></html>
