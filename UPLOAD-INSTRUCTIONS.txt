@@ -1,0 +1,28 @@
+DAILY VITALITY — CORRECTED RESTORE + PREMIUM HOMEPAGE
+
+IMPORTANT:
+This package is designed to RESTORE article visibility without deleting your existing article files.
+It contains only 4 files. Upload/replace these in the ROOT of your Daily Vitality repository:
+
+1. index.html
+2. dv-corrected.css
+3. dv-corrected.js
+4. dv-articles-restored.js
+
+DO NOT DELETE your existing HTML articles, hero images, styles.css, shop files, products, or library.
+
+WHAT WAS FIXED:
+- Restored 83 real article links recovered from the pre-V4 repository snapshot.
+- Removed utility/template pages from the homepage article list.
+- Article cards no longer depend on the broken SITE_ARTICLES variable.
+- Every restored article gets a visible cover using existing hero images already in your repository.
+- Categories return as working filters.
+- Original-style top navigation and marketplace navigation return.
+- Hero no longer fast-scrolls through 145 images; it uses three premium static editorial panels.
+- Existing Shop, Products, Library, BMI, Contributor, About and Contact pages remain linked.
+- Mobile layout is responsive.
+- Google verification meta tag already remains in the homepage.
+
+NOTE:
+The cover assignments in this repair build use your existing hero image library so nothing breaks.
+A later cover-production pass can replace each with unique topic-specific custom cover artwork.

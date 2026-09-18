@@ -1,58 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Vitality | Practical Wellness, Free Health Tools & Guides</title>
-<meta name="description" content="Practical, evidence-aware wellness guides, free health tools, digital resources and everyday habits for sleep, nutrition, movement, stress and healthy living.">
-<link rel="canonical" href="https://dailyvitality.xyz/">
-<meta property="og:title" content="Daily Vitality | Practical Wellness for Everyday Life">
-<meta property="og:description" content="Explore evidence-aware wellness articles, free calculators and practical health resources.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://dailyvitality.xyz/">
-<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="premium-v4.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Daily Vitality","url":"https://dailyvitality.xyz/","description":"Evidence-aware wellness guides and free health tools.","publisher":{"@type":"Organization","name":"Daily Vitality","url":"https://dailyvitality.xyz/"}}</script>
-</head>
-<body>
-<header class="v4-header"><a class="v4-brand" href="index.html"><img src="logo.png" alt="Daily Vitality">Daily Vitality</a>
-<button id="menuBtn" class="v4-menu" aria-label="Open menu">☰</button>
-<nav id="drawer" class="v4-drawer"><a href="index.html">Home</a><a href="#topics">Topics</a><a href="#articles">Articles</a><a href="#tools">Free Tools</a><a href="products.html">Products</a><a href="library.html">Library</a><a href="contribute.html">Contributors</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav></header>
+<title>Daily Vitality — Practical Wellness for Everyday Life</title>
+<meta name="description" content="Explore practical wellness articles on heart health, nutrition, sleep, movement, gut health, healthy aging and everyday wellbeing.">
+<meta name="google-site-verification" content="mEezSv5oefnisWMchZvFSkKp8ahn7cLnGKrXEfe7Ukk">
+<link rel="canonical" href="https://dailyvitality.xyz/"><link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="dv-corrected.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Daily Vitality","url":"https://dailyvitality.xyz/","publisher":{"@type":"Organization","name":"Daily Vitality","logo":{"@type":"ImageObject","url":"https://dailyvitality.xyz/logo.png"}}}</script>
+</head><body>
+<header class="dv-top"><div class="dv-wrap dv-brandrow"><a class="dv-brand" href="index.html"><img src="logo.png" alt="Daily Vitality logo">Daily Vitality</a><button id="menuBtn" class="dv-menu">☰</button><nav id="menu" class="dv-menu-panel"><a href="index.html">Home</a><a href="#articles">Articles / Blogs</a><a href="products.html">Products / Shop</a><a href="library.html">Library</a><a href="bmi-calculator.html">BMI Calculator</a><a href="contribute.html">Contribute</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header>
+<nav class="dv-mainnav"><div class="dv-wrap"><a href="index.html">Home</a><a href="#articles">Articles / Blogs</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="bmi-calculator.html">BMI Calculator</a></div></nav>
+<nav class="dv-market"><div class="dv-wrap dv-scroll"><a href="#articles">Health Articles</a><a href="products.html?category=photos">Photos</a><a href="products.html?category=premium-photos">Premium Photos</a><a href="products.html?category=videos">Videos</a><a href="products.html?category=4k-videos">4K Videos</a><a href="products.html?category=ebooks">eBooks / PDF Books</a><a href="products.html?category=templates">Templates / Workbooks</a><a href="products.html?category=social-media-packs">Covers / Thumbnails</a><a href="library.html">Free Resources</a></div></nav>
 
 <main>
-<section class="v4-hero">
-<div class="v4-hero-copy"><span class="v4-kicker">WELLNESS, MADE USEFUL</span>
-<h1>Small choices. <span id="typedHook">Stronger days.</span></h1>
-<p>Clear, practical wellness guidance for real life — plus free tools you can return to every day.</p>
-<div class="v4-actions"><a href="#articles">Explore Articles</a><a class="ghost" href="#tools">Try Free Tools</a></div>
-<div class="v4-trust"><span>Evidence-aware</span><span>Easy to understand</span><span>Built for everyday life</span></div></div>
-<div class="v4-hero-rail" aria-label="Daily Vitality visual gallery"><div id="heroRail" class="v4-rail"></div></div>
-</section>
+<section class="dv-hero"><div class="dv-wrap dv-hero-grid"><div><span class="eyebrow">WELCOME TO DAILY VITALITY</span><h1>Feel better through <em id="hook">smarter everyday habits.</em></h1><p>Clear, practical wellness guides built for real life — from heart and gut health to sleep, nutrition, movement and healthy aging.</p><div class="dv-actions"><a href="#articles">Explore Articles</a><a class="ghost" href="products.html">Browse Resources</a></div><div class="dv-trust"><span>Practical</span><span>Evidence-aware</span><span>Easy to understand</span></div></div><div class="dv-hero-gallery" id="heroGallery"></div></div></section>
 
-<section id="topics" class="v4-section"><div class="v4-head"><div><span>EXPLORE</span><h2>Wellness Topics</h2></div></div>
-<div class="v4-chips" id="topicChips"></div></section>
+<section class="dv-wrap dv-section"><div class="dv-section-head"><div><span class="eyebrow">EXPLORE BY TOPIC</span><h2>Wellness Topics</h2></div><p>Choose a topic or browse everything.</p></div><div id="filters" class="dv-filters"></div></section>
 
-<section id="articles" class="v4-section"><div class="v4-head"><div><span>EDITOR'S DESK</span><h2>Latest Wellness Reads</h2></div><p>Swipe, drag or use the arrows.</p></div>
-<div class="v4-carousel-wrap"><button class="rail-arrow left" data-target="articleRail">‹</button><div id="articleRail" class="v4-card-rail"></div><button class="rail-arrow right" data-target="articleRail">›</button></div></section>
+<section id="articles" class="dv-wrap dv-section"><div class="dv-section-head"><div><span class="eyebrow">DAILY VITALITY LIBRARY</span><h2>Wellness Articles</h2></div><p id="articleCount"></p></div><div id="articleGrid" class="dv-grid"></div></section>
 
-<section id="tools" class="v4-section tools-bg"><div class="v4-head"><div><span>FREE • PRIVATE • USEFUL</span><h2>Daily Vitality Tools</h2></div><p>Simple planning tools — not medical diagnosis.</p></div>
-<div class="v4-tools">
-<a href="bmi-calculator.html"><b>⚖️ BMI & Weight Range</b><small>Understand BMI with context.</small></a>
-<a href="water-intake-planner.html"><b>💧 Hydration Planner</b><small>Build a practical daily hydration plan.</small></a>
-<a href="sleep-schedule-calculator.html"><b>🌙 Sleep Schedule</b><small>Plan bedtime around your wake time.</small></a>
-<a href="protein-intake-planner.html"><b>🥗 Protein Planner</b><small>Estimate an educational daily range.</small></a>
-<a href="steps-walking-planner.html"><b>🚶 Walking Planner</b><small>Create a gradual weekly step goal.</small></a>
-<a href="wellness-habit-tracker.html"><b>✓ Habit Tracker</b><small>Track sleep, water, movement and breaks.</small></a>
-</div></section>
+<section class="dv-shop"><div class="dv-wrap dv-shop-inner"><div><span class="eyebrow">DIGITAL WELLNESS LIBRARY</span><h2>Guides, eBooks & Practical Resources</h2><p>Go deeper with downloadable guides, workbooks and wellness resources.</p></div><a href="products.html">Browse the Shop →</a></div></section>
 
-<section class="v4-section"><div class="v4-head"><div><span>GO DEEPER</span><h2>Guides, eBooks & Digital Resources</h2></div></div>
-<div class="v4-promo"><div><h3>Build a wellness library that works for you.</h3><p>Explore practical guides, workbooks, templates and premium resources.</p></div><a href="products.html">Browse Resources →</a></div></section>
-
-<section class="v4-join"><span>JOIN DAILY VITALITY</span><h2>One useful idea can change a day.</h2><p>Save your place and get new wellness resources as they arrive.</p><button onclick="openJoin()">Join Free</button></section>
+<section class="dv-wrap dv-section"><div class="dv-section-head"><div><span class="eyebrow">FREE TOOLS</span><h2>Useful Wellness Tools</h2></div></div><div class="dv-tools"><a href="bmi-calculator.html"><b>BMI Calculator</b><span>Understand BMI with context.</span></a><a href="bmi-calculator.html"><b>Healthy Weight Range</b><span>A simple educational reference.</span></a><a href="#articles" data-filter-link="Nutrition"><b>Nutrition Guides</b><span>Protein, hydration, fiber and more.</span></a><a href="#articles" data-filter-link="Brain & Mind"><b>Stress & Mind Guides</b><span>Practical mental wellness reading.</span></a></div></section>
 </main>
-
-<div id="joinModal" class="join-modal" aria-hidden="true"><div class="join-card"><button class="join-x" onclick="closeJoin()">×</button><img src="logo.png" alt=""><span>DAILY VITALITY</span><h2>Your wellness library, in one place.</h2><p>Create a free account to save tools, follow new guides and join the contributor community.</p>
-<button class="join-google" disabled>Continue with Google <em>Connect authentication to enable</em></button>
-<form onsubmit="event.preventDefault(); alert('Email authentication backend must be connected before collecting accounts.');"><input type="email" required placeholder="Email address"><button type="submit">Continue with Email</button></form>
-<button class="later" onclick="closeJoin()">Maybe later</button></div></div>
-
-<footer class="v4-footer"><div><b>Daily Vitality</b><p>Practical wellness for everyday life.</p></div><div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="contribute.html">Contribute</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Medical Disclaimer</a></div><small>Educational information only. Not medical advice.</small></footer>
-<script src="articles-data.js"></script><script src="premium-v4.js"></script>
-</body></html>
+<footer class="dv-footer"><div class="dv-wrap"><b>Daily Vitality</b><p>Practical wellness for everyday life.</p><div><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="contribute.html">Contribute</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Medical Disclaimer</a></div><small>Educational information only. Not medical advice.</small></div></footer>
+<script src="dv-articles-restored.js"></script><script src="dv-corrected.js"></script></body></html>
