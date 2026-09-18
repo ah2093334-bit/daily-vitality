@@ -1,0 +1,48 @@
+DAILY VITALITY PREMIUM V5 — UPLOAD INSTRUCTIONS
+
+WHAT THIS FIXES
+- Slow TYPE → PAUSE → ERASE hero hook animation. "WELCOME TO DAILY VITALITY" stays fixed.
+- Hero images now scroll left/right smoothly, include arrow buttons, auto-reverse, hover pause and mobile swipe.
+- Free Tools moved into a TOP "Tools" dropdown and a dedicated premium tools page.
+- Six wellness tools are linked: BMI, Hydration, Sleep, Protein, Walking/Steps, Habit Tracker.
+- Articles and Blogs are separated. Blogs have a different premium magazine/editorial style.
+- Restores 83 article links.
+- Homepage article covers are NO LONGER the old hero-image assignments. Each article cover now requests an AI image prompt based on that exact article title/topic.
+- Health vertical filters are color-coded.
+- White areas were replaced with a soft premium background and stronger contrast.
+- Product covers no longer appear empty: the shop builds designed book/eBook cover mockups with controlled titles and themes.
+- Mobile navigation was rebuilt around a hamburger + Tools group.
+- Join / Sign In box is present.
+
+IMPORTANT ABOUT ACCOUNT SIGN-UP
+The UI is included, but REAL Google/email accounts require Firebase Authentication (or another backend).
+This package DOES NOT fake login or store passwords in static HTML.
+When Firebase is configured, the public web config can be placed in firebase-config.js and secure auth can be connected.
+
+IMPORTANT ABOUT ARTICLE IMAGES
+Homepage covers are now title-specific generated-image requests, with lazy loading.
+Many existing article pages already contain topic-specific cover/carousel prompts (heart pages use heart prompts, kidney pages use kidney prompts, etc.).
+This ZIP does NOT overwrite all 83 existing article HTML files; doing that without a full article-by-article QA pass would be risky.
+A later article-image pass can convert every remaining internal image to permanent local topic-specific assets.
+
+UPLOAD
+Upload the files in this ZIP to the ROOT of your GitHub Pages repository.
+Replace same-name files when GitHub asks.
+DO NOT delete your existing article HTML files, hero images, logo, legal pages or library.
+
+MAIN FILES
+index.html
+blogs.html
+tools.html
+products.html
+dv-premium-v5.css
+dv-premium-v5.js
+dv-home-v5.js
+dv-content-v5.js
+dv-products-v5.js
+water-intake-planner.html
+protein-intake-planner.html
+sleep-schedule-calculator.html
+steps-walking-planner.html
+wellness-habit-tracker.html
+firebase-config.js

@@ -1,189 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stomach Warning Signs: When Indigestion Is Something More | Daily Vitality</title>
-<meta name="description" content="Learn the stomach and digestive warning signs worth paying attention to, what causes them, and daily habits that support better digestion.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0B1120; --panel:#111a2e; --coral:#FF4D6D; --amber:#FFB347;
-    --mint:#4ADE80; --off:#F1F5F9; --muted:#93a0b8;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{ background:var(--ink); color:var(--off); font-family:'Inter', sans-serif; line-height:1.7; overflow-x:hidden; }
-  h1,h2,h3,.display{ font-family:'Fraunces', serif; }
-  .wrap{ max-width:920px; margin:0 auto; padding:0 24px; }
-  nav{ display:flex; align-items:center; justify-content:space-between; padding:20px 24px; max-width:920px; margin:0 auto; }
-  .brand{ font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem; }
-  .brand span{ color:var(--coral); }
-  nav .tag{ font-size:.75rem; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); border:1px solid #24304a; padding:6px 14px; border-radius:999px; }
-
-  .hero{ position:relative; padding:50px 24px 30px; text-align:center; }
-  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-size:.78rem; text-transform:uppercase; letter-spacing:.16em; color:var(--coral); margin-bottom:20px; }
-  .eyebrow::before{ content:''; width:8px; height:8px; border-radius:50%; background:var(--coral); box-shadow:0 0 12px 3px var(--coral); animation:pulse 1.6s ease-in-out infinite; }
-  @keyframes pulse{ 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:.4; transform:scale(1.4);} }
-  h1.display{ font-size:clamp(2.1rem, 5.5vw, 3.6rem); font-weight:700; line-height:1.08; letter-spacing:-.01em; max-width:760px; margin:0 auto 18px; }
-  h1.display em{ font-style:normal; color:var(--coral); text-shadow:0 0 28px rgba(255,77,109,.55); }
-  .hero p.sub{ color:var(--muted); font-size:1.08rem; max-width:560px; margin:0 auto; }
-
-  .ecg-wrap{ margin:30px auto 0; max-width:700px; }
-  .ecg-wrap svg{ width:100%; height:60px; display:block; }
-  .ecg-path{ fill:none; stroke:var(--coral); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 8px rgba(255,77,109,.7)); stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 3.2s ease-in-out infinite; }
-  @keyframes draw{ 0%{stroke-dashoffset:1000;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:-1000;} }
-
-  .carousel{ width:100%; overflow:hidden; margin:36px 0; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
-  .carousel-track{ display:flex; gap:14px; width:max-content; animation:scrollTrack 30s linear infinite; }
-  .carousel:hover .carousel-track{ animation-play-state:paused; }
-  .carousel.reverse .carousel-track{ animation-direction:reverse; }
-  @keyframes scrollTrack{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
-  .carousel-track figure{ margin:0; flex:none; }
-  .carousel-track img{
-    height:200px; width:280px; object-fit:cover; border-radius:14px;
-    box-shadow:0 8px 26px rgba(0,0,0,.45); border:1px solid #24304a;
-    background:#1a2440; display:block;
-  }
-
-  section.block{ padding:44px 0 8px; border-top:1px solid #1b263f; }
-  section.block:first-of-type{ border-top:none; }
-  .kicker{ display:inline-block; font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; padding:5px 12px; border-radius:999px; margin-bottom:16px; font-weight:600; }
-  .kicker.coral{ background:rgba(255,77,109,.12); color:var(--coral); }
-  .kicker.amber{ background:rgba(255,179,71,.12); color:var(--amber); }
-  .kicker.mint{ background:rgba(74,222,128,.12); color:var(--mint); }
-  h2.display{ font-size:clamp(1.5rem, 3.4vw, 2.1rem); font-weight:600; margin-bottom:16px; }
-  p{ color:#cbd5e1; margin-bottom:16px; font-size:1.02rem; }
-  p strong{ color:var(--off); }
-
-  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0; }
-  @media(max-width:640px){ .grid{ grid-template-columns:1fr; } }
-  .card{ background:var(--panel); border:1px solid #24304a; border-radius:16px; padding:22px; position:relative; overflow:hidden; }
-  .card::before{ content:''; position:absolute; top:-40%; right:-40%; width:180px; height:180px; border-radius:50%; filter:blur(50px); opacity:.35; }
-  .card.coral::before{ background:var(--coral); } .card.amber::before{ background:var(--amber); }
-  .card h3{ font-size:1.05rem; font-weight:600; margin-bottom:8px; position:relative; }
-  .card p{ font-size:.94rem; margin-bottom:0; position:relative; color:#b8c3d9; }
-
-  .stat-row{ display:flex; gap:14px; flex-wrap:wrap; margin:24px 0; }
-  .stat{ flex:1; min-width:140px; background:var(--panel); border:1px solid #24304a; border-radius:14px; padding:18px; text-align:center; }
-  .stat .num{ font-family:'Fraunces', serif; font-size:1.9rem; font-weight:700; color:var(--amber); }
-  .stat .lbl{ font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-top:4px; }
-
-  ol.steps{ list-style:none; margin:18px 0; }
-  ol.steps li{ display:flex; gap:16px; margin-bottom:16px; padding-bottom:16px; border-bottom:1px dashed #24304a; }
-  ol.steps li:last-child{ border-bottom:none; }
-  ol.steps .n{ font-family:'Fraunces', serif; font-weight:700; font-size:1.3rem; color:var(--coral); min-width:34px; }
-
-  .callout{ background:linear-gradient(135deg, rgba(255,77,109,.14), rgba(255,179,71,.08)); border:1px solid rgba(255,77,109,.35); border-radius:16px; padding:24px; margin:26px 0; }
-  .callout h3{ color:var(--coral); margin-bottom:8px; font-size:1.1rem; }
-
-  .faq-item{ border-bottom:1px solid #1b263f; padding:16px 0; }
-  .faq-item h3{ font-size:1rem; font-weight:600; margin-bottom:6px; color:var(--off); }
-  .faq-item p{ margin-bottom:0; }
-
-  footer{ padding:46px 24px; text-align:center; color:var(--muted); font-size:.85rem; border-top:1px solid #1b263f; margin-top:20px; }
-  footer .disclaimer{ max-width:600px; margin:0 auto 14px; }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stomach Warning Signs | Daily Vitality</title>
+<meta name="description" content="A practical Daily Vitality article about stomach warning signs with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips.">
+<link rel="canonical" href="https://dailyvitality.xyz/stomach-warning-signs.html">
+<link rel="stylesheet" href="dv-premium-v5.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Stomach Warning Signs", "description": "A practical Daily Vitality article about stomach warning signs with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips.", "author": {"@type": "Organization", "name": "Daily Vitality"}, "publisher": {"@type": "Organization", "name": "Daily Vitality"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://dailyvitality.xyz/stomach-warning-signs.html"}, "image": ["https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20Gut%20%26%20Digestion%2C%20premium%20feature%20image%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true", "https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20educational%20health%20article%20visual%2C%20everyday%20lifestyle%20scene%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true"], "about": ["Gut & Digestion", "Stomach Warning Signs"], "inLanguage": "en-US"}</script>
 </head>
 <body>
-
-<nav>
-  <a href="index.html" class="brand" style="text-decoration:none;color:inherit;">Daily <span>Vitality</span></a>
-  <div class="tag">Body &middot; Digestive Health</div>
-</nav>
-
-<header class="hero">
-  <div class="eyebrow">6-minute read &middot; Medically reviewed format</div>
-  <h1 class="display">Stomach Warning Signs: <em>When Indigestion Is Something More</em></h1>
-  <p class="sub">Occasional stomach discomfort is normal. Here's how to tell when it's something your body wants you to pay closer attention to — and what actually helps.</p>
-  <div class="ecg-wrap">
-    <svg viewBox="0 0 700 60" preserveAspectRatio="none">
-      <path class="ecg-path" d="M0,30 L100,30 L120,30 L135,8 L150,52 L165,18 L180,30 L220,30 L240,30 L255,12 L270,48 L285,22 L300,30 L700,30" />
-    </svg>
+<header class="top">
+  <div class="wrap brandrow">
+    <a class="brand" href="index.html"><img src="logo.png" alt="Daily Vitality logo">Daily Vitality</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a><a href="index.html#articles">Articles</a><a href="blogs.html">Blogs</a>
+      <a href="products.html">Products</a><a href="tools.html">Tools</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a class="join-btn" href="#" data-join>Join / Sign In</a>
+    </nav>
+    <button id="hamb" class="hamb" aria-label="Open menu">☰</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a><a href="index.html#articles">Articles</a><a href="blogs.html">Blogs</a>
+    <a href="products.html">Products / Shop</a><a href="tools.html">Tools</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#" data-join>Join / Sign In</a>
   </div>
 </header>
 
-<div class="wrap">
+<main class="article-shell">
+  <div class="article-wrap">
+    <div class="breadcrumbs"><a href="index.html">Home</a> / <a href="index.html#articles">Articles</a> / <span>Gut & Digestion</span></div>
 
-  <div class="carousel">
-    <div class="carousel-track" data-track>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1649073586428-e288125d930a?auto=format&fit=crop&w=560&q=70" alt="3D illustration highlighting the stomach within the body"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1725399459301-20d51fb18194?auto=format&fit=crop&w=560&q=70" alt="Anatomical illustration of the digestive system"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1649073586751-695a1f9f76de?auto=format&fit=crop&w=560&q=70" alt="3D render of human body structure and organs"></figure>
-    </div>
+    <article class="article-hero">
+      <div class="article-top">
+        <span class="eyebrow">DAILY VITALITY · GUT & DIGESTION</span>
+        <h1>Stomach Warning Signs</h1>
+        <div class="meta-row">
+          <span>Educational wellness reading</span>
+          <span>•</span>
+          <span>Topic-matched visuals included</span>
+          <span>•</span>
+          <span>Tools and product links below</span>
+        </div>
+      </div>
+
+      <div class="hero-cover"><img src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20Gut%20%26%20Digestion%2C%20premium%20feature%20image%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs cover image"></div>
+
+      <div class="intro-grid">
+        <section class="summary-box">
+          <h2>Quick overview</h2>
+          <p>Stomach Warning Signs is easier to understand when it is explained clearly, connected to real-life habits, and separated from fear or hype. This Daily Vitality article breaks the topic into practical sections so readers can understand what it means, what may influence it, what habits are worth attention, and which signs deserve proper follow-up. The aim is to be useful, balanced and easy to return to later.</p>
+          <p>Because health topics can overlap, this page also points you toward related tools, product resources and similar reads. Nothing here is a diagnosis; it is educational guidance designed to help you ask better questions and make smarter everyday choices.</p>
+        </section>
+
+        <aside class="takeaways-box">
+          <h2>What this article covers</h2>
+          <ul>
+            <li>What Stomach Warning Signs means in plain language</li><li>How this topic can affect day-to-day wellbeing</li><li>Common causes, triggers or contributing factors</li><li>Practical habits that may support better health</li><li>Signs that deserve closer attention</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="article-main">
+        
+        <section class="content-block">
+            <h2 style="color:#f39c44">What counts as a warning sign?</h2>
+            <p>Stomach Warning Signs can sound complicated, but the topic becomes easier to understand when you break it into everyday questions: what it is, why it matters, what tends to make it better or worse, and which signs should not be ignored. In practical terms, stomach warning signs connects with routines such as sleep, food quality, hydration, movement, stress and the ability to notice changes early.</p>
+            <figure class="inline-image"><img loading="lazy" src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20educational%20health%20article%20visual%2C%20everyday%20lifestyle%20scene%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs image 2"></figure>
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <section class="content-block">
+            <h2 style="color:#f39c44">Early signals people often ignore</h2>
+            <p>When people think about stomach warning signs, they often focus only on symptoms, but the bigger story is function. A body system works best when the surrounding habits support it over time, and even small changes can matter when repeated consistently. That is why it helps to understand how this topic shows up in real life instead of looking at it as an isolated label.</p>
+            <figure class="inline-image"><img loading="lazy" src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20clean%20conceptual%20medical%20illustration%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs image 3"></figure>
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <section class="content-block">
+            <h2 style="color:#f39c44">Possible causes behind these symptoms</h2>
+            <p>There is rarely one single cause behind stomach warning signs. Genetics, environment, workload, age, lifestyle patterns, existing medical conditions and stress can all shape how symptoms appear. Online trends may oversimplify the issue, which is why a calmer, evidence-aware explanation can be more useful than viral health claims.</p>
+            <figure class="inline-image"><img loading="lazy" src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20supportive%20daily%20habits%20related%20to%20the%20topic%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs image 4"></figure>
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <section class="content-block">
+            <h2 style="color:#f39c44">What to watch, write down and discuss</h2>
+            <p>A practical approach works better than an extreme one. Start with two or three high-impact habits, keep them simple enough to repeat, and give them time. People often do best when they pair information with an action plan such as a hydration goal, walking target, sleep schedule, meal structure or symptom note.</p>
+            <figure class="inline-image"><img loading="lazy" src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20close-up%20wellness%20scene%20related%20to%20Gut%20%26%20Digestion%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs image 5"></figure>
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <section class="content-block">
+            <h2 style="color:#f39c44">When to get urgent help</h2>
+            <p>Educational reading is useful, but it should not replace medical care when warning signs are present. If symptoms are intense, persistent, getting worse, interfering with daily life, or connected to dizziness, fainting, bleeding, chest pain, breathing trouble or unexplained weight change, professional evaluation matters.</p>
+            <figure class="inline-image"><img loading="lazy" src="https://image.pollinations.ai/prompt/Stomach%20Warning%20Signs%20%E2%80%94%20Stomach%20Warning%20Signs%2C%20practical%20self-care%20or%20healthy%20routine%20visual%2C%20premium%20wellness%20editorial%20photography%20or%20clean%20medical%20illustration%2C%20realistic%2C%20attractive%2C%20clean%2C%20modern%2C%20natural%20light%2C%20no%20text%2C%20no%20logo%2C%20no%20watermark?width=1200&height=760&nologo=true" alt="Stomach Warning Signs image 6"></figure>
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <section class="content-block">
+            <h2 style="color:#f39c44">Practical next steps</h2>
+            <p>The goal is not perfection. The goal is understanding stomach warning signs well enough to make better daily decisions. Clear information, steady routines and appropriate medical advice usually beat fear, confusion and random internet experimentation.</p>
+            
+            <p>Rather than chasing quick fixes, it usually helps to focus on consistent basics and a clear personal context. Daily basics that usually matter most include fiber, hydration, meal rhythm, food tolerance awareness, stress management and getting checked when symptoms are persistent or severe. This article is educational and not a diagnosis, so any severe symptoms, sudden changes, alarming pain or concerns about medicines should always be discussed with a qualified clinician.</p>
+        </section>
+        
+
+        <div class="info-band">
+          <section class="link-card">
+            <h3>Helpful wellness tools</h3>
+            <p>Use these tools to turn information into simple daily action.</p>
+            <div class="link-list"><a href="water-intake-planner.html">Water Intake Planner →</a>
+<a href="protein-intake-planner.html">Protein Intake Planner →</a>
+<a href="wellness-habit-tracker.html">Wellness Habit Tracker →</a></div>
+          </section>
+
+          <section class="link-card">
+            <h3>Recommended resources</h3>
+            <p>Go deeper with Daily Vitality digital resources and guides.</p>
+            <div class="link-list"><a href="https://6517409126048.gumroad.com/l/gut-health-blueprint" target="_blank" rel="noopener">The Complete Gut Health Blueprint →</a>
+<a href="https://6517409126048.gumroad.com/l/30-day-grocery-budget-meal-plan" target="_blank" rel="noopener">30-Day Grocery Budget Meal Plan →</a>
+<a href="https://6517409126048.gumroad.com/l/simple-habits-healthier-life" target="_blank" rel="noopener">Simple Habits for a Healthier Life →</a></div>
+          </section>
+        </div>
+
+        <section class="link-card">
+          <h3>Related reads</h3>
+          <p>Continue with more articles in the same or closely related category.</p>
+          <div class="link-list"><a href="cyclosporiasis-outbreak-guide.html">Cyclosporiasis Outbreak Guide →</a>
+<a href="foodborne-waterborne-illness.html">Foodborne and Waterborne Illness: What Actually Makes You Sick →</a>
+<a href="gut-health.html">Understanding Your Gut: A Simple Guide to Digestive Health →</a></div>
+        </section>
+
+        <section class="end-note">
+          <h3 style="margin-top:0">Daily Vitality note</h3>
+          <p>Good health content should reduce confusion, not increase it. If symptoms are severe, persistent, new, rapidly changing, or linked with chest pain, breathing trouble, fainting, confusion, serious bleeding or dehydration, please seek professional medical care promptly.</p>
+        </section>
+      </div>
+    </article>
   </div>
+</main>
 
-  <section class="block">
-    <span class="kicker coral">The Basics</span>
-    <h2 class="display">What's actually happening when your stomach acts up</h2>
-    <p>Your stomach and digestive tract process nearly everything you eat and drink, using acid, enzymes, and muscle contractions to break food down and move it along. Most everyday stomach discomfort — a heavy meal, mild bloating — resolves on its own within hours.</p><p>Persistent or recurring symptoms are different. They're often your digestive system signaling an underlying pattern, from food sensitivities to acid imbalance to something that needs medical attention.</p>
-    <div class="stat-row">
-      <div class="stat"><div class="num">6-8 hrs</div><div class="lbl">typical digestion time, stomach to colon</div></div><div class="stat"><div class="num">1 in 4</div><div class="lbl">adults report frequent digestive discomfort</div></div><div class="stat"><div class="num">2+ wks</div><div class="lbl">of symptoms is worth a doctor's visit</div></div>
-    </div>
-  </section>
+<div id="joinModal" class="modal"><div class="modal-card"><button id="closeJoin" class="closex">×</button>
+<span class="eyebrow">DAILY VITALITY ACCOUNT</span><h2>Save your place in wellness.</h2>
+<p>Create an account to save tools, follow new resources, and prepare for contributor features. Secure Google/email sign-in activates after Firebase Authentication is connected with the public web configuration.</p>
+<button class="auth-btn" data-auth-not-ready>Continue with Google</button>
+<button class="auth-btn primary-auth" data-auth-not-ready>Create Account with Email</button>
+<div id="authToast" class="toast"></div><div class="auth-note">Static HTML should never store passwords directly.</div></div></div>
 
-  <div class="carousel reverse">
-    <div class="carousel-track" data-track>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1725399459296-935c0d72f04a?auto=format&fit=crop&w=560&q=70" alt="Illustration of the intestines within the torso"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?auto=format&fit=crop&w=560&q=70" alt="Healthy food arranged on a table"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=560&q=70" alt="Fresh vegetables and produce"></figure>
-    </div>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div><h3>Daily Vitality</h3><p>Practical wellness for everyday life — articles, blogs, tools and premium digital resources.</p><small>Educational information only. Not medical advice.</small></div>
+    <div><b>Explore</b><p><a href="index.html#articles">Articles</a><br><a href="blogs.html">Blogs</a><br><a href="tools.html">Tools</a><br><a href="products.html">Shop</a></p></div>
+    <div><b>Company</b><p><a href="about.html">About</a><br><a href="contact.html">Contact</a><br><a href="privacy.html">Privacy</a><br><a href="terms.html">Terms</a></p></div>
   </div>
-
-  <section class="block">
-    <span class="kicker amber">Recognize It</span>
-    <h2 class="display">The warning signs worth paying attention to</h2>
-    <p>Most stomach issues are minor, but certain patterns and combinations are worth taking seriously rather than waiting out.</p>
-    <div class="grid">
-      <div class="card coral"><h3>🔥 Frequent heartburn</h3><p>Burning discomfort more than twice a week, especially if antacids aren't providing relief.</p></div><div class="card amber"><h3>🎈 Persistent bloating</h3><p>Ongoing bloating that doesn't resolve with normal digestion, or comes with pain.</p></div><div class="card coral"><h3>⚖️ Unexplained weight loss</h3><p>Losing weight without trying, alongside digestive symptoms, deserves prompt evaluation.</p></div><div class="card amber"><h3>🩸 Blood or dark stool</h3><p>Any sign of blood in vomit or stool should be checked by a doctor promptly.</p></div><div class="card coral"><h3>😣 Pain that wakes you up</h3><p>Stomach pain severe enough to interrupt sleep is different from routine discomfort.</p></div><div class="card amber"><h3>🍽️ Difficulty swallowing</h3><p>New or worsening trouble swallowing food or liquids warrants medical evaluation.</p></div>
-    </div>
-    <div class="callout">
-      <h3>⚠️ If you notice any of this</h3>
-      <p style="margin-bottom:0;">Persistent symptoms lasting more than two weeks, or any of the signs above, are worth a doctor's visit — not to alarm you, but because early evaluation makes almost everything easier to manage.</p>
-    </div>
-  </section>
-
-  <section class="block">
-    <span class="kicker mint">Why It Happens</span>
-    <h2 class="display">What commonly triggers digestive trouble</h2>
-    <p>Digestive symptoms usually trace back to a fairly small set of common, well-understood triggers.</p>
-    <ol class="steps">
-      <li><span class="n">01</span><div><strong>Eating too fast or too much</strong> &mdash; overwhelms digestion and increases swallowed air, both contributing to bloating.</div></li><li><span class="n">02</span><div><strong>High-fat or highly processed meals</strong> &mdash; take longer to digest and can trigger reflux or discomfort.</div></li><li><span class="n">03</span><div><strong>Food intolerances</strong> &mdash; undiagnosed sensitivities (like to dairy or gluten) can cause recurring symptoms.</div></li><li><span class="n">04</span><div><strong>Chronic stress</strong> &mdash; directly affects gut motility and can worsen almost every digestive symptom.</div></li><li><span class="n">05</span><div><strong>Certain medications</strong> &mdash; some pain relievers and other drugs can irritate the stomach lining.</div></li><li><span class="n">06</span><div><strong>H. pylori infection</strong> &mdash; a common bacterial infection that can cause ulcers and chronic discomfort if untreated.</div></li>
-    </ol>
-  </section>
-
-  <div class="carousel">
-    <div class="carousel-track" data-track>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1649073586428-e288125d930a?auto=format&fit=crop&w=560&q=70" alt="Digital illustration of the stomach and digestive tract"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1725399459301-20d51fb18194?auto=format&fit=crop&w=560&q=70" alt="Diagram of the digestive organs"></figure>
-      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=560&q=70" alt="Glass of water supporting digestion"></figure>
-    </div>
-  </div>
-
-  <section class="block">
-    <span class="kicker mint">Protect It</span>
-    <h2 class="display">Daily habits that genuinely support digestion</h2>
-    <p><strong>Eat slower, smaller meals.</strong> Giving your stomach time reduces bloating and swallowed air significantly.</p><p><strong>Identify your personal triggers.</strong> A simple food and symptom diary often reveals a pattern within two weeks.</p><p><strong>Stay upright after eating.</strong> Avoid lying down for at least 2-3 hours after a meal.</p><p><strong>Manage stress proactively.</strong> The gut-brain connection means stress directly affects digestive symptoms.</p><p><strong>Don't ignore persistent patterns.</strong> Recurring symptoms deserve a proper evaluation, not indefinite self-management.</p>
-  </section>
-
-  <section class="block">
-    <span class="kicker coral">Good to Know</span>
-    <h2 class="display">Frequently asked questions</h2>
-    <div class="faq-item"><h3>Is occasional bloating normal?</h3><p>Yes — most people experience it sometimes, especially after large or gas-producing meals. Frequent or worsening bloating is what's worth checking.</p></div><div class="faq-item"><h3>Can stress really cause stomach symptoms?</h3><p>Yes — the gut and nervous system are closely linked, and stress can directly trigger or worsen digestive symptoms.</p></div><div class="faq-item"><h3>When is stomach pain an emergency?</h3><p>Sudden, severe pain, especially with fever, vomiting blood, or inability to keep fluids down, needs immediate medical care.</p></div><div class="faq-item"><h3>Do probiotics help with digestive symptoms?</h3><p>They may help some people, particularly with bloating, though individual responses vary — they're not a substitute for addressing an underlying cause.</p></div>
-  </section>
-
-</div>
-
-<footer>
-  <p class="disclaimer">This article is for general education and does not replace medical advice. Persistent or severe symptoms should be evaluated by a doctor.</p>
-  <p>&copy; 2026 Daily Vitality &mdash; Simple wellness, one habit at a time.</p>
 </footer>
 
-<script>
-  document.querySelectorAll('[data-track]').forEach(function(track){
-    track.innerHTML += track.innerHTML;
-  });
-</script>
-
+<script src="dv-premium-v5.js"></script>
 </body>
 </html>
