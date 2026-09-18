@@ -1,0 +1,15 @@
+{
+  "name": "Daily Vitality",
+  "short_name": "Daily Vitality",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#08111f",
+  "theme_color": "#19b7ad",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
