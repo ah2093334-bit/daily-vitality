@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="48" fill="#1B2E22"/>
-  <circle cx="50" cy="50" r="20" fill="none" stroke="#E8935C" stroke-width="6"/>
-  <circle cx="50" cy="50" r="6" fill="#E8935C"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14b8a6"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="320" height="72" rx="16" fill="white"/><g transform="translate(8 8)"><circle cx="24" cy="28" r="22" fill="url(#g)" opacity=".14"/><path d="M27 10c-5 2-11 8-12 17 6 1 11-1 15-4-2 5-4 12-3 19 10-6 16-17 15-30-6-4-10-4-15-2z" fill="url(#g)"/><circle cx="21" cy="34" r="2" fill="#0f172a" opacity=".45"/></g><text x="54" y="46" font-size="24" font-weight="700" font-family="Georgia, 'Times New Roman', serif" fill="#127a7f">Daily Vitality</text></svg>
