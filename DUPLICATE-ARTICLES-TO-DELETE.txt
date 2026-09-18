@@ -1,0 +1,5 @@
+Suggested duplicates to remove or stop linking on homepage:
+- the-truth-about-gut-health-what-you-need-to-know-beyond-the-.html
+- how-to-start-a-digital-detox-a-beginner-s-guide-to-reclaimin.html
+
+These are not linked in the updated homepage/article grid. If they already exist in your repo, you can keep them as archive or delete them manually from GitHub.
