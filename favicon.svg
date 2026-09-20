@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14b8a6"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="320" height="72" rx="16" fill="white"/><g transform="translate(8 8)"><circle cx="24" cy="28" r="22" fill="url(#g)" opacity=".14"/><path d="M27 10c-5 2-11 8-12 17 6 1 11-1 15-4-2 5-4 12-3 19 10-6 16-17 15-30-6-4-10-4-15-2z" fill="url(#g)"/><circle cx="21" cy="34" r="2" fill="#0f172a" opacity=".45"/></g><text x="54" y="46" font-size="24" font-weight="700" font-family="Georgia, 'Times New Roman', serif" fill="#127a7f">Daily Vitality</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="86" viewBox="0 0 360 86">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#56f5e8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+<rect width="360" height="86" rx="18" fill="#071427"/>
+<g transform="translate(12,9)"><path d="M31 60C12 48 5 28 12 8c18 7 27 19 29 33 5-15 17-27 33-34 4 25-5 46-30 59-5 3-9 3-13-6z" fill="url(#g)"/><path d="M42 58V21" stroke="#06243b" stroke-width="4" stroke-linecap="round"/></g>
+<text x="93" y="42" fill="#fff" font-family="Georgia,serif" font-size="31" font-weight="700">Daily Vitality</text>
+<text x="94" y="66" fill="#9fdde3" font-family="Arial,sans-serif" font-size="13">Better Habits. A Healthier You.</text>
+</svg>
