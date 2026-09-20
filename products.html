@@ -1,4 +1,16 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Vitality Shop — eBooks, PDF Books & Resources</title><meta name="description" content="Shop premium Daily Vitality eBooks, PDF books and practical wellness resources."><link rel="stylesheet" href="dv-premium-v5.css"><meta name="theme-color" content="#19b7ad"><link rel="manifest" href="site.webmanifest"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Vitality Shop — eBooks, PDF Books & Resources</title><meta name="description" content="Shop premium Daily Vitality eBooks, PDF books and practical wellness resources."><link rel="stylesheet" href="dv-premium-v5.css"><meta name="theme-color" content="#19b7ad"><link rel="manifest" href="site.webmanifest"><link rel="canonical" href="https://dailyvitality.xyz/products.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Vitality">
+<meta property="og:title" content="Premium wellness resources with covers worth opening.">
+<meta property="og:description" content="Shop premium Daily Vitality eBooks, PDF books and practical wellness resources.">
+<meta property="og:url" content="https://dailyvitality.xyz/products.html">
+<meta property="og:image" content="https://dailyvitality.xyz/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Premium wellness resources with covers worth opening.">
+<meta name="twitter:description" content="Shop premium Daily Vitality eBooks, PDF books and practical wellness resources.">
+<meta name="twitter:image" content="https://dailyvitality.xyz/assets/brand/og-default.png">
+</head><body>
 <header class="top"><div class="wrap brandrow"><a class="brand" href="index.html"><img class="dv-logo" src="assets/brand/daily-vitality-logo.svg" alt="Daily Vitality logo">Daily Vitality</a>
 <nav class="desktop-nav"><a href="index.html">Home</a><a href="#articles">Articles</a><a href="blogs.html">Blogs</a><a href="products.html">Products</a>
 <div class="dropdown"><button class="dropbtn">Tools ▾</button><div class="dropmenu">
@@ -28,4 +40,4 @@
 const P=window.DV_PRODUCTS_V5||[],g=document.getElementById('productGrid'),f=document.getElementById('shopFilters'),s=document.getElementById('shopSearch');let cat='All';
 ['All','eBook','PDF Book'].forEach(c=>{let b=document.createElement('button');b.textContent=c;if(c==='All')b.classList.add('active');b.onclick=()=>{cat=c;[...f.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');render()};f.appendChild(b)});
 function render(){let q=s.value.toLowerCase(),list=P.filter(p=>(cat==='All'||p.category===cat)&&(!q||(p.title+' '+p.desc).toLowerCase().includes(q)));g.innerHTML='';list.forEach(p=>{let x=document.createElement('article');x.className='product-card';x.innerHTML=`<div class="bookmock" style="--a:${p.a};--b:${p.b}"><div class="icon">${p.icon}</div><h3>${p.title}</h3><small>${p.category}</small></div><h4>${p.title}</h4><p>${p.desc}</p><div class="price">${p.price}</div><a class="buy" href="${p.url}" target="_blank" rel="noopener sponsored">Buy Now</a>`;g.appendChild(x)})}s.oninput=render;render();
-</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script></body></html>
+</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-photos.js" defer></script></body></html>

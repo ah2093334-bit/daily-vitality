@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06152b"/><stop offset=".55" stop-color="#0c6fa4"/><stop offset="1" stop-color="#15c8b8"/></linearGradient>
+<radialGradient id="r"><stop offset="0" stop-color="#fff" stop-opacity=".24"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="760" rx="40" fill="url(#g)"/>
+<circle cx="930" cy="170" r="220" fill="url(#r)"/><circle cx="1030" cy="640" r="300" fill="#fff" opacity=".035"/>
+<path d="M100 515 C310 420 465 620 720 505 S1030 430 1120 500" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>
+<rect x="62" y="62" width="1076" height="636" rx="34" fill="#061321" fill-opacity=".18" stroke="#fff" stroke-opacity=".15"/>
+<text x="100" y="145" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#7ef8ee">DAILY VITALITY</text>
+<text x="100" y="250" font-family="Georgia,serif" font-size="66" font-weight="700" fill="#fff">Cold Plunges and Ice Baths: What the Scien</text>
+<text x="100" y="310" font-family="Arial,sans-serif" font-size="28" fill="#d9edf5">Healthy Living</text>
+<circle cx="940" cy="395" r="148" fill="#061321" fill-opacity=".25" stroke="#fff" stroke-opacity=".18"/>
+<text x="940" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="160" fill="#fff">◒</text>
+<text x="100" y="650" font-family="Arial,sans-serif" font-size="22" fill="#c9e6ec">Practical • Evidence-aware • Everyday wellness</text>
+</svg>

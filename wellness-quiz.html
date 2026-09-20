@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Wellness Quiz & Q&A | Daily Vitality</title>
+<meta name="description" content="Test your everyday wellness knowledge with a free Daily Vitality quiz and search quick educational answers about nutrition, sleep, hydration, movement, hygiene and healthy routines.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dailyvitality.xyz/wellness-quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Vitality">
+<meta property="og:title" content="Daily Wellness Quiz & Q&A | Daily Vitality">
+<meta property="og:description" content="Take a free 10-question wellness quiz or search quick educational answers about everyday health habits.">
+<meta property="og:url" content="https://dailyvitality.xyz/wellness-quiz.html">
+<meta property="og:image" content="https://dailyvitality.xyz/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="dv-premium-v13.css">
+<link rel="stylesheet" href="wellness-quiz.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Daily Wellness Quiz & Q&A","url":"https://dailyvitality.xyz/wellness-quiz.html","description":"A free educational wellness quiz and quick-answer tool covering nutrition, sleep, hydration, movement, hygiene and daily routines.","isPartOf":{"@type":"WebSite","name":"Daily Vitality","url":"https://dailyvitality.xyz/"},"inLanguage":"en-US"}</script>
+</head>
+<body>
+<header class="top"><div class="wrap brandrow"><a class="brand" href="index.html"><img src="assets/brand/daily-vitality-logo.svg" alt="Daily Vitality"></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="index.html#articles">Articles</a><a href="blogs.html">Blogs</a><a href="products.html">Products</a><a href="tools.html">Tools</a><a class="quiz-nav-active" href="wellness-quiz.html">Quiz & Q&A</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="join-btn" href="account.html">Join / Sign In</a></nav><button id="hamb" class="hamb" aria-label="Open menu">☰</button></div><div id="mobileMenu" class="mobile-menu"><a href="index.html">Home</a><a href="index.html#articles">Articles</a><a href="blogs.html">Blogs</a><a href="products.html">Products</a><a href="tools.html">Tools</a><a href="wellness-quiz.html">Quiz & Q&A</a><a href="contact.html">Contact</a></div></header>
+
+<main>
+<section class="quiz-hero"><div class="wrap quiz-hero-grid"><div><span class="eyebrow">ASK · LEARN · TEST YOUR KNOWLEDGE</span><h1>Daily Wellness <span>Quiz & Q&A</span></h1><p>Answer a fresh 10-question quiz or type a common wellness question to get a quick educational answer. No diagnosis, no medical scoring, and no account is required.</p><div class="quiz-hero-actions"><a href="#quiz">Start the Quiz</a><a class="quiz-ghost" href="#qa">Ask a Question</a></div><div class="quiz-chips"><span>Nutrition</span><span>Sleep</span><span>Hydration</span><span>Movement</span><span>Hygiene</span><span>Daily Routines</span></div></div><div class="quiz-orb"><div class="quiz-orb-inner"><span>?</span><b>10 Questions</b><small>Instant explanations</small></div></div></div></section>
+
+<section id="quiz" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">DAILY WELLNESS QUIZ</span><h2 class="gradient-heading">How much do you know?</h2></div><p>Each round randomly selects 10 questions from the Daily Vitality question bank.</p></div>
+<div class="quiz-layout"><aside class="quiz-stats"><div class="quiz-stat"><small>QUESTION</small><b id="qProgress">1 / 10</b></div><div class="quiz-stat"><small>SCORE</small><b id="qScore">0</b></div><div class="quiz-stat"><small>BEST</small><b id="qBest">0 / 10</b></div><div class="quiz-progress"><span id="qBar"></span></div><p class="quiz-safe">Educational wellness knowledge only. This quiz does not assess disease risk or diagnose health conditions.</p></aside>
+<div class="quiz-card" id="quizCard"><span class="quiz-topic" id="qTopic">Wellness</span><h3 id="qText">Loading question...</h3><div id="qOptions" class="quiz-options"></div><div id="qFeedback" class="quiz-feedback" aria-live="polite"></div><button id="qNext" class="quiz-next" disabled>Next Question →</button></div></div>
+<div id="quizResult" class="quiz-result" hidden><span class="eyebrow">ROUND COMPLETE</span><h2 id="resultTitle">Nice work.</h2><p id="resultText"></p><div class="result-actions"><button id="retryQuiz">Try Another 10</button><a href="tools.html">Explore Wellness Tools</a></div></div>
+</div></section>
+
+<section id="qa" class="qa-section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">QUICK WELLNESS Q&A</span><h2>Ask a common wellness question</h2></div><p>Type a short question. The tool searches a curated educational answer library stored directly on this website.</p></div><div class="qa-grid"><div class="qa-search-card"><label for="qaInput">Your question</label><div class="qa-search-row"><input id="qaInput" type="search" placeholder="Example: How can I sleep better?" autocomplete="off"><button id="qaAsk">Get Answer</button></div><div class="qa-suggestions"><button data-q="How much water should I drink?">Hydration</button><button data-q="How can I sleep better?">Sleep</button><button data-q="How often should I walk?">Walking</button><button data-q="How should I wash my hands?">Hand washing</button><button data-q="How can I eat more fiber?">Fiber</button></div><div id="qaAnswer" class="qa-answer" aria-live="polite"><span class="qa-icon">✦</span><div><b>Ask a question above.</b><p>We will show the closest match from our curated wellness answer library.</p></div></div></div>
+<div class="qa-library"><span class="eyebrow">POPULAR QUESTIONS</span><h3>What visitors can ask</h3><div id="qaList" class="qa-list"></div></div></div></div></section>
+
+<section class="section"><div class="wrap"><div class="newsletter-card"><div><span class="eyebrow">KEEP LEARNING</span><h2 class="newsletter-title">Turn quiz answers into practical habits.</h2><p>Use the related articles and free tools to go deeper after each quiz round.</p></div><div class="quiz-link-grid"><a href="water-intake-planner.html">Water Planner</a><a href="sleep-schedule-calculator.html">Sleep Schedule</a><a href="steps-walking-planner.html">Walking Planner</a><a href="healthy-plate-builder.html">Healthy Plate Builder</a></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-grid"><div><img src="assets/brand/daily-vitality-logo.svg" alt="Daily Vitality" style="width:270px"><p>Better Habits. A Healthier You.</p><small>Educational information only. Not medical advice.</small></div><div><b>Explore</b><p><a href="index.html#articles">Articles</a><br><a href="blogs.html">Blogs</a><br><a href="tools.html">Tools</a><br><a href="wellness-quiz.html">Quiz & Q&A</a></p></div><div><b>Company</b><p><a href="about.html">About</a><br><a href="contact.html">Contact</a><br><a href="privacy.html">Privacy</a><br><a href="terms.html">Terms</a></p></div></div></footer>
+<script src="dv-premium-v13.js"></script><script src="click-sounds.js"></script><script src="wellness-quiz.js"></script>
+</body></html>

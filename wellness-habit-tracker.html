@@ -1,4 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wellness Habit Tracker — Daily Vitality</title><link rel="stylesheet" href="dv-premium-v5.css"><meta name="theme-color" content="#19b7ad"><link rel="manifest" href="site.webmanifest"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wellness Habit Tracker — Daily Vitality</title><link rel="stylesheet" href="dv-premium-v5.css"><meta name="theme-color" content="#19b7ad"><link rel="manifest" href="site.webmanifest"><meta name="description" content="Track a handful of small daily habits without creating an account.">
+<link rel="canonical" href="https://dailyvitality.xyz/wellness-habit-tracker.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Vitality">
+<meta property="og:title" content="Wellness Habit Tracker">
+<meta property="og:description" content="Track a handful of small daily habits without creating an account.">
+<meta property="og:url" content="https://dailyvitality.xyz/wellness-habit-tracker.html">
+<meta property="og:image" content="https://dailyvitality.xyz/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wellness Habit Tracker">
+<meta name="twitter:description" content="Track a handful of small daily habits without creating an account.">
+<meta name="twitter:image" content="https://dailyvitality.xyz/assets/brand/og-default.png">
+</head><body>
 <header class="top"><div class="wrap brandrow"><a class="brand" href="index.html"><img src="assets/brand/daily-vitality-logo.svg" alt="Daily Vitality logo">Daily Vitality</a>
 <nav class="desktop-nav"><a href="index.html">Home</a><a href="#articles">Articles</a><a href="blogs.html">Blogs</a><a href="products.html">Products</a>
 <div class="dropdown"><button class="dropbtn">Tools ▾</button><div class="dropmenu">
@@ -28,4 +41,4 @@ const names=['Morning water','10-minute walk','Fruit or vegetables','Screen brea
 const box=document.getElementById('habits'), key='dv-habits-'+new Date().toISOString().slice(0,10);
 let state=JSON.parse(localStorage.getItem(key)||'[]');names.forEach((n,i)=>{let d=document.createElement('label');d.className='habit-item';d.innerHTML=`<input type="checkbox" ${state[i]?'checked':''}> <span>${n}</span>`;d.querySelector('input').onchange=e=>{state[i]=e.target.checked;localStorage.setItem(key,JSON.stringify(state))};box.appendChild(d)});
 function resetHabits(){localStorage.removeItem(key);location.reload()}
-</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script></body></html>
+</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-photos.js" defer></script></body></html>
