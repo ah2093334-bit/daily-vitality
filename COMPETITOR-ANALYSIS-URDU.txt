@@ -1,0 +1,49 @@
+DAILY VITALITY — COMPETITOR INSIGHTS UPDATE
+Date: 22 Sep 2026
+
+ہم نے MANUAL Daily Health اور Everyday Health کے public structure/patterns سے یہ useful ideas لیے، لیکن ان کا text، design یا branding copy نہیں کیا:
+
+1) Strong topic clusters
+- Vitamins/minerals
+- Hair & scalp health
+- Sleep
+- Mental wellness
+- Heart/circulation
+- Practical daily-health tools
+
+2) Trust signals
+- Clear source links
+- Updated date
+- Educational / non-diagnostic labels
+- Honest Editorial Policy
+- No fake “medically reviewed” badge unless a real qualified reviewer reviews that exact page
+
+3) Engagement
+- Popular Daily Health horizontal rail
+- Free browser-based quizzes/checks
+- Related reads and tool links
+
+4) Privacy
+- Cookie consent panel with Accept optional analytics, Reject optional, and Customise
+- Google Analytics loads only after analytics consent
+
+NEW ORIGINAL ARTICLES
+- Vitamin D vs. Vitamin D3: What’s the Difference?
+- Zinc: What It Does, Food Sources, and Supplement Cautions
+- Biotin for Hair, Skin, and Nails: What the Evidence Actually Says
+- Intrusive Thoughts: What They Are and When to Get Help
+- Hair Loss: Common Causes, Shedding vs. Thinning, and When to See a Dermatologist
+
+NEW TOOLS
+- Wellness Focus Finder
+- Hair & Scalp Routine Check
+
+SEO FIXES
+- Existing Article structured-data image URLs fixed from missing /assets/photos/... paths to real root cover-*.webp files.
+- sitemap.xml rebuilt with URL encoding.
+- image-sitemap.xml updated.
+- robots.txt lists both sitemaps.
+- New articles are added to articles.json, v13 article data, All Articles page, and homepage.
+
+IMPORTANT
+Ranking is not guaranteed. The goal is to improve topical coverage, internal linking, usefulness, trust, crawlability, and repeat visits over time.
