@@ -1,0 +1,23 @@
+DAILY VITALITY — COMPETITOR INSIGHTS UPDATE
+
+UPLOAD METHOD (IMPORTANT)
+1. Extract this ZIP.
+2. Open the extracted folder.
+3. Select ALL files inside (Ctrl+A).
+4. In GitHub, open the ROOT of your daily-vitality repository — the same level where index.html lives.
+5. Drag/drop ALL selected files together and commit the changes.
+
+NO SUBFOLDERS ARE INCLUDED. You do NOT need to open any folder or upload nested files separately.
+
+WHAT THIS UPDATE ADDS
+- 5 original high-interest Daily Health articles inspired by competitor topic demand (not copied).
+- 2 engagement tools: Wellness Focus Finder + Hair & Scalp Routine Check.
+- A new “Popular Daily Health” auto-scrolling rail on the homepage.
+- Privacy-first cookie panel: Accept optional analytics / Reject optional / Customise.
+- Google Analytics now loads only after analytics consent.
+- New Editorial Policy page with honest sourcing and review rules.
+- Fixed structured-data image URLs so Google sees real root-level cover files.
+- Updated sitemap.xml, image-sitemap.xml, robots.txt, all-articles library, and tools listing.
+
+AFTER UPLOAD
+Wait for GitHub Pages deployment, then hard refresh (Ctrl+F5). Open the site in an incognito/private window to test the cookie panel as a first-time visitor.
