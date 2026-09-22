@@ -1,47 +1,47 @@
 [
- {
-  "slug": "simple-habits-healthier-life",
-  "title": "10 Simple Habits for a Healthier Life",
-  "price": "9.99",
-  "cat": "Guides & eBooks",
-  "cover": "ebook-cover.jpg",
-  "url": "https://6517409126048.gumroad.com/l/simple-habits-healthier-life",
-  "desc": "A practical, beautifully designed guide to small daily habits that genuinely improve energy, sleep and wellbeing \u2014 no fads, no extremes."
- },
- {
-  "slug": "simple-sleep-reset-guide",
-  "title": "The Complete Sleep Reset: 30-Day Guide",
-  "price": "12.99",
-  "cat": "Guides & eBooks",
-  "cover": "sleep-reset-cover.jpg",
-  "url": "https://6517409126048.gumroad.com/l/simple-sleep-reset-guide",
-  "desc": "A day-by-day, 30-day program to fall asleep faster and sleep deeper \u2014 with a daily focus, action and reflection for every single day."
- },
- {
-  "slug": "10-health-conditions-explained",
-  "title": "Understanding Your Body: 10 Common Health Conditions Explained",
-  "price": "14.99",
-  "cat": "Guides & eBooks",
-  "cover": "health-conditions-cover.jpg",
-  "url": "https://6517409126048.gumroad.com/l/10-health-conditions-explained",
-  "desc": "A clear, in-depth guide to blood pressure, diabetes, GERD, migraine, back pain, obesity and more \u2014 causes, symptoms and prevention explained simply."
- },
- {
-  "slug": "gut-health-blueprint",
-  "title": "The Gut Health Blueprint",
-  "price": "11.99",
-  "cat": "Guides & eBooks",
-  "cover": "gut-health-cover.jpg",
-  "url": "https://6517409126048.gumroad.com/l/gut-health-blueprint",
-  "desc": "A practical guide to better digestion, gut bacteria, and how to ease bloating, sluggish digestion and food sensitivities."
- },
- {
-  "slug": "30-day-grocery-budget-meal-plan",
-  "title": "30-Day Grocery Budget Meal Plan",
-  "price": "",
-  "cat": "Meal Plans & Templates",
-  "cover": "meal-plan-cover.jpg",
-  "url": "https://6517409126048.gumroad.com/l/30-day-grocery-budget-meal-plan",
-  "desc": "A month of simple, budget-friendly meals with shopping lists so healthy eating stays affordable."
- }
+  {
+    "slug": "simple-habits-healthier-life",
+    "title": "10 Simple Habits for a Healthier Life",
+    "price": "9.99",
+    "cat": "Guides & eBooks",
+    "cover": "ebook-cover.jpg",
+    "url": "https://6517409126048.gumroad.com/l/simple-habits-healthier-life",
+    "desc": "A practical, beautifully designed guide to small daily habits that genuinely improve energy, sleep and wellbeing — no fads, no extremes."
+  },
+  {
+    "slug": "simple-sleep-reset-guide",
+    "title": "The Complete Sleep Reset: 30-Day Guide",
+    "price": "12.99",
+    "cat": "Guides & eBooks",
+    "cover": "sleep-reset-cover.jpg",
+    "url": "https://6517409126048.gumroad.com/l/simple-sleep-reset-guide",
+    "desc": "A day-by-day, 30-day program to fall asleep faster and sleep deeper — with a daily focus, action and reflection for every single day."
+  },
+  {
+    "slug": "10-health-conditions-explained",
+    "title": "Understanding Your Body: 10 Common Health Conditions Explained",
+    "price": "14.99",
+    "cat": "Guides & eBooks",
+    "cover": "health-conditions-cover.jpg",
+    "url": "https://6517409126048.gumroad.com/l/10-health-conditions-explained",
+    "desc": "A clear, in-depth guide to blood pressure, diabetes, GERD, migraine, back pain, obesity and more — causes, symptoms and prevention explained simply."
+  },
+  {
+    "slug": "gut-health-blueprint",
+    "title": "The Gut Health Blueprint",
+    "price": "11.99",
+    "cat": "Guides & eBooks",
+    "cover": "gut-health-cover.jpg",
+    "url": "https://6517409126048.gumroad.com/l/gut-health-blueprint",
+    "desc": "A practical guide to better digestion, gut bacteria, and how to ease bloating, sluggish digestion and food sensitivities."
+  },
+  {
+    "slug": "30-day-grocery-budget-meal-plan",
+    "title": "30-Day Grocery Budget Meal Plan",
+    "price": "",
+    "cat": "Meal Plans & Templates",
+    "cover": "meal-plan-cover.jpg",
+    "url": "https://6517409126048.gumroad.com/l/30-day-grocery-budget-meal-plan",
+    "desc": "A month of simple, budget-friendly meals with shopping lists so healthy eating stays affordable."
+  }
 ]

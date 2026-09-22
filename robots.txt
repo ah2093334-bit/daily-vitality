@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /account.html
+
 Sitemap: https://dailyvitality.xyz/sitemap.xml
 Sitemap: https://dailyvitality.xyz/image-sitemap.xml
