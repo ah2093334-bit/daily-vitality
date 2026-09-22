@@ -1,0 +1,15 @@
+(function(){
+const KEY='dv_saved_reads_v17';
+function get(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return []}}
+function set(v){localStorage.setItem(KEY,JSON.stringify(v)); updateNav()}
+function updateNav(){let n=get().length;document.querySelectorAll('[data-dv-saved-link]').forEach(a=>a.textContent='Saved'+(n?' ('+n+')':''))}
+function nav(){document.querySelectorAll('.desktop-nav,.mobile-menu').forEach(n=>{if(!n.querySelector('[data-dv-saved-link]')){let a=document.createElement('a');a.href='saved.html';a.dataset.dvSavedLink='1';a.textContent='Saved';let join=n.querySelector('.join-btn,[data-join]');join?n.insertBefore(a,join):n.appendChild(a)}});updateNav()}
+function itemFrom(a){let h=a.querySelector('h1,h2,h3');let im=a.querySelector('img');return {href:a.getAttribute('href')||location.pathname.split('/').pop(),title:(h?h.textContent:document.title.replace(' | Daily Vitality','')).trim(),image:im?im.getAttribute('src'):''}}
+function saved(h){return get().some(x=>x.href===h)}
+function toggle(it){let v=get(),i=v.findIndex(x=>x.href===it.href);if(i>=0)v.splice(i,1);else v.unshift(it);set(v);return i<0}
+function buttonFor(a){let href=a.getAttribute('href');if(!href||href.startsWith('http')||a.querySelector('.dv-save-btn'))return;let b=document.createElement('button');b.type='button';b.className='dv-save-btn';function paint(){b.textContent=saved(href)?'★ Saved':'☆ Save';b.setAttribute('aria-label',saved(href)?'Remove from saved reads':'Save this read')}paint();b.onclick=e=>{e.preventDefault();e.stopPropagation();toggle(itemFrom(a));paint()};let cover=a.querySelector('.card-cover');(cover||a).appendChild(b)}
+function cards(){document.querySelectorAll('a.article-card,a.blog-card,a.blog-card-article').forEach(buttonFor)}
+function article(){let ar=document.querySelector('.article-hero');if(!ar)return;let top=ar.querySelector('.article-top');if(!top||top.querySelector('.dv-article-save'))return;let href=location.pathname.split('/').pop()||'index.html', h=top.querySelector('h1');let img=ar.querySelector('.hero-cover img');let b=document.createElement('button');b.className='dv-article-save';b.type='button';function paint(){b.textContent=saved(href)?'★ Saved for later':'☆ Save for later'}paint();b.onclick=()=>{toggle({href,title:h?h.textContent:document.title,image:img?img.getAttribute('src'):''});paint()};top.appendChild(b)}
+function savedPage(){let grid=document.getElementById('savedGrid');if(!grid)return;let v=get(),empty=document.getElementById('savedEmpty');if(!v.length){grid.style.display='none';empty.style.display='block';return}empty.style.display='none';v.forEach(it=>{let a=document.createElement('a');a.className='article-card';a.href=it.href;a.innerHTML='<div class="card-cover"><img loading="lazy" alt=""></div><div class="inside"><span class="cat">SAVED READ</span><h3></h3><p>Saved on this device.</p></div>';a.querySelector('h3').textContent=it.title;a.querySelector('img').src=it.image||'assets/brand/og-default.png';a.querySelector('img').alt=it.title;grid.appendChild(a)});cards()}
+document.addEventListener('DOMContentLoaded',()=>{nav();cards();article();savedPage()});
+})();

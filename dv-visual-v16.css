@@ -1,0 +1,17 @@
+/* Daily Vitality V16 — professional visual layer; loaded after existing theme. */
+:root{--dv-radius:24px;--dv-shadow:0 2px 8px rgba(39,55,45,.07),0 18px 46px rgba(57,67,50,.12)}
+img{max-width:100%}.card-cover,.hero-cover,.slide,.tool-cover{position:relative;overflow:hidden;background:linear-gradient(135deg,#e8f1e9,#f7ead5)}
+.card-cover:before,.hero-cover:before,.tool-cover:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.45) 45%,transparent 70%);transform:translateX(-120%);animation:dvShimmer 2.4s ease-in-out infinite;pointer-events:none;z-index:0}
+.card-cover img,.hero-cover img,.slide img,.tool-cover img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;background:#edf3ed}
+.card-cover img{aspect-ratio:16/10}.tool-card{padding:0!important}.tool-card .tool-cover{aspect-ratio:16/9}.tool-card .tool-cover+*{margin-left:18px}.tool-card .tool-cover~h3,.tool-card .tool-cover~p{margin-left:18px;margin-right:18px}.tool-card .tool-cover~p{margin-bottom:18px}.tool-card:before{display:none!important}
+.article-card,.blog-card,.tool-card,.product-card,.resource-card{isolation:isolate;box-shadow:var(--dv-shadow)!important;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease!important}
+.article-card:hover,.blog-card:hover,.tool-card:hover,.product-card:hover,.resource-card:hover{transform:translateY(-7px)!important;box-shadow:0 4px 12px rgba(38,56,46,.08),0 28px 60px rgba(54,74,58,.16)!important;border-color:rgba(27,143,115,.24)!important}
+.article-card:hover .card-cover img,.blog-card:hover .card-cover img,.product-card:hover .card-cover img,.tool-card:hover .tool-cover img{transform:scale(1.035);filter:saturate(1.04) contrast(1.02)}
+.card-cover img,.tool-cover img{transition:transform .55s ease,filter .55s ease}
+.hero-cover{min-height:280px}.hero-cover img{aspect-ratio:16/8.7;max-height:660px!important}
+.product-card .card-cover{aspect-ratio:4/5!important;background:#efe8d9}.product-card .card-cover img{aspect-ratio:4/5!important;object-position:center}
+.inside{position:relative}.inside h3{max-width:27ch}.cat{display:inline-flex;align-items:center;gap:6px}.cat:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.8}
+.section-head h2{max-width:20ch}.filters{row-gap:10px}.filter-pill{backdrop-filter:blur(7px)}
+@keyframes dvShimmer{0%,42%{transform:translateX(-130%)}70%,100%{transform:translateX(130%)}}
+@media(prefers-reduced-motion:reduce){.card-cover:before,.hero-cover:before,.tool-cover:before{animation:none}.article-card,.blog-card,.tool-card,.product-card{transition:none!important}}
+@media(max-width:620px){.hero-cover{min-height:190px}.article-card,.blog-card,.tool-card,.product-card{border-radius:20px!important}.tool-card .tool-cover+*{margin-left:15px}.tool-card .tool-cover~h3,.tool-card .tool-cover~p{margin-left:15px;margin-right:15px}}

@@ -1,56 +1,56 @@
 [
-  {
-    "title": "Apples Health Guide",
-    "slug": "apples-health-guide.html",
-    "category": "NUTRITION",
-    "description": "A practical Daily Vitality article about apples health guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "How Blood Circulation Works: A Simple Guide",
-    "slug": "blood-circulation.html",
-    "category": "HEART & CIRCULATION",
-    "description": "A practical Daily Vitality article about how blood circulation works: a simple guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Blood Sugar and Diabetes: A Simple Guide",
-    "slug": "blood-sugar.html",
-    "category": "METABOLIC HEALTH",
-    "description": "A practical Daily Vitality article about blood sugar and diabetes: a simple guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Bone Density Calcium Guide",
-    "slug": "bone-density-calcium-guide.html",
-    "category": "BONES & MOVEMENT",
-    "description": "A practical Daily Vitality article about bone density calcium guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "How Your Brain Works: A Simple Guide",
-    "slug": "brain-health.html",
-    "category": "BRAIN & MIND",
-    "description": "A practical Daily Vitality article about how your brain works: a simple guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Cyclosporiasis Outbreak Guide",
-    "slug": "cyclosporiasis-outbreak-guide.html",
-    "category": "GUT & DIGESTION",
-    "description": "A practical Daily Vitality article about cyclosporiasis outbreak guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Understanding Your Gut: A Simple Guide to Digestive Health",
-    "slug": "gut-health.html",
-    "category": "GUT & DIGESTION",
-    "description": "A practical Daily Vitality article about understanding your gut: a simple guide to digestive health with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Why Your Hair Gets Weak \u2014 And How to Support It",
-    "slug": "hair-health.html",
-    "category": "EYES, EARS & SKIN",
-    "description": "A practical Daily Vitality article about why your hair gets weak \u2014 and how to support it with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  },
-  {
-    "title": "Heart Attack Warning Signs: The Complete Guide",
-    "slug": "heart-attack-warning-signs-v2.html",
-    "category": "HEART & CIRCULATION",
-    "description": "A practical Daily Vitality article about heart attack warning signs: the complete guide with simple explanations, multiple topic-matched visuals, helpful tools, related reads and everyday wellness tips."
-  }
+ {
+  "title": "Apples Health Guide",
+  "slug": "apples-health-guide.html",
+  "category": "Nutrition & Food",
+  "description": "Apples Health Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+ },
+ {
+  "title": "How Blood Circulation Works: A Simple Guide",
+  "slug": "blood-circulation.html",
+  "category": "Heart & Circulation",
+  "description": "How Blood Circulation Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+ },
+ {
+  "title": "Blood Sugar and Diabetes: A Simple Guide",
+  "slug": "blood-sugar.html",
+  "category": "Metabolic Health",
+  "description": "Blood Sugar and Diabetes: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+ },
+ {
+  "title": "Bone Density Calcium Guide",
+  "slug": "bone-density-calcium-guide.html",
+  "category": "Bones, Joints & Movement",
+  "description": "Bone Density Calcium Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+ },
+ {
+  "title": "How Your Brain Works: A Simple Guide",
+  "slug": "brain-health.html",
+  "category": "Brain & Mind",
+  "description": "How Your Brain Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+ },
+ {
+  "title": "Cyclosporiasis Outbreak Guide",
+  "slug": "cyclosporiasis-outbreak-guide.html",
+  "category": "Gut & Digestion",
+  "description": "Cyclosporiasis Outbreak Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+ },
+ {
+  "title": "Understanding Your Gut: A Simple Guide to Digestive Health",
+  "slug": "gut-health.html",
+  "category": "Gut & Digestion",
+  "description": "Understanding Your Gut: A Simple Guide to Digestive Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+ },
+ {
+  "title": "Why Your Hair Gets Weak — And How to Support It",
+  "slug": "hair-health.html",
+  "category": "Skin, Hair & Beauty",
+  "description": "Why Your Hair Gets Weak — And How to Support It — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+ },
+ {
+  "title": "Heart Attack Warning Signs: The Complete Guide",
+  "slug": "heart-attack-warning-signs-v2.html",
+  "category": "Heart & Circulation",
+  "description": "Heart Attack Warning Signs: The Complete Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+ }
 ]

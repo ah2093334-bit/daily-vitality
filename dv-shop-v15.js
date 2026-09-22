@@ -1,0 +1,3 @@
+(function(){function boot(){var g=document.getElementById('productGrid');if(!g)return;var q=document.getElementById('shopSearch'),f=document.getElementById('shopFilters'),cat='All';function run(){var t=(q&&q.value||'').toLowerCase();g.querySelectorAll('.product-card').forEach(function(c){var ok=(cat==='All'||c.dataset.cat===cat)&&(!t||c.textContent.toLowerCase().indexOf(t)>-1);c.style.display=ok?'':'none'})}
+if(q)q.addEventListener('input',run);if(f)f.addEventListener('click',function(e){var b=e.target.closest('.filter-pill');if(!b)return;cat=b.dataset.cat;f.querySelectorAll('.filter-pill').forEach(function(x){x.classList.toggle('active',x===b)});run()})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot()})();
