@@ -1,15 +1,14 @@
 {
   "name": "Daily Vitality",
   "short_name": "Daily Vitality",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b7a3b",
-  "description": "Practical wellness articles, free tools and daily-use health guides.",
   "icons": [
     {
       "src": "daily-vitality-icon.png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ]

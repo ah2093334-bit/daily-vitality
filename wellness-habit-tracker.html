@@ -14,7 +14,7 @@
 <meta content="https://dailyvitality.xyz/daily-vitality-logo.jpg" name="twitter:image"/>
 <link href="dv-natural-v15.css" rel="stylesheet"/>
 
-<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/></head><body>
+<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/><link rel="stylesheet" href="dv-v21-premium.css"></head><body>
 <header class="dv-topbar top">
 <div class="dv-shell dv-header-row">
 <a aria-label="Daily Vitality home" class="dv-brand brand" href="index.html">
@@ -43,4 +43,4 @@ const names=['Morning water','10-minute walk','Fruit or vegetables','Screen brea
 const box=document.getElementById('habits'), key='dv-habits-'+new Date().toISOString().slice(0,10);
 let state=JSON.parse(localStorage.getItem(key)||'[]');names.forEach((n,i)=>{let d=document.createElement('label');d.className='habit-item';d.innerHTML=`<input type="checkbox" ${state[i]?'checked':''}> <span>${n}</span>`;d.querySelector('input').onchange=e=>{state[i]=e.target.checked;localStorage.setItem(key,JSON.stringify(state))};box.appendChild(d)});
 function resetHabits(){localStorage.removeItem(key);location.reload()}
-</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script></body></html>
+</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script><script src="dv-v21-premium.js"></script></body></html>

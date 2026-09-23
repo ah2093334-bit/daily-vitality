@@ -1,7 +1,1 @@
-
-window.DV_SUBSCRIBE = {
-  provider: 'formsubmit',
-  endpoint: 'https://formsubmit.co/ajax/YOUR_EMAIL@example.com',
-  successMessage: 'Thanks! Please check your inbox if confirmation is enabled.',
-  placeholderEmail: 'YOUR_EMAIL@example.com'
-};
+window.DV_SUBSCRIBE={provider:'formsubmit',endpoint:'https://formsubmit.co/ajax/ah209334@gmail.com',successMessage:'Thanks! You are on the Daily Vitality email list.',placeholderEmail:'YOUR_EMAIL@example.com'};
