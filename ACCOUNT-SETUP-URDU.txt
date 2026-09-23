@@ -1,0 +1,10 @@
+REAL ACCOUNT + GOOGLE LOGIN SETUP
+
+1) Firebase Console میں نیا project بنائیں۔
+2) Authentication > Sign-in method میں Email/Password اور Google enable کریں۔
+3) Project Settings > Your Apps > Web App بنائیں۔
+4) وہاں ملنے والی firebaseConfig values کو firebase-config.js میں PASTE_... placeholders کی جگہ paste کریں۔
+5) Authentication > Settings > Authorized domains میں dailyvitality.xyz شامل کریں۔
+6) دوبارہ files upload/commit کریں۔
+
+اس کے بعد users Firebase Console > Authentication > Users میں نظر آئیں گے۔
