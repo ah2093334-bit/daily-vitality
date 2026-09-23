@@ -14,6 +14,7 @@
     const auth = firebase.auth();
     const email = document.getElementById('authEmail');
     const pass = document.getElementById('authPassword');
+    const confirm = document.getElementById('authConfirm');
     const signup = document.getElementById('emailSignupBtn');
     const signin = document.getElementById('emailSigninBtn');
     const googleBtn = document.getElementById('googleAuthBtn');
@@ -25,6 +26,7 @@
     });
     signup && signup.addEventListener('click', async ()=>{
       if(!email?.value || !pass?.value) return show('Enter an email and password first.');
+      if(confirm && pass.value!==confirm.value) return show('Passwords do not match.');
       try{ await auth.createUserWithEmailAndPassword(email.value, pass.value); show('Account created successfully.'); }catch(err){ show(err.message); }
     });
     signin && signin.addEventListener('click', async ()=>{

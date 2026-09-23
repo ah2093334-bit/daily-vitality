@@ -6,7 +6,7 @@ window.DV_FIREBASE = {
   measurementId: 'PASTE_GA4_MEASUREMENT_ID'
 };
 window.DV_SITE = {
-  publicEmail: 'dailyvitalityxyz@gmail.com',
+  publicEmail: 'ah209334@gmail.com',
   searchConsoleVerificationMeta: 'PASTE_GOOGLE_VERIFICATION_META_CONTENT',
   analyticsTag: 'PASTE_GA4_MEASUREMENT_ID'
 };
