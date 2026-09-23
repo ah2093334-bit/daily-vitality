@@ -1,0 +1,32 @@
+/* Daily Vitality V21 — premium continuous motion + article resource rails */
+:root{--v21green:#0b7a3b;--v21ink:#10251c;--v21muted:#61716a;--v21line:#e2ebe5;--v21shadow:0 14px 42px rgba(17,56,34,.10)}
+html{scroll-behavior:smooth}body{background:#fff!important}
+img{image-rendering:auto;-webkit-font-smoothing:antialiased}
+/* Crisp topic imagery */
+.dv-topic-card img,.dv-card-img img,.dv-tool-card>img{filter:saturate(1.04) contrast(1.025);backface-visibility:hidden;transform:translateZ(0)}
+.dv-topic-card img{height:108px!important}.dv-card-img{height:194px!important}.dv-tool-card>img{height:148px!important}
+.dv-topic-card,.dv-article-card,.dv-tool-card,.dv-product-card{box-shadow:0 8px 28px rgba(20,56,35,.075)!important;border-color:#e1e9e4!important}
+.dv-article-card:hover,.dv-tool-card:hover,.dv-product-card:hover,.dv-topic-card:hover{box-shadow:0 18px 48px rgba(20,56,35,.14)!important;transform:translateY(-5px)}
+/* Continuous rails: JS drives scrollLeft frame-by-frame, no snap / no stop-start */
+.dv-rail{scroll-snap-type:none!important;scroll-behavior:auto!important;will-change:scroll-position;overscroll-behavior-inline:contain}
+.dv-rail>*{scroll-snap-align:none!important}
+.dv-rail.v21-loop-ready{cursor:grab}.dv-rail.v21-loop-ready:active{cursor:grabbing}
+.dv-rail-btn{transition:transform .2s ease,box-shadow .2s ease}.dv-rail-btn:hover{transform:translateY(-55%) scale(1.07);box-shadow:0 9px 24px rgba(23,55,36,.16)}
+/* Product covers: do not crop book covers */
+.dv-product-card>img,.v21-product-card img{object-fit:contain!important;background:linear-gradient(145deg,#fbfaf5,#eef6f0);padding:12px;filter:none!important}
+.dv-product-card>img{height:235px!important}
+/* V21 visual rails inside articles */
+.v21-resources{margin:28px 0 6px;padding:24px 0;border-top:1px solid var(--v21line)}
+.v21-resource-block{margin:22px 0}.v21-resource-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:13px}.v21-resource-head span{font-size:11px;letter-spacing:.13em;color:var(--v21green);font-weight:900}.v21-resource-head h2{font:700 clamp(28px,3vw,40px)/1.05 Georgia,serif;color:var(--v21ink);margin:4px 0}.v21-resource-head p{margin:0;color:var(--v21muted)}
+.v21-card{flex:0 0 286px;display:block;border:1px solid var(--v21line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 27px rgba(20,56,35,.075);transition:.28s}.v21-card:hover{transform:translateY(-5px);box-shadow:var(--v21shadow)}.v21-card img{width:100%;height:170px;object-fit:cover;background:#eef3ef}.v21-card>div{padding:14px}.v21-card small{display:block;color:var(--v21green);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.v21-card b{display:block;font:700 19px/1.12 Georgia,serif;margin:6px 0;color:var(--v21ink)}.v21-card p{font-size:12px;line-height:1.45;color:var(--v21muted);margin:0}.v21-product-card img{height:245px;object-fit:contain!important;padding:12px}
+/* Heart / BP monitor */
+.v21-heart-monitor{position:relative;overflow:hidden;border-radius:22px;background:#061813;border:1px solid #173d32;padding:18px;margin:20px 0;box-shadow:0 16px 40px rgba(4,30,20,.18)}.v21-heart-monitor:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(34,197,94,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.08) 1px,transparent 1px);background-size:28px 28px}.v21-monitor-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;color:#d9fbe7;font-size:12px;font-weight:800}.v21-heart-monitor svg{position:relative;z-index:2;width:100%;height:145px;display:block;margin:5px 0}.v21-ecg-green,.v21-ecg-red{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1300;animation:v21ecg 3.4s linear infinite}.v21-ecg-green{stroke:#22c55e;filter:drop-shadow(0 0 8px rgba(34,197,94,.72))}.v21-ecg-red{stroke:#ff4d5d;opacity:.55;stroke-width:2.2;animation-duration:4.2s}.v21-heart-sound{position:relative;z-index:3;border:1px solid rgba(255,255,255,.2);background:#102b22;color:#fff;border-radius:999px;padding:9px 13px;font-weight:800;cursor:pointer}.v21-heart-sound.on{background:#b91c1c}.v21-monitor-note{position:relative;z-index:2;color:#9bc8b2;font-size:12px;margin:0}@keyframes v21ecg{from{stroke-dashoffset:1300}to{stroke-dashoffset:0}}
+/* Eye blink visual */
+.v21-eye-panel{display:grid;place-items:center;min-height:180px;border-radius:22px;background:radial-gradient(circle at 50% 45%,#f8fdff,#e9f6f4);border:1px solid var(--v21line);margin:20px 0;overflow:hidden}.v21-eye{width:180px;height:92px;border-radius:100% 0 100% 0/100% 0 100% 0;background:#fff;transform:rotate(45deg);border:3px solid #1c5140;position:relative;animation:v21blink 5s infinite}.v21-eye:before{content:'';position:absolute;width:68px;height:68px;border-radius:50%;background:radial-gradient(circle,#111 0 17%,#4d98a6 18% 50%,#1b3d48 51% 62%,#fff 63%);left:53px;top:9px}.v21-eye:after{content:'';position:absolute;inset:-5px;background:#e9f6f4;transform-origin:center;transform:scaleY(0);animation:v21lid 5s infinite}@keyframes v21lid{0%,44%,50%,100%{transform:scaleY(0)}46%,48%{transform:scaleY(1)}}@keyframes v21blink{0%,100%{filter:none}48%{filter:brightness(.97)}}
+/* Better inline article media */
+.inline-image{border-radius:22px!important;overflow:hidden!important;background:#f2f6f3!important}.inline-image img{width:100%!important;max-height:520px!important;object-fit:cover!important;filter:saturate(1.03) contrast(1.02)!important}
+/* Account UI */
+.v21-auth-note{border:1px solid #d9e8de;background:#f5faf7;border-radius:16px;padding:14px;color:#3e5c4d;line-height:1.55}.v21-auth-note strong{color:#0b7a3b}.auth-btn{cursor:pointer}
+/* Soft performance settings */
+@media(prefers-reduced-motion:reduce){.v21-ecg-green,.v21-ecg-red,.v21-eye,.v21-eye:after{animation:none}.dv-rail{scroll-behavior:auto!important}}
+@media(max-width:760px){.dv-card-img{height:170px!important}.dv-topic-card{flex-basis:138px!important}.dv-topic-card img{height:95px!important}.v21-card{flex-basis:248px}.v21-card img{height:148px}.v21-product-card img{height:220px}.v21-heart-monitor svg{height:120px}}

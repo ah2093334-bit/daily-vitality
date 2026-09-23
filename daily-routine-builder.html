@@ -14,7 +14,7 @@
 <meta content="https://dailyvitality.xyz/daily-vitality-logo.jpg" name="twitter:image"/>
 <link href="dv-natural-v15.css" rel="stylesheet"/>
 
-<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/></head><body><header class="dv-topbar top">
+<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/><link rel="stylesheet" href="dv-v21-premium.css"></head><body><header class="dv-topbar top">
 <div class="dv-shell dv-header-row">
 <a aria-label="Daily Vitality home" class="dv-brand brand" href="index.html">
 <img alt="Daily Vitality logo" src="daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
@@ -35,4 +35,4 @@ function renderRoutine(){const items=[...rows.children].map(r=>[r.children[0].va
 function saveRoutine(){localStorage.setItem('dvRoutine',JSON.stringify({name:routineName.value,items:[...rows.children].map(r=>[r.children[0].value,r.children[1].value])}));}
 function clearRoutine(){localStorage.removeItem('dvRoutine');rows.innerHTML='';addRoutineRow()}
 routineName.oninput=renderRoutine;const saved=JSON.parse(localStorage.getItem('dvRoutine')||'null');if(saved){routineName.value=saved.name||'My Daily Routine';(saved.items||[]).forEach(i=>addRoutineRow(i[0],i[1]))}else{[['07:00','Drink water'],['08:00','Breakfast'],['12:30','Walk for 10 minutes'],['22:30','Wind down']].forEach(i=>addRoutineRow(...i))}
-</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script></body></html>
+</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script><script src="dv-v21-premium.js"></script></body></html>

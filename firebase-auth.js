@@ -1,51 +1,9 @@
-
 (function(){
-  function ready(fn){if(document.readyState!=='loading')fn();else document.addEventListener('DOMContentLoaded',fn)}
-  function show(msg){ const el=document.getElementById('authToast')||document.getElementById('authStatus'); if(el) el.textContent=msg; }
-  function configReady(){ return window.DV_FIREBASE && window.DV_FIREBASE.apiKey && !window.DV_FIREBASE.apiKey.includes('PASTE_'); }
-  function attachScripts(){
-    return new Promise((resolve,reject)=>{
-      const urls=['https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js','https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js'];
-      let i=0; function next(){ if(i>=urls.length) return resolve(); const s=document.createElement('script'); s.src=urls[i++]; s.onload=next; s.onerror=reject; document.head.appendChild(s);} next();
-    });
-  }
-  function wireAuth(){
-    if(!window.firebase.apps.length){ firebase.initializeApp(window.DV_FIREBASE); }
-    const auth = firebase.auth();
-    const email = document.getElementById('authEmail');
-    const pass = document.getElementById('authPassword');
-    const confirm = document.getElementById('authConfirm');
-    const signup = document.getElementById('emailSignupBtn');
-    const signin = document.getElementById('emailSigninBtn');
-    const googleBtn = document.getElementById('googleAuthBtn');
-    const signout = document.getElementById('signOutBtn');
-    auth.onAuthStateChanged(user=>{
-      const badge=document.getElementById('authUserBadge');
-      if(user){ show('Signed in as '+(user.email||'user')+'.'); if(badge) badge.textContent='Signed in: '+(user.email||'Google user'); }
-      else { if(badge) badge.textContent='Not signed in yet'; }
-    });
-    signup && signup.addEventListener('click', async ()=>{
-      if(!email?.value || !pass?.value) return show('Enter an email and password first.');
-      if(confirm && pass.value!==confirm.value) return show('Passwords do not match.');
-      try{ await auth.createUserWithEmailAndPassword(email.value, pass.value); show('Account created successfully.'); }catch(err){ show(err.message); }
-    });
-    signin && signin.addEventListener('click', async ()=>{
-      if(!email?.value || !pass?.value) return show('Enter an email and password first.');
-      try{ await auth.signInWithEmailAndPassword(email.value, pass.value); show('Signed in successfully.'); }catch(err){ show(err.message); }
-    });
-    googleBtn && googleBtn.addEventListener('click', async ()=>{
-      try{ const provider = new firebase.auth.GoogleAuthProvider(); await auth.signInWithPopup(provider); show('Signed in with Google.'); }catch(err){ show(err.message); }
-    });
-    signout && signout.addEventListener('click', async ()=>{ try{ await auth.signOut(); show('Signed out.'); }catch(err){ show(err.message); } });
-  }
-  ready(async ()=>{
-    const modal=document.getElementById('joinModal');
-    if(!modal){
-      document.querySelectorAll('[data-join]').forEach(a=>a.href='account.html');
-      return;
-    }
-    document.querySelectorAll('[data-join]').forEach(a=>a.addEventListener('click', e=>{e.preventDefault(); modal.classList.add('show')}));
-    if(!configReady()){ show('Firebase-ready: add your public Firebase web config in firebase-config.js to activate signup and login.'); return; }
-    try{ await attachScripts(); wireAuth(); }catch(err){ show('Firebase libraries failed to load. Check the network connection.'); }
-  });
+function ready(fn){if(document.readyState!=='loading')fn();else document.addEventListener('DOMContentLoaded',fn)}
+function el(id){return document.getElementById(id)}function show(msg,good=false){const x=el('authToast')||el('authStatus');if(x){x.textContent=msg;x.style.color=good?'#0b7a3b':'#7a342d'}}
+function configReady(){return window.DV_FIREBASE&&window.DV_FIREBASE.apiKey&&!String(window.DV_FIREBASE.apiKey).includes('PASTE_')}
+function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector('script[src="'+src+'"]'))return res();const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
+async function libs(){await loadScript('https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js');await loadScript('https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js')}
+function wire(){if(!firebase.apps.length)firebase.initializeApp(window.DV_FIREBASE);const auth=firebase.auth();auth.useDeviceLanguage();const email=el('authEmail'),pass=el('authPassword'),confirm=el('authConfirm');auth.getRedirectResult().catch(()=>{});auth.onAuthStateChanged(user=>{const b=el('authUserBadge');if(user){if(b)b.textContent='Signed in: '+(user.email||user.displayName||'Google user');show('You are signed in.',true)}else if(b)b.textContent='Not signed in yet'});el('emailSignupBtn')?.addEventListener('click',async()=>{if(!email?.value||!pass?.value)return show('Enter an email and password first.');if(pass.value.length<6)return show('Use at least 6 characters for your password.');if(confirm&&pass.value!==confirm.value)return show('Passwords do not match.');try{await auth.createUserWithEmailAndPassword(email.value.trim(),pass.value);show('Account created successfully.',true)}catch(e){show(e.message)}});el('emailSigninBtn')?.addEventListener('click',async()=>{try{await auth.signInWithEmailAndPassword(email.value.trim(),pass.value);show('Signed in successfully.',true)}catch(e){show(e.message)}});el('forgotPasswordBtn')?.addEventListener('click',async()=>{if(!email?.value)return show('Enter your email first.');try{await auth.sendPasswordResetEmail(email.value.trim());show('Password reset email sent.',true)}catch(e){show(e.message)}});el('googleAuthBtn')?.addEventListener('click',async()=>{try{const p=new firebase.auth.GoogleAuthProvider();if(/Android|iPhone|iPad|Mobile/i.test(navigator.userAgent))await auth.signInWithRedirect(p);else await auth.signInWithPopup(p)}catch(e){show(e.message)}});el('signOutBtn')?.addEventListener('click',async()=>{try{await auth.signOut();show('Signed out.',true)}catch(e){show(e.message)}})}
+ready(async()=>{if(!configReady()){show('Firebase is not connected yet. The site owner must paste the Firebase Web App configuration into firebase-config.js.');document.body.classList.add('firebase-not-ready');return}try{await libs();wire()}catch(e){show('Firebase could not load. Check your internet connection and Firebase setup.')}})
 })();

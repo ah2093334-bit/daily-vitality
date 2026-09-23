@@ -14,7 +14,7 @@
 <meta content="https://dailyvitality.xyz/daily-vitality-logo.jpg" name="twitter:image"/>
 <link href="dv-natural-v15.css" rel="stylesheet"/>
 
-<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/></head><body><header class="dv-topbar top">
+<link href="dv-visual-v16.css" rel="stylesheet"/><link href="dv-engage-v17.css" rel="stylesheet"/><link href="dv-v18-final.css" rel="stylesheet"/><link rel="stylesheet" href="dv-v21-premium.css"></head><body><header class="dv-topbar top">
 <div class="dv-shell dv-header-row">
 <a aria-label="Daily Vitality home" class="dv-brand brand" href="index.html">
 <img alt="Daily Vitality logo" src="daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
@@ -35,4 +35,4 @@ pDate.value=new Date().toISOString().slice(0,10);const pr=document.getElementByI
 function addP(t='09:00',x='Focused work'){const d=document.createElement('div');d.className='row-item';d.innerHTML=`<input type="time" value="${t}"><input value="${x}"><button class="mini-btn alt">×</button>`;d.querySelector('button').onclick=()=>d.remove();pr.appendChild(d)}
 function saveP(){localStorage.setItem('dvPlanner',JSON.stringify({date:pDate.value,top:pTop.value,notes:pNotes.value,rows:[...pr.children].map(r=>[r.children[0].value,r.children[1].value])}))}
 const s=JSON.parse(localStorage.getItem('dvPlanner')||'null');if(s){pDate.value=s.date||pDate.value;pTop.value=s.top||'';pNotes.value=s.notes||'';(s.rows||[]).forEach(i=>addP(...i))}else{addP();addP('13:00','Lunch / reset');addP('18:00','Personal tasks')}
-</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script></body></html>
+</script><script src="subscribe-config.js"></script><script src="dv-premium-v5.js"></script><script src="dv-v9-extras.js"></script><script src="subscribe-config.js"></script><script src="firebase-config.js"></script><script src="dv-premium-v5.js"></script><script src="click-sounds.js"></script><script src="firebase-auth.js"></script><script src="dv-site-v15.js"></script><script src="dv-engage-v17.js"></script><script src="dv-v18-final.js"></script><script src="dv-consent.js"></script><script src="dv-v21-premium.js"></script></body></html>

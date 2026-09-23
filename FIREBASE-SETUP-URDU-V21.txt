@@ -1,0 +1,20 @@
+DAILY VITALITY — FIREBASE AUTH SETUP (V21)
+
+اہم: ZIP upload کرنے سے Firebase خود connect نہیں ہوتا، کیونکہ ہر Firebase project کی اپنی public Web App config ہوتی ہے۔ یہ values میں آپ کی جگہ بنا یا اندازہ نہیں کر سکتا۔
+
+1) https://console.firebase.google.com کھولیں۔
+2) Add project دبائیں اور نام Daily Vitality رکھیں۔
+3) Security > Authentication > Get started کھولیں۔
+4) Sign-in method میں Email/Password کو Enable کریں۔
+5) اسی جگہ Google provider کو بھی Enable اور Save کریں۔
+6) Project Settings > General > Your apps میں Web (</>) app register کریں۔ App nickname: Daily Vitality Web۔
+7) Firebase جو firebaseConfig object دے گا، اس میں سے apiKey, authDomain, projectId, appId copy کریں۔
+8) ZIP کی firebase-config.js کھولیں اور PASTE_ والی چار values replace کریں۔ quotation marks رہنے دیں۔
+9) Authentication > Settings > Authorized domains میں dailyvitality.xyz شامل کریں۔ اگر GitHub Pages URL پر بھی test کرتے ہیں تو اپنا username.github.io domain بھی شامل کریں۔
+10) updated firebase-config.js GitHub root میں upload/replace کریں۔
+
+اس کے بعد Email/Password signup اور Google login چلیں گے۔
+نئے users Firebase Console > Security > Authentication > Users میں نظر آئیں گے۔
+Passwords آپ کو readable شکل میں نظر نہیں آئیں گے، اور ایسا ہونا ہی secure design ہے۔
+
+V21 account page میں Forgot Password بھی شامل ہے۔

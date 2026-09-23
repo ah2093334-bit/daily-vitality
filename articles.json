@@ -1,1106 +1,1388 @@
 [
   {
+    "title": "How Many Steps a Day Do You Really Need?",
+    "slug": "how-many-steps-a-day-do-you-really-need.html",
+    "category": "Bones, Joints & Movement",
+    "description": "A practical guide to step counts, walking intensity, and why moving more consistently matters more than chasing one magic number.",
+    "cover": "cover-how-to-start-walking-every-day.webp"
+  },
+  {
+    "title": "Caffeine and Sleep: How Late Is Too Late?",
+    "slug": "caffeine-and-sleep-how-late-is-too-late.html",
+    "category": "Sleep & Recovery",
+    "description": "How caffeine can linger for hours, why sensitivity varies, and how to build a cutoff time that protects sleep without making life rigid.",
+    "cover": "cover-how-to-sleep-better-at-night.webp"
+  },
+  {
+    "title": "Electrolytes: When Plain Water Is Enough",
+    "slug": "electrolytes-when-plain-water-is-enough.html",
+    "category": "Nutrition & Food",
+    "description": "When water is usually enough, when sweat and illness change the picture, and why more electrolytes are not automatically better.",
+    "cover": "cover-hydration-electrolytes.webp"
+  },
+  {
+    "title": "Magnesium Glycinate vs. Citrate vs. Oxide",
+    "slug": "magnesium-glycinate-vs-citrate-vs-oxide.html",
+    "category": "Nutrition & Food",
+    "description": "A simple comparison of common magnesium supplement forms, what labels mean, and the practical cautions worth knowing.",
+    "cover": "cover-magnesium-guide.webp"
+  },
+  {
+    "title": "Omega-3s: Food vs. Supplements",
+    "slug": "omega-3-food-vs-supplements.html",
+    "category": "Nutrition & Food",
+    "description": "A practical look at omega-3 food sources, fish-oil supplements, and why the best choice depends on diet, goals, and medical context.",
+    "cover": "cover-heart-health.webp"
+  },
+  {
+    "title": "Walking After Meals: What It May Do for Blood Sugar",
+    "slug": "walking-after-meals-blood-sugar.html",
+    "category": "Metabolic Health",
+    "description": "Why a short walk after eating can be a useful routine, how to start gently, and why it does not replace diabetes care.",
+    "cover": "cover-blood-sugar.webp"
+  },
+  {
+    "title": "Protein as You Age: How Much and How Often?",
+    "slug": "protein-as-you-age-how-much-and-how-often.html",
+    "category": "Nutrition & Food",
+    "description": "Why protein matters for muscle as adults age, how to spread it across meals, and where food-first choices fit.",
+    "cover": "cover-high-protein-breakfasts-for-busy-mornings.webp"
+  },
+  {
+    "title": "Melatonin: What It Can — and Can’t — Do for Sleep",
+    "slug": "melatonin-what-it-can-and-cant-do.html",
+    "category": "Sleep & Recovery",
+    "description": "What melatonin does in the body, when timing matters, and why it is not a universal fix for poor sleep.",
+    "cover": "cover-sleep-regularity-consistent-wake-time.webp"
+  },
+  {
+    "title": "Added Sugar on Nutrition Labels: How to Read It",
+    "slug": "added-sugar-label-how-to-read-it.html",
+    "category": "Nutrition & Food",
+    "description": "How to find added sugar, understand Percent Daily Value, compare products, and avoid turning one number into food fear.",
+    "cover": "cover-how-to-read-food-labels.webp"
+  },
+  {
+    "title": "Ultra-Processed Foods: A Practical Guide Without Food Fear",
+    "slug": "ultra-processed-foods-practical-guide.html",
+    "category": "Nutrition & Food",
+    "description": "A balanced way to think about highly processed foods, overall diet patterns, convenience, and realistic upgrades.",
+    "cover": "cover-how-to-build-a-grocery-list-around-whole-foods.webp"
+  },
+  {
+    "title": "Vitamin B12: Food Sources, Deficiency Basics, and When Testing May Help",
+    "slug": "vitamin-b12-foods-deficiency-basics.html",
+    "category": "Nutrition & Food",
+    "description": "A simple guide to vitamin B12, food sources, possible deficiency signs and testing context.",
+    "cover": "cover-vitamin-b12-foods-deficiency-basics.svg"
+  },
+  {
+    "title": "When to Take Vitamins and Supplements",
+    "slug": "when-to-take-vitamins-and-supplements.html",
+    "category": "Nutrition & Food",
+    "description": "A practical guide to timing, food, medicine interactions and simple reminders.",
+    "cover": "cover-when-to-take-vitamins-and-supplements.svg"
+  },
+  {
+    "title": "Quick Online Mind Tests: What They Can — and Can’t — Tell You",
+    "slug": "quick-online-mind-tests.html",
+    "category": "Brain & Mind",
+    "description": "What short brain scores mean and what they do not.",
+    "cover": "cover-quick-online-mind-tests.svg"
+  },
+  {
+    "title": "Understanding Blood Pressure Numbers",
+    "slug": "understanding-blood-pressure.html",
+    "category": "Heart & Circulation",
+    "description": "Systolic, diastolic and home-reading context.",
+    "cover": "cover-understanding-blood-pressure.svg"
+  },
+  {
+    "title": "Hormone Imbalance Signs",
+    "slug": "hormone-patterns-guide.html",
+    "category": "Metabolic Health",
+    "description": "Common overlapping symptoms and when to follow up.",
+    "cover": "cover-hormone-patterns.svg"
+  },
+  {
+    "title": "What Resting Heart Rate Can — and Can’t — Tell You",
+    "slug": "resting-heart-rate-guide.html",
+    "category": "Heart & Circulation",
+    "description": "Why trends and symptoms matter.",
+    "cover": "cover-resting-heart-rate.svg"
+  },
+  {
+    "title": "Healthy Weight, BMI, and Waist Size Explained",
+    "slug": "healthy-weight-bmi-guide.html",
+    "category": "Metabolic Health",
+    "description": "A more balanced way to use weight-health numbers.",
+    "cover": "cover-healthy-weight-bmi.svg"
+  },
+  {
     "title": "Vitamin D vs. Vitamin D3: What’s the Difference?",
     "slug": "vitamin-d-vs-d3.html",
     "category": "Nutrition & Food",
-    "description": "A clear guide to vitamin D2 and D3, food sources, blood testing, supplement basics, and why more is not always better."
+    "description": "A clear guide to vitamin D2 and D3, food sources, blood testing, supplement basics, and why more is not always better.",
+    "cover": "cover-vitamin-d-vs-d3.webp"
   },
   {
     "title": "Zinc: What It Does, Food Sources, and Supplement Cautions",
     "slug": "zinc-foods-benefits-supplements.html",
     "category": "Nutrition & Food",
-    "description": "Learn what zinc does, where to get it from food, common supplement mistakes, and why high doses can create new problems."
+    "description": "Learn what zinc does, where to get it from food, common supplement mistakes, and why high doses can create new problems.",
+    "cover": "cover-zinc-foods-benefits-supplements.webp"
   },
   {
     "title": "Biotin for Hair, Skin, and Nails: What the Evidence Actually Says",
     "slug": "biotin-hair-skin-nails.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Biotin is popular in beauty supplements, but deficiency is uncommon and evidence for routine high-dose hair, skin, or nail use is limited."
+    "description": "Biotin is popular in beauty supplements, but deficiency is uncommon and evidence for routine high-dose hair, skin, or nail use is limited.",
+    "cover": "cover-biotin-hair-skin-nails.webp"
   },
   {
     "title": "Intrusive Thoughts: What They Are and When to Get Help",
     "slug": "intrusive-thoughts-what-they-are.html",
     "category": "Brain & Mind",
-    "description": "A calm, practical explanation of intrusive thoughts, why having a thought is not the same as wanting it, and when recurring thoughts may need professional support."
+    "description": "A calm, practical explanation of intrusive thoughts, why having a thought is not the same as wanting it, and when recurring thoughts may need professional support.",
+    "cover": "cover-intrusive-thoughts-what-they-are.webp"
   },
   {
     "title": "Hair Loss: Common Causes, Shedding vs. Thinning, and When to See a Dermatologist",
     "slug": "hair-loss-causes-when-to-see-dermatologist.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Hair loss has many causes. Learn the difference between shedding and progressive thinning, common triggers, and when a dermatologist can help."
-  },
-  {
-    "title": "Online Color Vision Checks: What They Can — and Can’t — Tell You",
-    "slug": "online-color-vision-checks-what-they-can-and-cant-tell-you.html",
-    "category": "Eyes, Ears & Oral Care",
-    "description": "How browser color-vision checks work, why screens can affect results, and when an eye-care professional should evaluate color vision."
+    "description": "Hair loss has many causes. Learn the difference between shedding and progressive thinning, common triggers, and when a dermatologist can help.",
+    "cover": "cover-hair-loss-causes-when-to-see-dermatologist.webp"
   },
   {
     "title": "Online Hearing Checks: How to Use Them Safely",
     "slug": "online-hearing-checks-how-to-use-them-safely.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "What an online hearing or speech check can show, what it cannot measure, and when to arrange a professional hearing test."
+    "description": "What an online hearing or speech check can show, what it cannot measure, and when to arrange a professional hearing test.",
+    "cover": "cover-online-hearing-checks-how-to-use-them-safely.webp"
+  },
+  {
+    "title": "Online Color Vision Checks: What They Can — and Can’t — Tell You",
+    "slug": "online-color-vision-checks-what-they-can-and-cant-tell-you.html",
+    "category": "Eyes, Ears & Oral Care",
+    "description": "How browser color-vision checks work, why screens can affect results, and when an eye-care professional should evaluate color vision.",
+    "cover": "cover-online-color-vision-checks-what-they-can-and-cant-tell-you.webp"
   },
   {
     "title": "5 Simple Ways to Boost Your Energy Naturally This Week",
     "slug": "5-simple-ways-to-boost-your-energy-naturally-this-week.html",
     "category": "Daily Routines & Habits",
-    "description": "5 Simple Ways to Boost Your Energy Naturally This Week — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "5 Simple Ways to Boost Your Energy Naturally This Week — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-5-simple-ways-to-boost-your-energy-naturally-this-week.webp"
   },
   {
     "title": "Collagen: What It Actually Does and Do Supplements Work?",
     "slug": "collagen-what-it-actually-does-and-do-supplements-work.html",
     "category": "Nutrition & Food",
-    "description": "Collagen: What It Actually Does and Do Supplements Work — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Collagen: What It Actually Does and Do Supplements Work — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-collagen-what-it-actually-does-and-do-supplements-work.webp"
   },
   {
     "title": "Bone Strength Blueprint",
     "slug": "DV-EB-000001-bone-strength-blueprint.html",
     "category": "Bones, Joints & Movement",
-    "description": "Bone Strength Blueprint — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Bone Strength Blueprint — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-dv-eb-000001-bone-strength-blueprint.webp"
   },
   {
     "title": "Eczema and Psoriasis: What’s Actually Happening in Your Skin",
     "slug": "eczema-and-psoriasis-whats-actually-happening-in-your-skin.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Eczema and Psoriasis: What’s Actually Happening in Your Skin — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+    "description": "Eczema and Psoriasis: What’s Actually Happening in Your Skin — a plain-language guide to the basics, common myths, everyday habits that may help, and when…",
+    "cover": "cover-eczema-and-psoriasis-whats-actually-happening-in-your-skin.webp"
   },
   {
     "title": "Understanding Anxiety: What’s Actually Happening in Your Body",
     "slug": "anxiety-explained.html",
     "category": "Brain & Mind",
-    "description": "Understanding Anxiety: What’s Actually Happening in Your Body — a plain-language guide to the basics, common myths, everyday habits that may help, and…"
+    "description": "Understanding Anxiety: What’s Actually Happening in Your Body — a plain-language guide to the basics, common myths, everyday habits that may help, and…",
+    "cover": "cover-anxiety-explained.webp"
   },
   {
     "title": "Apples Health Guide",
     "slug": "apples-health-guide.html",
     "category": "Nutrition & Food",
-    "description": "Apples Health Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Apples Health Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-apples-health-guide.webp"
   },
   {
     "title": "Arthritis: Why Joints Become Painful Over Time",
     "slug": "arthritis-joint-pain.html",
     "category": "Bones, Joints & Movement",
-    "description": "Arthritis: Why Joints Become Painful Over Time — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…"
+    "description": "Arthritis: Why Joints Become Painful Over Time — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…",
+    "cover": "cover-arthritis-joint-pain.webp"
   },
   {
     "title": "Asthma and Respiratory Health: What Actually Happens",
     "slug": "asthma-respiratory-health.html",
     "category": "Immunity & Lungs",
-    "description": "Asthma and Respiratory Health: What Actually Happens — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…"
+    "description": "Asthma and Respiratory Health: What Actually Happens — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…",
+    "cover": "cover-asthma-respiratory-health.webp"
   },
   {
     "title": "Why Your Back Hurts — And What Actually Helps",
     "slug": "back-pain.html",
     "category": "Bones, Joints & Movement",
-    "description": "Why Your Back Hurts — And What Actually Helps — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…"
+    "description": "Why Your Back Hurts — And What Actually Helps — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…",
+    "cover": "cover-back-pain.webp"
   },
   {
     "title": "How Blood Circulation Works: A Simple Guide",
     "slug": "blood-circulation.html",
     "category": "Heart & Circulation",
-    "description": "How Blood Circulation Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "How Blood Circulation Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-blood-circulation.webp"
   },
   {
     "title": "High Blood Pressure Warning Signs: The Silent Signals Most People Miss",
     "slug": "blood-pressure-warning-signs.html",
     "category": "Heart & Circulation",
-    "description": "High Blood Pressure Warning Signs: The Silent Signals Most People Miss — clear, practical wellness guidance with everyday tips, related tools and reads…"
+    "description": "High Blood Pressure Warning Signs: The Silent Signals Most People Miss — clear, practical wellness guidance with everyday tips, related tools and reads…",
+    "cover": "cover-blood-pressure-warning-signs.webp"
   },
   {
     "title": "High Blood Pressure: What You Actually Need to Know",
     "slug": "blood-pressure.html",
     "category": "Heart & Circulation",
-    "description": "High Blood Pressure: What You Actually Need to Know — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…"
+    "description": "High Blood Pressure: What You Actually Need to Know — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…",
+    "cover": "cover-blood-pressure.webp"
   },
   {
     "title": "Blood Sugar and Diabetes: A Simple Guide",
     "slug": "blood-sugar.html",
     "category": "Metabolic Health",
-    "description": "Blood Sugar and Diabetes: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Blood Sugar and Diabetes: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-blood-sugar.webp"
   },
   {
     "title": "Bone Anatomy Explained",
     "slug": "bone-anatomy-explained.html",
     "category": "Bones, Joints & Movement",
-    "description": "Bone Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Bone Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-bone-anatomy-explained.webp"
   },
   {
     "title": "Bone Density Calcium Guide",
     "slug": "bone-density-calcium-guide.html",
     "category": "Bones, Joints & Movement",
-    "description": "Bone Density Calcium Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Bone Density Calcium Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-bone-density-calcium-guide.webp"
   },
   {
     "title": "How Your Brain Works: A Simple Guide",
     "slug": "brain-health.html",
     "category": "Brain & Mind",
-    "description": "How Your Brain Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "How Your Brain Works: A Simple Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-brain-health.webp"
   },
   {
     "title": "A 2-Minute Breathing Exercise for Anxious Moments",
     "slug": "breathing.html",
     "category": "Brain & Mind",
-    "description": "A 2-Minute Breathing Exercise for Anxious Moments — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "A 2-Minute Breathing Exercise for Anxious Moments — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-breathing.webp"
   },
   {
     "title": "Budget High-Protein Foods That Actually Fit a Grocery Budget",
     "slug": "budget-high-protein-foods-that-actually-fit-a-grocery-budget.html",
     "category": "Nutrition & Food",
-    "description": "Budget High-Protein Foods That Actually Fit a Grocery Budget — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+    "description": "Budget High-Protein Foods That Actually Fit a Grocery Budget — a plain-language guide to the basics, common myths, everyday habits that may help, and when…",
+    "cover": "cover-budget-high-protein-foods-that-actually-fit-a-grocery-budget.webp"
   },
   {
     "title": "Child Nutrition Growth",
     "slug": "child-nutrition-growth.html",
     "category": "Nutrition & Food",
-    "description": "Child Nutrition Growth — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Child Nutrition Growth — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-child-nutrition-growth.webp"
   },
   {
     "title": "Cholesterol Explained: Good, Bad, and What to Do About It",
     "slug": "cholesterol.html",
     "category": "Heart & Circulation",
-    "description": "Cholesterol Explained: Good, Bad, and What to Do About It — clear, practical wellness guidance with everyday tips, related tools and reads from Daily…"
+    "description": "Cholesterol Explained: Good, Bad, and What to Do About It — clear, practical wellness guidance with everyday tips, related tools and reads from Daily…",
+    "cover": "cover-cholesterol.webp"
   },
   {
     "title": "Colds vs. Flu: What’s the Actual Difference",
     "slug": "cold-and-flu.html",
     "category": "Immunity & Lungs",
-    "description": "Colds vs. Flu: What’s the Actual Difference — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Colds vs. Flu: What’s the Actual Difference — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-cold-and-flu.webp"
   },
   {
     "title": "Cold Plunges and Ice Baths: What the Science Actually Says",
     "slug": "cold-plunges-ice-baths-what-science-says.html",
     "category": "Immunity & Lungs",
-    "description": "Cold Plunges and Ice Baths: What the Science Actually Says — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+    "description": "Cold Plunges and Ice Baths: What the Science Actually Says — a plain-language guide to the basics, common myths, everyday habits that may help, and when…",
+    "cover": "cover-cold-plunges-ice-baths-what-science-says.webp"
   },
   {
     "title": "Creatine: Not Just for Athletes Anymore",
     "slug": "creatine-not-just-for-athletes.html",
     "category": "Nutrition & Food",
-    "description": "Creatine: Not Just for Athletes Anymore — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Creatine: Not Just for Athletes Anymore — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-creatine-not-just-for-athletes.webp"
   },
   {
     "title": "Cyclosporiasis Outbreak Guide",
     "slug": "cyclosporiasis-outbreak-guide.html",
     "category": "Gut & Digestion",
-    "description": "Cyclosporiasis Outbreak Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Cyclosporiasis Outbreak Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-cyclosporiasis-outbreak-guide.webp"
   },
   {
     "title": "Why Dehydration Affects You More Than You Realize",
     "slug": "dehydration.html",
     "category": "Nutrition & Food",
-    "description": "Why Dehydration Affects You More Than You Realize — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "Why Dehydration Affects You More Than You Realize — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-dehydration.webp"
   },
   {
     "title": "Digital Eye Strain: Why Screens Exhaust Your Eyes",
     "slug": "digital-eye-strain.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Digital Eye Strain: Why Screens Exhaust Your Eyes — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "Digital Eye Strain: Why Screens Exhaust Your Eyes — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-digital-eye-strain.webp"
   },
   {
     "title": "Ear Health Hearing",
     "slug": "ear-health-hearing.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Ear Health Hearing — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Ear Health Hearing — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-ear-health-hearing.webp"
   },
   {
     "title": "Ear Hearing Warning Signs",
     "slug": "ear-hearing-warning-signs.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Ear Hearing Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Ear Hearing Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-ear-hearing-warning-signs.webp"
   },
   {
     "title": "Simple Habits to Protect Your Eyesight",
     "slug": "eye-health.html",
     "category": "Daily Routines & Habits",
-    "description": "Simple Habits to Protect Your Eyesight — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Simple Habits to Protect Your Eyesight — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-eye-health.webp"
   },
   {
     "title": "Eye Warning Signs",
     "slug": "eye-warning-signs.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Eye Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Eye Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-eye-warning-signs.webp"
   },
   {
     "title": "Foodborne and Waterborne Illness: What Actually Makes You Sick",
     "slug": "foodborne-waterborne-illness.html",
     "category": "Gut & Digestion",
-    "description": "Foodborne and Waterborne Illness: What Actually Makes You Sick — a plain-language guide to the basics, common myths, everyday habits that may help, and…"
+    "description": "Foodborne and Waterborne Illness: What Actually Makes You Sick — a plain-language guide to the basics, common myths, everyday habits that may help, and…",
+    "cover": "cover-foodborne-waterborne-illness.webp"
   },
   {
     "title": "GLP-1 Weight-Loss Drugs Explained",
     "slug": "glp1-weight-loss-drugs-explained.html",
     "category": "Metabolic Health",
-    "description": "GLP-1 Weight-Loss Drugs Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "GLP-1 Weight-Loss Drugs Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-glp1-weight-loss-drugs-explained.webp"
   },
   {
     "title": "Understanding Your Gut: A Simple Guide to Digestive Health",
     "slug": "gut-health.html",
     "category": "Gut & Digestion",
-    "description": "Understanding Your Gut: A Simple Guide to Digestive Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+    "description": "Understanding Your Gut: A Simple Guide to Digestive Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when…",
+    "cover": "cover-gut-health.webp"
   },
   {
     "title": "Why Your Hair Gets Weak — And How to Support It",
     "slug": "hair-health.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Why Your Hair Gets Weak — And How to Support It — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Why Your Hair Gets Weak — And How to Support It — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-hair-health.webp"
   },
   {
     "title": "Heart Attack Warning Signs: The Complete Guide",
     "slug": "heart-attack-warning-signs-v2.html",
     "category": "Heart & Circulation",
-    "description": "Heart Attack Warning Signs: The Complete Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Heart Attack Warning Signs: The Complete Guide — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-heart-attack-warning-signs-v2.webp"
   },
   {
     "title": "Understanding Your Heart: A Simple Guide to Heart Health",
     "slug": "heart-health.html",
     "category": "Heart & Circulation",
-    "description": "Understanding Your Heart: A Simple Guide to Heart Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Understanding Your Heart: A Simple Guide to Heart Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-heart-health.webp"
   },
   {
     "title": "High-Fiber Foods: 25 Easy Ways to Increase Fiber",
     "slug": "high-fiber-foods-25-easy-ways-to-increase-fiber-without-over.html",
     "category": "Nutrition & Food",
-    "description": "High-Fiber Foods: 25 Easy Ways to Increase Fiber — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "High-Fiber Foods: 25 Easy Ways to Increase Fiber — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-high-fiber-foods-25-easy-ways-to-increase-fiber-without-over.webp"
   },
   {
     "title": "High-Protein Breakfasts for Busy Mornings",
     "slug": "high-protein-breakfasts-for-busy-mornings.html",
     "category": "Nutrition & Food",
-    "description": "High-Protein Breakfasts for Busy Mornings — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "High-Protein Breakfasts for Busy Mornings — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-high-protein-breakfasts-for-busy-mornings.webp"
   },
   {
     "title": "How Blood Works",
     "slug": "how-blood-works.html",
     "category": "Heart & Circulation",
-    "description": "How Blood Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "How Blood Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-how-blood-works.webp"
   },
   {
     "title": "How to Add More Color to Your Plate",
     "slug": "how-to-add-more-color-to-your-plate.html",
     "category": "Nutrition & Food",
-    "description": "How to Add More Color to Your Plate: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits your day."
+    "description": "How to Add More Color to Your Plate: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits your day.",
+    "cover": "cover-how-to-add-more-color-to-your-plate.webp"
   },
   {
     "title": "How to Add Movement to a Desk Job",
     "slug": "how-to-add-movement-to-a-desk-job.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Add Movement to a Desk Job: start below your maximum, focus on smooth movement, attach it to your day, progress gradually."
+    "description": "How to Add Movement to a Desk Job: start below your maximum, focus on smooth movement, attach it to your day, progress gradually.",
+    "cover": "cover-how-to-add-movement-to-a-desk-job.webp"
   },
   {
     "title": "How to Avoid Germs in the Kitchen",
     "slug": "how-to-avoid-germs-in-the-kitchen.html",
     "category": "Immunity & Lungs",
-    "description": "How to Avoid Germs in the Kitchen: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…"
+    "description": "How to Avoid Germs in the Kitchen: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…",
+    "cover": "cover-how-to-avoid-germs-in-the-kitchen.webp"
   },
   {
     "title": "How to Brush Your Teeth the Right Way",
     "slug": "how-to-brush-your-teeth-the-right-way.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "How to Brush Your Teeth the Right Way: a 4-step guide — Brush on a schedule; Clean between teeth; Freshen the full mouth; Protect the result."
+    "description": "How to Brush Your Teeth the Right Way: a 4-step guide — Brush on a schedule; Clean between teeth; Freshen the full mouth; Protect the result.",
+    "cover": "cover-how-to-brush-your-teeth-the-right-way.webp"
   },
   {
     "title": "How to Build a Beginner Home Movement Routine",
     "slug": "how-to-build-a-beginner-home-movement-routine.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Build a Beginner Home Movement Routine: start below your maximum, focus on smooth movement, attach it to your day, progress gradually."
+    "description": "How to Build a Beginner Home Movement Routine: start below your maximum, focus on smooth movement, attach it to your day, progress gradually.",
+    "cover": "cover-how-to-build-a-beginner-home-movement-routine.webp"
   },
   {
     "title": "How to Build a Better Hand-Washing Routine",
     "slug": "how-to-build-a-better-hand-washing-routine.html",
     "category": "Immunity & Lungs",
-    "description": "How to Build a Better Hand-Washing Routine: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule."
+    "description": "How to Build a Better Hand-Washing Routine: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule.",
+    "cover": "cover-how-to-build-a-better-hand-washing-routine.webp"
   },
   {
     "title": "How to Build a Better Work-From-Home Wellness Routine",
     "slug": "how-to-build-a-better-work-from-home-wellness-routine.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Better Work-From-Home Wellness Routine: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Build a Better Work-From-Home Wellness Routine: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-build-a-better-work-from-home-wellness-routine.webp"
   },
   {
     "title": "How to Build a Daily Routine You Can Actually Follow",
     "slug": "how-to-build-a-daily-routine-you-can-actually-follow.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Daily Routine You Can Actually Follow: choose the anchor, keep the first version small, put the actions in order, review after a week."
+    "description": "How to Build a Daily Routine You Can Actually Follow: choose the anchor, keep the first version small, put the actions in order, review after a week.",
+    "cover": "cover-how-to-build-a-daily-routine-you-can-actually-follow.webp"
   },
   {
     "title": "How to Build a Fresh Skin Routine",
     "slug": "how-to-build-a-fresh-skin-routine.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Build a Fresh Skin Routine: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…"
+    "description": "How to Build a Fresh Skin Routine: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…",
+    "cover": "cover-how-to-build-a-fresh-skin-routine.webp"
   },
   {
     "title": "How to Build a Gentle Face-Washing Routine",
     "slug": "how-to-build-a-gentle-face-washing-routine.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Build a Gentle Face-Washing Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds."
+    "description": "How to Build a Gentle Face-Washing Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds.",
+    "cover": "cover-how-to-build-a-gentle-face-washing-routine.webp"
   },
   {
     "title": "How to Build a Grocery List Around Whole Foods",
     "slug": "how-to-build-a-grocery-list-around-whole-foods.html",
     "category": "Nutrition & Food",
-    "description": "How to Build a Grocery List Around Whole Foods: choose one nutrition target, build around simple staples, make the better choice visible, review how it…"
+    "description": "How to Build a Grocery List Around Whole Foods: choose one nutrition target, build around simple staples, make the better choice visible, review how it…",
+    "cover": "cover-how-to-build-a-grocery-list-around-whole-foods.webp"
   },
   {
     "title": "How to Build a Habit Without Relying on Motivation",
     "slug": "how-to-build-a-habit-without-relying-on-motivation.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Habit Without Relying on Motivation: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Build a Habit Without Relying on Motivation: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-build-a-habit-without-relying-on-motivation.webp"
   },
   {
     "title": "How to Build a Healthy Breakfast",
     "slug": "how-to-build-a-healthy-breakfast.html",
     "category": "Nutrition & Food",
-    "description": "How to Build a Healthy Breakfast: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…"
+    "description": "How to Build a Healthy Breakfast: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…",
+    "cover": "cover-how-to-build-a-healthy-breakfast.webp"
   },
   {
     "title": "How to Build a Heart-Healthy Plate",
     "slug": "how-to-build-a-heart-healthy-plate.html",
     "category": "Heart & Circulation",
-    "description": "How to Build a Heart-Healthy Plate: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…"
+    "description": "How to Build a Heart-Healthy Plate: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…",
+    "cover": "cover-how-to-build-a-heart-healthy-plate.webp"
   },
   {
     "title": "How to Build a Morning Light Routine",
     "slug": "how-to-build-a-morning-light-routine.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Morning Light Routine: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep."
+    "description": "How to Build a Morning Light Routine: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep.",
+    "cover": "cover-how-to-build-a-morning-light-routine.webp"
   },
   {
     "title": "How to Build a Morning Routine Without Waking Up Extremely Early",
     "slug": "how-to-build-a-morning-routine-without-waking-up-extremely-early.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Morning Routine Without Waking Up Extremely Early: choose the anchor, keep the first version small, put the actions in order, review after…"
+    "description": "How to Build a Morning Routine Without Waking Up Extremely Early: choose the anchor, keep the first version small, put the actions in order, review after…",
+    "cover": "cover-how-to-build-a-morning-routine-without-waking-up-extremely-early.webp"
   },
   {
     "title": "How to Build a Simple Gratitude Routine",
     "slug": "how-to-build-a-simple-gratitude-routine.html",
     "category": "Brain & Mind",
-    "description": "How to Build a Simple Gratitude Routine: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Build a Simple Gratitude Routine: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-build-a-simple-gratitude-routine.webp"
   },
   {
     "title": "How to Build a Simple High-Fiber Lunch",
     "slug": "how-to-build-a-simple-high-fiber-lunch.html",
     "category": "Gut & Digestion",
-    "description": "How to Build a Simple High-Fiber Lunch: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits your day."
+    "description": "How to Build a Simple High-Fiber Lunch: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits your day.",
+    "cover": "cover-how-to-build-a-simple-high-fiber-lunch.webp"
   },
   {
     "title": "How to Build a Simple Morning Routine",
     "slug": "how-to-build-a-simple-morning-routine.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Simple Morning Routine: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a…"
+    "description": "How to Build a Simple Morning Routine: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a…",
+    "cover": "cover-how-to-build-a-simple-morning-routine.webp"
   },
   {
     "title": "How to Build a Simple Oral-Care Routine",
     "slug": "how-to-build-a-simple-oral-care-routine.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "How to Build a Simple Oral-Care Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds."
+    "description": "How to Build a Simple Oral-Care Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds.",
+    "cover": "cover-how-to-build-a-simple-oral-care-routine.webp"
   },
   {
     "title": "How to Build a Simple Personal Self-Care Menu",
     "slug": "how-to-build-a-simple-personal-self-care-menu.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Simple Personal Self-Care Menu: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Build a Simple Personal Self-Care Menu: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-build-a-simple-personal-self-care-menu.webp"
   },
   {
     "title": "How to Build a Simple Scalp-Care Routine",
     "slug": "how-to-build-a-simple-scalp-care-routine.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Build a Simple Scalp-Care Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds."
+    "description": "How to Build a Simple Scalp-Care Routine: start gentle, use the right basic product, protect after cleaning, watch how your body responds.",
+    "cover": "cover-how-to-build-a-simple-scalp-care-routine.webp"
   },
   {
     "title": "How to Build a Simple Walking Routine",
     "slug": "how-to-build-a-simple-walking-routine.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Build a Simple Walking Routine: start below your maximum, focus on smooth movement, attach it to your day, progress gradually."
+    "description": "How to Build a Simple Walking Routine: start below your maximum, focus on smooth movement, attach it to your day, progress gradually.",
+    "cover": "cover-how-to-build-a-simple-walking-routine.webp"
   },
   {
     "title": "How to Build a Three-Day Meal Prep Routine",
     "slug": "how-to-build-a-three-day-meal-prep-routine.html",
     "category": "Nutrition & Food",
-    "description": "How to Build a Three-Day Meal Prep Routine: start clean and organized, use a simple sequence, protect food quality, reset the kitchen."
+    "description": "How to Build a Three-Day Meal Prep Routine: start clean and organized, use a simple sequence, protect food quality, reset the kitchen.",
+    "cover": "cover-how-to-build-a-three-day-meal-prep-routine.webp"
   },
   {
     "title": "How to Build a Weekly Wellness Check-In",
     "slug": "how-to-build-a-weekly-wellness-check-in.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Build a Weekly Wellness Check-In: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Build a Weekly Wellness Check-In: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-build-a-weekly-wellness-check-in.webp"
   },
   {
     "title": "How to Build an Evening Reset Routine",
     "slug": "how-to-build-an-evening-reset-routine.html",
     "category": "Sleep & Recovery",
-    "description": "How to Build an Evening Reset Routine: choose the anchor, keep the first version small, put the actions in order, review after a week."
+    "description": "How to Build an Evening Reset Routine: choose the anchor, keep the first version small, put the actions in order, review after a week.",
+    "cover": "cover-how-to-build-an-evening-reset-routine.webp"
   },
   {
     "title": "How to Build an Evening Routine",
     "slug": "how-to-build-an-evening-routine.html",
     "category": "Sleep & Recovery",
-    "description": "How to Build an Evening Routine: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room work…"
+    "description": "How to Build an Evening Routine: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room work…",
+    "cover": "cover-how-to-build-an-evening-routine.webp"
   },
   {
     "title": "How to Build Healthy Lunches",
     "slug": "how-to-build-healthy-lunches.html",
     "category": "Nutrition & Food",
-    "description": "How to Build Healthy Lunches: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…"
+    "description": "How to Build Healthy Lunches: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…",
+    "cover": "cover-how-to-build-healthy-lunches.webp"
   },
   {
     "title": "How to Calm an Anxious Moment",
     "slug": "how-to-calm-an-anxious-moment.html",
     "category": "Brain & Mind",
-    "description": "How to Calm an Anxious Moment: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a repeatable…"
+    "description": "How to Calm an Anxious Moment: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a repeatable…",
+    "cover": "cover-how-to-calm-an-anxious-moment.webp"
   },
   {
     "title": "How to Care for Your Hair Daily",
     "slug": "how-to-care-for-your-hair-daily.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Care for Your Hair Daily: a 4-step guide — Cleanse the scalp, not just the hair; Condition with purpose; Dry more gently; Support hair from the inside."
+    "description": "How to Care for Your Hair Daily: a 4-step guide — Cleanse the scalp, not just the hair; Condition with purpose; Dry more gently; Support hair from the inside.",
+    "cover": "cover-how-to-care-for-your-hair-daily.webp"
   },
   {
     "title": "How to Choose Fruits for Heart Health",
     "slug": "how-to-choose-fruits-for-heart-health.html",
     "category": "Heart & Circulation",
-    "description": "How to Choose Fruits for Heart Health: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…"
+    "description": "How to Choose Fruits for Heart Health: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…",
+    "cover": "cover-how-to-choose-fruits-for-heart-health.webp"
   },
   {
     "title": "How to Choose Vegetables for Better Health",
     "slug": "how-to-choose-vegetables-for-better-health.html",
     "category": "Nutrition & Food",
-    "description": "How to Choose Vegetables for Better Health: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat…"
+    "description": "How to Choose Vegetables for Better Health: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat…",
+    "cover": "cover-how-to-choose-vegetables-for-better-health.webp"
   },
   {
     "title": "How to Clean Reusable Water Bottles Properly",
     "slug": "how-to-clean-reusable-water-bottles-properly.html",
     "category": "Immunity & Lungs",
-    "description": "How to Clean Reusable Water Bottles Properly: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible…"
+    "description": "How to Clean Reusable Water Bottles Properly: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible…",
+    "cover": "cover-how-to-clean-reusable-water-bottles-properly.webp"
   },
   {
     "title": "How to Clean Your Mouth and Tongue",
     "slug": "how-to-clean-your-mouth-and-tongue.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "How to Clean Your Mouth and Tongue: a 4-step guide — Brush on a schedule; Clean between teeth; Freshen the full mouth; Protect the result."
+    "description": "How to Clean Your Mouth and Tongue: a 4-step guide — Brush on a schedule; Clean between teeth; Freshen the full mouth; Protect the result.",
+    "cover": "cover-how-to-clean-your-mouth-and-tongue.webp"
   },
   {
     "title": "How to Clean Your Phone More Safely",
     "slug": "how-to-clean-your-phone-more-safely.html",
     "category": "Immunity & Lungs",
-    "description": "How to Clean Your Phone More Safely: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule."
+    "description": "How to Clean Your Phone More Safely: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule.",
+    "cover": "cover-how-to-clean-your-phone-more-safely.webp"
   },
   {
     "title": "How to Create a Better Hydration Routine",
     "slug": "how-to-create-a-better-hydration-routine.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "How to Create a Better Hydration Routine: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Create a Better Hydration Routine: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-create-a-better-hydration-routine.webp"
   },
   {
     "title": "How to Create a Calm Phone-Free Hour",
     "slug": "how-to-create-a-calm-phone-free-hour.html",
     "category": "Brain & Mind",
-    "description": "How to Create a Calm Phone-Free Hour: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Create a Calm Phone-Free Hour: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-create-a-calm-phone-free-hour.webp"
   },
   {
     "title": "How to Create a Five-Minute Journal Habit",
     "slug": "how-to-create-a-five-minute-journal-habit.html",
     "category": "Brain & Mind",
-    "description": "How to Create a Five-Minute Journal Habit: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Create a Five-Minute Journal Habit: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-create-a-five-minute-journal-habit.webp"
   },
   {
     "title": "How to Create a Five-Minute Stretch Break",
     "slug": "how-to-create-a-five-minute-stretch-break.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Create a Five-Minute Stretch Break: start below your maximum, focus on smooth movement, attach it to your day, progress gradually."
+    "description": "How to Create a Five-Minute Stretch Break: start below your maximum, focus on smooth movement, attach it to your day, progress gradually.",
+    "cover": "cover-how-to-create-a-five-minute-stretch-break.webp"
   },
   {
     "title": "How to Create a Healthy Snack Station at Home",
     "slug": "how-to-create-a-healthy-snack-station-at-home.html",
     "category": "Nutrition & Food",
-    "description": "How to Create a Healthy Snack Station at Home: choose one nutrition target, build around simple staples, make the better choice visible, review how it…"
+    "description": "How to Create a Healthy Snack Station at Home: choose one nutrition target, build around simple staples, make the better choice visible, review how it…",
+    "cover": "cover-how-to-create-a-healthy-snack-station-at-home.webp"
   },
   {
     "title": "How to Create a Healthy Travel-Day Routine",
     "slug": "how-to-create-a-healthy-travel-day-routine.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Create a Healthy Travel-Day Routine: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Create a Healthy Travel-Day Routine: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-create-a-healthy-travel-day-routine.webp"
   },
   {
     "title": "How to Create a Simple Sunday Reset",
     "slug": "how-to-create-a-simple-sunday-reset.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Create a Simple Sunday Reset: capture what matters, choose priorities, give tasks a place, leave breathing room."
+    "description": "How to Create a Simple Sunday Reset: capture what matters, choose priorities, give tasks a place, leave breathing room.",
+    "cover": "cover-how-to-create-a-simple-sunday-reset.webp"
   },
   {
     "title": "How to Cut Down Sugar Without Feeling Bad",
     "slug": "how-to-cut-down-sugar-without-feeling-bad.html",
     "category": "Nutrition & Food",
-    "description": "How to Cut Down Sugar Without Feeling Bad: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with…"
+    "description": "How to Cut Down Sugar Without Feeling Bad: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with…",
+    "cover": "cover-how-to-cut-down-sugar-without-feeling-bad.webp"
   },
   {
     "title": "How to Drink More Water Every Day",
     "slug": "how-to-drink-more-water-every-day.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "How to Drink More Water Every Day: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense; Replace what…"
+    "description": "How to Drink More Water Every Day: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense; Replace what…",
+    "cover": "cover-how-to-drink-more-water-every-day.webp"
   },
   {
     "title": "How to Eat More Fiber Easily",
     "slug": "how-to-eat-more-fiber-easily.html",
     "category": "Gut & Digestion",
-    "description": "How to Eat More Fiber Easily: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…"
+    "description": "How to Eat More Fiber Easily: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…",
+    "cover": "cover-how-to-eat-more-fiber-easily.webp"
   },
   {
     "title": "How to Eat More Fruit Without Wasting It",
     "slug": "how-to-eat-more-fruit-without-wasting-it.html",
     "category": "Nutrition & Food",
-    "description": "How to Eat More Fruit Without Wasting It: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits…"
+    "description": "How to Eat More Fruit Without Wasting It: choose one nutrition target, build around simple staples, make the better choice visible, review how it fits…",
+    "cover": "cover-how-to-eat-more-fruit-without-wasting-it.webp"
   },
   {
     "title": "How to Eat More Vegetables Without Making Complicated Meals",
     "slug": "how-to-eat-more-vegetables-without-making-complicated-meals.html",
     "category": "Nutrition & Food",
-    "description": "How to Eat More Vegetables Without Making Complicated Meals: choose one nutrition target, build around simple staples, make the better choice visible…"
+    "description": "How to Eat More Vegetables Without Making Complicated Meals: choose one nutrition target, build around simple staples, make the better choice visible…",
+    "cover": "cover-how-to-eat-more-vegetables-without-making-complicated-meals.webp"
   },
   {
     "title": "How to Get More Iron From Food",
     "slug": "how-to-get-more-iron-from-food.html",
     "category": "Nutrition & Food",
-    "description": "How to Get More Iron From Food: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…"
+    "description": "How to Get More Iron From Food: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…",
+    "cover": "cover-how-to-get-more-iron-from-food.webp"
   },
   {
     "title": "How to Get More Vitamin C From Food",
     "slug": "how-to-get-more-vitamin-c-from-food.html",
     "category": "Nutrition & Food",
-    "description": "How to Get More Vitamin C From Food: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…"
+    "description": "How to Get More Vitamin C From Food: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…",
+    "cover": "cover-how-to-get-more-vitamin-c-from-food.webp"
   },
   {
     "title": "How to Get More Vitamin D Safely",
     "slug": "how-to-get-more-vitamin-d-safely.html",
     "category": "Nutrition & Food",
-    "description": "How to Get More Vitamin D Safely: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…"
+    "description": "How to Get More Vitamin D Safely: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…",
+    "cover": "cover-how-to-get-more-vitamin-d-safely.webp"
   },
   {
     "title": "How to Improve Posture While Sitting",
     "slug": "how-to-improve-posture-while-sitting.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Improve Posture While Sitting: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress…"
+    "description": "How to Improve Posture While Sitting: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress…",
+    "cover": "cover-how-to-improve-posture-while-sitting.webp"
   },
   {
     "title": "How to Keep Feet Clean and Healthy",
     "slug": "how-to-keep-feet-clean-and-healthy.html",
     "category": "Immunity & Lungs",
-    "description": "How to Keep Feet Clean and Healthy: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…"
+    "description": "How to Keep Feet Clean and Healthy: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…",
+    "cover": "cover-how-to-keep-feet-clean-and-healthy.webp"
   },
   {
     "title": "How to Keep Germs Off Your Hands",
     "slug": "how-to-keep-germs-off-your-hands.html",
     "category": "Immunity & Lungs",
-    "description": "How to Keep Germs Off Your Hands: a 4-step guide — Wet and soap thoroughly; Scrub all surfaces; Rinse and dry well; Protect the clean result."
+    "description": "How to Keep Germs Off Your Hands: a 4-step guide — Wet and soap thoroughly; Scrub all surfaces; Rinse and dry well; Protect the clean result.",
+    "cover": "cover-how-to-keep-germs-off-your-hands.webp"
   },
   {
     "title": "How to Keep Skin Fresh in Summer",
     "slug": "how-to-keep-skin-fresh-in-summer.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Keep Skin Fresh in Summer: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…"
+    "description": "How to Keep Skin Fresh in Summer: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…",
+    "cover": "cover-how-to-keep-skin-fresh-in-summer.webp"
   },
   {
     "title": "How to Keep Towels Cleaner and Fresher",
     "slug": "how-to-keep-towels-cleaner-and-fresher.html",
     "category": "Immunity & Lungs",
-    "description": "How to Keep Towels Cleaner and Fresher: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule."
+    "description": "How to Keep Towels Cleaner and Fresher: identify high-touch areas, clean before overusing products, dry and store properly, repeat on a sensible schedule.",
+    "cover": "cover-how-to-keep-towels-cleaner-and-fresher.webp"
   },
   {
     "title": "How to Keep Your Pillowcase Routine Skin-Friendly",
     "slug": "how-to-keep-your-pillowcase-routine-skin-friendly.html",
     "category": "Sleep & Recovery",
-    "description": "How to Keep Your Pillowcase Routine Skin-Friendly: start gentle, use the right basic product, protect after cleaning, watch how your body responds."
+    "description": "How to Keep Your Pillowcase Routine Skin-Friendly: start gentle, use the right basic product, protect after cleaning, watch how your body responds.",
+    "cover": "cover-how-to-keep-your-pillowcase-routine-skin-friendly.webp"
   },
   {
     "title": "How to Lower Salt in Your Diet",
     "slug": "how-to-lower-salt-in-your-diet.html",
     "category": "Nutrition & Food",
-    "description": "How to Lower Salt in Your Diet: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…"
+    "description": "How to Lower Salt in Your Diet: a 4-step guide — Build around whole foods; Reduce the biggest excesses; Add movement and recovery; Track patterns…",
+    "cover": "cover-how-to-lower-salt-in-your-diet.webp"
   },
   {
     "title": "How to Make a Better Bedtime Routine",
     "slug": "how-to-make-a-better-bedtime-routine.html",
     "category": "Sleep & Recovery",
-    "description": "How to Make a Better Bedtime Routine: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep."
+    "description": "How to Make a Better Bedtime Routine: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep.",
+    "cover": "cover-how-to-make-a-better-bedtime-routine.webp"
   },
   {
     "title": "How to Make Your Skin Look Fresh Before Bed",
     "slug": "how-to-make-your-skin-look-fresh-before-bed.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Make Your Skin Look Fresh Before Bed: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with…"
+    "description": "How to Make Your Skin Look Fresh Before Bed: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with…",
+    "cover": "cover-how-to-make-your-skin-look-fresh-before-bed.webp"
   },
   {
     "title": "How to Manage Stress Step by Step",
     "slug": "how-to-manage-stress-step-by-step.html",
     "category": "Brain & Mind",
-    "description": "How to Manage Stress Step by Step: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a…"
+    "description": "How to Manage Stress Step by Step: a 4-step guide — Notice the trigger or moment; Use a short grounding action; Reset your next decision; Build a…",
+    "cover": "cover-how-to-manage-stress-step-by-step.webp"
   },
   {
     "title": "How to Organize a Fridge for Healthier Choices",
     "slug": "how-to-organize-a-fridge-for-healthier-choices.html",
     "category": "Nutrition & Food",
-    "description": "How to Organize a Fridge for Healthier Choices: start clean and organized, use a simple sequence, protect food quality, reset the kitchen."
+    "description": "How to Organize a Fridge for Healthier Choices: start clean and organized, use a simple sequence, protect food quality, reset the kitchen.",
+    "cover": "cover-how-to-organize-a-fridge-for-healthier-choices.webp"
   },
   {
     "title": "How to Plan a Week of Easy Healthy Breakfasts",
     "slug": "how-to-plan-a-week-of-easy-healthy-breakfasts.html",
     "category": "Nutrition & Food",
-    "description": "How to Plan a Week of Easy Healthy Breakfasts: choose one nutrition target, build around simple staples, make the better choice visible, review how it…"
+    "description": "How to Plan a Week of Easy Healthy Breakfasts: choose one nutrition target, build around simple staples, make the better choice visible, review how it…",
+    "cover": "cover-how-to-plan-a-week-of-easy-healthy-breakfasts.webp"
   },
   {
     "title": "How to Plan Tomorrow in 10 Minutes Tonight",
     "slug": "how-to-plan-tomorrow-in-10-minutes-tonight.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Plan Tomorrow in 10 Minutes Tonight: capture what matters, choose priorities, give tasks a place, leave breathing room."
+    "description": "How to Plan Tomorrow in 10 Minutes Tonight: capture what matters, choose priorities, give tasks a place, leave breathing room.",
+    "cover": "cover-how-to-plan-tomorrow-in-10-minutes-tonight.webp"
   },
   {
     "title": "How to Prepare Your Bedroom for Better Sleep",
     "slug": "how-to-prepare-your-bedroom-for-better-sleep.html",
     "category": "Sleep & Recovery",
-    "description": "How to Prepare Your Bedroom for Better Sleep: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep."
+    "description": "How to Prepare Your Bedroom for Better Sleep: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep.",
+    "cover": "cover-how-to-prepare-your-bedroom-for-better-sleep.webp"
   },
   {
     "title": "How to Prevent Dehydration in Hot Weather",
     "slug": "how-to-prevent-dehydration-in-hot-weather.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "How to Prevent Dehydration in Hot Weather: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense…"
+    "description": "How to Prevent Dehydration in Hot Weather: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense…",
+    "cover": "cover-how-to-prevent-dehydration-in-hot-weather.webp"
   },
   {
     "title": "How to Protect Bone Health as You Age",
     "slug": "how-to-protect-bone-health-as-you-age.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Protect Bone Health as You Age: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress…"
+    "description": "How to Protect Bone Health as You Age: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress…",
+    "cover": "cover-how-to-protect-bone-health-as-you-age.webp"
   },
   {
     "title": "How to Protect Your Eyes from Screens",
     "slug": "how-to-protect-your-eyes-from-screens.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "How to Protect Your Eyes from Screens: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with environment…"
+    "description": "How to Protect Your Eyes from Screens: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with environment…",
+    "cover": "cover-how-to-protect-your-eyes-from-screens.webp"
   },
   {
     "title": "How to Protect Your Hair From Everyday Breakage",
     "slug": "how-to-protect-your-hair-from-everyday-breakage.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Protect Your Hair From Everyday Breakage: start gentle, use the right basic product, protect after cleaning, watch how your body responds."
+    "description": "How to Protect Your Hair From Everyday Breakage: start gentle, use the right basic product, protect after cleaning, watch how your body responds.",
+    "cover": "cover-how-to-protect-your-hair-from-everyday-breakage.webp"
   },
   {
     "title": "How to Protect Your Lungs From Dust and Smoke",
     "slug": "how-to-protect-your-lungs-from-dust-and-smoke.html",
     "category": "Immunity & Lungs",
-    "description": "How to Protect Your Lungs From Dust and Smoke: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when…"
+    "description": "How to Protect Your Lungs From Dust and Smoke: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when…",
+    "cover": "cover-how-to-protect-your-lungs-from-dust-and-smoke.webp"
   },
   {
     "title": "How to Read Food Labels",
     "slug": "how-to-read-food-labels.html",
     "category": "Nutrition & Food",
-    "description": "How to Read Food Labels: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…"
+    "description": "How to Read Food Labels: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the pattern…",
+    "cover": "cover-how-to-read-food-labels.webp"
   },
   {
     "title": "How to Recognize Dehydration Signs",
     "slug": "how-to-recognize-dehydration-signs.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "How to Recognize Dehydration Signs: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense; Replace…"
+    "description": "How to Recognize Dehydration Signs: a 4-step guide — Spread water across the day; Watch the heat and activity level; Use cues that make sense; Replace…",
+    "cover": "cover-how-to-recognize-dehydration-signs.webp"
   },
   {
     "title": "How to Recover After a Bad Night of Sleep",
     "slug": "how-to-recover-after-a-bad-night-of-sleep.html",
     "category": "Sleep & Recovery",
-    "description": "How to Recover After a Bad Night of Sleep: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep."
+    "description": "How to Recover After a Bad Night of Sleep: set a time anchor, lower evening stimulation, build a repeatable wind-down, make the room support sleep.",
+    "cover": "cover-how-to-recover-after-a-bad-night-of-sleep.webp"
   },
   {
     "title": "How to Reduce Back Pain at Home",
     "slug": "how-to-reduce-back-pain-at-home.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Reduce Back Pain at Home: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually."
+    "description": "How to Reduce Back Pain at Home: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually.",
+    "cover": "cover-how-to-reduce-back-pain-at-home.webp"
   },
   {
     "title": "How to Refresh Your Mind After a Long Workday",
     "slug": "how-to-refresh-your-mind-after-a-long-workday.html",
     "category": "Brain & Mind",
-    "description": "How to Refresh Your Mind After a Long Workday: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Refresh Your Mind After a Long Workday: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-refresh-your-mind-after-a-long-workday.webp"
   },
   {
     "title": "How to Reset Your Routine After a Busy Week",
     "slug": "how-to-reset-your-routine-after-a-busy-week.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Reset Your Routine After a Busy Week: choose the anchor, keep the first version small, put the actions in order, review after a week."
+    "description": "How to Reset Your Routine After a Busy Week: choose the anchor, keep the first version small, put the actions in order, review after a week.",
+    "cover": "cover-how-to-reset-your-routine-after-a-busy-week.webp"
   },
   {
     "title": "How to Sleep Better at Night",
     "slug": "how-to-sleep-better-at-night.html",
     "category": "Sleep & Recovery",
-    "description": "How to Sleep Better at Night: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room work for you."
+    "description": "How to Sleep Better at Night: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room work for you.",
+    "cover": "cover-how-to-sleep-better-at-night.webp"
   },
   {
     "title": "How to Start a 10-Minute Focus Routine",
     "slug": "how-to-start-a-10-minute-focus-routine.html",
     "category": "Brain & Mind",
-    "description": "How to Start a 10-Minute Focus Routine: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Start a 10-Minute Focus Routine: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-start-a-10-minute-focus-routine.webp"
   },
   {
     "title": "How to Start a Digital Detox: A Beginner’s Guide",
     "slug": "how-to-start-a-digital-detox-a-beginner-s-guide-to-reclaimin.html",
     "category": "Brain & Mind",
-    "description": "How to Start a Digital Detox: A Beginner’s Guide: what How to Start a Digital Detox does in the body, why this topic matters in everyday life, common…"
+    "description": "How to Start a Digital Detox: A Beginner’s Guide: what How to Start a Digital Detox does in the body, why this topic matters in everyday life, common…",
+    "cover": "cover-how-to-start-a-digital-detox-a-beginner-s-guide-to-reclaimin.webp"
   },
   {
     "title": "How to Start a Digital Detox Without Feeling Overwhelmed",
     "slug": "how-to-start-a-digital-detox-without-feeling-overwhelmed.html",
     "category": "Brain & Mind",
-    "description": "How to Start a Digital Detox Without Feeling Overwhelmed: what How to Start a Digital Detox Without Feeling Overwhelmed does in the body, why this topic…"
+    "description": "How to Start a Digital Detox Without Feeling Overwhelmed: what How to Start a Digital Detox Without Feeling Overwhelmed does in the body, why this topic…",
+    "cover": "cover-how-to-start-a-digital-detox-without-feeling-overwhelmed.webp"
   },
   {
     "title": "How to Start Walking Every Day",
     "slug": "how-to-start-walking-every-day.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Start Walking Every Day: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually."
+    "description": "How to Start Walking Every Day: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually.",
+    "cover": "cover-how-to-start-walking-every-day.webp"
   },
   {
     "title": "How to Stay Clean While Traveling",
     "slug": "how-to-stay-clean-while-traveling.html",
     "category": "Immunity & Lungs",
-    "description": "How to Stay Clean While Traveling: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…"
+    "description": "How to Stay Clean While Traveling: a 4-step guide — Start with clean basics; Handle high-risk spots carefully; Finish with drying or storage; Repeat at…",
+    "cover": "cover-how-to-stay-clean-while-traveling.webp"
   },
   {
     "title": "How to Store Food Safely at Home",
     "slug": "how-to-store-food-safely-at-home.html",
     "category": "Nutrition & Food",
-    "description": "How to Store Food Safely at Home: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…"
+    "description": "How to Store Food Safely at Home: a 4-step guide — Pick one main nutrition goal; Build the plate practically; Upgrade shopping and prep; Repeat the…",
+    "cover": "cover-how-to-store-food-safely-at-home.webp"
   },
   {
     "title": "How to Store Leftovers More Safely",
     "slug": "how-to-store-leftovers-more-safely.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Store Leftovers More Safely: start clean and organized, use a simple sequence, protect food quality, reset the kitchen."
+    "description": "How to Store Leftovers More Safely: start clean and organized, use a simple sequence, protect food quality, reset the kitchen.",
+    "cover": "cover-how-to-store-leftovers-more-safely.webp"
   },
   {
     "title": "How to Support Gut Health Every Day",
     "slug": "how-to-support-gut-health-every-day.html",
     "category": "Gut & Digestion",
-    "description": "How to Support Gut Health Every Day: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with environment…"
+    "description": "How to Support Gut Health Every Day: a 4-step guide — Start with the simplest action; Make the routine practical; Support the habit with environment…",
+    "cover": "cover-how-to-support-gut-health-every-day.webp"
   },
   {
     "title": "How to Support Immunity Naturally",
     "slug": "how-to-support-immunity-naturally.html",
     "category": "Immunity & Lungs",
-    "description": "How to Support Immunity Naturally: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed."
+    "description": "How to Support Immunity Naturally: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed.",
+    "cover": "cover-how-to-support-immunity-naturally.webp"
   },
   {
     "title": "How to Support Kidney Health Daily",
     "slug": "how-to-support-kidney-health-daily.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "How to Support Kidney Health Daily: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed."
+    "description": "How to Support Kidney Health Daily: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed.",
+    "cover": "cover-how-to-support-kidney-health-daily.webp"
   },
   {
     "title": "How to Support Your Liver Daily",
     "slug": "how-to-support-your-liver-daily.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Support Your Liver Daily: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed."
+    "description": "How to Support Your Liver Daily: a 4-step guide — Protect the basics; Reduce avoidable strain; Watch patterns and symptoms; Follow up when needed.",
+    "cover": "cover-how-to-support-your-liver-daily.webp"
   },
   {
     "title": "How to Take a Better Screen Break",
     "slug": "how-to-take-a-better-screen-break.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Take a Better Screen Break: reduce stimulation, use one grounding action, choose the next small task, close the loop."
+    "description": "How to Take a Better Screen Break: reduce stimulation, use one grounding action, choose the next small task, close the loop.",
+    "cover": "cover-how-to-take-a-better-screen-break.webp"
   },
   {
     "title": "How to Take Care of Your Joints",
     "slug": "how-to-take-care-of-your-joints.html",
     "category": "Bones, Joints & Movement",
-    "description": "How to Take Care of Your Joints: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually."
+    "description": "How to Take Care of Your Joints: a 4-step guide — Start small and safe; Focus on alignment and control; Add mobility or strengthening; Progress gradually.",
+    "cover": "cover-how-to-take-care-of-your-joints.webp"
   },
   {
     "title": "How to Track Energy Levels Without Obsessing",
     "slug": "how-to-track-energy-levels-without-obsessing.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Track Energy Levels Without Obsessing: pick one signal to improve, make the action easy, track lightly, review weekly."
+    "description": "How to Track Energy Levels Without Obsessing: pick one signal to improve, make the action easy, track lightly, review weekly.",
+    "cover": "cover-how-to-track-energy-levels-without-obsessing.webp"
   },
   {
     "title": "How to Use a Daily Top-3 Task List",
     "slug": "how-to-use-a-daily-top-3-task-list.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Use a Daily Top-3 Task List: capture what matters, choose priorities, give tasks a place, leave breathing room."
+    "description": "How to Use a Daily Top-3 Task List: capture what matters, choose priorities, give tasks a place, leave breathing room.",
+    "cover": "cover-how-to-use-a-daily-top-3-task-list.webp"
   },
   {
     "title": "How to Wash Fresh Produce Safely",
     "slug": "how-to-wash-fresh-produce-safely.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Wash Fresh Produce Safely: start clean and organized, use a simple sequence, protect food quality, reset the kitchen."
+    "description": "How to Wash Fresh Produce Safely: start clean and organized, use a simple sequence, protect food quality, reset the kitchen.",
+    "cover": "cover-how-to-wash-fresh-produce-safely.webp"
   },
   {
     "title": "How to Wash Your Face the Right Way",
     "slug": "how-to-wash-your-face-the-right-way.html",
     "category": "Skin, Hair & Beauty",
-    "description": "How to Wash Your Face the Right Way: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…"
+    "description": "How to Wash Your Face the Right Way: a 4-step guide — Start gentle and clean; Use a simple cleanser; Rinse, pat dry and protect; Finish with moisture and…",
+    "cover": "cover-how-to-wash-your-face-the-right-way.webp"
   },
   {
     "title": "How to Wash Your Hands Properly",
     "slug": "how-to-wash-your-hands-properly.html",
     "category": "Immunity & Lungs",
-    "description": "How to Wash Your Hands Properly: a 4-step guide — Wet and soap thoroughly; Scrub all surfaces; Rinse and dry well; Protect the clean result."
+    "description": "How to Wash Your Hands Properly: a 4-step guide — Wet and soap thoroughly; Scrub all surfaces; Rinse and dry well; Protect the clean result.",
+    "cover": "cover-how-to-wash-your-hands-properly.webp"
   },
   {
     "title": "How to Wind Down After Screen Time",
     "slug": "how-to-wind-down-after-screen-time.html",
     "category": "Brain & Mind",
-    "description": "How to Wind Down After Screen Time: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room…"
+    "description": "How to Wind Down After Screen Time: a 4-step guide — Create a steady time anchor; Lower stimulation gradually; Build a calming sequence; Make the room…",
+    "cover": "cover-how-to-wind-down-after-screen-time.webp"
   },
   {
     "title": "Hydration vs. Electrolytes: What Your Body Actually Needs",
     "slug": "hydration-electrolytes.html",
     "category": "Nutrition & Food",
-    "description": "Hydration vs. Electrolytes: What Your Body Actually Needs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Hydration vs. Electrolytes: What Your Body Actually Needs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-hydration-electrolytes.webp"
   },
   {
     "title": "How Your Immune System Really Works",
     "slug": "immune-system.html",
     "category": "Immunity & Lungs",
-    "description": "How Your Immune System Really Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "How Your Immune System Really Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-immune-system.webp"
   },
   {
     "title": "Iron Deficiency & Anemia: Why You Feel Tired All the Time",
     "slug": "iron-deficiency-anemia.html",
     "category": "Nutrition & Food",
-    "description": "Iron Deficiency & Anemia: Why You Feel Tired All the Time — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Iron Deficiency & Anemia: Why You Feel Tired All the Time — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-iron-deficiency-anemia.webp"
   },
   {
     "title": "Keeping Your Joints and Bones Strong: A Simple Guide",
     "slug": "joint-bone-health.html",
     "category": "Bones, Joints & Movement",
-    "description": "Keeping Your Joints and Bones Strong: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…"
+    "description": "Keeping Your Joints and Bones Strong: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…",
+    "cover": "cover-joint-bone-health.webp"
   },
   {
     "title": "Kidney Anatomy Explained",
     "slug": "kidney-anatomy-explained.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "Kidney Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Kidney Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-kidney-anatomy-explained.webp"
   },
   {
     "title": "Understanding Your Kidneys: Why They Matter More Than You Think",
     "slug": "kidney-health.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "Understanding Your Kidneys: Why They Matter More Than You Think — a plain-language guide to the basics, common myths, everyday habits that may help, and…"
+    "description": "Understanding Your Kidneys: Why They Matter More Than You Think — a plain-language guide to the basics, common myths, everyday habits that may help, and…",
+    "cover": "cover-kidney-health.webp"
   },
   {
     "title": "Kidney Stones",
     "slug": "kidney-stones.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "Kidney Stones — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Kidney Stones — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-kidney-stones.webp"
   },
   {
     "title": "Kidney Warning Signs",
     "slug": "kidney-warning-signs.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "Kidney Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Kidney Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-kidney-warning-signs.webp"
   },
   {
     "title": "Your Liver and Detox: Separating Myths From Facts",
     "slug": "liver-detox-myths-facts.html",
     "category": "Daily Routines & Habits",
-    "description": "Your Liver and Detox: Separating Myths From Facts — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "Your Liver and Detox: Separating Myths From Facts — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-liver-detox-myths-facts.webp"
   },
   {
     "title": "Your Lungs: A Complete Guide to Breathing and Respiratory Health",
     "slug": "lung-health-complete-guide.html",
     "category": "Immunity & Lungs",
-    "description": "Your Lungs: A Complete Guide to Breathing and Respiratory Health — a plain-language guide to the basics, common myths, everyday habits that may help, and…"
+    "description": "Your Lungs: A Complete Guide to Breathing and Respiratory Health — a plain-language guide to the basics, common myths, everyday habits that may help, and…",
+    "cover": "cover-lung-health-complete-guide.webp"
   },
   {
     "title": "Magnesium: The Trending Supplement Everyone’s Talking About",
     "slug": "magnesium-guide.html",
     "category": "Nutrition & Food",
-    "description": "Magnesium: The Trending Supplement Everyone’s Talking About — a plain-language guide to the basics, common myths, everyday habits that may help, and when…"
+    "description": "Magnesium: The Trending Supplement Everyone’s Talking About — a plain-language guide to the basics, common myths, everyday habits that may help, and when…",
+    "cover": "cover-magnesium-guide.webp"
   },
   {
     "title": "Menopause: What’s Actually Happening in the Body",
     "slug": "menopause-basics.html",
     "category": "Daily Routines & Habits",
-    "description": "Menopause: What’s Actually Happening in the Body — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "Menopause: What’s Actually Happening in the Body — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-menopause-basics.webp"
   },
   {
     "title": "Microplastics and Your Health: What to Know",
     "slug": "microplastics-and-your-health.html",
     "category": "Daily Routines & Habits",
-    "description": "Microplastics and Your Health: What to Know — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Microplastics and Your Health: What to Know — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-microplastics-and-your-health.webp"
   },
   {
     "title": "Mindful Eating vs. Dieting: Why One Works Better for Long-Term Health",
     "slug": "mindful-eating-vs-dieting-why-one-works-better-for-long-term.html",
     "category": "Gut & Digestion",
-    "description": "Mindful Eating vs. Dieting: Why One Works Better for Long-Term Health — a plain-language guide to the basics, common myths, everyday habits that may help…"
+    "description": "Mindful Eating vs. Dieting: Why One Works Better for Long-Term Health — a plain-language guide to the basics, common myths, everyday habits that may help…",
+    "cover": "cover-mindful-eating-vs-dieting-why-one-works-better-for-long-term.webp"
   },
   {
     "title": "Mouth Ulcers, Sores, and Oral Germs: A Complete Guide",
     "slug": "oral-health.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Mouth Ulcers, Sores, and Oral Germs: A Complete Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Mouth Ulcers, Sores, and Oral Germs: A Complete Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-oral-health.webp"
   },
   {
     "title": "Why Posture Matters More Than You Think",
     "slug": "posture-and-health.html",
     "category": "Bones, Joints & Movement",
-    "description": "Why Posture Matters More Than You Think — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Why Posture Matters More Than You Think — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-posture-and-health.webp"
   },
   {
     "title": "Prostate Health",
     "slug": "prostate-health.html",
     "category": "Kidney, Urinary & Hydration",
-    "description": "Prostate Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Prostate Health — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-prostate-health.webp"
   },
   {
     "title": "How to Reduce Screen Time Without Feeling Deprived",
     "slug": "screen-time.html",
     "category": "Brain & Mind",
-    "description": "How to Reduce Screen Time Without Feeling Deprived: what How to Reduce Screen Time Without Feeling Deprived does in the body, why this topic matters in…"
+    "description": "How to Reduce Screen Time Without Feeling Deprived: what How to Reduce Screen Time Without Feeling Deprived does in the body, why this topic matters in…",
+    "cover": "cover-screen-time.webp"
   },
   {
     "title": "Simple Desk Stretches to Improve Posture and Reduce Pain",
     "slug": "simple-desk-stretches-to-improve-posture-and-reduce-pain.html",
     "category": "Bones, Joints & Movement",
-    "description": "Simple Desk Stretches to Improve Posture and Reduce Pain — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Simple Desk Stretches to Improve Posture and Reduce Pain — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-simple-desk-stretches-to-improve-posture-and-reduce-pain.webp"
   },
   {
     "title": "Skin Anatomy Explained",
     "slug": "skin-anatomy-explained.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Skin Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Skin Anatomy Explained — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-skin-anatomy-explained.webp"
   },
   {
     "title": "Your Skin Barrier: Why It’s the Key to Healthy Skin",
     "slug": "skin-barrier-explained.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Your Skin Barrier: Why It’s the Key to Healthy Skin — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…"
+    "description": "Your Skin Barrier: Why It’s the Key to Healthy Skin — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…",
+    "cover": "cover-skin-barrier-explained.webp"
   },
   {
     "title": "What Your Skin Is Trying to Tell You",
     "slug": "skin-health.html",
     "category": "Skin, Hair & Beauty",
-    "description": "What Your Skin Is Trying to Tell You — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "What Your Skin Is Trying to Tell You — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-skin-health.webp"
   },
   {
     "title": "Stomach Warning Signs",
     "slug": "stomach-warning-signs.html",
     "category": "Gut & Digestion",
-    "description": "Stomach Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Stomach Warning Signs — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-stomach-warning-signs.webp"
   },
   {
     "title": "Cortisol and Chronic Stress: What’s Actually Happening",
     "slug": "stress-hormones-cortisol.html",
     "category": "Brain & Mind",
-    "description": "Cortisol and Chronic Stress: What’s Actually Happening — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…"
+    "description": "Cortisol and Chronic Stress: What’s Actually Happening — a plain-language guide to the basics, common myths, everyday habits that may help, and when to…",
+    "cover": "cover-stress-hormones-cortisol.webp"
   },
   {
     "title": "Stretches",
     "slug": "stretches.html",
     "category": "Bones, Joints & Movement",
-    "description": "Stretches — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Stretches — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-stretches.webp"
   },
   {
     "title": "Caring for Your Teeth and Nails: A Simple Guide",
     "slug": "teeth-nails-health.html",
     "category": "Eyes, Ears & Oral Care",
-    "description": "Caring for Your Teeth and Nails: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…"
+    "description": "Caring for Your Teeth and Nails: A Simple Guide — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…",
+    "cover": "cover-teeth-nails-health.webp"
   },
   {
     "title": "The Benefits of Walking for Mental Well-Being",
     "slug": "the-benefits-of-walking-for-mental-well-being-more-than-just.html",
     "category": "Brain & Mind",
-    "description": "The Benefits of Walking for Mental Well-Being — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "The Benefits of Walking for Mental Well-Being — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-the-benefits-of-walking-for-mental-well-being-more-than-just.webp"
   },
   {
     "title": "The Truth About Gut Health: What You Need to Know Beyond Probiotics",
     "slug": "the-truth-about-gut-health-what-you-need-to-know-beyond-prob.html",
     "category": "Gut & Digestion",
-    "description": "The Truth About Gut Health: What You Need to Know Beyond Probiotics — a plain-language guide to the basics, common myths, everyday habits that may help…"
+    "description": "The Truth About Gut Health: What You Need to Know Beyond Probiotics — a plain-language guide to the basics, common myths, everyday habits that may help…",
+    "cover": "cover-the-truth-about-gut-health-what-you-need-to-know-beyond-prob.webp"
   },
   {
     "title": "The Truth About Gut Health: Beyond the Hype",
     "slug": "the-truth-about-gut-health-what-you-need-to-know-beyond-the-.html",
     "category": "Gut & Digestion",
-    "description": "The Truth About Gut Health: Beyond the Hype — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "The Truth About Gut Health: Beyond the Hype — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-the-truth-about-gut-health-what-you-need-to-know-beyond-the.webp"
   },
   {
     "title": "Your Thyroid: The Small Gland With a Big Job",
     "slug": "thyroid-health.html",
     "category": "Metabolic Health",
-    "description": "Your Thyroid: The Small Gland With a Big Job — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…"
+    "description": "Your Thyroid: The Small Gland With a Big Job — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…",
+    "cover": "cover-thyroid-health.webp"
   },
   {
     "title": "Understanding Allergies: Why Your Body Overreacts",
     "slug": "understanding-allergies.html",
     "category": "Immunity & Lungs",
-    "description": "Understanding Allergies: Why Your Body Overreacts — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…"
+    "description": "Understanding Allergies: Why Your Body Overreacts — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to…",
+    "cover": "cover-understanding-allergies.webp"
   },
   {
     "title": "Understanding Cancer: How It Develops",
     "slug": "understanding-cancer.html",
     "category": "Daily Routines & Habits",
-    "description": "Understanding Cancer: How It Develops — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "Understanding Cancer: How It Develops — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-understanding-cancer.webp"
   },
   {
     "title": "Understanding Your Body’s Hunger Cues: A Step Toward Mindful Eating",
     "slug": "understanding-your-body-s-hunger-cues-a-step-towards-mindful.html",
     "category": "Gut & Digestion",
-    "description": "Understanding Your Body’s Hunger Cues: A Step Toward Mindful Eating — a plain-language guide to the basics, common myths, everyday habits that may help…"
+    "description": "Understanding Your Body’s Hunger Cues: A Step Toward Mindful Eating — a plain-language guide to the basics, common myths, everyday habits that may help…",
+    "cover": "cover-understanding-your-body-s-hunger-cues-a-step-towards-mindful.webp"
   },
   {
     "title": "Understanding Your Stress Triggers: A First Step to Better Mental Wellness",
     "slug": "understanding-your-stress-triggers-a-first-step-to-better-me.html",
     "category": "Brain & Mind",
-    "description": "Understanding Your Stress Triggers: A First Step to Better Mental Wellness — a plain-language guide to the basics, common myths, everyday habits that may…"
+    "description": "Understanding Your Stress Triggers: A First Step to Better Mental Wellness — a plain-language guide to the basics, common myths, everyday habits that may…",
+    "cover": "cover-understanding-your-stress-triggers-a-first-step-to-better-me.webp"
   },
   {
     "title": "The Vagus Nerve and Nervous System Regulation",
     "slug": "vagus-nerve-nervous-system-regulation.html",
     "category": "Brain & Mind",
-    "description": "The Vagus Nerve and Nervous System Regulation — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…"
+    "description": "The Vagus Nerve and Nervous System Regulation — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a…",
+    "cover": "cover-vagus-nerve-nervous-system-regulation.webp"
   },
   {
     "title": "Vitamins and Minerals: What Your Body Actually Needs",
     "slug": "vitamins-minerals.html",
     "category": "Nutrition & Food",
-    "description": "Vitamins and Minerals: What Your Body Actually Needs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…"
+    "description": "Vitamins and Minerals: What Your Body Actually Needs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk…",
+    "cover": "cover-vitamins-minerals.webp"
   },
   {
     "title": "How Metabolism Actually Works",
     "slug": "weight-loss-metabolism.html",
     "category": "Metabolic Health",
-    "description": "How Metabolism Actually Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality."
+    "description": "How Metabolism Actually Works — clear, practical wellness guidance with everyday tips, related tools and reads from Daily Vitality.",
+    "cover": "cover-weight-loss-metabolism.webp"
   },
   {
     "title": "Why Hair Turns Gray",
     "slug": "why-hair-turns-gray.html",
     "category": "Skin, Hair & Beauty",
-    "description": "Why Hair Turns Gray — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Why Hair Turns Gray — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-why-hair-turns-gray.webp"
   },
   {
     "title": "Why Height Differs",
     "slug": "why-height-differs.html",
     "category": "Bones, Joints & Movement",
-    "description": "Why Height Differs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor."
+    "description": "Why Height Differs — a plain-language guide to the basics, common myths, everyday habits that may help, and when to talk to a doctor.",
+    "cover": "cover-why-height-differs.webp"
   },
   {
     "title": "How to Actually Wind Down at Night",
     "slug": "wind-down.html",
     "category": "Daily Routines & Habits",
-    "description": "How to Actually Wind Down at Night: what How to Actually Wind Down at Night does in the body, why this topic matters in everyday life, common problems or…"
-  },
-  {
-    "title": "Sleep Regularity: Why a Consistent Wake Time Matters",
-    "slug": "sleep-regularity-consistent-wake-time.html",
-    "category": "Sleep & Recovery",
-    "description": "A practical guide to sleep regularity, consistent wake times, and building a realistic schedule without chasing perfection."
-  },
-  {
-    "title": "How to Read a Supplement Label Without Getting Misled",
-    "slug": "how-to-read-a-supplement-label.html",
-    "category": "Nutrition & Food",
-    "description": "Learn how to read Supplement Facts, serving size, ingredient amounts, proprietary blends, and marketing claims before buying a dietary supplement."
-  },
-  {
-    "title": "How to Build a 10-Minute Walking Habit You’ll Actually Keep",
-    "slug": "how-to-build-a-10-minute-walking-habit.html",
-    "category": "Bones, Joints & Movement",
-    "description": "A simple, realistic plan for turning a short daily walk into a repeatable habit without needing a gym or complicated tracking."
+    "description": "How to Actually Wind Down at Night: what How to Actually Wind Down at Night does in the body, why this topic matters in everyday life, common problems or…",
+    "cover": "cover-wind-down.webp"
   }
 ]
