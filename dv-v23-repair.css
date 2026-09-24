@@ -1,0 +1,42 @@
+/* Daily Vitality V23 emergency homepage repair */
+:root{--dv23-green:#0b7a3b;--dv23-ink:#10251c;--dv23-line:#dfe9e2;--dv23-soft:#f4faf6}
+/* V22 accidentally left reveal items hidden because the old reveal JS was no longer loaded. */
+.dv-reveal{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}
+.dv-hero-copy{opacity:1!important;visibility:visible!important;transform:none!important}
+/* Remove accidental giant empty spaces */
+.dv-rail-section,.dv-library,.dv-shop-section{min-height:0!important;height:auto!important;padding-top:42px!important;padding-bottom:42px!important}
+.dv-rail-wrap{min-height:0!important;height:auto!important;position:relative!important}
+.dv-rail,.dv-card-rail,.dv-tool-rail,.dv-product-rail{display:flex!important;align-items:stretch!important;gap:16px!important;min-height:0!important;height:auto!important;overflow-x:hidden!important;overflow-y:visible!important;padding:8px 4px 16px!important;scrollbar-width:none}
+.dv-rail::-webkit-scrollbar,.dv-card-rail::-webkit-scrollbar,.dv-tool-rail::-webkit-scrollbar,.dv-product-rail::-webkit-scrollbar{display:none}
+.dv-article-card,.dv-product-card,.dv-topic-card,.dv-tool-card{opacity:1!important;visibility:visible!important;transform:none!important;flex:0 0 auto!important}
+.dv-card-rail .dv-article-card{width:290px!important;min-width:290px!important}
+.dv-tool-rail .dv-tool-card{width:260px!important;min-width:260px!important}
+.dv-product-rail .dv-product-card{width:260px!important;min-width:260px!important}
+/* Hero copy + slider always visible */
+.dv-hero{min-height:0!important;padding:34px 0 28px!important}
+.dv-hero-grid{align-items:center!important}
+.dv-hero-copy{display:block!important}
+#hookLine{display:inline!important;transition:opacity .35s ease,color .35s ease;color:var(--dv23-green)}
+#hookLine.dv23-fade{opacity:.08}
+.dv-hero-slider{display:block!important;min-height:360px!important;overflow:hidden!important}
+.dv-hero-track{position:relative!important;min-height:360px!important}
+.dv-hero-slide{position:absolute!important;inset:0!important;opacity:0!important;visibility:hidden!important;transition:opacity .7s ease,transform .7s ease!important;transform:scale(1.015)!important}
+.dv-hero-slide.active{opacity:1!important;visibility:visible!important;transform:scale(1)!important;z-index:2!important}
+.dv-hero-slide img{width:100%!important;height:100%!important;min-height:360px!important;object-fit:cover!important;display:block!important}
+.dv-hero-dots{z-index:5!important}
+/* Cards: polished but lightweight */
+.dv-article-card,.dv-product-card,.dv-topic-card,.dv-tool-card,.dv-library-card{background:#fff!important;border:1px solid var(--dv23-line)!important;border-radius:18px!important;box-shadow:0 10px 26px rgba(27,70,46,.08)!important;overflow:hidden!important}
+.dv-article-card:hover,.dv-product-card:hover,.dv-topic-card:hover,.dv-tool-card:hover,.dv-library-card:hover{box-shadow:0 16px 36px rgba(27,70,46,.13)!important}
+.dv-card-img img,.dv-article-card img{width:100%!important;height:170px!important;object-fit:cover!important;display:block!important}
+.dv-product-card img{width:100%!important;height:210px!important;object-fit:contain!important;background:#f5faf6!important;padding:10px!important}
+.dv-topic-card img{width:100%!important;height:86px!important;object-fit:cover!important}
+/* Home library must be visible even without legacy JS */
+.dv-library-grid{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))!important;gap:18px!important;margin-top:20px!important;min-height:0!important}
+.dv-library-card{display:block!important;color:inherit!important;text-decoration:none!important}
+.dv-library-card img{width:100%!important;height:165px!important;object-fit:cover!important;display:block!important}
+.dv-library-card>div{padding:14px!important}.dv-library-card small{font-weight:900;color:var(--dv23-green);letter-spacing:.08em}.dv-library-card h3{font:700 20px/1.12 Georgia,serif;margin:6px 0;color:var(--dv23-ink)}.dv-library-card p{font-size:13px;line-height:1.5;color:#587066;margin:0}
+#homeLoadMore{display:inline-flex!important}
+/* Manual rail buttons stay usable */
+.dv-rail-btn{z-index:20!important}
+@media(max-width:760px){.dv-card-rail .dv-article-card{width:235px!important;min-width:235px!important}.dv-product-rail .dv-product-card,.dv-tool-rail .dv-tool-card{width:220px!important;min-width:220px!important}.dv-hero-slider,.dv-hero-track{min-height:300px!important}.dv-hero-slide img{min-height:300px!important}.dv-rail-section{padding-top:30px!important;padding-bottom:30px!important}}
+@media(prefers-reduced-motion:reduce){.dv-hero-slide,#hookLine{transition:none!important}}
