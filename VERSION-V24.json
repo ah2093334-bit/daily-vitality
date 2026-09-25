@@ -1,0 +1,27 @@
+{
+  "version": "V24.0",
+  "build": "Premium Visual + SEO Update",
+  "upload_mode": "GitHub repository root overlay",
+  "files": 395,
+  "hero_images": 8,
+  "new_tools": [
+    "meal-balance-checker.html",
+    "skin-routine-builder.html",
+    "supplement-timing-planner.html",
+    "daily-symptom-check-in.html"
+  ],
+  "new_article": "vitamin-c-skin-food-supplements-serum.html",
+  "homepage_motion": {
+    "categories": "continuous",
+    "tools": "continuous",
+    "products": "continuous",
+    "fresh_guides": "static",
+    "latest_articles": "static",
+    "more_useful_reads": "static"
+  },
+  "notes": [
+    "Do not delete older repository files before upload.",
+    "Upload/replace all files from this ZIP at repository root.",
+    "Hard refresh after deployment."
+  ]
+}
