@@ -1,0 +1,7 @@
+Total files: 583
+HTML files: 297
+V26 tool covers: 20
+V26 blog covers: 13
+All Wellness Articles cards: 201
+V26 CSS present: True
+V26 JS present: True
