@@ -1,0 +1,8 @@
+HTML patched: 304
+Sitemap URLs: 298
+Bundle CSS bytes: 61185
+V27 JS bytes: 16627
+Old premium refs remaining: 0
+Sitemap XML parse: PASS
+Missing bundle CSS: 0
+Missing V27 JS: 0

@@ -1,0 +1,19 @@
+{
+  "version": "27.0-final",
+  "built": "2026-10-02",
+  "patched_html": 304,
+  "sitemap_urls": 298,
+  "new_tools": [
+    "bmr-tdee-calculator.html",
+    "macro-split-planner.html",
+    "sleep-schedule-planner.html",
+    "habit-streak-planner.html"
+  ],
+  "new_articles": [
+    "bmr-vs-tdee-explained.html",
+    "macro-tracking-basics.html",
+    "how-to-build-a-consistent-sleep-schedule.html",
+    "habit-streaks-without-perfection.html"
+  ],
+  "themes": 12
+}

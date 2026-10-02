@@ -1204,5 +1204,29 @@
     "slug": "wind-down.html",
     "category": "Daily Routines & Habits",
     "description": "How to Actually Wind Down at Night: what How to Actually Wind Down at Night does in the body, why this topic matters in everyday life, common problems or…"
+  },
+  {
+    "slug": "bmr-vs-tdee-explained.html",
+    "title": "BMR vs. TDEE: What These Energy Estimates Actually Mean",
+    "category": "Nutrition & Food",
+    "description": "BMR estimates the energy your body uses at rest; TDEE adds an activity estimate. Both are starting points, not precise prescriptions."
+  },
+  {
+    "slug": "macro-tracking-basics.html",
+    "title": "Macro Tracking Basics: Protein, Carbohydrate and Fat Without the Hype",
+    "category": "Nutrition & Food",
+    "description": "Macronutrients are carbohydrates, protein and fat. Tracking can be a planning tool, but a perfect ratio is not required for a healthy diet."
+  },
+  {
+    "slug": "how-to-build-a-consistent-sleep-schedule.html",
+    "title": "How to Build a More Consistent Sleep Schedule",
+    "category": "Sleep & Recovery",
+    "description": "A repeatable wake time, enough sleep opportunity and a calmer evening routine can make sleep timing easier to maintain."
+  },
+  {
+    "slug": "habit-streaks-without-perfection.html",
+    "title": "Habit Streaks Without Perfection: A Better Way to Track Progress",
+    "category": "Daily Routines & Habits",
+    "description": "A habit tracker works best when it helps you notice patterns and restart quickly, not when one missed day feels like failure."
   }
 ]
