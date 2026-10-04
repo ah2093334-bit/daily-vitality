@@ -1,0 +1,31 @@
+DAILY VITALITY — FIREBASE AUTH SETUP (DO THIS AFTER THE WEBSITE PATCH IS LIVE)
+
+The ZIP does NOT contain your private Firebase project keys because they were not provided.
+
+1. Open https://console.firebase.google.com/
+2. Create or select a Firebase project for Daily Vitality.
+3. Go to Build -> Authentication -> Get started.
+4. Enable these Sign-in providers:
+   - Email/Password
+   - Google
+5. Authentication -> Settings -> Authorized domains:
+   add dailyvitality.xyz
+   add www.dailyvitality.xyz only if you actually use it.
+6. Project settings -> General -> Your apps -> Web app -> Register app.
+7. Copy the Firebase web config (apiKey, authDomain, projectId, appId, etc.).
+8. Keep using account.html as the public Join / Sign In destination. Do not paste admin/service-account secrets into website JavaScript.
+9. When you have the Web config, add it to the site's Firebase client integration. Firebase Web apiKey is a client identifier, not a server admin secret; service-account/private keys must NEVER go into GitHub Pages.
+10. Test on dailyvitality.xyz:
+   - Email signup
+   - Email login
+   - Google popup/login
+   - Logout
+   - Refresh persistence
+
+Recommended next auth features after login works:
+- Saved articles synced to the signed-in account
+- Saved habit/planner data
+- Contributor profile/status
+- Theme preference sync
+
+Do not enable paid/privileged actions based only on client-side JavaScript; use Firebase security rules/backend verification for protected data.

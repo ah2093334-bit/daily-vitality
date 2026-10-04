@@ -1,37 +1,28 @@
-DAILY VITALITY FINAL V2 — MERGE UPLOAD PACK
+DAILY VITALITY V28 PREMIUM MOTION + TOOLS PATCH
 
-HOW TO UPLOAD
-1. Extract this ZIP.
-2. Upload/merge the extracted CONTENTS into the ROOT of your existing DailyVitality GitHub repository.
-3. Replace files when the SAME PATH/NAME already exists.
-4. DO NOT delete existing files that are not included in this update pack.
-5. Commit changes and wait for GitHub Pages deployment.
-6. Verify:
-   https://dailyvitality.xyz/
-   https://dailyvitality.xyz/products.html
-   https://dailyvitality.xyz/library.html
-   https://dailyvitality.xyz/robots.txt
-   https://dailyvitality.xyz/sitemap.xml
+UPLOAD ORDER
+- This ZIP is already divided into UPLOAD-01.
+- UPLOAD-01 contains 16 files (under 100).
+- Open UPLOAD-01, Select All, upload the FILES themselves to the repository ROOT beside index.html.
+- Do NOT upload the UPLOAD-01 folder as a folder in the repository.
+- Replace matching files when GitHub asks.
+- Commit, wait for Pages deploy, then hard-refresh.
 
-PRESERVE FROM YOUR EXISTING REPO
-- CNAME (dailyvitality.xyz)
-- all existing article HTML pages
-- hero/article image files
-- logo, favicon, founder image
-- About, FAQ, Contact, Feedback, Support, Privacy, Terms, Disclaimer, BMI calculator and other pages
+CHECK AFTER DEPLOYMENT
+1. Mobile header shows a visible horizontal navigation strip.
+2. Welcome label types/erases automatically.
+3. Hero photos remain sharp; only the background motion changes.
+4. A new Body + Mind digital intelligence section appears under the hero.
+5. Fresh Tools & Guides appears near the top.
+6. Motion Themes opens a premium theme selector and saves the choice locally.
+7. Test all four new tools.
+8. Re-run PageSpeed and Search Console after deployment.
 
-WHAT THIS PACK ADDS/KEEPS
-- Phase-1 homepage/shop/product structure
-- custom-domain SEO fixes
-- honest product structured data
-- robots.txt + sitemap.xml
-- responsive Explore Library page
-- visible entry points for Articles/Blogs, Photos, Premium Photos, Videos, HD/4K/Short Videos,
-  Audio, eBooks/PDFs, Templates/Workbooks, Thumbnails/Covers, ZIP/Digital Files, Free Resources and Bundles
-- responsive mobile improvements for the Why Daily Vitality cards
+NEW WORKING TOOLS
+- calorie-needs-calculator.html
+- heart-rate-zones-calculator.html
+- daily-habit-goal-studio.html
+- weekly-wellness-planner.html
 
-IMPORTANT — NOT FAKED
-- Contributor accounts, Google sign-in, secure uploads, likes, comments, follows, reviews and earnings require backend/auth/database and are NOT claimed as live.
-- Empty media categories remain empty until real assets are published.
-- The current article thumbnail mapping is preserved. The pack does NOT pretend that all 57 images are semantically repaired:
-  the actual article image library was not supplied as a complete topic-specific replacement set.
+SEO NOTE
+The patch improves crawl discovery, internal navigation and sitemap coverage. Google indexing/ranking is not guaranteed or immediate.
