@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://dailyvitality.xyz/sitemap.xml
-Sitemap: https://dailyvitality.xyz/image-sitemap-v25.xml
+Sitemap: https://dailyvitality.xyz/image-sitemap-v29.xml

@@ -1,0 +1,10 @@
+{
+  "version": "29.0",
+  "date": "2026-10-08",
+  "purpose": "Final premium visual/SEO/tools/articles/books overlay",
+  "new_articles": 9,
+  "new_tools": 3,
+  "new_books": 2,
+  "new_assets": 21,
+  "notes": "Upload as overlay to existing Daily Vitality repository root; do not delete existing repository files."
+}
