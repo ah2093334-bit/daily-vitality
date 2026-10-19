@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Exposure Estimator - Daily Vitality</title>
+    <meta name="description" content="Estimate safe daily sun exposure for Vitamin D production. Input skin type, location, and time of year for a personalized estimate. Educational only.">
+    <style>
+        :root {
+            --color-primary: #4CAF50; /* Green */
+            --color-secondary: #8BC34A; /* Light Green */
+            --color-background-light: #f8f9fa;
+            --color-surface-light: #ffffff;
+            --color-text-light: #212529;
+            --color-border-light: #dee2e6;
+            --color-background-dark: #121212;
+            --color-surface-dark: #1e1e1e;
+            --color-text-dark: #e0e0e0;
+            --color-border-dark: #333333;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-background: var(--color-background-dark);
+                --color-surface: var(--color-surface-dark);
+                --color-text: var(--color-text-dark);
+                --color-border: var(--color-border-dark);
+                --shadow: var(--shadow-dark);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --color-background: var(--color-background-light);
+                --color-surface: var(--color-surface-light);
+                --color-text: var(--color-text-light);
+                --color-border: var(--color-border-light);
+                --shadow: var(--shadow-light);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: 20px;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(139, 195, 74, 0.1); /* Light secondary hover */
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: var(--color-primary);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .sub-heading {
+            text-align: center;
+            color: var(--color-text);
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .tool-card {
+            background-color: var(--color-surface);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow), 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--color-text);
+        }
+
+        input[type="text"],
+        select,
+        input[type="number"] {
+            padding: 15px 20px;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            font-size: 1.1em;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        .unit-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .unit-toggle label {
+            font-size: 0.95em;
+            font-weight: 500;
+            color: var(--color-text);
+            opacity: 0.8;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--color-primary);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px var(--color-primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .error-message {
+            color: #dc3545; /* Red */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none; /* Hidden by default */
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            margin-top: 10px;
+            align-self: center;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .results-card {
+            background-color: var(--color-surface);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0; /* Hidden by default */
+            transform: translateY(20px);
+            transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+
+        .results-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .results-card h2 {
+            font-size: 1.8em;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+
+        .results-card p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .exposure-time {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--color-secondary);
+            display: block;
+            margin: 10px 0;
+        }
+
+        .explanation {
+            font-size: 0.95em;
+            color: var(--color-text);
+            opacity: 0.8;
+        }
+
+        .disclaimer {
+            font-size: 0.85em;
+            color: var(--color-text);
+            opacity: 0.7;
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        .info-section {
+            background-color: var(--color-surface);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .info-section p {
+            margin-bottom: 0;
+        }
+
+        .info-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            background-color: var(--color-surface);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: box-shadow var(--transition-speed) ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow), 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            font-size: 1.2em;
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 0.95em;
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--color-text);
+            opacity: 0.7;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                gap: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .tool-card, .info-section, .faq-item {
+                padding: 20px;
+            }
+            button {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+            .results-card h2 {
+                font-size: 1.6em;
+            }
+            .exposure-time {
+                font-size: 2em;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/sun-exposure-estimator.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/tools.html" class="logo">Daily Vitality</a>
+            <nav>
+                <a href="/tools.html">Tools</a>
+            </nav>
+        </header>
+
+        <h1>Sun Exposure Estimator</h1>
+        <p class="sub-heading">Estimate safe daily sun exposure for Vitamin D production.</p>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label for="skin-type">Your Skin Type (Fitzpatrick Scale):</label>
+                <select id="skin-type" aria-required="true">
+                    <option value="1">Type I (Very fair, always burns, never tans)</option>
+                    <option value="2">Type II (Fair, usually burns, tans minimally)</option>
+                    <option value="3">Type III (Light brown, sometimes burns, tans gradually)</option>
+                    <option value="4">Type IV (Moderate brown, rarely burns, tans well)</option>
+                    <option value="5">Type V (Dark brown, very rarely burns, tans very easily)</option>
+                    <option value="6">Type VI (Deeply pigmented dark brown to black, never burns)</option>
+                </select>
+                <div class="error-message" id="skin-type-error">Please select your skin type.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="latitude">Your Location (Latitude):</label>
+                <input type="number" id="latitude" placeholder="e.g., 40.71 (New York) or 51.51 (London)" aria-required="true" step="0.01">
+                <div class="error-message" id="latitude-error">Please enter a valid latitude (between -90 and 90).</div>
+            </div>
+
+            <div class="form-group">
+                <label for="time-of-year">Time of Year:</label>
+                <select id="time-of-year" aria-required="true">
+                    <option value="summer">Summer (June, July, August in Northern Hemisphere; Dec, Jan, Feb in Southern)</option>
+                    <option value="spring_autumn">Spring/Autumn (March, April, May & Sept, Oct, Nov in Northern; Mar, Apr, May & Sept, Oct, Nov in Southern)</option>
+                    <option value="winter">Winter (December, January, February in Northern Hemisphere; June, July, August in Southern)</option>
+                </select>
+                <div class="error-message" id="time-of-year-error">Please select the time of year.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="sunscreen-use">Are you wearing sunscreen?</label>
+                <div class="unit-toggle">
+                    <label for="sunscreen-yes">Yes</label>
+                    <label class="switch">
+                        <input type="checkbox" id="sunscreen-use">
+                        <span class="slider"></span>
+                    </label>
+                    <label for="sunscreen-no">No</label>
+                </div>
+            </div>
+
+            <button id="calculate-btn">Estimate Exposure</button>
+        </div>
+
+        <div id="results-container" class="results-card" role="alert" aria-live="polite">
+            <h2>Your Estimated Safe Sun Exposure</h2>
+            <p>Based on your inputs, a safe amount of daily sun exposure for Vitamin D production without excessive risk could be approximately:</p>
+            <span class="exposure-time" id="estimated-time">--</span>
+            <p id="time-unit">minutes</p>
+            <p class="explanation" id="exposure-explanation">This is a general estimate. Individual factors and UV index can significantly influence actual needs and risks.</p>
+        </div>
+
+        <div class="disclaimer">
+            Educational estimate, not medical advice. Always consult with a healthcare professional for personalized guidance.
+        </div>
+
+        <section class="info-section">
+            <h2 class="section-title">How it Works</h2>
+            <p>This tool uses a simplified model to estimate safe sun exposure. It considers your skin type (how easily you burn), your geographical location (which affects sun intensity), and the time of year (which also impacts sun intensity). The goal is to find a balance for Vitamin D synthesis while minimizing sunburn risk.</p>
+        </section>
+
+        <section class="info-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is the Fitzpatrick Scale?</h3>
+                <p>The Fitzpatrick scale is a way to classify your skin's reaction to sun exposure. It ranges from Type I (very fair, always burns) to Type VI (deeply pigmented, never burns). Knowing your skin type helps determine how much sun you can tolerate.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Why does location and time of year matter?</h3>
+                <p>The intensity of the sun's UV rays varies greatly depending on your latitude and the season. Closer to the equator and during summer months, UV radiation is stronger, meaning you need less time in the sun to get Vitamin D and the risk of burning is higher.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How much Vitamin D do I need?</h3>
+                <p>Recommended daily intake of Vitamin D varies by age and health status. While this tool focuses on safe exposure time, it's important to remember that individual Vitamin D needs and absorption can differ. Consult a healthcare provider for personalized advice.</p>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2023 Daily Vitality. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const skinTypeSelect = document.getElementById('skin-type');
+            const latitudeInput = document.getElementById('latitude');
+            const timeOfYearSelect = document.getElementById('time-of-year');
+            const sunscreenCheckbox = document.getElementById('sunscreen-use');
+            const calculateBtn = document.getElementById('calculate-btn');
+            const resultsContainer = document.getElementById('results-container');
+            const estimatedTimeSpan = document.getElementById('estimated-time');
+            const timeUnitSpan = document.getElementById('time-unit');
+            const exposureExplanation = document.getElementById('exposure-explanation');
+
+            const skinTypeError = document.getElementById('skin-type-error');
+            const latitudeError = document.getElementById('latitude-error');
+            const timeOfYearError = document.getElementById('time-of-year-error');
+
+            // UV Index data (simplified, representative values)
+            // These are rough estimates and can vary significantly.
+            // For a more accurate tool, real-time UV index data would be needed.
+            const uvIndexFactors = {
+                summer: {
+                    equator: 10,
+                    mid_latitude: 8,
+                    high_latitude: 5
+                },
+                spring_autumn: {
+                    equator: 7,
+                    mid_latitude: 5,
+                    high_latitude: 3
+                },
+                winter: {
+                    equator: 5,
+                    mid_latitude: 2,
+                    high_latitude: 1
+                }
+            };
+
+            // Time to burn (minutes) based on skin type and UV index (highly simplified)
+            // These are illustrative values. Real-world times are complex.
+            const timeToBurnMinutes = {
+                1: { uv10: 5, uv8: 6, uv5: 10, uv3: 15, uv2: 20, uv1: 30 }, // Type I
+                2: { uv10: 8, uv8: 10, uv5: 15, uv3: 20, uv2: 30, uv1: 45 }, // Type II
+                3: { uv10: 12, uv8: 15, uv5: 20, uv3: 30, uv2: 40, uv1: 60 }, // Type III
+                4: { uv10: 20, uv8: 25, uv5: 35, uv3: 45, uv2: 60, uv1: 90 }, // Type IV
+                5: { uv10: 30, uv8: 40, uv5: 50, uv3: 60, uv2: 80, uv1: 120 }, // Type V
+                6: { uv10: 60, uv8: 80, uv5: 100, uv3: 120, uv2: 150, uv1: 200 } // Type VI
+            };
+
+            // Vitamin D production factor (simplified)
+            // Assumes a certain amount of time is needed for adequate Vitamin D production.
+            // This is a rough estimate, often cited as 10-15 minutes for fair skin in peak sun.
+            const vitaminDProductionFactor = 0.5; // e.g., need 1/2 the time to burn for Vit D
+
+            function getUVIndexLevel(uv) {
+                if (uv >= 10) return 'uv10';
+                if (uv >= 8) return 'uv8';
+                if (uv >= 5) return 'uv5';
+                if (uv >= 3) return 'uv3';
+                if (uv >= 2) return 'uv2';
+                return 'uv1';
+            }
+
+            function getLatitudeBand(lat) {
+                if (Math.abs(lat) <= 25) return 'equator';
+                if (Math.abs(lat) <= 50) return 'mid_latitude';
+                return 'high_latitude';
+            }
+
+            function calculateExposure() {
+                let isValid = true;
+
+                // Reset errors
+                skinTypeError.classList.remove('visible');
+                latitudeError.classList.remove('visible');
+                timeOfYearError.classList.remove('visible');
+
+                const skinType = parseInt(skinTypeSelect.value);
+                const latitude = parseFloat(latitudeInput.value);
+                const timeOfYear = timeOfYearSelect.value;
+                const wearingSunscreen = sunscreenCheckbox.checked;
+
+                // Validation
+                if (isNaN(skinType) || skinType < 1 || skinType > 6) {
+                    skinTypeError.classList.add('visible');
+                    isValid = false;
+                }
+                if (isNaN(latitude) || latitude < -90 || latitude > 90) {
+                    latitudeError.classList.add('visible');
+                    isValid = false;
+                }
+                if (!timeOfYear) {
+                    timeOfYearError.classList.add('visible');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    resultsContainer.classList.remove('visible');
+                    return;
+                }
+
+                const latBand = getLatitudeBand(latitude);
+                const uvLevelKey = getUVIndexLevel(uvIndexFactors[timeOfYear][latBand]);
+                const burnTime = timeToBurnMinutes[skinType][uvLevelKey];
+
+                let estimatedMinutes = burnTime * vitaminDProductionFactor;
+
+                // Adjust for sunscreen
+                if (wearingSunscreen) {
+                    estimatedMinutes *= 2; // Assume sunscreen significantly reduces effective UV, requiring longer exposure for Vit D
+                    exposureExplanation.textContent = "Wearing sunscreen significantly reduces UV exposure. This estimate is for Vitamin D production with sunscreen on, which requires longer exposure.";
+                } else {
+                    exposureExplanation.textContent = "This is a general estimate for Vitamin D production without sunscreen. Be mindful of your skin's reaction and avoid burning.";
+                }
+
+                // Ensure a minimum reasonable time if calculation results in very low numbers
+                if (estimatedMinutes < 5) estimatedMinutes = 5;
+                // Cap at a reasonable maximum to avoid suggesting excessive exposure
+                if (estimatedMinutes > 30) estimatedMinutes = 30;
+
+
+                estimatedTimeSpan.textContent = Math.round(estimatedMinutes);
+                timeUnitSpan.textContent = "minutes";
+                resultsContainer.classList.add('visible');
+            }
+
+            calculateBtn.addEventListener('click', calculateExposure);
+
+            // Initial state: hide results
+            resultsContainer.classList.remove('visible');
+        });
+    </script>
+</body>
+</html>
