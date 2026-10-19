@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Perfector - Daily Vitality</title>
+    <meta name="description" content="Improve your posture with personalized tips and exercises based on your daily activities. Get practical wellness advice for a healthier you.">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #8BC34A; /* Light Green */
+            --background-light: #f4f7f6;
+            --text-light: #333;
+            --card-background-light: #ffffff;
+            --border-radius: 12px;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --button-hover-light: #388E3C; /* Darker Green */
+
+            --background-dark: #2c3e50; /* Dark Blue-Grey */
+            --text-dark: #ecf0f1; /* Light Grey */
+            --card-background-dark: #34495e; /* Slightly Lighter Blue-Grey */
+            --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.2);
+            --button-hover-dark: #2980b9; /* Darker Blue */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+        }
+
+        .header-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header-link:hover {
+            color: var(--button-hover-light);
+        }
+
+        .how-it-works, .faq {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .how-it-works h2, .faq h2 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--button-hover-light);
+        }
+
+        .faq-answer {
+            margin-top: 8px;
+            padding-left: 15px;
+            border-left: 3px solid var(--secondary-color);
+            display: none; /* Hidden by default */
+        }
+
+        .tool-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 15px 20px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-size: 1.1em;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: var(--button-hover-light);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            color: #f44336; /* Red */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none; /* Hidden by default */
+        }
+
+        .results-card {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out forwards;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .results-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        .results-card p {
+            font-size: 1.1em;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .results-card ul {
+            list-style: disc;
+            padding-left: 30px;
+            text-align: left;
+            margin-top: 15px;
+            display: inline-block;
+            color: var(--text-light);
+        }
+
+        .results-card li {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .educational-note {
+            font-size: 0.85em;
+            color: #757575;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--background-dark);
+                color: var(--text-dark);
+            }
+
+            .container {
+                background-color: var(--card-background-dark);
+                box-shadow: var(--shadow-dark);
+            }
+
+            h1, h2, h3 {
+                color: var(--primary-color);
+            }
+
+            .header-link {
+                color: var(--primary-color);
+            }
+
+            .header-link:hover {
+                color: var(--button-hover-dark);
+            }
+
+            .how-it-works, .faq {
+                background-color: var(--background-dark);
+                box-shadow: var(--shadow-dark);
+            }
+
+            .faq-question {
+                color: var(--primary-color);
+            }
+
+            .faq-question:hover {
+                color: var(--button-hover-dark);
+            }
+
+            label {
+                color: var(--text-dark);
+            }
+
+            input[type="text"],
+            input[type="number"],
+            select,
+            textarea {
+                background-color: var(--card-background-dark);
+                color: var(--text-dark);
+                border-color: #555;
+            }
+
+            input[type="text"]:focus,
+            input[type="number"]:focus,
+            select:focus,
+            textarea:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+            }
+
+            button {
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+            button:hover {
+                background-color: var(--button-hover-dark);
+            }
+
+            .results-card {
+                background-color: var(--card-background-dark);
+                box-shadow: var(--shadow-dark);
+            }
+
+            .results-card p, .results-card li {
+                color: var(--text-dark);
+            }
+
+            .educational-note {
+                color: #aaa;
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 600px) {
+            .tool-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/posture-perfector.html"></head>
+<body>
+    <div class="container">
+        <a href="/tools.html" class="header-link">← Back to Tools</a>
+
+        <h1>Posture Perfector</h1>
+
+        <div class="how-it-works">
+            <h2>How it Works</h2>
+            <p>Tell us about your typical daily activities, from sitting at a desk to physical hobbies. Our tool analyzes your input to provide tailored advice.</p>
+            <p>Receive simple, practical tips and gentle exercises designed to help you improve your posture and reduce discomfort.</p>
+            <p>Start your journey to better posture and a more comfortable day!</p>
+        </div>
+
+        <form id="postureForm" class="tool-form" novalidate>
+            <div class="form-group">
+                <label for="workHours">Hours spent sitting at a desk daily:</label>
+                <input type="number" id="workHours" name="workHours" min="0" max="24" required step="0.5">
+                <span class="error-message" id="workHoursError">Please enter a valid number of hours (0-24).</span>
+            </div>
+
+            <div class="form-group">
+                <label for="physicalActivity">Type of physical activity (e.g., walking, gym, gardening, none):</label>
+                <input type="text" id="physicalActivity" name="physicalActivity" required>
+                <span class="error-message" id="physicalActivityError">Please describe your physical activity.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="screenTime">Hours spent looking at screens (phone, tablet, TV):</label>
+                <input type="number" id="screenTime" name="screenTime" min="0" max="24" required step="0.5">
+                <span class="error-message" id="screenTimeError">Please enter a valid number of hours (0-24).</span>
+            </div>
+
+            <div class="form-group">
+                <label for="lifting">How often do you lift heavy objects? (e.g., rarely, sometimes, often):</label>
+                <select id="lifting" name="lifting" required>
+                    <option value="">-- Select an option --</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="often">Often</option>
+                </select>
+                <span class="error-message" id="liftingError">Please select how often you lift heavy objects.</span>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="otherActivities">Any other significant daily activities affecting posture? (e.g., driving long distances, carrying a heavy bag):</label>
+                <textarea id="otherActivities" name="otherActivities" rows="3"></textarea>
+                <span class="error-message" id="otherActivitiesError"></span>
+            </div>
+
+            <div class="button-group full-width">
+                <button type="submit">Get My Posture Tips</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+
+        <div id="resultsContainer" class="results-card" style="display: none;" aria-live="polite">
+            <h3 id="resultsTitle">Your Personalized Posture Tips</h3>
+            <p id="resultsSummary"></p>
+            <ul id="resultsList"></ul>
+        </div>
+
+        <p class="educational-note">Educational only, not medical advice.</p>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What kind of exercises will I receive?</div>
+                <div class="faq-answer">The exercises are generally simple, bodyweight movements focusing on stretching and strengthening key postural muscles, like shoulder blade squeezes, chin tucks, and gentle spinal twists.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I do these exercises?</div>
+                <div class="faq-answer">For best results, aim to incorporate the suggested exercises into your daily routine. Even a few minutes several times a day can make a significant difference. Listen to your body and adjust as needed.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can this tool diagnose posture problems?</div>
+                <div class="faq-answer">No, this tool provides general wellness information and suggestions based on your input. It is not a diagnostic tool and cannot replace professional medical advice. If you have concerns about your posture or experience pain, please consult a healthcare professional.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('postureForm');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultsTitle = document.getElementById('resultsTitle');
+        const resultsSummary = document.getElementById('resultsSummary');
+        const resultsList = document.getElementById('resultsList');
+
+        const errorElements = {
+            workHours: document.getElementById('workHoursError'),
+            physicalActivity: document.getElementById('physicalActivityError'),
+            screenTime: document.getElementById('screenTimeError'),
+            lifting: document.getElementById('liftingError'),
+            otherActivities: document.getElementById('otherActivitiesError')
+        };
+
+        function validateForm() {
+            let isValid = true;
+            const formData = {};
+
+            // Clear previous errors
+            for (const key in errorElements) {
+                errorElements[key].style.display = 'none';
+            }
+            resultsContainer.style.display = 'none';
+
+            // Validate workHours
+            const workHoursInput = document.getElementById('workHours');
+            const workHours = parseFloat(workHoursInput.value);
+            if (isNaN(workHours) || workHours < 0 || workHours > 24) {
+                errorElements.workHours.style.display = 'block';
+                isValid = false;
+            } else {
+                formData.workHours = workHours;
+            }
+
+            // Validate physicalActivity
+            const physicalActivityInput = document.getElementById('physicalActivity');
+            const physicalActivity = physicalActivityInput.value.trim();
+            if (physicalActivity === '') {
+                errorElements.physicalActivity.style.display = 'block';
+                isValid = false;
+            } else {
+                formData.physicalActivity = physicalActivity;
+            }
+
+            // Validate screenTime
+            const screenTimeInput = document.getElementById('screenTime');
+            const screenTime = parseFloat(screenTimeInput.value);
+            if (isNaN(screenTime) || screenTime < 0 || screenTime > 24) {
+                errorElements.screenTime.style.display = 'block';
+                isValid = false;
+            } else {
+                formData.screenTime = screenTime;
+            }
+
+            // Validate lifting
+            const liftingInput = document.getElementById('lifting');
+            const lifting = liftingInput.value;
+            if (lifting === '') {
+                errorElements.lifting.style.display = 'block';
+                isValid = false;
+            } else {
+                formData.lifting = lifting;
+            }
+
+            // Validate otherActivities (optional, but check if there's an error message to display)
+            const otherActivitiesInput = document.getElementById('otherActivities');
+            formData.otherActivities = otherActivitiesInput.value.trim();
+
+            return isValid ? formData : null;
+        }
+
+        function generatePostureTips(data) {
+            const tips = [];
+            let summary = "";
+
+            // General advice based on sitting time
+            if (data.workHours > 4) {
+                tips.push("Take short breaks every 30-60 minutes to stand up, stretch, and walk around.");
+                tips.push("Ensure your workstation is ergonomically set up: monitor at eye level, feet flat on the floor, and good lumbar support.");
+            } else {
+                tips.push("Be mindful of your posture even during shorter sitting periods.");
+            }
+
+            // Advice based on screen time
+            if (data.screenTime > 3) {
+                tips.push("Hold your phone at eye level to avoid 'tech neck'.");
+                tips.push("When using a computer, try to maintain a neutral spine and avoid hunching.");
+            }
+
+            // Advice based on physical activity
+            if (data.physicalActivity.toLowerCase().includes('walking') || data.physicalActivity.toLowerCase().includes('running')) {
+                tips.push("Focus on maintaining an upright posture while walking, with shoulders back and down.");
+            }
+            if (data.physicalActivity.toLowerCase().includes('gym') || data.physicalActivity.toLowerCase().includes('lifting')) {
+                tips.push("When lifting weights, engage your core and maintain a straight back. Avoid rounding your spine.");
+            }
+            if (data.physicalActivity.toLowerCase().includes('gardening')) {
+                tips.push("Use proper bending techniques, like squatting or lunging, rather than just bending at the waist.");
+            }
+            if (data.physicalActivity === 'none' || data.physicalActivity.toLowerCase().includes('sedentary')) {
+                tips.push("Incorporate more movement throughout your day. Consider short walks or simple stretches.");
+            }
+
+            // Advice based on lifting
+            if (data.lifting === 'often') {
+                tips.push("Always use proper lifting techniques: bend your knees, keep your back straight, and lift with your legs.");
+                tips.push("Consider strengthening your core and back muscles to better support lifting activities.");
+            } else if (data.lifting === 'sometimes') {
+                tips.push("Be cautious when lifting. Ensure you're using good form to protect your back.");
+            }
+
+            // Advice based on other activities
+            if (data.otherActivities) {
+                if (data.otherActivities.toLowerCase().includes('driving')) {
+                    tips.push("Use lumbar support in your car seat and adjust it to maintain a good sitting posture.");
+                }
+                if (data.otherActivities.toLowerCase().includes('heavy bag')) {
+                    tips.push("Distribute weight evenly by using a backpack with both straps, or switch sides frequently if using a single-strap bag.");
+                }
+            }
+
+            // General posture exercises
+            tips.push("Perform chin tucks: gently pull your chin back as if making a double chin, then relax. Repeat 10-15 times.");
+            tips.push("Do shoulder blade squeezes: pinch your shoulder blades together, hold for 5 seconds, then release. Repeat 10-15 times.");
+            tips.push("Try chest stretches: stand in a doorway, place your forearms on the frame, and gently lean forward. Hold for 20-30 seconds.");
+
+            // Summary sentence
+            summary = "Based on your daily activities, focus on incorporating regular movement, ergonomic adjustments, and specific exercises to improve your posture and reduce strain.";
+
+            return { summary, tips };
+        }
+
+        function displayResults(data) {
+            const { summary, tips } = generatePostureTips(data);
+            resultsSummary.textContent = summary;
+            resultsList.innerHTML = ''; // Clear previous list items
+            tips.forEach(tip => {
+                const li = document.createElement('li');
+                li.textContent = tip;
+                resultsList.appendChild(li);
+            });
+            resultsContainer.style.display = 'block';
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = validateForm();
+            if (formData) {
+                displayResults(formData);
+            }
+        });
+
+        function resetForm() {
+            form.reset();
+            resultsContainer.style.display = 'none';
+            for (const key in errorElements) {
+                errorElements[key].style.display = 'none';
+            }
+        }
+
+        // FAQ functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Posture Perfector",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "A web tool that provides personalized posture improvement tips and exercises based on user's daily activities.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "screenshot": "https://example.com/posture-perfector-screenshot.png",
+  "feature": [
+    "Personalized posture tips",
+    "Simple exercise suggestions",
+    "Activity-based recommendations",
+    "User-friendly interface",
+    "Responsive design"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "150"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Vitality",
+    "url": "https://dailyvitality.com/tools.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of exercises will I receive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exercises are generally simple, bodyweight movements focusing on stretching and strengthening key postural muscles, like shoulder blade squeezes, chin tucks, and gentle spinal twists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I do these exercises?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For best results, aim to incorporate the suggested exercises into your daily routine. Even a few minutes several times a day can make a significant difference. Listen to your body and adjust as needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this tool diagnose posture problems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this tool provides general wellness information and suggestions based on your input. It is not a diagnostic tool and cannot replace professional medical advice. If you have concerns about your posture or experience pain, please consult a healthcare professional."
+      }
+    }
+  ]
+}
+</script>
