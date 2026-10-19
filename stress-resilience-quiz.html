@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Resilience Quiz - Daily Vitality</title>
+    <meta name="description" content="Discover your stress resilience with our quick quiz. Understand your coping mechanisms and get a personalized estimate. Educational only, not medical advice.">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #8BC34A; /* Light Green */
+            --background-light: #f4f7f6;
+            --text-light: #333;
+            --card-background-light: #ffffff;
+            --border-color-light: #e0e0e0;
+            --button-hover-light: #388E3C; /* Darker Green */
+
+            --background-dark: #212121;
+            --text-dark: #e0e0e0;
+            --card-background-dark: #424242;
+            --border-color-dark: #616161;
+            --button-hover-dark: #66BB6A; /* Lighter Green */
+
+            --spacing-unit: 16px;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #66BB6A; /* Lighter Green */
+                --secondary-color: #9CCC65; /* Even Lighter Green */
+                --background-light: var(--background-dark);
+                --text-light: var(--text-dark);
+                --card-background-light: var(--card-background-dark);
+                --border-color-light: var(--border-color-dark);
+                --button-hover-light: var(--button-hover-dark);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: var(--spacing-unit);
+            background-color: var(--background-light);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            padding: var(--spacing-unit);
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        header a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: bold;
+            padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+            border-radius: var(--border-radius);
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        header a:hover, header a:focus {
+            background-color: var(--secondary-color);
+            color: var(--card-background-light);
+        }
+
+        .tool-section {
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: calc(var(--spacing-unit) * 2);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .tool-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.6em;
+        }
+
+        .how-it-works, .faq-section {
+            margin-top: calc(var(--spacing-unit) * 2);
+        }
+
+        .how-it-works h3, .faq-section h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.4em;
+        }
+
+        .how-it-works p, .faq-item {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .faq-item {
+            background-color: var(--background-light);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color-light);
+            transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item strong {
+            display: block;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            color: var(--primary-color);
+        }
+
+        .quiz-form {
+            display: grid;
+            gap: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .question-block {
+            background-color: var(--background-light);
+            padding: calc(var(--spacing-unit) * 1.5);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color-light);
+            transition: box-shadow var(--transition-speed) ease;
+        }
+
+        .question-block:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .question-block label {
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: var(--spacing-unit);
+            color: var(--text-light);
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            font-size: 1.1em;
+            cursor: pointer;
+            padding: calc(var(--spacing-unit) / 2);
+            border-radius: var(--border-radius);
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .options label:hover {
+            background-color: var(--secondary-color);
+            color: var(--card-background-light);
+        }
+
+        .options input[type="radio"] {
+            margin-right: var(--spacing-unit);
+            transform: scale(1.3);
+            accent-color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: #f44336; /* Red */
+            font-size: 0.9em;
+            margin-top: calc(var(--spacing-unit) / 2);
+            display: none; /* Hidden by default */
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 2);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: calc(var(--spacing-unit) * 1.2) calc(var(--spacing-unit) * 2.5);
+            font-size: 1.2em;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            box-shadow: var(--shadow);
+        }
+
+        button:hover, button:focus {
+            background-color: var(--button-hover-light);
+            transform: translateY(-2px);
+            outline: none;
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .results-card {
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 2);
+            text-align: center;
+            animation: fadeIn var(--transition-speed) ease-out;
+            border: 1px solid var(--border-color-light);
+        }
+
+        .results-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .results-card .score {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .results-card p {
+            font-size: 1.1em;
+            color: var(--text-light);
+        }
+
+        .educational-note {
+            font-size: 0.9em;
+            color: #757575;
+            margin-top: var(--spacing-unit);
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: var(--spacing-unit);
+            text-align: center;
+            font-size: 0.9em;
+            color: #9e9e9e;
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/stress-resilience-quiz.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Vitality</h1>
+            <nav>
+                <a href="/tools.html">Back to Tools</a>
+            </nav>
+        </header>
+
+        <main class="tool-section">
+            <h2>Stress Resilience Quiz</h2>
+
+            <div class="how-it-works">
+                <h3>How it works</h3>
+                <p>This quiz helps you understand your current stress resilience by exploring your typical coping strategies. Answer honestly about how you usually react to stressful situations.</p>
+                <p>Your responses will be used to calculate an estimated resilience score, offering insights into your strengths and areas for potential growth.</p>
+                <p>Remember, this is for educational purposes only and is not a substitute for professional medical advice.</p>
+            </div>
+
+            <form id="quizForm" class="quiz-form" novalidate>
+                <div class="question-block">
+                    <label for="q1">When faced with a challenge, I tend to:</label>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="5" required> Actively seek solutions and plan my next steps.</label>
+                        <label><input type="radio" name="q1" value="3"> Try to stay calm and adapt as the situation unfolds.</label>
+                        <label><input type="radio" name="q1" value="1"> Feel overwhelmed and unsure of how to proceed.</label>
+                    </div>
+                    <div class="error-message" id="q1-error">Please select an option.</div>
+                </div>
+
+                <div class="question-block">
+                    <label for="q2">When I feel stressed, my first reaction is often to:</label>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="5" required> Engage in activities that help me relax or recharge.</label>
+                        <label><input type="radio" name="q2" value="3"> Talk to a friend or family member about it.</label>
+                        <label><input type="radio" name="q2" value="1"> Withdraw and avoid dealing with the stressor.</label>
+                    </div>
+                    <div class="error-message" id="q2-error">Please select an option.</div>
+                </div>
+
+                <div class="question-block">
+                    <label for="q3">How do you typically view setbacks or failures?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="5" required> As learning opportunities to grow from.</label>
+                        <label><input type="radio" name="q3" value="3"> As temporary difficulties that will pass.</label>
+                        <label><input type="radio" name="q3" value="1"> As personal shortcomings that are hard to overcome.</label>
+                    </div>
+                    <div class="error-message" id="q3-error">Please select an option.</div>
+                </div>
+
+                <div class="question-block">
+                    <label for="q4">When dealing with pressure, I usually:</label>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="5" required> Break down tasks into manageable steps and focus on one at a time.</label>
+                        <label><input type="radio" name="q4" value="3"> Try to maintain a positive outlook and keep going.</label>
+                        <label><input type="radio" name="q4" value="1"> Feel my performance suffers significantly.</label>
+                    </div>
+                    <div class="error-message" id="q4-error">Please select an option.</div>
+                </div>
+
+                <div class="question-block">
+                    <label for="q5">My approach to self-care during stressful times is:</label>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="5" required> Consistent and a priority, even when busy.</label>
+                        <label><input type="radio" name="q5" value="3"> Something I try to do when I have the time and energy.</label>
+                        <label><input type="radio" name="q5" value="1"> Often neglected when I'm feeling overwhelmed.</label>
+                    </div>
+                    <div class="error-message" id="q5-error">Please select an option.</div>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit">Calculate My Score</button>
+                </div>
+            </form>
+
+            <div id="resultsContainer" class="results-card" style="display: none;">
+                <h3 id="resultsTitle">Your Stress Resilience Estimate</h3>
+                <div class="score" id="stressScore"></div>
+                <p id="resultsExplanation"></p>
+                <p class="educational-note">Educational estimate, not medical advice.</p>
+            </div>
+        </main>
+
+        <section class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <strong>What is stress resilience?</strong>
+                <p>Stress resilience is your ability to adapt and bounce back from challenging experiences, adversity, or significant stress. It's about navigating difficult times without being permanently overwhelmed.</p>
+            </div>
+            <div class="faq-item">
+                <strong>How accurate is this quiz?</strong>
+                <p>This quiz provides an educational estimate based on common coping mechanisms. It's designed to offer general insights and encourage self-reflection, not to provide a clinical diagnosis.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can I improve my stress resilience?</strong>
+                <p>Yes, absolutely. Resilience is a skill that can be developed. Practices like mindfulness, regular exercise, strong social connections, and effective problem-solving can all contribute to building greater resilience over time.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Daily Vitality. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const quizForm = document.getElementById('quizForm');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const stressScoreElement = document.getElementById('stressScore');
+        const resultsExplanationElement = document.getElementById('resultsExplanation');
+        const errorMessages = document.querySelectorAll('.error-message');
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let score = 0;
+            let allQuestionsAnswered = true;
+
+            // Clear previous errors
+            errorMessages.forEach(msg => msg.style.display = 'none');
+
+            const questions = quizForm.querySelectorAll('.question-block');
+            questions.forEach(block => {
+                const selectedRadio = block.querySelector('input[type="radio"]:checked');
+                const errorDiv = block.querySelector('.error-message');
+                if (selectedRadio) {
+                    score += parseInt(selectedRadio.value, 10);
+                } else {
+                    allQuestionsAnswered = false;
+                    if (errorDiv) {
+                        errorDiv.style.display = 'block';
+                    }
+                }
+            });
+
+            if (allQuestionsAnswered) {
+                let explanation = '';
+                let scoreText = '';
+
+                if (score >= 20) {
+                    scoreText = 'High Resilience';
+                    explanation = "Your responses suggest a strong ability to cope with stress, adapt to challenges, and bounce back effectively. You likely have robust coping mechanisms and a positive outlook.";
+                } else if (score >= 15) {
+                    scoreText = 'Good Resilience';
+                    explanation = "You demonstrate good stress resilience, effectively managing many challenging situations. You have solid coping strategies and a generally adaptive approach.";
+                } else if (score >= 10) {
+                    scoreText = 'Moderate Resilience';
+                    explanation = "Your stress resilience appears moderate. You can handle some stressors well, but may find certain challenges more difficult. Focusing on developing specific coping skills could be beneficial.";
+                } else {
+                    scoreText = 'Developing Resilience';
+                    explanation = "Your responses indicate that your stress resilience may be in the developing stages. You might find yourself frequently overwhelmed by stress. Exploring new coping strategies and seeking support could be helpful.";
+                }
+
+                stressScoreElement.textContent = score;
+                resultsExplanationElement.textContent = explanation;
+                resultsContainer.style.display = 'block';
+                // Announce results for accessibility
+                const srOnlyAnnouncement = document.createElement('span');
+                srOnlyAnnouncement.className = 'sr-only';
+                srOnlyAnnouncement.setAttribute('aria-live', 'polite');
+                srOnlyAnnouncement.textContent = `Your estimated stress resilience score is ${score}. This indicates ${scoreText.toLowerCase()}. ${explanation}`;
+                resultsContainer.prepend(srOnlyAnnouncement);
+
+                // Scroll to results
+                resultsContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stress Resilience Quiz",
+  "description": "A web tool to estimate stress resilience based on coping mechanisms.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Vitality",
+    "url": "https://dailyvitality.com/tools.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is stress resilience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stress resilience is your ability to adapt and bounce back from challenging experiences, adversity, or significant stress. It's about navigating difficult times without being permanently overwhelmed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this quiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This quiz provides an educational estimate based on common coping mechanisms. It's designed to offer general insights and encourage self-reflection, not to provide a clinical diagnosis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I improve my stress resilience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, absolutely. Resilience is a skill that can be developed. Practices like mindfulness, regular exercise, strong social connections, and effective problem-solving can all contribute to building greater resilience over time."
+      }
+    }
+  ]
+}
+</script>

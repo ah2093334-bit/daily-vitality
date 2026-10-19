@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Movement Planner</title>
+    <meta name="description" content="Create your personalized gentle exercise schedule with the Mindful Movement Planner. Select activities and time slots for a balanced wellness routine.">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green for health */
+            --secondary-color: #8BC34A; /* Lighter green */
+            --background-light: #f4f6f8;
+            --text-light: #333;
+            --card-background-light: #ffffff;
+            --button-hover-light: #388E3C;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+            --background-dark: #1e1e1e;
+            --text-dark: #e0e0e0;
+            --card-background-dark: #2c2c2c;
+            --button-hover-dark: #66BB6A;
+            --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: var(--background-dark);
+                --text-color: var(--text-dark);
+                --card-background: var(--card-background-dark);
+                --shadow: var(--shadow-dark);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --background-color: var(--background-light);
+                --text-color: var(--text-light);
+                --card-background: var(--card-background-light);
+                --shadow: var(--shadow-light);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: var(--spacing-unit);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            padding: var(--spacing-unit) 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            font-size: 1em;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary-color);
+            color: var(--card-background);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        .section {
+            background-color: var(--card-background);
+            padding: calc(var(--spacing-unit) * 2);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            text-align: center;
+        }
+
+        .how-it-works p, .faq-item p {
+            margin-bottom: var(--spacing-unit);
+            text-align: left;
+        }
+
+        .tool-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-unit);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: calc(var(--spacing-unit) * 1.2);
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            font-size: 1.1em;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+        }
+
+        .checkbox-group label {
+            flex-direction: row;
+            align-items: center;
+            font-size: 1em;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: var(--spacing-unit);
+            transform: scale(1.5);
+            accent-color: var(--primary-color);
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: var(--button-hover-light);
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            color: #f44336; /* Red for errors */
+            font-size: 0.9em;
+            margin-top: calc(var(--spacing-unit) / 2);
+            display: none; /* Hidden by default */
+            width: 100%;
+            text-align: left;
+        }
+
+        .results-card {
+            background-color: var(--card-background);
+            padding: calc(var(--spacing-unit) * 2);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: calc(var(--spacing-unit) * 2);
+            text-align: left;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .results-card h3 {
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .results-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results-card li {
+            margin-bottom: var(--spacing-unit);
+            padding-bottom: var(--spacing-unit);
+            border-bottom: 1px dashed var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-card li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .activity-name {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .time-slot {
+            font-style: italic;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .explanation {
+            font-size: 0.95em;
+            color: var(--text-color);
+            opacity: 0.9;
+            margin-top: var(--spacing-unit);
+        }
+
+        .disclaimer {
+            font-size: 0.8em;
+            color: var(--text-color);
+            opacity: 0.7;
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 2);
+            padding: var(--spacing-unit);
+            border-top: 1px solid var(--secondary-color);
+        }
+
+        .faq-section {
+            margin-top: calc(var(--spacing-unit) * 3);
+        }
+
+        .faq-item {
+            background-color: var(--card-background);
+            padding: calc(var(--spacing-unit) * 2);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-unit);
+            text-align: left;
+        }
+
+        .faq-item h3 {
+            margin-top: 0;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            text-align: left;
+            font-size: 1.3em;
+            cursor: pointer;
+            position: relative;
+            padding-left: calc(var(--spacing-unit) * 2);
+        }
+
+        .faq-item h3::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open h3::before {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-top: 0;
+            padding-top: 0;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .faq-item.open p {
+            max-height: 200px; /* Adjust as needed */
+            opacity: 1;
+            padding-top: var(--spacing-unit);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (min-width: 768px) {
+            .tool-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-group:nth-last-child(2) { /* Last group before button */
+                grid-column: 1 / -1;
+            }
+            .button-container {
+                grid-column: 1 / -1;
+                text-align: center;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/mindful-movement-planner.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/tools.html" class="logo">Daily Vitality</a>
+            <nav>
+                <a href="/tools.html" class="nav-link">Back to Tools</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section">
+                <h1>Mindful Movement Planner</h1>
+                <p class="explanation">Create a personalized, gentle exercise schedule tailored to your preferences and availability. This tool helps you build consistency in your wellness routine.</p>
+            </section>
+
+            <section class="section how-it-works">
+                <h2>How it Works</h2>
+                <p>1. Select the gentle movement activities you enjoy from the list provided.</p>
+                <p>2. Choose your preferred days and time slots for each activity.</p>
+                <p>3. Click 'Generate Plan' to see your custom schedule.</p>
+                <p>4. Review your plan and make adjustments as needed.</p>
+            </section>
+
+            <section class="section tool-form-section">
+                <h2>Create Your Plan</h2>
+                <form id="movementForm">
+                    <div class="tool-form">
+                        <div class="form-group">
+                            <label for="activity1">Activity 1:</label>
+                            <select id="activity1" name="activity1">
+                                <option value="">-- Select Activity --</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Stretching">Stretching</option>
+                                <option value="Yoga (Gentle)">Yoga (Gentle)</option>
+                                <option value="Tai Chi">Tai Chi</option>
+                                <option value="Mindful Breathing Exercises">Mindful Breathing Exercises</option>
+                                <option value="Light Gardening">Light Gardening</option>
+                                <option value="Dancing (Slow)">Dancing (Slow)</option>
+                            </select>
+                            <span class="error-message" id="activity1Error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time1">Preferred Time Slot:</label>
+                            <select id="time1" name="time1">
+                                <option value="">-- Select Time --</option>
+                                <option value="Morning (7-9 AM)">Morning (7-9 AM)</option>
+                                <option value="Late Morning (10-12 PM)">Late Morning (10-12 PM)</option>
+                                <option value="Afternoon (1-3 PM)">Afternoon (1-3 PM)</option>
+                                <option value="Late Afternoon (4-6 PM)">Late Afternoon (4-6 PM)</option>
+                                <option value="Evening (7-9 PM)">Evening (7-9 PM)</option>
+                            </select>
+                            <span class="error-message" id="time1Error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="activity2">Activity 2:</label>
+                            <select id="activity2" name="activity2">
+                                <option value="">-- Select Activity --</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Stretching">Stretching</option>
+                                <option value="Yoga (Gentle)">Yoga (Gentle)</option>
+                                <option value="Tai Chi">Tai Chi</option>
+                                <option value="Mindful Breathing Exercises">Mindful Breathing Exercises</option>
+                                <option value="Light Gardening">Light Gardening</option>
+                                <option value="Dancing (Slow)">Dancing (Slow)</option>
+                            </select>
+                            <span class="error-message" id="activity2Error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time2">Preferred Time Slot:</label>
+                            <select id="time2" name="time2">
+                                <option value="">-- Select Time --</option>
+                                <option value="Morning (7-9 AM)">Morning (7-9 AM)</option>
+                                <option value="Late Morning (10-12 PM)">Late Morning (10-12 PM)</option>
+                                <option value="Afternoon (1-3 PM)">Afternoon (1-3 PM)</option>
+                                <option value="Late Afternoon (4-6 PM)">Late Afternoon (4-6 PM)</option>
+                                <option value="Evening (7-9 PM)">Evening (7-9 PM)</option>
+                            </select>
+                            <span class="error-message" id="time2Error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="activity3">Activity 3:</label>
+                            <select id="activity3" name="activity3">
+                                <option value="">-- Select Activity --</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Stretching">Stretching</option>
+                                <option value="Yoga (Gentle)">Yoga (Gentle)</option>
+                                <option value="Tai Chi">Tai Chi</option>
+                                <option value="Mindful Breathing Exercises">Mindful Breathing Exercises</option>
+                                <option value="Light Gardening">Light Gardening</option>
+                                <option value="Dancing (Slow)">Dancing (Slow)</option>
+                            </select>
+                            <span class="error-message" id="activity3Error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time3">Preferred Time Slot:</label>
+                            <select id="time3" name="time3">
+                                <option value="">-- Select Time --</option>
+                                <option value="Morning (7-9 AM)">Morning (7-9 AM)</option>
+                                <option value="Late Morning (10-12 PM)">Late Morning (10-12 PM)</option>
+                                <option value="Afternoon (1-3 PM)">Afternoon (1-3 PM)</option>
+                                <option value="Late Afternoon (4-6 PM)">Late Afternoon (4-6 PM)</option>
+                                <option value="Evening (7-9 PM)">Evening (7-9 PM)</option>
+                            </select>
+                            <span class="error-message" id="time3Error"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="includeDays" name="includeDays" value="true">
+                                Include specific days of the week?
+                            </label>
+                        </div>
+
+                        <div id="daySelection" style="display: none; grid-column: 1 / -1;" class="tool-form">
+                            <div class="form-group">
+                                <label for="days">Days of the Week:</label>
+                                <select id="days" name="days" multiple size="7">
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                </select>
+                                <span class="error-message" id="daysError"></span>
+                            </div>
+                        </div>
+
+                        <div class="button-container" style="grid-column: 1 / -1;">
+                            <button type="submit" class="button">Generate Plan</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section id="resultsSection" class="results-card" style="display: none;" aria-live="polite">
+                <h3 id="resultsTitle">Your Mindful Movement Plan</h3>
+                <ul id="planList"></ul>
+                <p class="explanation">This is a sample schedule based on your selections. Remember to listen to your body and adjust as needed. Consistency is key to building a healthy habit.</p>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What kind of activities are included?</h3>
+                    <p>The planner includes a variety of gentle movement activities designed to promote well-being without being strenuous. Examples include walking, stretching, gentle yoga, Tai Chi, and mindful breathing exercises.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this a substitute for medical advice?</h3>
+                    <p>No, this planner is for educational and planning purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with your doctor or a qualified healthcare provider before starting any new exercise program.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize the plan further?</h3>
+                    <p>Yes, this planner provides a starting point. Feel free to adjust the activities, time slots, and frequency based on your personal preferences, energy levels, and what feels best for your body each day.</p>
+                </div>
+            </section>
+
+            <p class="disclaimer">Educational estimate, not medical advice.</p>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('movementForm');
+            const resultsSection = document.getElementById('resultsSection');
+            const planList = document.getElementById('planList');
+            const includeDaysCheckbox = document.getElementById('includeDays');
+            const daySelectionDiv = document.getElementById('daySelection');
+            const resultsTitle = document.getElementById('resultsTitle');
+
+            // Toggle day selection visibility
+            includeDaysCheckbox.addEventListener('change', () => {
+                daySelectionDiv.style.display = includeDaysCheckbox.checked ? 'grid' : 'none';
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                let isValid = true;
+                const formData = new FormData(form);
+                const plan = [];
+
+                // Clear previous errors and results
+                form.querySelectorAll('.error-message').forEach(el => {
+                    el.style.display = 'none';
+                    el.textContent = '';
+                });
+                resultsSection.style.display = 'none';
+                planList.innerHTML = '';
+
+                const activities = [
+                    { activity: formData.get('activity1'), time: formData.get('time1') },
+                    { activity: formData.get('activity2'), time: formData.get('time2') },
+                    { activity: formData.get('activity3'), time: formData.get('time3') }
+                ];
+
+                const selectedDays = includeDaysCheckbox.checked ? Array.from(form.querySelectorAll('#days option:checked')).map(option => option.value) : [];
+
+                // Validation
+                activities.forEach((item, index) => {
+                    const activityInput = document.getElementById(`activity${index + 1}`);
+                    const timeInput = document.getElementById(`time${index + 1}`);
+                    const activityError = document.getElementById(`activity${index + 1}Error`);
+                    const timeError = document.getElementById(`time${index + 1}Error`);
+
+                    if (!item.activity || item.activity === "") {
+                        activityError.textContent = 'Please select an activity.';
+                        activityError.style.display = 'block';
+                        activityInput.style.borderColor = '#f44336';
+                        isValid = false;
+                    } else {
+                        activityInput.style.borderColor = ''; // Reset border
+                    }
+
+                    if (!item.time || item.time === "") {
+                        timeError.textContent = 'Please select a time slot.';
+                        timeError.style.display = 'block';
+                        timeInput.style.borderColor = '#f44336';
+                        isValid = false;
+                    } else {
+                        timeInput.style.borderColor = ''; // Reset border
+                    }
+
+                    // Add to plan if valid and not empty
+                    if (item.activity && item.time) {
+                        plan.push({ activity: item.activity, time: item.time });
+                    }
+                });
+
+                if (includeDaysCheckbox.checked && selectedDays.length === 0) {
+                    document.getElementById('daysError').textContent = 'Please select at least one day.';
+                    document.getElementById('daysError').style.display = 'block';
+                    document.getElementById('days').style.borderColor = '#f44336';
+                    isValid = false;
+                } else {
+                    document.getElementById('days').style.borderColor = '';
+                }
+
+                if (isValid) {
+                    // Sort plan by time for better readability
+                    plan.sort((a, b) => {
+                        const timeOrder = [
+                            "Morning (7-9 AM)", "Late Morning (10-12 PM)", "Afternoon (1-3 PM)",
+                            "Late Afternoon (4-6 PM)", "Evening (7-9 PM)"
+                        ];
+                        return timeOrder.indexOf(a.time) - timeOrder.indexOf(b.time);
+                    });
+
+                    let planOutput = "";
+                    if (selectedDays.length > 0) {
+                        resultsTitle.textContent = `Your Mindful Movement Plan for ${selectedDays.join(', ')}`;
+                        selectedDays.forEach(day => {
+                            planOutput += `<li><strong>${day}:</strong><ul>`;
+                            plan.forEach(item => {
+                                planOutput += `<li><span class="activity-name">${item.activity}</span> <span class="time-slot">(${item.time})</span></li>`;
+                            });
+                            planOutput += `</ul></li>`;
+                        });
+                    } else {
+                        resultsTitle.textContent = "Your Mindful Movement Plan";
+                        plan.forEach(item => {
+                            planOutput += `<li><span class="activity-name">${item.activity}</span> <span class="time-slot">(${item.time})</span></li>`;
+                        });
+                    }
+                    planList.innerHTML = planOutput;
+                    resultsSection.style.display = 'block';
+                }
+            });
+
+            // FAQ toggles
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('h3');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mindful Movement Planner",
+      "operatingSystem": "Any",
+      "applicationCategory": "WebApplication",
+      "description": "Create a personalized gentle exercise schedule with the Mindful Movement Planner. Select activities and time slots for a balanced wellness routine.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Daily Vitality",
+        "url": "https://dailyvitality.com/tools.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What kind of activities are included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The planner includes a variety of gentle movement activities designed to promote well-being without being strenuous. Examples include walking, stretching, gentle yoga, Tai Chi, and mindful breathing exercises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a substitute for medical advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, this planner is for educational and planning purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with your doctor or a qualified healthcare provider before starting any new exercise program."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize the plan further?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this planner provides a starting point. Feel free to adjust the activities, time slots, and frequency based on your personal preferences, energy levels, and what feels best for your body each day."
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

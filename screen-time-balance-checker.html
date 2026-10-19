@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time Balance Checker</title>
+    <meta name="description" content="Estimate your digital balance by inputting your daily screen time for different activities. Get practical insights for a healthier tech life. Educational only, not medical advice.">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #8BC34A; /* Light Green */
+            --background-light: #f8f9fa;
+            --text-light: #343a40;
+            --card-background-light: #ffffff;
+            --border-radius: 12px;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --button-hover-light: #388E3C; /* Darker Green */
+            --error-color: #f44336; /* Red */
+            --spacing-unit: 16px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-light: #121212;
+                --text-light: #e0e0e0;
+                --card-background-light: #1e1e1e;
+                --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.4);
+                --button-hover-light: #66BB6A; /* Lighter Green for dark mode */
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: var(--spacing-unit);
+            background-color: var(--background-light);
+            color: var(--text-light);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: var(--spacing-unit);
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            padding: var(--spacing-unit) 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            font-size: 1em;
+            color: var(--text-light);
+            text-decoration: none;
+            border: 1px solid var(--text-light);
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: var(--text-light);
+            color: var(--background-light);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        .tool-section {
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--shadow-light);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tool-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .input-group {
+            margin-bottom: var(--spacing-unit);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--text-light);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-size: 1.2em;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            color: var(--text-light);
+            background-color: var(--background-light);
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+        }
+
+        .unit-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 0.9em;
+        }
+
+        .unit-toggle label {
+            font-weight: normal;
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        .unit-toggle input[type="checkbox"] {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            appearance: none;
+            background-color: #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .unit-toggle input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+        }
+
+        .unit-toggle input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .unit-toggle input[type="checkbox"]:checked::before {
+            transform: translateX(20px);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.9em;
+            margin-top: 4px;
+            display: none; /* Hidden by default */
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: center;
+            margin-top: var(--spacing-unit);
+        }
+
+        .button:hover {
+            background-color: var(--button-hover-light);
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .results-card {
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--shadow-light);
+            margin-top: calc(var(--spacing-unit) * 2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .results-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .results-card h3 {
+            margin-bottom: var(--spacing-unit);
+            color: var(--secondary-color);
+        }
+
+        .results-card p {
+            font-size: 1.1em;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .results-card .score {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .results-card .explanation {
+            font-size: 1em;
+            margin-top: var(--spacing-unit);
+            color: #6c757d; /* Muted text */
+        }
+
+        .disclaimer {
+            font-size: 0.8em;
+            color: #6c757d;
+            text-align: center;
+            margin-top: var(--spacing-unit);
+            padding: 0 var(--spacing-unit);
+        }
+
+        .how-it-works, .faq-section {
+            background-color: var(--card-background-light);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--shadow-light);
+            margin-top: calc(var(--spacing-unit) * 2);
+        }
+
+        .how-it-works h2, .faq-section h2 {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .how-it-works p {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .faq-item {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .faq-item h3 {
+            margin-bottom: 8px;
+            text-align: left;
+            color: var(--text-light);
+            font-size: 1.2em;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 1em;
+            color: #6c757d;
+        }
+
+        /* Accessibility */
+        a:focus, button:focus, input:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Mobile First */
+        @media (min-width: 768px) {
+            .container {
+                padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+            }
+            .input-group {
+                flex-direction: row;
+                align-items: center;
+                gap: var(--spacing-unit);
+            }
+            label {
+                flex-basis: 180px; /* Fixed width for labels on larger screens */
+                margin-bottom: 0;
+            }
+            input[type="number"] {
+                flex-grow: 1;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/screen-time-balance-checker.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/tools.html" class="logo">Daily Vitality</a>
+            <nav>
+                <a href="/tools.html" class="nav-link">Back to Tools</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="tool-section">
+                <h1>Screen Time Balance Checker</h1>
+                <p style="text-align: center; font-size: 1.1em;">Estimate your digital balance by inputting your daily screen time for different activities.</p>
+
+                <form id="screenTimeForm">
+                    <div class="input-group">
+                        <label for="workTime">Work/Study (hours):</label>
+                        <input type="number" id="workTime" name="workTime" min="0" step="0.25" value="8" aria-describedby="workTimeError">
+                        <div id="workTimeError" class="error-message" role="alert"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="socialMediaTime">Social Media (hours):</label>
+                        <input type="number" id="socialMediaTime" name="socialMediaTime" min="0" step="0.25" value="2" aria-describedby="socialMediaTimeError">
+                        <div id="socialMediaTimeError" class="error-message" role="alert"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="entertainmentTime">Entertainment (hours):</label>
+                        <input type="number" id="entertainmentTime" name="entertainmentTime" min="0" step="0.25" value="3" aria-describedby="entertainmentTimeError">
+                        <div id="entertainmentTimeError" class="error-message" role="alert"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="otherScreenTime">Other Screen Time (hours):</label>
+                        <input type="number" id="otherScreenTime" name="otherScreenTime" min="0" step="0.25" value="1" aria-describedby="otherScreenTimeError">
+                        <div id="otherScreenTimeError" class="error-message" role="alert"></div>
+                    </div>
+
+                    <button type="submit" class="button">Check My Balance</button>
+                </form>
+
+                <div id="resultsContainer" style="display: none;">
+                    <div class="results-card">
+                        <h3 id="resultTitle">Your Digital Balance Estimate</h3>
+                        <p id="resultScore" class="score">--</p>
+                        <p id="resultExplanation" class="explanation">Enter your screen time above to get an estimate.</p>
+                    </div>
+                </div>
+
+                <p class="disclaimer">Educational estimate, not medical advice.</p>
+            </section>
+
+            <section class="how-it-works">
+                <h2>How it Works</h2>
+                <p>Simply input the estimated number of hours you spend on different digital activities each day. The tool then calculates a score based on a balanced approach to screen time, considering productive versus leisure use.</p>
+                <p>This provides a general overview of your digital habits and encourages mindful engagement with technology.</p>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What is considered "balanced" screen time?</h3>
+                    <p>A balanced approach typically prioritizes productive screen time (work, learning) over purely recreational activities. There's no single magic number, as it depends on individual needs and goals.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I use this for my children?</h3>
+                    <p>This tool is designed for general adult self-assessment. For children, it's best to consult with a pediatrician or child development specialist for age-appropriate screen time guidelines.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if my total screen time is very high?</h3>
+                    <p>If your total screen time is high, it might be beneficial to explore ways to reduce it, such as setting time limits, scheduling tech-free periods, or finding offline hobbies. Small, consistent changes can make a big difference.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer style="text-align: center; margin-top: calc(var(--spacing-unit) * 3); font-size: 0.9em; color: #6c757d;">
+            <p>&copy; 2023 Daily Vitality. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('screenTimeForm');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultScore = document.getElementById('resultScore');
+        const resultExplanation = document.getElementById('resultExplanation');
+        const inputFields = form.querySelectorAll('input[type="number"]');
+        const errorMessages = form.querySelectorAll('.error-message');
+
+        const MAX_HOURS_PER_DAY = 24;
+        const PRODUCTIVE_WEIGHT = 2; // Higher score for productive time
+        const LEISURE_WEIGHT = 1;   // Lower score for leisure time
+        const IDEAL_PRODUCTIVE_HOURS = 8; // Target for productive time
+        const MAX_LEISURE_HOURS = 4; // Max recommended leisure time
+
+        function validateForm() {
+            let isValid = true;
+            let totalHours = 0;
+
+            // Clear previous errors
+            errorMessages.forEach(el => {
+                el.style.display = 'none';
+                el.textContent = '';
+            });
+
+            inputFields.forEach(input => {
+                const value = parseFloat(input.value);
+                const id = input.id;
+                const errorElement = document.getElementById(`${id}Error`);
+
+                if (isNaN(value) || value < 0) {
+                    errorElement.textContent = 'Please enter a valid non-negative number.';
+                    errorElement.style.display = 'block';
+                    isValid = false;
+                } else {
+                    totalHours += value;
+                }
+            });
+
+            if (totalHours > MAX_HOURS_PER_DAY) {
+                // This is a general check, individual inputs might still be valid
+                // but the sum is impossible. We'll let the score reflect this.
+                // For now, we won't set a specific error for total hours > 24
+                // as it's more about interpretation of the score.
+            }
+
+            return isValid;
+        }
+
+        function calculateDigitalBalance() {
+            const workTime = parseFloat(document.getElementById('workTime').value) || 0;
+            const socialMediaTime = parseFloat(document.getElementById('socialMediaTime').value) || 0;
+            const entertainmentTime = parseFloat(document.getElementById('entertainmentTime').value) || 0;
+            const otherScreenTime = parseFloat(document.getElementById('otherScreenTime').value) || 0;
+
+            const totalScreenTime = workTime + socialMediaTime + entertainmentTime + otherScreenTime;
+
+            // Simple scoring mechanism:
+            // Productive time contributes more positively.
+            // Leisure time contributes less positively, or negatively if excessive.
+            // We'll aim for a score out of 100.
+
+            let score = 0;
+            let explanation = "";
+
+            // Calculate weighted productive and leisure time
+            const productiveTime = workTime; // Assuming work/study is productive
+            const leisureTime = socialMediaTime + entertainmentTime + otherScreenTime; // Assuming these are leisure
+
+            // Score based on productive time
+            if (productiveTime >= IDEAL_PRODUCTIVE_HOURS) {
+                score += 50; // Max score for productive time
+            } else {
+                score += (productiveTime / IDEAL_PRODUCTIVE_HOURS) * 50;
+            }
+
+            // Score based on leisure time
+            if (leisureTime <= MAX_LEISURE_HOURS) {
+                score += 30; // Max score for leisure time
+            } else {
+                score += Math.max(0, 30 - ((leisureTime - MAX_LEISURE_HOURS) / 4) * 30); // Deduct points for excessive leisure
+            }
+
+            // Bonus for overall low screen time
+            if (totalScreenTime < 6) {
+                score += 20;
+            } else if (totalScreenTime < 10) {
+                score += 10;
+            }
+
+            // Ensure score is within 0-100
+            score = Math.max(0, Math.min(100, score));
+
+            // Determine explanation based on score
+            if (score >= 80) {
+                explanation = "Excellent digital balance! You're effectively managing your screen time for productivity and well-being.";
+            } else if (score >= 60) {
+                explanation = "Good digital balance. You're doing well, but could consider optimizing your screen time further.";
+            } else if (score >= 40) {
+                explanation = "Moderate digital balance. You might want to review your screen time habits to find more balance.";
+            } else {
+                explanation = "Challenging digital balance. Consider making adjustments to your screen time for better well-being.";
+            }
+
+            // Add a note about total hours if it's very high
+            if (totalScreenTime > 12) {
+                explanation += " Your total daily screen time is quite high; consider strategies to reduce it.";
+            }
+
+            return { score: Math.round(score), explanation: explanation };
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            if (validateForm()) {
+                const balanceData = calculateDigitalBalance();
+                resultScore.textContent = `${balanceData.score}/100`;
+                resultExplanation.textContent = balanceData.explanation;
+                resultsContainer.style.display = 'block';
+                // Announce results for accessibility
+                const resultsAnnouncer = document.createElement('div');
+                resultsAnnouncer.setAttribute('aria-live', 'polite');
+                resultsAnnouncer.textContent = `Your digital balance estimate is ${balanceData.score} out of 100. ${balanceData.explanation}`;
+                resultsContainer.appendChild(resultsAnnouncer);
+            }
+        });
+
+        // Initial validation on load if there are default values
+        validateForm();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Screen Time Balance Checker",
+        "operatingSystem": "Any",
+        "applicationCategory": "UtilityApplication",
+        "description": "An online tool to estimate your digital balance by inputting daily screen time for various activities. Provides insights into healthy tech habits. Educational only, not medical advice.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Daily Vitality"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is considered \"balanced\" screen time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A balanced approach typically prioritizes productive screen time (work, learning) over purely recreational activities. There's no single magic number, as it depends on individual needs and goals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for my children?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This tool is designed for general adult self-assessment. For children, it's best to consult with a pediatrician or child development specialist for age-appropriate screen time guidelines."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my total screen time is very high?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If your total screen time is high, it might be beneficial to explore ways to reduce it, such as setting time limits, scheduling tech-free periods, or finding offline hobbies. Small, consistent changes can make a big difference."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydration Goal Calculator | Daily Vitality</title>
+    <meta name="description" content="Estimate your daily water intake goal based on your activity level and climate. A practical tool for your wellness journey.">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #8BC34A; /* Light Green */
+            --background-light: #f8f9fa;
+            --text-light: #212529;
+            --card-background-light: #ffffff;
+            --border-radius: 12px;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --button-hover-light: #388E3C; /* Darker Green */
+
+            --background-dark: #121212;
+            --text-dark: #e0e0e0;
+            --card-background-dark: #1e1e1e;
+            --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.2);
+            --button-hover-dark: #66BB6A; /* Lighter Green */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: var(--background-dark);
+                --text-color: var(--text-dark);
+                --card-background: var(--card-background-dark);
+                --shadow: var(--shadow-dark);
+                --button-hover: var(--button-hover-dark);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --background-color: var(--background-light);
+                --text-color: var(--text-light);
+                --card-background: var(--card-background-light);
+                --shadow: var(--shadow-light);
+                --button-hover: var(--button-hover-light);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 24px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--text-color);
+            opacity: 0.8;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            font-size: 1.1em;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(76, 175, 80, 0.1); /* Light primary color */
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .tool-description {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--text-color);
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .tool-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        input[type="number"],
+        select {
+            padding: 15px 20px;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+
+        .unit-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .unit-toggle label {
+            font-size: 1em;
+            opacity: 0.8;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 24px;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary-color);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.3em;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            color: #dc3545; /* Red */
+            font-size: 0.9em;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .results-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .results-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .results-card h2 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .results-card .goal-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1.1;
+        }
+
+        .results-card .goal-unit {
+            font-size: 1.5em;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .results-card p {
+            font-size: 1.1em;
+            color: var(--text-color);
+            opacity: 0.9;
+            max-width: 400px;
+        }
+
+        .educational-note {
+            font-size: 0.9em;
+            color: var(--text-color);
+            opacity: 0.7;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid var(--text-color);
+            border-opacity: 0.2;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 40px;
+            border-bottom: 1px solid var(--text-color);
+            border-opacity: 0.1;
+            padding-bottom: 10px;
+        }
+
+        .how-it-works, .faq-section {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        .how-it-works p, .faq-section p {
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--text-color);
+            opacity: 0.6;
+            width: 100%;
+        }
+
+        /* Accessibility */
+        a:focus, button:focus, input:focus, select:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                gap: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .tool-description {
+                font-size: 1em;
+            }
+            .tool-card, .results-card, .how-it-works, .faq-section {
+                padding: 20px;
+            }
+            input[type="number"],
+            select {
+                font-size: 1.1em;
+                padding: 12px 15px;
+            }
+            button {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+            .results-card .goal-value {
+                font-size: 2.5em;
+            }
+            .results-card .goal-unit {
+                font-size: 1.3em;
+            }
+            .section-title {
+                font-size: 1.4em;
+            }
+            .faq-item h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                gap: 15px;
+            }
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding-bottom: 10px;
+            }
+            .logo {
+                font-size: 1.5em;
+            }
+            .nav-link {
+                font-size: 1em;
+                padding: 5px 10px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            .tool-card, .results-card, .how-it-works, .faq-section {
+                padding: 15px;
+            }
+            input[type="number"],
+            select {
+                font-size: 1em;
+                padding: 10px 12px;
+            }
+            button {
+                font-size: 1em;
+                padding: 10px 15px;
+                margin-top: 5px;
+            }
+            .results-card .goal-value {
+                font-size: 2em;
+            }
+            .results-card .goal-unit {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 1.3em;
+            }
+            .faq-item h3 {
+                font-size: 1em;
+            }
+            .unit-toggle {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .toggle-switch {
+                margin-top: 5px;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/hydration-goal-calculator.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/tools.html" class="logo" aria-label="Daily Vitality Home">Daily Vitality</a>
+            <nav>
+                <a href="/tools.html" class="nav-link">Back to Tools</a>
+            </nav>
+        </header>
+
+        <h1>Hydration Goal Calculator</h1>
+        <p class="tool-description">Estimate your daily water intake goal. Enter your activity level and climate for a personalized suggestion.</p>
+
+        <div class="tool-card">
+            <div class="input-group">
+                <label for="activityLevel">Activity Level</label>
+                <select id="activityLevel" aria-describedby="activityLevelError">
+                    <option value="sedentary">Sedentary (little to no exercise)</option>
+                    <option value="light">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                    <option value="moderate">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="very_active">Very Active (hard exercise/sports 6-7 days/week)</option>
+                    <option value="extra_active">Extra Active (very hard exercise/sports & physical job)</option>
+                </select>
+                <div id="activityLevelError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="climate">Climate</label>
+                <select id="climate" aria-describedby="climateError">
+                    <option value="cool_mild">Cool/Mild</option>
+                    <option value="hot_humid">Hot/Humid</option>
+                    <option value="hot_dry">Hot/Dry</option>
+                </select>
+                <div id="climateError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Body Weight</label>
+                <input type="number" id="weight" placeholder="e.g., 150" aria-describedby="weightError">
+                <div class="unit-toggle">
+                    <label for="weightUnit">Unit:</label>
+                    <span class="toggle-switch">
+                        <input type="checkbox" id="weightUnit" checked>
+                        <span class="slider"></span>
+                    </span>
+                    <label id="weightUnitLabel">lbs</label>
+                </div>
+                <div id="weightError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <button id="calculateBtn">Calculate Goal</button>
+        </div>
+
+        <div id="resultsCard" class="results-card" aria-live="polite">
+            <h2>Your Estimated Daily Goal</h2>
+            <div class="goal-value" id="goalValue">--</div>
+            <div class="goal-unit" id="goalUnit">--</div>
+            <p id="goalExplanation">Enter your details above to get your personalized hydration goal.</p>
+        </div>
+
+        <div class="educational-note">
+            Educational estimate, not medical advice. This tool provides a general guideline. Always consult with a healthcare professional for personalized advice.
+        </div>
+
+        <section class="how-it-works">
+            <h2 class="section-title">How It Works</h2>
+            <p>This calculator uses a common guideline to estimate your daily water needs. It starts with a baseline based on your body weight and then adjusts for your activity level and the climate you're in. Higher activity and hotter, drier climates generally require more water.</p>
+            <p>Remember, this is a simplified model. Individual needs can vary significantly based on health, diet, and other factors.</p>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Why is hydration important?</h3>
+                <p>Water is essential for nearly every bodily function, including regulating body temperature, transporting nutrients, lubricating joints, and removing waste. Proper hydration supports energy levels, cognitive function, and overall well-being.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I drink too much water?</h3>
+                <p>Yes, it's possible to drink too much water, a condition called hyponatremia. This is rare and usually occurs with extreme overconsumption over a short period, often in endurance athletes. For most people, drinking to thirst is a safe approach.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does this include water from food?</h3>
+                <p>This calculator primarily estimates fluid intake from beverages. About 20% of our daily water intake typically comes from food. You can consider this goal as a target for your drinks, and your food will contribute to the rest.</p>
+            </div>
+        </section>
+
+        <footer>
+            © 2023 Daily Vitality. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        const activityLevelSelect = document.getElementById('activityLevel');
+        const climateSelect = document.getElementById('climate');
+        const weightInput = document.getElementById('weight');
+        const weightUnitToggle = document.getElementById('weightUnit');
+        const weightUnitLabel = document.getElementById('weightUnitLabel');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const resultsCard = document.getElementById('resultsCard');
+        const goalValue = document.getElementById('goalValue');
+        const goalUnit = document.getElementById('goalUnit');
+        const goalExplanation = document.getElementById('goalExplanation');
+        const activityLevelError = document.getElementById('activityLevelError');
+        const climateError = document.getElementById('climateError');
+        const weightError = document.getElementById('weightError');
+
+        const BASE_WATER_PER_LB = 0.5; // ounces per pound of body weight
+        const ACTIVITY_MULTIPLIERS = {
+            sedentary: 1.0,
+            light: 1.2,
+            moderate: 1.4,
+            very_active: 1.6,
+            extra_active: 1.8
+        };
+        const CLIMATE_ADJUSTMENTS = {
+            cool_mild: 0,
+            hot_humid: 8, // ounces
+            hot_dry: 12  // ounces
+        };
+        const OZ_TO_ML = 29.5735;
+        const LB_TO_KG = 0.453592;
+
+        function calculateHydrationGoal() {
+            let isValid = true;
+            resetErrors();
+
+            const activity = activityLevelSelect.value;
+            const climate = climateSelect.value;
+            const weight = parseFloat(weightInput.value);
+            const isLbs = weightUnitToggle.checked;
+
+            if (!activity) {
+                activityLevelError.textContent = "Please select an activity level.";
+                isValid = false;
+            }
+            if (!climate) {
+                climateError.textContent = "Please select a climate.";
+                isValid = false;
+            }
+            if (isNaN(weight) || weight <= 0) {
+                weightError.textContent = "Please enter a valid body weight.";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                resultsCard.classList.remove('visible');
+                return;
+            }
+
+            let baseIntakeOz = weight * BASE_WATER_PER_LB;
+            let adjustedIntakeOz = baseIntakeOz * ACTIVITY_MULTIPLIERS[activity];
+            adjustedIntakeOz += CLIMATE_ADJUSTMENTS[climate];
+
+            // Ensure a minimum intake
+            const minIntakeOz = 64; // Approx 2 liters
+            adjustedIntakeOz = Math.max(adjustedIntakeOz, minIntakeOz);
+
+            let finalIntakeOz = adjustedIntakeOz;
+            let finalIntakeMl = Math.round(finalIntakeOz * OZ_TO_ML);
+            let finalIntakeLiters = (finalIntakeMl / 1000).toFixed(1);
+
+            let goalValueText = '';
+            let goalUnitText = '';
+            let explanationText = '';
+
+            if (isLbs) { // Display in ounces and liters if weight is in lbs
+                goalValueText = `${Math.round(finalIntakeOz)} oz`;
+                goalUnitText = `or ${finalIntakeLiters} L`;
+                explanationText = `This is an estimated daily water intake goal of ${Math.round(finalIntakeOz)} fluid ounces, adjusted for your activity level and climate.`;
+            } else { // Display in ml and liters if weight is in kg
+                const weightKg = weight * LB_TO_KG;
+                const baseIntakeMl = weightKg * 30; // Approx 30ml per kg
+                const adjustedIntakeMl = baseIntakeMl * ACTIVITY_MULTIPLIERS[activity] + CLIMATE_ADJUSTMENTS[climate] * OZ_TO_ML;
+                const finalIntakeMlKg = Math.max(adjustedIntakeMl, 2000); // Min 2 liters
+                const finalIntakeLitersKg = (finalIntakeMlKg / 1000).toFixed(1);
+
+                goalValueText = `${Math.round(finalIntakeMlKg)} ml`;
+                goalUnitText = `or ${finalIntakeLitersKg} L`;
+                explanationText = `This is an estimated daily water intake goal of ${Math.round(finalIntakeMlKg)} milliliters, adjusted for your activity level and climate.`;
+            }
+
+            goalValue.textContent = goalValueText;
+            goalUnit.textContent = goalUnitText;
+            goalExplanation.textContent = explanationText;
+
+            resultsCard.classList.add('visible');
+        }
+
+        function resetErrors() {
+            activityLevelError.textContent = '';
+            climateError.textContent = '';
+            weightError.textContent = '';
+        }
+
+        weightUnitToggle.addEventListener('change', () => {
+            if (weightUnitToggle.checked) {
+                weightUnitLabel.textContent = 'lbs';
+                weightInput.placeholder = 'e.g., 150';
+            } else {
+                weightUnitLabel.textContent = 'kg';
+                weightInput.placeholder = 'e.g., 68';
+            }
+            // Clear previous calculation if units change
+            resultsCard.classList.remove('visible');
+            goalValue.textContent = '--';
+            goalUnit.textContent = '--';
+            goalExplanation.textContent = 'Enter your details above to get your personalized hydration goal.';
+        });
+
+        calculateBtn.addEventListener('click', calculateHydrationGoal);
+
+        // Initial setup for the unit label
+        if (weightUnitToggle.checked) {
+            weightUnitLabel.textContent = 'lbs';
+        } else {
+            weightUnitLabel.textContent = 'kg';
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Hydration Goal Calculator",
+      "operatingSystem": "Any",
+      "applicationCategory": "UtilityApplication",
+      "description": "A web-based tool to estimate daily water intake goals based on user inputs for activity level, climate, and body weight.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "screenshot": "https://example.com/hydration-calculator-screenshot.png",
+      "featureList": [
+        "Activity Level Input",
+        "Climate Input",
+        "Body Weight Input",
+        "Unit Toggle (lbs/kg)",
+        "Estimated Daily Goal Calculation",
+        "Responsive Design",
+        "Light/Dark Mode Support"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Daily Vitality",
+        "url": "https://dailyvitality.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is hydration important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Water is essential for nearly every bodily function, including regulating body temperature, transporting nutrients, lubricating joints, and removing waste. Proper hydration supports energy levels, cognitive function, and overall well-being."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I drink too much water?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it's possible to drink too much water, a condition called hyponatremia. This is rare and usually occurs with extreme overconsumption over a short period, often in endurance athletes. For most people, drinking to thirst is a safe approach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this include water from food?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator primarily estimates fluid intake from beverages. About 20% of our daily water intake typically comes from food. You can consider this goal as a target for your drinks, and your food will contribute to the rest."
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
