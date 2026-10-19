@@ -1,5 +1,25 @@
 [
  {
+  "slug": "sun-exposure-estimator",
+  "title": "Sun Exposure Estimator - Daily Vitality",
+  "date": "2026-10-19"
+ },
+ {
+  "slug": "posture-perfector",
+  "title": "Posture Perfector Tool - Daily Vitality",
+  "date": "2026-10-19"
+ },
+ {
+  "slug": "mindful-munchies-matcher",
+  "title": "Mindful Munchies Matcher - Daily Vitality",
+  "date": "2026-10-19"
+ },
+ {
+  "slug": "sleep-cycle-optimizer",
+  "title": "Sleep Cycle Optimizer - Daily Vitality",
+  "date": "2026-10-19"
+ },
+ {
   "slug": "hydration-goal-calculator",
   "title": "Daily Vitality Hydration Goal Calculator",
   "date": "2026-10-19"
