@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Munchies Matcher</title>
+    <meta name="description" content="Find healthy, mood-boosting snack pairings based on your current mood and energy levels. Get personalized suggestions for a calmer, more vibrant you.">
+    <style>
+        :root {
+            --color-primary: #6a994e; /* A calm, earthy green */
+            --color-secondary: #a7c957; /* A brighter, uplifting green */
+            --color-background-light: #f8f9fa;
+            --color-text-light: #343a40;
+            --color-card-light: #ffffff;
+            --color-border-light: #dee2e6;
+            --color-background-dark: #212529;
+            --color-text-dark: #e9ecef;
+            --color-card-dark: #343a40;
+            --color-border-dark: #495057;
+            --color-accent: #f2cc8f; /* A warm, friendly accent */
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --spacing-unit: 16px;
+            --border-radius: 12px;
+            --transition-speed: 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-primary: #80b918; /* Brighter green for dark mode */
+                --color-secondary: #97cc00;
+                --color-background-light: var(--color-background-dark);
+                --color-text-light: var(--color-text-dark);
+                --color-card-light: var(--color-card-dark);
+                --color-border-light: var(--color-border-dark);
+                --color-shadow: var(--shadow-dark);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 0;
+            padding: calc(var(--spacing-unit) * 2);
+            background-color: var(--color-background-light);
+            color: var(--color-text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--color-card-light);
+            padding: calc(var(--spacing-unit) * 2);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .container {
+                box-shadow: var(--shadow-dark);
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+            border-radius: var(--border-radius);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        .nav-link:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-text-dark);
+        }
+
+        h1, h2, h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+
+        .how-it-works, .faq {
+            margin-top: calc(var(--spacing-unit) * 2);
+            padding-top: calc(var(--spacing-unit) * 2);
+            border-top: 1px solid var(--color-border-light);
+            transition: border-color var(--transition-speed);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .how-it-works, .faq {
+                border-top-color: var(--color-border-dark);
+            }
+        }
+
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-unit);
+        }
+
+        .how-it-works li {
+            background-color: var(--color-background-light);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-unit);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .how-it-works li {
+                box-shadow: var(--shadow-dark);
+            }
+        }
+
+        .how-it-works li::before {
+            content: counter(item, decimal);
+            counter-increment: item;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--color-accent);
+            color: var(--color-text-dark);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .tool-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-unit);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) / 2);
+        }
+
+        label {
+            font-weight: 500;
+            color: var(--color-text-light);
+            transition: color var(--transition-speed);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            label {
+                color: var(--color-text-dark);
+            }
+        }
+
+        input[type="text"],
+        select {
+            padding: calc(var(--spacing-unit) * 1.2);
+            border: 1px solid var(--color-border-light);
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            transition: border-color var(--transition-speed), background-color var(--transition-speed);
+            background-color: var(--color-background-light);
+            color: var(--color-text-light);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            input[type="text"],
+            select {
+                border-color: var(--color-border-dark);
+                background-color: var(--color-card-dark);
+                color: var(--color-text-dark);
+            }
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(106, 153, 78, 0.3);
+        }
+
+        .error-message {
+            color: #dc3545; /* Red for errors */
+            font-size: 0.9em;
+            margin-top: calc(var(--spacing-unit) / 4);
+            display: none; /* Hidden by default */
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: calc(var(--spacing-unit) * 1.2);
+            border-radius: var(--border-radius);
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            margin-top: var(--spacing-unit);
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .results-card {
+            background-color: var(--color-card-light);
+            border: 1px solid var(--color-border-light);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--shadow-light);
+            transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+            display: none; /* Hidden by default */
+            animation: fadeIn var(--transition-speed) ease-out forwards;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .results-card {
+                border-color: var(--color-border-dark);
+                box-shadow: var(--shadow-dark);
+            }
+        }
+
+        .results-card h3 {
+            margin-top: 0;
+            color: var(--color-secondary);
+            text-align: center;
+        }
+
+        .results-card p {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .results-card strong {
+            color: var(--color-primary);
+        }
+
+        .educational-note {
+            font-size: 0.85em;
+            color: #6c757d; /* Muted gray */
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 1.5);
+            padding-top: var(--spacing-unit);
+            border-top: 1px solid var(--color-border-light);
+            transition: border-color var(--transition-speed);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .educational-note {
+                color: #adb5bd;
+                border-top-color: var(--color-border-dark);
+            }
+        }
+
+        .faq-item {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .faq-item summary {
+            font-weight: 500;
+            color: var(--color-primary);
+            cursor: pointer;
+            padding: calc(var(--spacing-unit) / 2) 0;
+            transition: color var(--transition-speed);
+            list-style: none; /* Remove default triangle */
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none; /* Hide default triangle in Chrome/Safari */
+        }
+
+        .faq-item summary::before {
+            content: '+ ';
+            margin-right: var(--spacing-unit);
+            font-weight: bold;
+            color: var(--color-secondary);
+            transition: color var(--transition-speed);
+        }
+
+        .faq-item[open] summary::before {
+            content: '- ';
+        }
+
+        .faq-item p {
+            margin-top: calc(var(--spacing-unit) / 2);
+            padding-left: calc(var(--spacing-unit) * 2);
+            color: var(--color-text-light);
+            transition: color var(--transition-speed);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .faq-item p {
+                color: var(--color-text-dark);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<link rel="canonical" href="https://dailyvitality.xyz/mindful-munchies-matcher.html"></head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/tools.html" class="logo">Daily Vitality</a>
+            <nav>
+                <a href="/tools.html" class="nav-link">Back to Tools</a>
+            </nav>
+        </header>
+
+        <h1>Mindful Munchies Matcher</h1>
+
+        <section class="how-it-works">
+            <h2>How it Works</h2>
+            <ul style="counter-reset: item 0;">
+                <li>Describe your current mood and energy levels using the options below.</li>
+                <li>The tool will suggest healthy, mood-boosting snack pairings.</li>
+                <li>Discover simple ways to nourish your mind and body.</li>
+            </ul>
+        </section>
+
+        <section class="tool-section">
+            <h2>Find Your Snack Match</h2>
+            <form id="snackMatcherForm" class="tool-form" novalidate>
+                <div class="form-group">
+                    <label for="mood">How are you feeling right now?</label>
+                    <select id="mood" name="mood" required>
+                        <option value="">-- Select your mood --</option>
+                        <option value="calm">Calm</option>
+                        <option value="stressed">Stressed</option>
+                        <option value="happy">Happy</option>
+                        <option value="tired">Tired</option>
+                        <option value="anxious">Anxious</option>
+                        <option value="energetic">Energetic</option>
+                        <option value="neutral">Neutral</option>
+                    </select>
+                    <div class="error-message" id="moodError">Please select your current mood.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="energy">What's your energy level like?</label>
+                    <select id="energy" name="energy" required>
+                        <option value="">-- Select your energy level --</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <div class="error-message" id="energyError">Please select your energy level.</div>
+                </div>
+
+                <button type="submit">Get Snack Suggestions</button>
+            </form>
+        </section>
+
+        <div id="resultsCard" class="results-card" aria-live="polite">
+            <h3 id="resultsTitle">Your Mindful Munchies Suggestion</h3>
+            <p id="snackSuggestion"></p>
+            <p id="snackExplanation"></p>
+        </div>
+
+        <p class="educational-note">Educational estimate, not medical advice.</p>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details class="faq-item">
+                <summary>What kind of snacks are suggested?</summary>
+                <p>Suggestions focus on whole foods rich in nutrients that can support mood and energy, such as fruits, nuts, seeds, yogurt, and dark chocolate. We avoid processed foods and excessive sugar.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can these snacks really boost my mood?</summary>
+                <p>Certain nutrients found in healthy foods, like omega-3 fatty acids, B vitamins, and magnesium, are linked to brain health and can play a role in mood regulation. While not a cure, mindful snacking can be a supportive practice.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Is this a substitute for professional medical advice?</summary>
+                <p>Absolutely not. This tool is for informational and educational purposes only. If you have concerns about your mood, energy levels, or diet, please consult a qualified healthcare professional.</p>
+            </details>
+        </section>
+    </div>
+
+    <script>
+        const form = document.getElementById('snackMatcherForm');
+        const moodSelect = document.getElementById('mood');
+        const energySelect = document.getElementById('energy');
+        const moodError = document.getElementById('moodError');
+        const energyError = document.getElementById('energyError');
+        const resultsCard = document.getElementById('resultsCard');
+        const resultsTitle = document.getElementById('resultsTitle');
+        const snackSuggestion = document.getElementById('snackSuggestion');
+        const snackExplanation = document.getElementById('snackExplanation');
+
+        const snackData = {
+            calm: {
+                low: { suggestion: "Chamomile Tea & a Handful of Almonds", explanation: "Chamomile is known for its calming properties, and almonds provide magnesium, which can help with relaxation." },
+                medium: { suggestion: "Greek Yogurt with Berries & a drizzle of Honey", explanation: "Yogurt offers probiotics for gut health (linked to mood), berries are packed with antioxidants, and honey provides a gentle energy lift." },
+                high: { suggestion: "A small piece of Dark Chocolate (70%+ cacao)", explanation: "Dark chocolate contains flavanols that can improve blood flow to the brain and may have mood-lifting effects." }
+            },
+            stressed: {
+                low: { suggestion: "Warm Milk & a Banana", explanation: "Warm milk can be soothing, and bananas are a good source of potassium and magnesium, which can help manage stress." },
+                medium: { suggestion: "Oatmeal with Walnuts & Cinnamon", explanation: "Oatmeal provides complex carbohydrates for sustained energy, walnuts offer omega-3s, and cinnamon can help regulate blood sugar." },
+                high: { suggestion: "A small bowl of Edamame (steamed)", explanation: "Edamame is a good source of protein and fiber, helping to stabilize energy and reduce feelings of overwhelm." }
+            },
+            happy: {
+                low: { suggestion: "Fresh Fruit Salad (e.g., melon, grapes, oranges)", explanation: "A refreshing mix of natural sugars and vitamins to complement your positive mood." },
+                medium: { suggestion: "A small smoothie with spinach, banana, and almond milk", explanation: "A nutrient-dense option that's easy to digest and provides a good balance of energy and vitamins." },
+                high: { suggestion: "A few dates stuffed with a walnut", explanation: "A naturally sweet and satisfying treat that provides quick energy and healthy fats." }
+            },
+            tired: {
+                low: { suggestion: "Apple Slices with Peanut Butter", explanation: "The combination of fiber from the apple and protein/healthy fats from peanut butter offers sustained energy release." },
+                medium: { suggestion: "Hard-boiled Egg & a few whole-wheat crackers", explanation: "Protein from the egg provides a steady energy source, and crackers offer complex carbohydrates." },
+                high: { suggestion: "A small handful of mixed nuts and seeds", explanation: "A concentrated source of healthy fats, protein, and minerals to help combat fatigue." }
+            },
+            anxious: {
+                low: { suggestion: "Herbal Tea (e.g., lemon balm, passionflower) & a few pumpkin seeds", explanation: "Certain herbs can promote relaxation, and pumpkin seeds are rich in magnesium, known for its calming effects." },
+                medium: { suggestion: "Cottage cheese with pineapple chunks", explanation: "Cottage cheese is a good source of protein, and pineapple contains bromelain, which may have anti-inflammatory benefits." },
+                high: { suggestion: "A small portion of roasted chickpeas", explanation: "Crunchy and satisfying, roasted chickpeas offer fiber and protein to help ground you." }
+            },
+            energetic: {
+                low: { suggestion: "A small bowl of berries with a dollop of plain yogurt", explanation: "A light and refreshing option that won't weigh you down, providing antioxidants and protein." },
+                medium: { suggestion: "A small protein shake with unsweetened almond milk", explanation: "To sustain your energy without a sugar crash, a balanced protein source is ideal." },
+                high: { suggestion: "A small handful of trail mix (nuts, seeds, dried fruit - no added sugar)", explanation: "A portable and nutrient-dense option to keep your energy levels up." }
+            },
+            neutral: {
+                low: { suggestion: "A piece of fruit (e.g., orange, pear)", explanation: "Simple, natural sugars and fiber for a gentle energy boost." },
+                medium: { suggestion: "A small handful of almonds", explanation: "A balanced snack providing healthy fats and protein for steady energy." },
+                high: { suggestion: "A rice cake with a thin layer of avocado", explanation: "A light and satisfying option that's easy to digest." }
+            }
+        };
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Reset previous errors
+            moodError.classList.remove('visible');
+            energyError.classList.remove('visible');
+            resultsCard.style.display = 'none';
+
+            if (moodSelect.value === "") {
+                moodError.classList.add('visible');
+                isValid = false;
+            }
+            if (energySelect.value === "") {
+                energyError.classList.add('visible');
+                isValid = false;
+            }
+
+            if (isValid) {
+                const mood = moodSelect.value;
+                const energy = energySelect.value;
+                const suggestionData = snackData[mood] ? snackData[mood][energy] : null;
+
+                if (suggestionData) {
+                    snackSuggestion.textContent = suggestionData.suggestion;
+                    snackExplanation.textContent = suggestionData.explanation;
+                    resultsCard.style.display = 'block';
+                    resultsTitle.focus(); // Move focus to the results for accessibility
+                } else {
+                    // Fallback for unexpected combinations, though our data should cover all
+                    snackSuggestion.textContent = "A simple piece of fruit.";
+                    snackExplanation.textContent = "When in doubt, a piece of fruit is a great way to get natural energy and nutrients.";
+                    resultsCard.style.display = 'block';
+                    resultsTitle.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mindful Munchies Matcher",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "A web tool that suggests healthy, mood-boosting snack pairings based on user-described mood and energy levels.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Vitality"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of snacks are suggested?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suggestions focus on whole foods rich in nutrients that can support mood and energy, such as fruits, nuts, seeds, yogurt, and dark chocolate. We avoid processed foods and excessive sugar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can these snacks really boost my mood?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Certain nutrients found in healthy foods, like omega-3 fatty acids, B vitamins, and magnesium, are linked to brain health and can play a role in mood regulation. While not a cure, mindful snacking can be a supportive practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a substitute for professional medical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely not. This tool is for informational and educational purposes only. If you have concerns about your mood, energy levels, or diet, please consult a qualified healthcare professional."
+      }
+    }
+  ]
+}
+</script>
