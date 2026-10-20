@@ -1,11 +1,29 @@
 [
   {
+    "slug": "benefits-keto-diet-diabetes-metabolic-health",
+    "title": "Benefits of Keto Diet for Diabetes: Unlocking Metabolic Health",
+    "date": "2026-10-20",
+    "excerpt": "The ketogenic diet offers promising benefits for individuals with diabetes, primarily through its impact on blood sugar control, insulin sensitivity, and weight management.",
+    "keyword": "benefits of keto diet for diabetes",
+    "image": "/blog/img/benefits-keto-diet-diabetes-metabolic-health-hero.svg",
+    "category": "NUTRITION & FOOD",
+    "pinned": true
+  },
+  {
+    "slug": "benefits-of-following-a-diabetic-diet",
+    "title": "Benefits of a Diabetic Diet: 5 Ways It Boosts Your Health",
+    "date": "2026-10-20",
+    "excerpt": "Following a diabetic diet offers profound benefits beyond blood sugar control, impacting overall health and vitality.",
+    "keyword": "benefits of following a diabetic diet",
+    "image": "/blog/img/benefits-of-following-a-diabetic-diet-hero.svg",
+    "category": "NUTRITION & FOOD"
+  },
+  {
     "slug": "hydration-break-world-cup-boost-performance",
     "title": "Hydration Break World Cup: Boost Performance",
     "date": "2026-10-19",
     "excerpt": "Understanding the importance of hydration breaks can significantly enhance your physical and mental performance, especially during demanding activities.",
-    "keyword": "hydration break world cup",
-    "pinned": true
+    "keyword": "hydration break world cup"
   },
   {
     "slug": "hydration-in-pregnancy-tips",
