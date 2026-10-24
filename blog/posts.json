@@ -1,13 +1,22 @@
 [
   {
+    "slug": "how-to-sleep-with-lower-back-pain",
+    "title": "How to Sleep with Lower Back Pain: 5 Steps to Better Nights",
+    "date": "2026-10-24",
+    "excerpt": "Discover practical, evidence-aware strategies to improve your sleep quality and reduce lower back pain, from optimal sleeping positions to mattress selection and daily wellness habits.",
+    "keyword": "how to sleep with lower back pain",
+    "image": "/blog/img/how-to-sleep-with-lower-back-pain-hero.svg",
+    "category": "SLEEP & RECOVERY",
+    "pinned": true
+  },
+  {
     "slug": "benefits-keto-diet-diabetes-metabolic-health",
     "title": "Benefits of Keto Diet for Diabetes: Unlocking Metabolic Health",
     "date": "2026-10-20",
     "excerpt": "The ketogenic diet offers promising benefits for individuals with diabetes, primarily through its impact on blood sugar control, insulin sensitivity, and weight management.",
     "keyword": "benefits of keto diet for diabetes",
     "image": "/blog/img/benefits-keto-diet-diabetes-metabolic-health-hero.svg",
-    "category": "NUTRITION & FOOD",
-    "pinned": true
+    "category": "NUTRITION & FOOD"
   },
   {
     "slug": "benefits-of-following-a-diabetic-diet",
