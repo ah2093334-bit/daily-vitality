@@ -1,5 +1,25 @@
 [
  {
+  "slug": "daily-water-intake-calculator",
+  "title": "Daily Water Intake Calculator",
+  "date": "2026-11-03"
+ },
+ {
+  "slug": "sleep-cycle-bedtime-calculator",
+  "title": "Sleep Cycle Bedtime Calculator",
+  "date": "2026-11-03"
+ },
+ {
+  "slug": "protein-intake-calculator",
+  "title": "Daily Protein Intake Calculator",
+  "date": "2026-11-03"
+ },
+ {
+  "slug": "calorie-needs-calculator",
+  "title": "Daily Calorie Needs Calculator (BMR & TDEE)",
+  "date": "2026-11-03"
+ },
+ {
   "slug": "sun-exposure-estimator",
   "title": "Sun Exposure Estimator - Daily Vitality",
   "date": "2026-10-19"
