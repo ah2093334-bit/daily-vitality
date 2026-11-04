@@ -1,13 +1,31 @@
 [
   {
+    "slug": "how-to-hydrate-fast-at-home",
+    "title": "How To Hydrate Fast At Home: 5 Smart Steps for Quick Recovery",
+    "date": "2026-11-03",
+    "excerpt": "Rapid rehydration at home is achievable with the right approach, focusing on electrolyte balance and mindful fluid intake.",
+    "keyword": "how to hydrate fast at home",
+    "image": "/blog/img/how-to-hydrate-fast-at-home-hero.svg",
+    "category": "BONES, JOINTS & MOVEMENT",
+    "pinned": true
+  },
+  {
+    "slug": "symptoms-of-vitamin-d-deficiency",
+    "title": "Symptoms Of Vitamin D Deficiency: 7 Signs You Might Miss",
+    "date": "2026-11-03",
+    "excerpt": "Understanding the subtle signs of vitamin D deficiency is crucial for maintaining your overall health and vitality.",
+    "keyword": "symptoms of vitamin d deficiency",
+    "image": "/blog/img/symptoms-of-vitamin-d-deficiency-hero.svg",
+    "category": "NUTRITION & FOOD"
+  },
+  {
     "slug": "why-inflammation-occurs-on-face",
     "title": "Why Inflammation Occurs On Face: 5 Common Causes Explained",
     "date": "2026-11-02",
     "excerpt": "Facial inflammation is a common concern, often signaling your body's protective response to various internal and external factors.",
     "keyword": "why inflammation occurs on face",
     "image": "/blog/img/why-inflammation-occurs-on-face-hero.svg",
-    "category": "METABOLIC HEALTH",
-    "pinned": true
+    "category": "METABOLIC HEALTH"
   },
   {
     "slug": "how-to-pick-gut-health-book",
