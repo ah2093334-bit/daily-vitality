@@ -1,13 +1,31 @@
 [
   {
+    "slug": "tips-for-mental-health-awareness",
+    "title": "Tips For Mental Health Awareness: 7 Practical Steps",
+    "date": "2026-11-05",
+    "excerpt": "Understanding and actively nurturing your mental health is crucial for overall wellbeing, and it starts with awareness.",
+    "keyword": "tips for mental health awareness",
+    "image": "/blog/img/tips-for-mental-health-awareness-hero.svg",
+    "category": "BRAIN & MIND",
+    "pinned": true
+  },
+  {
+    "slug": "mental-health-facilities-near-me-guide",
+    "title": "Mental Health Facilities Near Me: Your Guide to Finding Support",
+    "date": "2026-11-05",
+    "excerpt": "Finding the right mental health support can feel overwhelming, but knowing your options is the first step towards getting the help you need.",
+    "keyword": "mental health facilities near me",
+    "image": "/blog/img/mental-health-facilities-near-me-guide-hero.svg",
+    "category": "BRAIN & MIND"
+  },
+  {
     "slug": "how-to-hydrate-fast-at-home",
     "title": "How To Hydrate Fast At Home: 5 Quick Steps for Vitality",
     "date": "2026-11-03",
     "excerpt": "Rapid rehydration is crucial for well-being, and you can achieve it effectively at home with simple, evidence-based strategies.",
     "keyword": "how to hydrate fast at home",
     "image": "/blog/img/how-to-hydrate-fast-at-home-hero.svg",
-    "category": "BONES, JOINTS & MOVEMENT",
-    "pinned": true
+    "category": "BONES, JOINTS & MOVEMENT"
   },
   {
     "slug": "vitamin-d-deficiency-7-key-symptoms-for-your-daily-vitality",
