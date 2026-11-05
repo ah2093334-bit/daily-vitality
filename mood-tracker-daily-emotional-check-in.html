@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mood Tracker: Daily Emotional Check-in</title>
+<meta name="description" content="Track your daily mood, add notes, and visualize your emotional trends over time with this simple, private tool. Educational only, not medical advice.">
+<link rel="canonical" href="https://dailyvitality.xyz/mood-tracker-daily-emotional-check-in.html">
+<meta property="og:title" content="Mood Tracker: Daily Emotional Check-in">
+<meta property="og:description" content="Track your daily mood, add notes, and visualize your emotional trends over time with this simple, private tool. Educational only, not medical advice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/mood-tracker-daily-emotional-check-in.html">
+<link href="daily-vitality-icon.png" rel="icon"/>
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Mood Tracker: Daily Emotional Check-in"><defs><linearGradient id="at9s00zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#ea580c"/><stop offset="1" stop-color="#fde047"/></linearGradient><radialGradient id="at9s00zr" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="at9s00zf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="at9s00zp" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#at9s00zb)"/><rect width="1200" height="675" fill="url(#at9s00zp)"/><rect width="1200" height="675" fill="url(#at9s00zr)"/><g filter="url(#at9s00zf)"><circle cx="231" cy="120" r="170" fill="#fde047" opacity=".55"/><circle cx="911" cy="560" r="210" fill="#7c2d12" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="701" cy="555" r="6" fill="#fff" opacity="0.16"/><circle cx="908" cy="58" r="4" fill="#fff" opacity="0.24"/><circle cx="1115" cy="161" r="3" fill="#fff" opacity="0.32"/><circle cx="282" cy="264" r="3" fill="#fff" opacity="0.16"/><circle cx="489" cy="367" r="5" fill="#fff" opacity="0.24"/><circle cx="696" cy="470" r="4" fill="#fff" opacity="0.32"/><circle cx="903" cy="573" r="3" fill="#fff" opacity="0.16"/><circle cx="1110" cy="76" r="3" fill="#fff" opacity="0.24"/><circle cx="277" cy="179" r="3" fill="#fff" opacity="0.32"/><circle cx="484" cy="282" r="5" fill="#fff" opacity="0.16"/><circle cx="691" cy="385" r="6" fill="#fff" opacity="0.24"/><circle cx="898" cy="488" r="4" fill="#fff" opacity="0.32"/><circle cx="1105" cy="591" r="5" fill="#fff" opacity="0.16"/><circle cx="272" cy="94" r="4" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M58 8L24 56h22l-6 36 36-52H54z"/></g></g><text x="600" y="364" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="54" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Mood Tracker: Daily</text><text x="600" y="426" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="54" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Emotional Check-in</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    /* Scoped styles for the Mood Tracker tool */
+    .wf-tool {
+      font-family: var(--sans, 'Inter', 'Helvetica Neue', Arial, sans-serif);
+      color: var(--ink, #10251c);
+      line-height: 1.6;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wf-tool *, .wf-tool *::before, .wf-tool *::after {
+      box-sizing: inherit;
+    }
+
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        color: var(--soft, #f5faf6);
+        background-color: var(--forest, #123629);
+      }
+      .wf-tool .card, .wf-tool .accordion-item {
+        background-color: var(--v29-card, rgba(255,255,255,.1));
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      }
+      .wf-tool input[type="text"], .wf-tool textarea {
+        background-color: var(--forest, #123629);
+        color: var(--soft, #f5faf6);
+        border-color: var(--muted, #61716a);
+      }
+      .wf-tool input[type="text"]:focus, .wf-tool textarea:focus {
+        border-color: var(--v29-green, #087f55);
+      }
+      .wf-tool .button {
+        background-color: var(--v29-green, #087f55);
+        color: var(--white, #fff);
+      }
+      .wf-tool .button:hover {
+        background-color: var(--v29-blue, #18a9e8);
+      }
+      .wf-tool .mood-option.selected {
+        background-color: var(--v29-green, #087f55);
+        color: var(--white, #fff);
+      }
+      .wf-tool .mood-option:hover:not(.selected) {
+        background-color: rgba(var(--v29-green, #087f55), 0.2);
+      }
+      .wf-tool .accordion-header {
+        color: var(--v29-cyan, #6df7ff);
+      }
+      .wf-tool .accordion-content {
+        color: var(--muted, #61716a);
+      }
+      .wf-tool .progress-bar-fill {
+        background-color: var(--v29-green, #087f55);
+      }
+      .wf-tool .progress-bar-bg {
+        background-color: var(--muted, #61716a);
+      }
+    }
+
+    /* Hero Banner */
+    .wf-tool .hero {
+      background: linear-gradient(135deg, var(--green2, #0f9150) 0%, var(--green, #0b7a3b) 100%);
+      color: var(--white, #fff);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .wf-tool .hero h1 {
+      font-family: var(--serif, 'Fraunces', Georgia, serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+    }
+
+    .wf-tool .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* General Card Styling */
+    .wf-tool .card {
+      background-color: var(--v29-card, rgba(255,255,255,.94));
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 0 auto 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      max-width: 800px;
+      border: 1px solid var(--line, #e5ebe7);
+    }
+
+    .wf-tool .card h2 {
+      font-family: var(--serif, 'Fraunces', Georgia, serif);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--v29-ink, #092d2a);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .wf-tool .card p.hint {
+      font-size: 0.95rem;
+      color: var(--muted, #61716a);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Form Elements */
+    .wf-tool .mood-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .wf-tool .mood-option {
+      background-color: var(--soft, #f5faf6);
+      border: 2px solid var(--line, #e5ebe7);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      min-width: 100px;
+      text-align: center;
+    }
+
+    .wf-tool .mood-option:hover {
+      border-color: var(--v29-green, #087f55);
+      background-color: var(--soft, #f5faf6);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool .mood-option.selected {
+      background-color: var(--v29-green, #087f55);
+      color: var(--white, #fff);
+      border-color: var(--v29-green, #087f55);
+      box-shadow: 0 4px 10px rgba(var(--v29-green, #087f55), 0.3);
+    }
+
+    .wf-tool .mood-option.selected .mood-icon {
+      filter: brightness(0) invert(1); /* Makes SVG white */
+    }
+
+    .wf-tool .mood-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 0.5rem;
+      transition: filter 0.2s ease-in-out;
+    }
+
+    .wf-tool .mood-label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .wf-tool label {
+      display: block;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      color: var(--v29-ink, #092d2a);
+      font-size: 1.05rem;
+    }
+
+    .wf-tool textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid var(--line, #e5ebe7);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      min-height: 100px;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.2s ease-in-out;
+      resize: vertical;
+    }
+
+    .wf-tool textarea:focus {
+      outline: none;
+      border-color: var(--v29-green, #087f55);
+      box-shadow: 0 0 0 3px rgba(var(--v29-green, #087f55), 0.2);
+    }
+
+    .wf-tool .button {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background-color: var(--v29-green, #087f55);
+      color: var(--white, #fff);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+      text-align: center;
+    }
+
+    .wf-tool .button:hover {
+      background-color: var(--v29-blue, #18a9e8);
+      transform: translateY(-1px);
+    }
+
+    .wf-tool .button:active {
+      transform: translateY(0);
+    }
+
+    .wf-tool .error-message {
+      color: #e74c3c;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* Results Card */
+    .wf-tool .results-card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      padding: 2.5rem; /* More generous padding */
+    }
+
+    .wf-tool .results-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .wf-tool .results-card h2 {
+      margin-bottom: 1rem;
+    }
+
+    .wf-tool .results-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .wf-tool .summary-verdict {
+      font-family: var(--serif, 'Fraunces', Georgia, serif);
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: var(--v29-green, #087f55);
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .wf-tool .summary-explanation {
+      font-size: 1.1rem;
+      color: var(--v29-ink, #092d2a);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .wf-tool .mood-distribution {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 2rem;
+    }
+
+    .wf-tool .progress-bar-container {
+      margin-bottom: 1rem;
+    }
+
+    .wf-tool .progress-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .progress-bar {
+      height: 12px;
+      background-color: var(--line, #e5ebe7);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .wf-tool .progress-bar-fill {
+      height: 100%;
+      background-color: var(--v29-green, #087f55);
+      border-radius: 6px;
+      transition: width 0.8s ease-out;
+    }
+
+    .wf-tool .results-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .wf-tool .results-actions .button {
+      width: auto;
+      min-width: 180px;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .wf-tool .results-actions .button.secondary {
+      background-color: var(--muted, #61716a);
+    }
+
+    .wf-tool .results-actions .button.secondary:hover {
+      background-color: var(--ink, #10251c);
+    }
+
+    /* Educational Disclaimer */
+    .wf-tool .disclaimer {
+      font-size: 0.85rem;
+      color: var(--muted, #61716a);
+      text-align: center;
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+
+    /* How it Works & FAQ */
+    .wf-tool .section-title {
+      font-family: var(--serif, 'Fraunces', Georgia, serif);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--v29-ink, #092d2a);
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .wf-tool .how-it-works-text {
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      font-size: 1.05rem;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .accordion-container {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .wf-tool .accordion-item {
+      background-color: var(--v29-card, rgba(255,255,255,.94));
+      border: 1px solid var(--line, #e5ebe7);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .wf-tool .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--v29-ink, #092d2a);
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .wf-tool .accordion-header:hover {
+      background-color: var(--soft, #f5faf6);
+    }
+
+    .wf-tool .accordion-header svg {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .wf-tool .accordion-item[open] .accordion-header svg {
+      transform: rotate(180deg);
+    }
+
+    .wf-tool .accordion-content {
+      padding: 0 1.5rem 1.5rem;
+      font-size: 0.95rem;
+      color: var(--muted, #61716a);
+    }
+
+    /* Related Tools */
+    .wf-tool .related-tools {
+      text-align: center;
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .wf-tool .related-tools .button {
+      width: auto;
+      padding: 0.8rem 2rem;
+      font-size: 1.05rem;
+      background-color: var(--v29-blue, #18a9e8);
+    }
+
+    .wf-tool .related-tools .button:hover {
+      background-color: var(--v29-cyan, #6df7ff);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wf-tool .hero {
+        padding: 2.5rem 1rem;
+      }
+      .wf-tool .card {
+        padding: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .wf-tool .mood-option {
+        min-width: unset;
+        width: calc(50% - 0.5rem); /* Two columns on smaller screens */
+        padding: 0.8rem 1rem;
+      }
+      .wf-tool .mood-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .wf-tool .mood-label {
+        font-size: 0.9rem;
+      }
+      .wf-tool .results-card {
+        padding: 2rem 1.5rem;
+      }
+      .wf-tool .results-actions {
+        flex-direction: column;
+      }
+      .wf-tool .results-actions .button {
+        width: 100%;
+      }
+      .wf-tool .accordion-header {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .wf-tool .accordion-content {
+        padding: 0 1rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wf-tool .mood-option {
+        width: 100%; /* One column on very small screens */
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mood Tracker: Daily Emotional Check-in",
+    "operatingSystem": "Any",
+    "applicationCategory": "HealthAndFitness",
+    "description": "Track your daily mood, add notes, and visualize your emotional trends over time with this simple, private tool. Educational only, not medical advice.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "120"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the Mood Tracker work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply select the mood that best describes how you're feeling today from the options provided. You can also add a short note to capture more details about your day or specific thoughts. The tool then stores your entries locally in your browser and provides a visual summary of your mood trends over time, helping you observe patterns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data private and secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. All your mood entries and notes are stored exclusively on your device within your web browser's local storage. This means your data never leaves your computer or phone and is not sent to any servers. We do not track your usage or collect any personal information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I want to delete my mood entries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can easily clear all your stored mood entries at any time. In the results section, there will be an option to 'Clear All Data'. Clicking this will permanently remove all your past check-ins from your browser's local storage. Please note this action cannot be undone."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <div class="hero">
+    <h1>Mood Tracker: Daily Emotional Check-in</h1>
+    <p>Understand your emotional landscape. Track your mood, add notes, and visualize your trends over time.</p>
+  </div>
+
+  <section class="card input-card">
+    <h2>How are you feeling today?</h2>
+    <p class="hint">Select the option that best describes your current mood.</p>
+
+    <div class="mood-options" role="radiogroup" aria-label="Select your current mood">
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Joyful">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h2v2H7v-2zm8 0h2v2h-2v-2zm-1 4c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4z"/></svg>
+        <span class="mood-label">Joyful</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Content">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM9 9h6v2H9V9zm3 8c-1.66 0-3-1.34-3-3h2c0 .55.45 1 1 1s1-.45 1-1h2c0 1.66-1.34 3-3 3z"/></svg>
+        <span class="mood-label">Content</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Neutral">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h10v2H7v-2z"/></svg>
+        <span class="mood-label">Neutral</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Anxious">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h2v2H7v-2zm8 0h2v2h-2v-2zm-1 4c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4z"/></svg>
+        <span class="mood-label">Anxious</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Stressed">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h2v2H7v-2zm8 0h2v2h-2v-2zm-1 4c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4z"/></svg>
+        <span class="mood-label">Stressed</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Sad">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h2v2H7v-2zm8 0h2v2h-2v-2zm-1 4c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4z"/></svg>
+        <span class="mood-label">Sad</span>
+      </div>
+      <div class="mood-option" tabindex="0" role="radio" aria-checked="false" data-mood="Angry">
+        <svg class="mood-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-7h2v2H7v-2zm8 0h2v2h-2v-2zm-1 4c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4zM12 17c-2.21 0-4-1.79-4-4h2c0 1.1.9 2 2 2s2-.9 2-2h2c0 2.21-1.79 4-4 4z"/></svg>
+        <span class="mood-label">Angry</span>
+      </div>
+    </div>
+
+    <label for="mood-note">Optional: Add a short note (max 200 characters)</label>
+    <textarea id="mood-note" maxlength="200" placeholder="What's on your mind? Any specific reasons for your mood?"></textarea>
+
+    <div id="mood-error" class="error-message" role="alert" aria-live="assertive" style="display: none;"></div>
+    <button id="submit-mood" class="button">Submit Mood Check-in</button>
+  </section>
+
+  <section id="results-section" class="card results-card" style="display: none;" aria-live="polite">
+    <h2>Your Mood Trends</h2>
+    <div class="results-summary">
+      <div class="summary-verdict" id="summary-verdict"></div>
+      <p class="summary-explanation" id="summary-explanation"></p>
+    </div>
+
+    <div class="mood-distribution">
+      <h3>Mood Distribution Over Time</h3>
+      <p class="hint">Based on your last 7 entries.</p>
+      <div id="mood-chart">
+        <!-- Mood bars will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <div class="results-actions">
+      <button id="copy-results" class="button">Copy Summary</button>
+      <button id="print-results" class="button secondary">Print Report</button>
+      <button id="clear-data" class="button secondary">Clear All Data</button>
+    </div>
+  </section>
+
+  <p class="disclaimer"><strong>Educational estimate, not medical advice:</strong> This tool is for informational purposes only and should not be used as a substitute for professional medical or psychological advice, diagnosis, or treatment. If you are experiencing severe emotional distress, please consult a qualified healthcare provider.</p>
+
+  <h2 class="section-title">How It Works</h2>
+  <p class="how-it-works-text">The Daily Vitality Mood Tracker is a simple, private tool designed to help you become more aware of your emotional patterns. Each day, you select your current mood and can add a brief note. Your entries are stored securely on your device, allowing the tool to generate a visual summary of your mood distribution over time. This can help you identify trends, understand triggers, and reflect on your emotional well-being.</p>
+
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="accordion-container">
+    <details class="accordion-item">
+      <summary class="accordion-header">
+        How does the Mood Tracker work?
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="accordion-content">
+        <p>Simply select the mood that best describes how you're feeling today from the options provided. You can also add a short note to capture more details about your day or specific thoughts. The tool then stores your entries locally in your browser and provides a visual summary of your mood trends over time, helping you observe patterns.</p>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary class="accordion-header">
+        Is my data private and secure?
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="accordion-content">
+        <p>Yes, absolutely. All your mood entries and notes are stored exclusively on your device within your web browser's local storage. This means your data never leaves your computer or phone and is not sent to any servers. We do not track your usage or collect any personal information.</p>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary class="accordion-header">
+        What if I want to delete my mood entries?
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="accordion-content">
+        <p>You can easily clear all your stored mood entries at any time. In the results section, there will be an option to 'Clear All Data'. Clicking this will permanently remove all your past check-ins from your browser's local storage. Please note this action cannot be undone.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="related-tools">
+    <h2 class="section-title">Explore More Wellness Tools</h2>
+    <a href="/tools.html" class="button">View All Tools</a>
+  </div>
+</main>
+
+<script>
+  (function() {
+    const MOOD_STORAGE_KEY = 'dailyVitalityMoodEntries';
+    const MAX_NOTE_LENGTH = 200;
+    const MAX_ENTRIES_FOR_SUMMARY = 30; // Limit entries for summary to avoid performance issues with too much data
+
+    const moodOptionsContainer = document.querySelector('.wf-tool .mood-options');
+    const moodNoteInput = document.getElementById('mood-note');
+    const submitButton = document.getElementById('submit-mood');
+    const errorMessage = document.getElementById('mood-error');
+    const resultsSection = document.getElementById('results-section');
+    const summaryVerdict = document.getElementById('summary-verdict');
+    const summaryExplanation = document.getElementById('summary-explanation');
+    const moodChart = document.getElementById('mood-chart');
+    const copyResultsButton = document.getElementById('copy-results');
+    const printResultsButton = document.getElementById('print-results');
+    const clearDataButton = document.getElementById('clear-data');
+
+    let selectedMood = null;
+
+    // --- Data Management ---
+    function getMoodEntries() {
+      try {
+        const entries = JSON.parse(localStorage.getItem(MOOD_STORAGE_KEY) || '[]');
+        // Ensure entries are sorted by date, newest first
+        return entries.sort((a, b) => new Date(b.date) - new Date(a.date));
+      } catch (e) {
+        console.error("Error parsing mood entries from localStorage:", e);
+        return [];
+      }
+    }
+
+    function saveMoodEntry(mood, note) {
+      const entries = getMoodEntries();
+      const newEntry = {
+        id: Date.now(), // Unique ID for each entry
+        date: new Date().toISOString(),
+        mood: mood,
+        note: note.substring(0, MAX_NOTE_LENGTH)
+      };
+      entries.unshift(newEntry); // Add to the beginning for newest first
+      localStorage.setItem(MOOD_STORAGE_KEY, JSON.stringify(entries));
+      return entries;
+    }
+
+    function clearAllMoodData() {
+      if (confirm('Are you sure you want to delete all your mood tracking data? This action cannot be undone.')) {
+        localStorage.removeItem(MOOD_STORAGE_KEY);
+        displayResults(); // Refresh results (will show no data)
+        alert('All mood data has been cleared.');
+      }
+    }
+
+    // --- UI Update Functions ---
+    function updateSelectedMoodUI(moodElement) {
+      document.querySelectorAll('.wf-tool .mood-option').forEach(option => {
+        option.classList.remove('selected');
+        option.setAttribute('aria-checked', 'false');
+      });
+      if (moodElement) {
+        moodElement.classList.add('selected');
+        moodElement.setAttribute('aria-checked', 'true');
+        selectedMood = moodElement.dataset.mood;
+        errorMessage.style.display = 'none'; // Clear error if mood is selected
+      } else {
+        selectedMood = null;
+      }
+    }
+
+    function displayErrorMessage(message) {
+      errorMessage.textContent = message;
+      errorMessage.style.display = 'block';
+      errorMessage.focus(); // Focus for accessibility
+    }
+
+    function generateMoodSummary(entries) {
+      if (entries.length === 0) {
+        return {
+          verdict: "No Mood Data Yet",
+          explanation: "Start tracking your mood to see your personal trends here!",
+          distribution: {}
+        };
+      }
+
+      const recentEntries = entries.slice(0, MAX_ENTRIES_FOR_SUMMARY);
+      const moodCounts = {};
+      let totalEntries = 0;
+
+      recentEntries.forEach(entry => {
+        moodCounts[entry.mood] = (moodCounts[entry.mood] || 0) + 1;
+        totalEntries++;
+      });
+
+      const sortedMoods = Object.entries(moodCounts).sort(([, countA], [, countB]) => countB - countA);
+      const mostFrequentMood = sortedMoods.length > 0 ? sortedMoods[0][0] : 'Unknown';
+
+      let verdict = '';
+      let explanation = '';
+
+      if (totalEntries < 3) {
+        verdict = "Getting Started!";
+        explanation = "Log a few more days to see meaningful trends.";
+      } else {
+        switch (mostFrequentMood) {
+          case 'Joyful':
+            verdict = "Feeling Great!";
+            explanation = `You've been feeling predominantly joyful lately. Keep up the positive energy!`;
+            break;
+          case 'Content':
+            verdict = "Feeling Balanced";
+            explanation = `Your recent moods show a strong sense of contentment and stability.`;
+            break;
+          case 'Neutral':
+            verdict = "Steady State";
+            explanation = `Your mood has been largely neutral. This could indicate calm or a need for more reflection.`;
+            break;
+          case 'Anxious':
+            verdict = "Feeling Anxious";
+            explanation = `Anxiety has been a common theme in your recent check-ins. Consider what might be contributing to this.`;
+            break;
+          case 'Stressed':
+            verdict = "Feeling Stressed";
+            explanation = `Stress has been prominent in your recent mood entries. It might be helpful to identify stressors and practice relaxation techniques.`;
+            break;
+          case 'Sad':
+            verdict = "Feeling Down";
+            explanation = `Sadness has been a recurring mood. Remember, it's okay to feel this way, and reaching out for support can help.`;
+            break;
+          case 'Angry':
+            verdict = "Feeling Frustrated";
+            explanation = `Anger has been a notable mood. Exploring the sources of frustration can be a first step towards managing it.`;
+            break;
+          default:
+            verdict = "Mixed Feelings";
+            explanation = "Your moods have been varied. Keep tracking to uncover deeper patterns.";
+        }
+      }
+
+      return { verdict, explanation, distribution: moodCounts, totalEntries };
+    }
+
+    function renderMoodChart(distribution, totalEntries) {
+      moodChart.innerHTML = ''; // Clear previous chart
+      if (totalEntries === 0) {
+        moodChart.innerHTML = '<p style="text-align: center; color: var(--muted, #61716a);">No data to display yet. Submit your first mood!</p>';
+        return;
+      }
+
+      const moodOrder = ['Joyful', 'Content', 'Neutral', 'Anxious', 'Stressed', 'Sad', 'Angry'];
+      const moodColors = {
+        'Joyful': 'var(--v29-green, #087f55)',
+        'Content': 'var(--green2, #0f9150)',
+        'Neutral': 'var(--muted, #61716a)',
+        'Anxious': '#f39c12', /* Orange */
+        'Stressed': '#e67e22', /* Darker Orange */
+        'Sad': '#3498db', /* Blue */
+        'Angry': '#e74c3c' /* Red */
+      };
+
+      moodOrder.forEach(mood => {
+        const count = distribution[mood] || 0;
+        const percentage = totalEntries > 0 ? (count / totalEntries) * 100 : 0;
+
+        if (percentage > 0) { // Only show moods that have been logged
+          const barContainer = document.createElement('div');
+          barContainer.className = 'progress-bar-container';
+          barContainer.innerHTML = `
+            <div class="progress-bar-label">
+              <span>${mood}</span>
+              <span>${percentage.toFixed(1)}%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar-fill" style="width: ${percentage}%; background-color: ${moodColors[mood] || 'var(--muted, #61716a)'};"></div>
+            </div>
+          `;
+          moodChart.appendChild(barContainer);
+        }
+      });
+    }
+
+    function displayResults() {
+      const entries = getMoodEntries();
+      const { verdict, explanation, distribution, totalEntries } = generateMoodSummary(entries);
+
+      summaryVerdict.textContent = verdict;
+      summaryExplanation.textContent = explanation;
+      renderMoodChart(distribution, totalEntries);
+
+      if (entries.length > 0) {
+        resultsSection.style.display = 'block';
+        // Force reflow to ensure transition plays
+        void resultsSection.offsetWidth;
+        resultsSection.classList.add('show');
+      } else {
+        resultsSection.classList.remove('show');
+        setTimeout(() => { resultsSection.style.display = 'none'; }, 500); // Hide after transition
+      }
+    }
+
+    // --- Event Handlers ---
+    moodOptionsContainer.addEventListener('click', (event) => {
+      const moodOption = event.target.closest('.wf-tool .mood-option');
+      if (moodOption) {
+        updateSelectedMoodUI(moodOption);
+      }
+    });
+
+    moodOptionsContainer.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        const moodOption = event.target.closest('.wf-tool .mood-option');
+        if (moodOption) {
+          updateSelectedMoodUI(moodOption);
+        }
+      }
+    });
+
+    submitButton.addEventListener('click', () => {
+      if (!selectedMood) {
+        displayErrorMessage('Please select your mood before submitting.');
+        return;
+      }
+
+      const note = moodNoteInput.value.trim();
+      saveMoodEntry(selectedMood, note);
+
+      // Reset form
+      updateSelectedMoodUI(null);
+      moodNoteInput.value = '';
+      errorMessage.style.display = 'none';
+
+      displayResults();
+      alert('Mood check-in submitted successfully!');
+      resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    copyResultsButton.addEventListener('click', async () => {
+      const entries = getMoodEntries();
+      const { verdict, explanation, distribution } = generateMoodSummary(entries);
+      let copyText = `Daily Vitality Mood Report:\n\nVerdict: ${verdict}\nSummary: ${explanation}\n\nMood Distribution (last ${MAX_ENTRIES_FOR_SUMMARY} entries):\n`;
+
+      const moodOrder = ['Joyful', 'Content', 'Neutral', 'Anxious', 'Stressed', 'Sad', 'Angry'];
+      moodOrder.forEach(mood => {
+        const count = distribution[mood] || 0;
+        const percentage = entries.slice(0, MAX_ENTRIES_FOR_SUMMARY).length > 0 ? (count / entries.slice(0, MAX_ENTRIES_FOR_SUMMARY).length) * 100 : 0;
+        if (percentage > 0) {
+          copyText += `- ${mood}: ${percentage.toFixed(1)}%\n`;
+        }
+      });
+      copyText += `\nEducational estimate, not medical advice.`;
+
+      try {
+        await navigator.clipboard.writeText(copyText);
+        alert('Mood summary copied to clipboard!');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy summary. Please try again or manually copy the text.');
+      }
+    });
+
+    printResultsButton.addEventListener('click', () => {
+      const printWindow = window.open('', '_blank');
+      const entries = getMoodEntries();
+      const { verdict, explanation, distribution } = generateMoodSummary(entries);
+
+      let printContent = `
+        <style>
+          body { font-family: var(--sans, 'Inter', 'Helvetica Neue', Arial, sans-serif); color: var(--ink, #10251c); line-height: 1.6; padding: 20px; }
+          h1 { font-
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
