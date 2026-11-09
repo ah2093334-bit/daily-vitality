@@ -1,22 +1,13 @@
 [
   {
-    "slug": "inflammation-in-the-body-manage",
-    "title": "Inflammation In The Body: What It Is & How To Manage It",
-    "date": "2026-11-08",
-    "excerpt": "Inflammation in the body is a natural immune response, but chronic inflammation can impact your health significantly.",
-    "keyword": "inflammation in the body",
-    "image": "/blog/img/inflammation-in-the-body-manage-hero.svg",
-    "category": "METABOLIC HEALTH",
-    "pinned": true
-  },
-  {
     "slug": "healthy-goals-to-set-for-yourself",
-    "title": "Healthy Goals To Set For Yourself: A Practical Guide",
+    "title": "Healthy Goals To Set For Yourself: Your Vitality Guide",
     "date": "2026-11-08",
-    "excerpt": "Setting effective healthy goals is key to sustained well-being, and this guide provides a clear roadmap to achieve them.",
+    "excerpt": "Setting achievable healthy goals is key to a more vibrant life, impacting everything from personal well-being to relationships.",
     "keyword": "healthy goals to set for yourself",
     "image": "/blog/img/healthy-goals-to-set-for-yourself-hero.svg",
-    "category": "DAILY ROUTINES & HABITS"
+    "category": "DAILY ROUTINES & HABITS",
+    "pinned": true
   },
   {
     "slug": "morning-routine-chart-for-kids-calm-starts",
