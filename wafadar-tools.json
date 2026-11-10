@@ -1,22 +1,42 @@
 [
  {
-  "slug": "heart-rate-zone-calculator",
-  "title": "Heart Rate Zone Calculator",
+  "slug": "fruit-veggie-nutrient-compare",
+  "title": "Fruit & Veggie Nutrient Compare: Apple vs. Banana",
+  "date": "2026-11-09"
+ },
+ {
+  "slug": "kids-plate-planner",
+  "title": "Kids' Plate Planner: Balanced Meal Builder",
+  "date": "2026-11-09"
+ },
+ {
+  "slug": "daily-fiber-tracker",
+  "title": "Daily Fiber Tracker & Goal Setter",
+  "date": "2026-11-09"
+ },
+ {
+  "slug": "avocado-ripeness-guide",
+  "title": "Avocado Ripeness Guide & Storage Tips",
+  "date": "2026-11-09"
+ },
+ {
+  "slug": "inflammation-food-finder",
+  "title": "Inflammation Food Finder",
   "date": "2026-11-08"
  },
  {
-  "slug": "steps-walking-goal-planner",
-  "title": "Daily Steps & Walking Goal Planner",
+  "slug": "healthy-goal-setter",
+  "title": "Healthy Goal Setter",
   "date": "2026-11-08"
  },
  {
-  "slug": "ideal-weight-range-calculator",
-  "title": "Healthy Weight Range Calculator by Height",
+  "slug": "relationship-wellness-check",
+  "title": "Relationship Wellness Check",
   "date": "2026-11-08"
  },
  {
-  "slug": "percentage-calculator",
-  "title": "Percentage Calculator",
+  "slug": "inflammation-symptom-guide",
+  "title": "Inflammation Symptom Guide",
   "date": "2026-11-08"
  },
  {
