@@ -1,13 +1,40 @@
 [
   {
-    "slug": "healthy-goals-to-set-for-yourself",
-    "title": "Healthy Goals To Set For Yourself: Your Vitality Guide",
-    "date": "2026-11-08",
-    "excerpt": "Setting achievable healthy goals is key to a more vibrant life, impacting everything from personal well-being to relationships.",
-    "keyword": "healthy goals to set for yourself",
-    "image": "/blog/img/healthy-goals-to-set-for-yourself-hero.svg",
+    "slug": "morning-routine-visual-schedule",
+    "title": "Morning Routine Visual Schedule: Your Daily Blueprint for Calm",
+    "date": "2026-11-09",
+    "excerpt": "A morning routine visual schedule is a powerful tool for transforming chaotic mornings into calm, productive starts.",
+    "keyword": "morning routine visual schedule",
+    "image": "/blog/img/morning-routine-visual-schedule-hero.svg",
     "category": "DAILY ROUTINES & HABITS",
     "pinned": true
+  },
+  {
+    "slug": "sweet-potato-health-facts",
+    "title": "Sweet Potato Health Facts: Your Daily Vitality Guide",
+    "date": "2026-11-09",
+    "excerpt": "Sweet potatoes are a nutritional powerhouse, offering a wealth of vitamins, minerals, and fiber that support overall health and well-being.",
+    "keyword": "health facts about sweet potatoes",
+    "image": "/blog/img/sweet-potato-health-facts-hero.svg",
+    "category": "DAILY ROUTINES & HABITS"
+  },
+  {
+    "slug": "inflammation-in-the-body-manage",
+    "title": "Inflammation In The Body: What It Is & How To Manage It",
+    "date": "2026-11-08",
+    "excerpt": "Inflammation in the body is a natural immune response, but chronic inflammation can impact your health significantly.",
+    "keyword": "inflammation in the body",
+    "image": "/blog/img/inflammation-in-the-body-manage-hero.svg",
+    "category": "METABOLIC HEALTH"
+  },
+  {
+    "slug": "healthy-goals-to-set-for-yourself",
+    "title": "Healthy Goals To Set For Yourself: A Practical Guide",
+    "date": "2026-11-08",
+    "excerpt": "Setting effective healthy goals is key to sustained well-being, and this guide provides a clear roadmap to achieve them.",
+    "keyword": "healthy goals to set for yourself",
+    "image": "/blog/img/healthy-goals-to-set-for-yourself-hero.svg",
+    "category": "DAILY ROUTINES & HABITS"
   },
   {
     "slug": "morning-routine-chart-for-kids-calm-starts",
