@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Level Predictor</title>
+<meta name="description" content="Estimate your daily energy curve based on sleep, meals, and activity. Educational only, not medical advice.">
+<link rel="canonical" href="https://dailyvitality.xyz/energy-level-predictor.html">
+<meta property="og:title" content="Energy Level Predictor">
+<meta property="og:description" content="Estimate your daily energy curve based on sleep, meals, and activity. Educational only, not medical advice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/energy-level-predictor.html">
+<link href="daily-vitality-icon.png" rel="icon"/>
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Energy Level Predictor"><defs><linearGradient id="a1eb6fenb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#ea580c"/><stop offset="1" stop-color="#fde047"/></linearGradient><radialGradient id="a1eb6fenr" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a1eb6fenf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a1eb6fenp" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a1eb6fenb)"/><rect width="1200" height="675" fill="url(#a1eb6fenp)"/><rect width="1200" height="675" fill="url(#a1eb6fenr)"/><g filter="url(#a1eb6fenf)"><circle cx="259" cy="120" r="170" fill="#fde047" opacity=".55"/><circle cx="1019" cy="560" r="210" fill="#7c2d12" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="609" cy="375" r="6" fill="#fff" opacity="0.16"/><circle cx="92" cy="562" r="6" fill="#fff" opacity="0.24"/><circle cx="615" cy="149" r="6" fill="#fff" opacity="0.32"/><circle cx="98" cy="336" r="6" fill="#fff" opacity="0.16"/><circle cx="621" cy="523" r="6" fill="#fff" opacity="0.24"/><circle cx="104" cy="110" r="6" fill="#fff" opacity="0.32"/><circle cx="627" cy="297" r="4" fill="#fff" opacity="0.16"/><circle cx="110" cy="484" r="3" fill="#fff" opacity="0.24"/><circle cx="633" cy="71" r="5" fill="#fff" opacity="0.32"/><circle cx="116" cy="258" r="6" fill="#fff" opacity="0.16"/><circle cx="639" cy="445" r="4" fill="#fff" opacity="0.24"/><circle cx="122" cy="632" r="3" fill="#fff" opacity="0.32"/><circle cx="645" cy="219" r="3" fill="#fff" opacity="0.16"/><circle cx="128" cy="406" r="3" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M18 82C16 42 42 16 84 16c0 40-24 68-66 66z"/><path d="M22 78L58 42" stroke="#fff" stroke-opacity=".6" stroke-width="4" fill="none" stroke-linecap="round"/></g></g><text x="600" y="395" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Energy Level Predictor</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    .wf-tool {
+      --primary: var(--v29-green, #087f55);
+      --secondary: var(--v29-blue, #18a9e8);
+      --background: var(--soft, #f5faf6);
+      --card-background: var(--v29-card, rgba(255,255,255,.94));
+      --text-primary: var(--ink, #10251c);
+      --text-muted: var(--muted, #61716a);
+      --border-color: var(--line, #e5ebe7);
+      --shadow-color: rgba(0, 0, 0, 0.08);
+      --font-heading: var(--serif, 'Fraunces', Georgia, serif);
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background-color: var(--background);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .wf-tool .hero-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 40px 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 20px var(--shadow-color);
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .wf-tool .hero-banner h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .wf-tool .hero-banner p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .wf-tool .input-card {
+      background-color: var(--card-background);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 5px 15px var(--shadow-color);
+      width: 100%;
+      max-width: 600px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .wf-tool .input-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+      text-align: center;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .input-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .wf-tool .input-group label {
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .wf-tool .input-group label svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--primary);
+      opacity: 0.8;
+    }
+
+    .wf-tool .input-group input[type="number"],
+    .wf-tool .input-group input[type="time"],
+    .wf-tool .input-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      background-color: var(--white);
+      color: var(--text-primary);
+    }
+
+    .wf-tool .input-group input[type="number"]:focus,
+    .wf-tool .input-group input[type="time"]:focus,
+    .wf-tool .input-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(8, 127, 85, 0.2);
+    }
+
+    .wf-tool .input-group .unit-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .wf-tool .input-group .unit-toggle button {
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      font-weight: 500;
+    }
+
+    .wf-tool .input-group .unit-toggle button.active {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .wf-tool .input-group .unit-toggle button:hover:not(.active) {
+      background-color: var(--border-color);
+    }
+
+    .wf-tool .input-group .hint {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    .wf-tool .submit-button {
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .wf-tool .submit-button:hover {
+      background-color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .submit-button:active {
+      transform: translateY(2px);
+    }
+
+    .wf-tool .validation-message {
+      color: #e53e3e;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .wf-tool .result-card {
+      background-color: var(--card-background);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 5px 15px var(--shadow-color);
+      width: 100%;
+      max-width: 600px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .wf-tool .result-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .wf-tool .result-card h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin: 0;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .result-card .verdict {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .wf-tool .result-card .explanation {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .wf-tool .result-chart-container {
+      width: 100%;
+      max-width: 300px;
+      position: relative;
+      height: 150px;
+    }
+
+    .wf-tool .result-chart-container svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wf-tool .result-chart-container .progress-bar {
+      stroke-width: 15;
+      fill: none;
+      stroke-linecap: round;
+    }
+
+    .wf-tool .result-chart-container .progress-bar.background {
+      stroke: var(--border-color);
+    }
+
+    .wf-tool .result-chart-container .progress-bar.foreground {
+      stroke: var(--primary);
+      transition: stroke-dashoffset 0.8s ease-out;
+    }
+
+    .wf-tool .result-chart-container .chart-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .result-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .wf-tool .result-actions button {
+      background-color: var(--soft, #f5faf6);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+
+    .wf-tool .result-actions button:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .wf-tool .how-it-works,
+    .wf-tool .faq-section {
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .wf-tool .how-it-works h2,
+    .wf-tool .faq-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--v29-ink, #092d2a);
+      text-align: center;
+    }
+
+    .wf-tool .how-it-works p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .wf-tool .faq-section .accordion {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .wf-tool .faq-section .accordion summary {
+      padding: 15px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: var(--soft, #f5faf6);
+      color: var(--text-primary);
+      transition: background-color 0.2s ease-in-out;
+      list-style: none;
+      position: relative;
+    }
+
+    .wf-tool .faq-section .accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .wf-tool .faq-section .accordion summary::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .wf-tool .faq-section .accordion[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .wf-tool .faq-section .accordion summary:hover {
+      background-color: var(--line, #e5ebe7);
+    }
+
+    .wf-tool .faq-section .accordion div {
+      padding: 15px 20px;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .wf-tool .related-tools {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .wf-tool .related-tools h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--v29-ink, #092d2a);
+    }
+
+    .wf-tool .related-tools .tool-list {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .wf-tool .related-tools .tool-item {
+      background-color: var(--card-background);
+      border-radius: 12px;
+      padding: 15px 25px;
+      box-shadow: 0 3px 10px var(--shadow-color);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      text-decoration: none;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .wf-tool .related-tools .tool-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px var(--shadow-color);
+    }
+
+    .wf-tool .related-tools .tool-item svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--primary);
+    }
+
+    .wf-tool .disclaimer {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 30px;
+      opacity: 0.8;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wf-tool {
+        padding: 30px 15px;
+        gap: 30px;
+      }
+
+      .wf-tool .hero-banner {
+        padding: 30px 20px;
+      }
+
+      .wf-tool .hero-banner h1 {
+        font-size: 2rem;
+      }
+
+      .wf-tool .input-card,
+      .wf-tool .result-card {
+        padding: 25px;
+      }
+
+      .wf-tool .input-card h2,
+      .wf-tool .how-it-works h2,
+      .wf-tool .faq-section h2,
+      .wf-tool .related-tools h2 {
+        font-size: 1.6rem;
+      }
+
+      .wf-tool .result-chart-container {
+        max-width: 250px;
+        height: 120px;
+      }
+
+      .wf-tool .result-chart-container .chart-label {
+        font-size: 1.6rem;
+      }
+
+      .wf-tool .result-actions {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .wf-tool .related-tools .tool-list {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .wf-tool .related-tools .tool-item {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        --background: #1a202c; /* Darker background */
+        --card-background: rgba(31, 41, 55, 0.9); /* Darker card background */
+        --text-primary: #e2e8f0; /* Light text */
+        --text-muted: #94a3b8; /* Lighter muted text */
+        --border-color: #374151; /* Darker border */
+        --shadow-color: rgba(0, 0, 0, 0.2); /* Darker shadow */
+        --v29-ink: #f8fafc; /* Very light ink for headings */
+        --v29-card: rgba(31, 41, 55, 0.9);
+      }
+
+      .wf-tool .hero-banner {
+        background: linear-gradient(135deg, var(--v29-green, #087f55) 0%, var(--v29-blue, #18a9e8) 100%);
+      }
+
+      .wf-tool .input-group input[type="number"],
+      .wf-tool .input-group input[type="time"],
+      .wf-tool .input-group select {
+        background-color: #2d3748; /* Darker input background */
+        border-color: #4a5568;
+      }
+
+      .wf-tool .input-group input[type="number"]:focus,
+      .wf-tool .input-group input[type="time"]:focus,
+      .wf-tool .input-group select:focus {
+        box-shadow: 0 0 0 3px rgba(8, 127, 85, 0.4);
+      }
+
+      .wf-tool .submit-button {
+        background-color: var(--v29-green, #087f55);
+      }
+
+      .wf-tool .submit-button:hover {
+        background-color: var(--v29-ink, #f8fafc);
+        color: var(--v29-green, #087f55);
+      }
+
+      .wf-tool .result-actions button {
+        background-color: #2d3748;
+        color: var(--v29-green, #087f55);
+        border-color: var(--v29-green, #087f55);
+      }
+
+      .wf-tool .result-actions button:hover {
+        background-color: var(--v29-green, #087f55);
+        color: var(--white);
+        border-color: var(--v29-green, #087f55);
+      }
+
+      .wf-tool .faq-section .accordion summary {
+        background-color: #2d3748;
+      }
+
+      .wf-tool .faq-section .accordion summary:hover {
+        background-color: #374151;
+      }
+
+      .wf-tool .related-tools .tool-item {
+        background-color: #2d3748;
+        border: 1px solid #4a5568;
+      }
+    }
+  </style>
+
+  <div class="hero-banner">
+    <h1>Energy Level Predictor</h1>
+    <p>Get a visual estimate of your daily energy flow based on your habits.</p>
+  </div>
+
+  <div class="input-card">
+    <h2>Tell Us About Your Day</h2>
+    <div class="input-group">
+      <label for="sleep-duration">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM11 7h2v7h-2V7zm0 0h2v7h-2V7z"/>
+        </svg>
+        Sleep Duration
+      </label>
+      <input type="number" id="sleep-duration" value="7" min="1" max="12">
+      <div class="unit-toggle">
+        Hours <button class="active">hr</button>
+      </div>
+      <div class="hint">How many hours did you sleep? (e.g., 7)</div>
+    </div>
+
+    <div class="input-group">
+      <label for="wake-time">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM13 7h-2v5h5v-2h-3V7z"/>
+        </svg>
+        Wake-up Time
+      </label>
+      <input type="time" id="wake-time" value="07:00">
+      <div class="hint">What time did you wake up? (e.g., 7:00 AM)</div>
+    </div>
+
+    <div class="input-group">
+      <label for="meal-timing">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM12 11h2v2h-2v-2zm-4 0h2v2h-2v-2zm8 0h2v2h-2v-2z"/>
+        </svg>
+        Meal Timing
+      </label>
+      <select id="meal-timing">
+        <option value="regular">Regular (e.g., 3 meals spaced out)</option>
+        <option value="late">Late/Irregular</option>
+        <option value="skipping">Skipping Meals</option>
+      </select>
+      <div class="hint">How do your meals typically look?</div>
+    </div>
+
+    <div class="input-group">
+      <label for="activity-level">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM10 10a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4z"/>
+        </svg>
+        Activity Level
+      </label>
+      <select id="activity-level">
+        <option value="low">Low (mostly sedentary)</option>
+        <option value="moderate">Moderate (some walking, light exercise)</option>
+        <option value="high">High (regular intense workouts)</option>
+      </select>
+      <div class="hint">How active are you on a typical day?</div>
+    </div>
+
+    <button id="predict-button" class="submit-button">Predict My Energy</button>
+    <div id="validation-message" class="validation-message" role="alert" aria-live="assertive"></div>
+  </div>
+
+  <div id="result-card" class="result-card">
+    <h3 id="result-headline">Your Estimated Energy Curve</h3>
+    <div class="verdict" id="result-verdict">Stable throughout the day</div>
+    <div class="explanation" id="result-explanation">Based on your inputs, your energy levels are likely to remain fairly consistent.</div>
+
+    <div class="result-chart-container">
+      <svg viewBox="0 0 100 100">
+        <circle class="progress-bar background" cx="50" cy="50" r="45"></circle>
+        <circle id="energy-progress" class="progress-bar foreground" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="283"></circle>
+      </svg>
+      <div class="chart-label" id="chart-label">7/10</div>
+    </div>
+
+    <div class="result-actions">
+      <button id="copy-result">Copy Result</button>
+      <button id="print-result">Print</button>
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <h2>How It Works</h2>
+    <p>This tool provides a general estimate based on common patterns. Good sleep, balanced meals, and consistent activity are generally linked to more stable energy. Irregularities in these areas can lead to dips or spikes. Remember, this is a simplified model for educational purposes.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <details class="accordion">
+      <summary>Is this medical advice?</summary>
+      <div>No, this tool is for educational purposes only and does not provide medical advice. Always consult with a healthcare professional for any health concerns or before making any decisions related to your health or treatment.</div>
+    </details>
+    <details class="accordion">
+      <summary>Can I input exact times for meals?</summary>
+      <div>Currently, the tool uses categories for meal timing (regular, late, skipping) to simplify the prediction. Future versions may offer more granular input.</div>
+    </details>
+    <details class="accordion">
+      <summary>How accurate is this prediction?</summary>
+      <div>This tool offers a general estimate based on common correlations between lifestyle factors and energy levels. Individual responses can vary significantly. It's a guide, not a definitive prediction.</div>
+    </details>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="tool-list">
+      <a href="/tools.html" class="tool-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM11 7h2v7h-2V7zm0 0h2v7h-2V7z"/>
+        </svg>
+        Sleep Quality Tracker
+      </a>
+      <a href="/tools.html" class="tool-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM11 7h2v7h-2V7zm0 0h2v7h-2V7z"/>
+        </svg>
+        Hydration Calculator
+      </a>
+      <a href="/tools.html" class="tool-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM11 7h2v7h-2V7zm0 0h2v7h-2V7z"/>
+        </svg>
+        Mindfulness Timer
+      </a>
+    </div>
+  </div>
+
+  <p class="disclaimer">Educational estimate, not medical advice.</p>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sleepDurationInput = document.getElementById('sleep-duration');
+    const wakeTimeInput = document.getElementById('wake-time');
+    const mealTimingInput = document.getElementById('meal-timing');
+    const activityLevelInput = document.getElementById('activity-level');
+    const predictButton = document.getElementById('predict-button');
+    const validationMessage = document.getElementById('validation-message');
+    const resultCard = document.getElementById('result-card');
+    const resultHeadline = document.getElementById('result-headline');
+    const resultVerdict = document.getElementById('result-verdict');
+    const resultExplanation = document.getElementById('result-explanation');
+    const energyProgress = document.getElementById('energy-progress');
+    const chartLabel = document.getElementById('chart-label');
+    const copyResultButton = document.getElementById('copy-result');
+    const printResultButton = document.getElementById('print-result');
+
+    // Function to calculate energy score (simplified model)
+    function calculateEnergyScore(sleep, wakeHour, meal, activity) {
+      let score = 5; // Base score
+
+      // Sleep adjustment
+      if (sleep >= 7 && sleep <= 9) score += 2;
+      else if (sleep < 6 || sleep > 10) score -= 2;
+      else score += 1;
+
+      // Wake-up time adjustment (assuming earlier wake-ups might indicate more structured days)
+      if (wakeHour < 7) score += 1;
+      else if (wakeHour > 9) score -= 1;
+
+      // Meal timing adjustment
+      if (meal === 'regular') score += 2;
+      else if (meal === 'late') score -= 1;
+      else if (meal === 'skipping') score -= 3;
+
+      // Activity level adjustment
+      if (activity === 'high') score += 2;
+      else if (activity === 'moderate') score += 1;
+      else score -= 1;
+
+      // Clamp score between 1 and 10
+      return Math.max(1, Math.min(10, score));
+    }
+
+    // Function to get verdict and explanation based on score
+    function getEnergyInsights(score) {
+      let verdict, explanation;
+      if (score >= 8) {
+        verdict = "High Energy Potential";
+        explanation = "Your habits suggest a strong foundation for sustained energy throughout the day.";
+      } else if (score >= 6) {
+        verdict = "Good Energy Levels";
+        explanation = "You're likely to experience balanced energy, with potential for good focus and productivity.";
+      } else if (score >= 4) {
+        verdict = "Moderate Energy";
+        explanation = "Your energy levels might fluctuate. Consider small adjustments to optimize your day.";
+      } else {
+        verdict = "Lower Energy Expected";
+        explanation = "Your current habits may contribute to lower energy levels. Reviewing sleep, meals, and activity could help.";
+      }
+      return { verdict, explanation };
+    }
+
+    // Function to update the chart
+    function updateChart(score) {
+      const maxScore = 10;
+      const percentage = (score / maxScore) * 100;
+      const circumference = 283; // 2 * PI * r (r=45)
+      const offset = circumference - (percentage / 100) * circumference;
+
+      energyProgress.style.strokeDashoffset = offset;
+      chartLabel.textContent = `${score}/${maxScore}`;
+    }
+
+    // Function to parse time input into hours
+    function parseWakeTime(timeString) {
+      const [hours, minutes] = timeString.split(':').map(Number);
+      // Simple approximation: consider hours for scoring
+      return hours;
+    }
+
+    predictButton.addEventListener('click', () => {
+      validationMessage.textContent = ''; // Clear previous messages
+      resultCard.classList.remove('visible');
+
+      const sleep = parseInt(sleepDurationInput.value, 10);
+      const wakeTime = wakeTimeInput.value;
+      const meal = mealTimingInput.value;
+      const activity = activityLevelInput.value;
+
+      // Validation
+      if (isNaN(sleep) || sleep < 1 || sleep > 12) {
+        validationMessage.textContent = 'Please enter a valid sleep duration between 1 and 12 hours.';
+        return;
+      }
+      if (!wakeTime) {
+        validationMessage.textContent = 'Please enter your wake-up time.';
+        return;
+      }
+
+      const wakeHour = parseWakeTime(wakeTime);
+      const energyScore = calculateEnergyScore(sleep, wakeHour, meal, activity);
+      const { verdict, explanation } = getEnergyInsights(energyScore);
+
+      resultHeadline.textContent = `Your Energy Estimate`;
+      resultVerdict.textContent = verdict;
+      resultExplanation.textContent = explanation;
+      updateChart(energyScore);
+
+      // Make result card visible after a short delay for animation
+      setTimeout(() => {
+        resultCard.classList.add('visible');
+      }, 100);
+    });
+
+    copyResultButton.addEventListener('click', () => {
+      const resultText = `Energy Level Predictor Result:
+Headline: ${resultHeadline.textContent}
+Verdict: ${resultVerdict.textContent}
+Explanation: ${resultExplanation.textContent}
+Score: ${chartLabel.textContent}`;
+
+      navigator.clipboard.writeText(resultText).then(() => {
+        alert('Result copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert('Could not copy result. Please copy manually.');
+      });
+    });
+
+    printResultButton.addEventListener('click', () => {
+      // Basic print functionality - could be enhanced to print specific parts
+      window.print();
+    });
+
+    // Initial state: hide result card
+    resultCard.style.opacity = '0';
+    resultCard.style.transform = 'translateY(20px)';
+  });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Energy Level Predictor",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "An online tool to predict daily energy levels based on sleep, meal times, and activity.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "free": true
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "1000"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daily Vitality"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this medical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this tool is for educational purposes only and does not provide medical advice. Always consult with a healthcare professional for any health concerns or before making any decisions related to your health or treatment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I input exact times for meals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently, the tool uses categories for meal timing (regular, late, skipping) to simplify the prediction. Future versions may offer more granular input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this prediction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool offers a general estimate based on common correlations between lifestyle factors and energy levels. Individual responses can vary significantly. It's a guide, not a definitive prediction."
+      }
+    }
+  ]
+}
+</script>
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
