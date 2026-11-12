@@ -1,13 +1,31 @@
 [
   {
+    "slug": "tips-for-healthy-hair-growth-daily-vitality",
+    "title": "Tips for Healthy Hair Growth: Your Daily Vitality Guide",
+    "date": "2026-11-12",
+    "excerpt": "Achieving healthy hair growth involves more than just external treatments; it's a holistic approach encompassing nutrition, care, and overall well-being.",
+    "keyword": "tips for healthy hair growth",
+    "image": "/blog/img/tips-for-healthy-hair-growth-daily-vitality-hero.svg",
+    "category": "SKIN, HAIR & BEAUTY",
+    "pinned": true
+  },
+  {
+    "slug": "sweet-potato-health-facts-daily-vitality",
+    "title": "Sweet Potato Health Facts: Your Daily Vitality Guide",
+    "date": "2026-11-12",
+    "excerpt": "Sweet potatoes are a nutritional powerhouse, offering a wealth of vitamins, minerals, and fiber that support overall health and well-being.",
+    "keyword": "health facts about sweet potatoes",
+    "image": "/blog/img/sweet-potato-health-facts-daily-vitality-hero.svg",
+    "category": "DAILY ROUTINES & HABITS"
+  },
+  {
     "slug": "daily-habits-of-successful-people",
     "title": "Daily Habits Of Successful People: Your Vitality Blueprint",
     "date": "2026-11-10",
     "excerpt": "Successful individuals often share common daily habits that contribute to their achievements and overall well-being.",
     "keyword": "daily habits of successful people",
     "image": "/blog/img/daily-habits-of-successful-people-hero.svg",
-    "category": "DAILY ROUTINES & HABITS",
-    "pinned": true
+    "category": "DAILY ROUTINES & HABITS"
   },
   {
     "slug": "daily-habits-to-improve-life",
