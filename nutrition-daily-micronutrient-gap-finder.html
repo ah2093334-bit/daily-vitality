@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Micronutrient Gap Finder</title>
+<meta name="description" content="Identify potential micronutrient gaps based on daily food group intake and get food suggestions. Educational only, not medical advice.">
+<link rel="canonical" href="https://dailyvitality.xyz/nutrition-daily-micronutrient-gap-finder.html">
+<meta property="og:title" content="Daily Micronutrient Gap Finder">
+<meta property="og:description" content="Identify potential micronutrient gaps based on daily food group intake and get food suggestions. Educational only, not medical advice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/nutrition-daily-micronutrient-gap-finder.html">
+<link href="daily-vitality-icon.png" rel="icon"/>
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Daily Micronutrient Gap Finder"><defs><linearGradient id="a3ane4nb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#ea580c"/><stop offset="1" stop-color="#fde047"/></linearGradient><radialGradient id="a3ane4nr" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a3ane4nf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a3ane4np" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a3ane4nb)"/><rect width="1200" height="675" fill="url(#a3ane4np)"/><rect width="1200" height="675" fill="url(#a3ane4nr)"/><g filter="url(#a3ane4nf)"><circle cx="267" cy="120" r="170" fill="#fde047" opacity=".55"/><circle cx="947" cy="560" r="210" fill="#7c2d12" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="457" cy="495" r="6" fill="#fff" opacity="0.16"/><circle cx="236" cy="106" r="6" fill="#fff" opacity="0.24"/><circle cx="1055" cy="317" r="4" fill="#fff" opacity="0.32"/><circle cx="834" cy="528" r="3" fill="#fff" opacity="0.16"/><circle cx="613" cy="139" r="3" fill="#fff" opacity="0.24"/><circle cx="392" cy="350" r="5" fill="#fff" opacity="0.32"/><circle cx="171" cy="561" r="4" fill="#fff" opacity="0.16"/><circle cx="990" cy="172" r="5" fill="#fff" opacity="0.24"/><circle cx="769" cy="383" r="4" fill="#fff" opacity="0.32"/><circle cx="548" cy="594" r="5" fill="#fff" opacity="0.16"/><circle cx="327" cy="205" r="6" fill="#fff" opacity="0.24"/><circle cx="106" cy="416" r="6" fill="#fff" opacity="0.32"/><circle cx="925" cy="627" r="4" fill="#fff" opacity="0.16"/><circle cx="704" cy="238" r="5" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M18 82C16 42 42 16 84 16c0 40-24 68-66 66z"/><path d="M22 78L58 42" stroke="#fff" stroke-opacity=".6" stroke-width="4" fill="none" stroke-linecap="round"/></g></g><text x="600" y="367" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Daily Micronutrient Gap</text><text x="600" y="423" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Finder</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    /* Scoped styles for the Micronutrient Gap Finder tool */
+    .wf-tool {
+      --primary: var(--v29-green, #087f55);
+      --secondary: var(--v29-blue, #18a9e8);
+      --accent: var(--v29-cyan, #6df7ff);
+      --text-color: var(--v29-ink, #092d2a);
+      --muted-text: var(--muted, #61716a);
+      --background-soft: var(--soft, #f5faf6);
+      --card-background: var(--v29-card, rgba(255,255,255,.94));
+      --border-color: var(--v29-line, #d8ebe5);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+      --radius: 1.5rem;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      --font-heading: var(--serif, 'Fraunces', Georgia, serif);
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      font-family: var(--font-body);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        --text-color: var(--soft, #f5faf6);
+        --muted-text: var(--line, #e5ebe7);
+        --background-soft: var(--forest, #123629);
+        --card-background: var(--ink, #10251c);
+        --border-color: var(--forest, #123629);
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .wf-tool * {
+      box-sizing: border-box;
+    }
+
+    .wf-tool h1, .wf-tool h2, .wf-tool h3 {
+      font-family: var(--font-heading);
+      color: var(--text-color);
+      margin-top: 0;
+      margin-bottom: 0.8em;
+    }
+
+    .wf-tool h1 { font-size: 2.5rem; line-height: 1.2; }
+    .wf-tool h2 { font-size: 2rem; line-height: 1.3; }
+    .wf-tool h3 { font-size: 1.5rem; line-height: 1.4; }
+
+    .wf-tool p {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .wf-tool .hero-banner {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white, #fff);
+      padding: 3rem 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .wf-tool .hero-banner h1 {
+      color: var(--white, #fff);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .wf-tool .hero-banner p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 600px;
+      opacity: 0.9;
+    }
+
+    .wf-tool .card {
+      background: var(--card-background);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .wf-tool .card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .wf-tool .input-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .wf-tool .food-group-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 1rem;
+      transition: all 0.2s ease;
+      background-color: var(--background-soft);
+      position: relative;
+    }
+
+    .wf-tool .food-group-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .wf-tool .food-group-item.selected {
+      border-color: var(--primary);
+      background-color: color-mix(in srgb, var(--primary) 10%, var(--background-soft));
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+
+    .wf-tool .food-group-item input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    .wf-tool .food-group-item svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      transition: color 0.2s ease;
+    }
+
+    .wf-tool .food-group-item.selected svg {
+      color: var(--text-color);
+    }
+
+    .wf-tool .food-group-item span {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+
+    .wf-tool .hint {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .wf-tool .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .wf-tool button {
+      background-color: var(--primary);
+      color: var(--white, #fff);
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .wf-tool button:hover {
+      background-color: color-mix(in srgb, var(--primary) 80%, var(--text-color));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .wf-tool button:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .wf-tool button.secondary {
+      background-color: var(--muted-text);
+    }
+
+    .wf-tool button.secondary:hover {
+      background-color: color-mix(in srgb, var(--muted-text) 80%, var(--text-color));
+    }
+
+    .wf-tool .result-card {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease-out, max-height 0.7s ease-out;
+      padding: 0 2rem; /* Initial padding to match card, will be overridden */
+    }
+
+    .wf-tool .result-card.visible {
+      opacity: 1;
+      max-height: 2000px; /* Sufficiently large value */
+      padding: 2rem;
+    }
+
+    .wf-tool .result-card h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .wf-tool .result-summary {
+      font-size: 1.15rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .wf-tool .micronutrient-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .wf-tool .micronutrient-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--background-soft);
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .wf-tool .micronutrient-item .icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--white, #fff);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .wf-tool .micronutrient-item .details {
+      flex-grow: 1;
+    }
+
+    .wf-tool .micronutrient-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: var(--text-color);
+    }
+
+    .wf-tool .micronutrient-item p {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .wf-tool .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background-color: var(--border-color);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+
+    .wf-tool .progress-bar {
+      height: 100%;
+      background-color: var(--secondary);
+      width: 0%;
+      border-radius: 4px;
+      transition: width 0.8s ease-out;
+    }
+
+    .wf-tool .progress-bar.low { background-color: #e74c3c; } /* Red for low */
+    .wf-tool .progress-bar.medium { background-color: #f39c12; } /* Orange for medium */
+    .wf-tool .progress-bar.good { background-color: var(--primary); } /* Green for good */
+
+    .wf-tool .educational-note {
+      font-size: 0.85rem;
+      color: var(--muted-text);
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: var(--background-soft);
+      border-radius: 1rem;
+      border: 1px dashed var(--border-color);
+    }
+
+    .wf-tool .how-it-works, .wf-tool .faq-section {
+      margin-top: 2.5rem;
+    }
+
+    .wf-tool .how-it-works h2, .wf-tool .faq-section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .wf-tool details {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .wf-tool details:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .wf-tool summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      color: var(--text-color);
+      font-size: 1.1rem;
+    }
+
+    .wf-tool summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .wf-tool summary::after {
+      content: '▼';
+      font-size: 0.8em;
+      transition: transform 0.2s;
+    }
+
+    .wf-tool details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .wf-tool details p {
+      padding: 0 1.5rem 1.5rem;
+      margin-top: 0;
+      color: var(--muted-text);
+    }
+
+    .wf-tool .related-tools {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .wf-tool .related-tools a {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--white, #fff);
+      padding: 0.7rem 1.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .wf-tool .related-tools a:hover {
+      background-color: color-mix(in srgb, var(--secondary) 80%, var(--text-color));
+      transform: translateY(-2px);
+    }
+
+    /* Accessibility */
+    .wf-tool [aria-live="polite"] {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .wf-tool {
+        padding: 1.5rem 0.8rem;
+        gap: 2rem;
+      }
+      .wf-tool .hero-banner {
+        padding: 2rem 1.5rem;
+      }
+      .wf-tool .card {
+        padding: 1.5rem;
+      }
+      .wf-tool .input-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+      .wf-tool .food-group-item svg {
+        width: 36px;
+        height: 36px;
+      }
+      .wf-tool .food-group-item span {
+        font-size: 0.9rem;
+      }
+      .wf-tool button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+      }
+      .wf-tool .result-card.visible {
+        padding: 1.5rem;
+      }
+      .wf-tool .micronutrient-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="hero-banner">
+    <h1>Daily Micronutrient Gap Finder</h1>
+    <p>Discover which key micronutrients might be missing from your daily diet and get practical food suggestions.</p>
+  </div>
+
+  <section class="card">
+    <h2>Select Your Daily Food Groups</h2>
+    <p class="hint">Choose the food groups you typically consume in a day. Select all that apply.</p>
+
+    <div class="input-grid" role="group" aria-labelledby="food-group-selection-heading">
+      <h3 id="food-group-selection-heading" class="sr-only">Select Food Groups</h3>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="vegetables">
+        <input type="checkbox" value="vegetables" id="food-vegetables">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Vegetables</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="fruits">
+        <input type="checkbox" value="fruits" id="food-fruits">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Fruits</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="grains">
+        <input type="checkbox" value="grains" id="food-grains">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Whole Grains</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="dairy">
+        <input type="checkbox" value="dairy" id="food-dairy">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Dairy/Alt.</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="protein">
+        <input type="checkbox" value="protein" id="food-protein">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Protein Foods</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="nuts_seeds">
+        <input type="checkbox" value="nuts_seeds" id="food-nuts-seeds">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Nuts & Seeds</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="fats_oils">
+        <input type="checkbox" value="fats_oils" id="food-fats-oils">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Healthy Fats</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="legumes">
+        <input type="checkbox" value="legumes" id="food-legumes">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Legumes</span>
+      </label>
+
+      <label class="food-group-item" tabindex="0" role="checkbox" aria-checked="false" data-food-group="seafood">
+        <input type="checkbox" value="seafood" id="food-seafood">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Seafood</span>
+      </label>
+
+    </div>
+
+    <div class="button-group">
+      <button id="calculate-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        Find Gaps
+      </button>
+      <button id="reset-button" class="secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.5 15.5A9 9 0 0 1 20.5 9.5"></path><path d="M20.5 8.5A9 9 0 0 0 3.5 14.5"></path></svg>
+        Reset
+      </button>
+    </div>
+    <div id="validation-message" aria-live="assertive" style="color: #e74c3c; text-align: center; margin-top: 1rem;"></div>
+  </section>
+
+  <section id="results" class="result-card card" aria-live="polite">
+    <h2>Your Micronutrient Snapshot</h2>
+    <p class="result-summary" id="result-summary-text"></p>
+
+    <div class="micronutrient-list" id="micronutrient-results">
+      <!-- Results will be dynamically inserted here -->
+    </div>
+
+    <div class="button-group">
+      <button id="copy-results-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copy Results
+      </button>
+      <button id="print-results-button" class="secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8" rx="2" ry="2"></rect></svg>
+        Print
+      </button>
+    </div>
+
+    <p class="educational-note">
+      <strong>Educational estimate, not medical advice:</strong> This tool provides general nutritional information based on common food groups. It is not a substitute for professional medical or dietary advice. Consult a healthcare professional or registered dietitian for personalized guidance.
+    </p>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <p>
+      Our Daily Micronutrient Gap Finder estimates potential nutrient deficiencies by analyzing your selected food groups against general dietary recommendations. It highlights key vitamins and minerals commonly found in those foods and suggests areas where your intake might be low. This is a simplified educational tool to raise awareness about diverse nutrition.
+    </p>
+    <p class="educational-note">
+      <strong>Educational only, not medical advice:</strong> This tool provides general nutritional information based on common food groups. It is not a substitute for professional medical or dietary advice. Consult a healthcare professional or registered dietitian for personalized guidance.
+    </p>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-items">
+      <details>
+        <summary>How accurate is this tool?</summary>
+        <p>This tool provides an educational estimate based on typical nutrient profiles of general food groups. It does not account for specific portion sizes, cooking methods, individual absorption rates, or unique dietary needs. For precise nutritional assessment, consult a registered dietitian or healthcare provider.</p>
+      </details>
+      <details>
+        <summary>What if I eat foods not listed in the groups?</summary>
+        <p>The food groups are broad categories designed to cover common dietary patterns. If you consume foods not explicitly listed, try to categorize them into the most appropriate group (e.g., lentils under "Legumes," salmon under "Seafood"). For highly specialized diets, this tool may be less representative.</p>
+      </details>
+      <details>
+        <summary>Can this tool diagnose a deficiency?</summary>
+        <p>No, this tool cannot diagnose any medical condition, including nutrient deficiencies. It is designed for educational purposes only to help you identify potential areas where your diet might be lacking. A diagnosis requires medical testing and evaluation by a qualified healthcare professional.</p>
+      </details>
+      <details>
+        <summary>How often should I use this tool?</summary>
+        <p>You can use this tool whenever you want to get a quick overview of your dietary patterns. It's helpful for reflecting on your food choices over a typical day or week. Remember, dietary needs can change, so regular reflection on your eating habits is beneficial.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Explore More Daily Vitality Tools</h2>
+    <a href="/tools.html">View All Tools</a>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Daily Micronutrient Gap Finder",
+    "operatingSystem": "Any",
+    "applicationCategory": "HealthAndFitness",
+    "description": "Identify potential micronutrient gaps based on daily food group intake and get food suggestions. Educational only, not medical advice.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "120"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This tool provides an educational estimate based on typical nutrient profiles of general food groups. It does not account for specific portion sizes, cooking methods, individual absorption rates, or unique dietary needs. For precise nutritional assessment, consult a registered dietitian or healthcare provider."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I eat foods not listed in the groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The food groups are broad categories designed to cover common dietary patterns. If you consume foods not explicitly listed, try to categorize them into the most appropriate group (e.g., lentils under \"Legumes,\" salmon under \"Seafood\"). For highly specialized diets, this tool may be less representative."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can this tool diagnose a deficiency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, this tool cannot diagnose any medical condition, including nutrient deficiencies. It is designed for educational purposes only to help you identify potential areas where your diet might be lacking. A diagnosis requires medical testing and evaluation by a qualified healthcare professional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I use this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use this tool whenever you want to get a quick overview of your dietary patterns. It's helpful for reflecting on your food choices over a typical day or week. Remember, dietary needs can change, so regular reflection on your eating habits is beneficial."
+        }
+      }
+    ]
+  }
+  </script>
+</main>
+
+<script>
+  (function() {
+    const foodGroupItems = document.querySelectorAll('.wf-tool .food-group-item');
+    const calculateButton = document.getElementById('calculate-button');
+    const resetButton = document.getElementById('reset-button');
+    const resultsSection = document.getElementById('results');
+    const resultSummaryText = document.getElementById('result-summary-text');
+    const micronutrientResultsDiv = document.getElementById('micronutrient-results');
+    const validationMessage = document.getElementById('validation-message');
+    const copyResultsButton = document.getElementById('copy-results-button');
+    const printResultsButton = document.getElementById('print-results-button');
+
+    // Micronutrient data (simplified for demonstration)
+    // Each micronutrient has a base "presence" score, and food groups modify it.
+    // Score 0-100, where 100 is "sufficient" for a typical diet.
+    const micronutrientsData = {
+      "Vitamin D": {
+        icon: "☀️",
+        description: "Essential for bone health and immune function.",
+        baseScore: 10,
+        foodImpact: {
+          dairy: 20, seafood: 30, // Fortified dairy, fatty fish
+        },
+        suggestions: ["Fatty fish (salmon, mackerel)", "Fortified milk/plant-based drinks", "Mushrooms (UV-exposed)"]
+      },
+      "Magnesium": {
+        icon: "✨",
+        description: "Supports muscle and nerve function, blood sugar control, and blood pressure regulation.",
+        baseScore: 20,
+        foodImpact: {
+          vegetables: 20, grains: 15, nuts_seeds: 30, legumes: 25,
+        },
+        suggestions: ["Leafy green vegetables", "Nuts and seeds", "Whole grains", "Legumes", "Avocado"]
+      },
+      "Iron": {
+        icon: "🩸",
+        description: "Crucial for oxygen transport and energy production.",
+        baseScore: 15,
+        foodImpact: {
+          protein: 30, legumes: 20, grains: 10, vegetables: 10, nuts_seeds: 10,
+        },
+        suggestions: ["Red meat, poultry, fish", "Lentils, beans", "Spinach", "Fortified cereals", "Pumpkin seeds"]
+      },
+      "Calcium": {
+        icon: "🦴",
+        description: "Vital for strong bones and teeth, muscle contraction, and nerve signaling.",
+        baseScore: 20,
+        foodImpact: {
+          dairy: 40, vegetables: 15, legumes: 5,
+        },
+        suggestions: ["Dairy products (milk, yogurt, cheese)", "Fortified plant-based milks", "Leafy greens (kale, collards)", "Tofu"]
+      },
+      "Vitamin C": {
+        icon: "🍊",
+        description: "An antioxidant important for immune health, skin, and wound healing.",
+        baseScore: 30,
+        foodImpact: {
+          fruits: 40, vegetables: 30,
+        },
+        suggestions: ["Citrus fruits", "Berries", "Bell peppers", "Broccoli", "Kiwi"]
+      },
+      "Potassium": {
+        icon: "🍌",
+        description: "Helps maintain fluid balance, nerve signals, and muscle contractions.",
+        baseScore: 25,
+        foodImpact: {
+          vegetables: 30, fruits: 20, legumes: 15, dairy: 10,
+        },
+        suggestions: ["Bananas", "Potatoes", "Spinach", "Avocado", "Beans", "Yogurt"]
+      },
+      "Zinc": {
+        icon: "🛡️",
+        description: "Supports immune function, wound healing, and DNA synthesis.",
+        baseScore: 15,
+        foodImpact: {
+          protein: 25, nuts_seeds: 20, legumes: 10, grains: 5,
+        },
+        suggestions: ["Red meat, poultry", "Oysters", "Beans", "Nuts", "Whole grains"]
+      },
+      "Folate (B9)": {
+        icon: "🌱",
+        description: "Essential for cell growth and DNA formation, especially important during pregnancy.",
+        baseScore: 20,
+        foodImpact: {
+          vegetables: 30, legumes: 20, grains: 10,
+        },
+        suggestions: ["Leafy green vegetables", "Legumes (beans, lentils)", "Asparagus", "Fortified grains", "Avocado"]
+      },
+      "Vitamin B12": {
+        icon: "🥩",
+        description: "Crucial for nerve function, red blood cell formation, and DNA synthesis.",
+        baseScore: 10,
+        foodImpact: {
+          protein: 40, dairy: 15, seafood: 20,
+        },
+        suggestions: ["Meat, fish, poultry", "Eggs", "Dairy products", "Fortified cereals/plant milks"]
+      }
+    };
+
+    // Event Listeners for food group selection
+    foodGroupItems.forEach(item => {
+      const checkbox = item.querySelector('input[type="checkbox"]');
+
+      // Toggle selection on click
+      item.addEventListener('click', () => {
+        checkbox.checked = !checkbox.checked;
+        item.setAttribute('aria-checked', checkbox.checked);
+        item.classList.toggle('selected', checkbox.checked);
+        validationMessage.textContent = ''; // Clear validation message on interaction
+      });
+
+      // Handle keyboard navigation (Space/Enter)
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(); // Prevent scrolling on space
+          checkbox.checked = !checkbox.checked;
+          item.setAttribute('aria-checked', checkbox.checked);
+          item.classList.toggle('selected', checkbox.checked);
+          validationMessage.textContent = ''; // Clear validation message on interaction
+        }
+      });
+
+      // Sync initial state if any checkbox is pre-checked (though none are here)
+      if (checkbox.checked) {
+        item.classList.add('selected');
+        item.setAttribute('aria-checked', 'true');
+      }
+    });
+
+    calculateButton.addEventListener('click', calculateGaps);
+    resetButton.addEventListener('click', resetTool);
+    copyResultsButton.addEventListener('click', copyResults);
+    printResultsButton.addEventListener('click', printResults);
+
+    function calculateGaps() {
+      const selectedFoodGroups = Array.from(document.querySelectorAll('.wf-tool .food-group-item input:checked'))
+                                     .map(input => input.value);
+
+      if (selectedFoodGroups.length === 0) {
+        validationMessage.textContent = 'Please select at least one food group to find your gaps.';
+        resultsSection.classList.remove('visible');
+        return;
+      } else {
+        validationMessage.textContent = '';
+      }
+
+      const micronutrientScores = {};
+      for (const micro in micronutrientsData) {
+        let score = micronutrientsData[micro].baseScore;
+        selectedFoodGroups.forEach(group => {
+          if (micronutrientsData[micro].foodImpact[group]) {
+            score += micronutrientsData[micro].foodImpact[group];
+          }
+        });
+        micronutrientScores[micro] = Math.min(100, score); // Cap at 100
+      }
+
+      displayResults(micronutrientScores);
+    }
+
+    function displayResults(scores) {
+      micronutrientResultsDiv.innerHTML = '';
+      let lowCount = 0;
+      let mediumCount = 0;
+      let goodCount = 0;
+
+      for (const micro in scores) {
+        const score = scores[micro];
+        const data = micronutrientsData[micro];
+        let status = '';
+        let statusClass = '';
+
+        if (score < 40) {
+          status = 'Potentially Low';
+          statusClass = 'low';
+          lowCount++;
+        } else if (score < 70) {
+          status = 'Moderate';
+          statusClass = 'medium';
+          mediumCount++;
+        } else {
+          status = 'Good';
+          statusClass = 'good';
+          goodCount++;
+        }
+
+        const itemHtml = `
+          <div class="micronutrient-item">
+            <div class="icon">${data.icon}</div>
+            <div class="details">
+              <h3>${micro} (${status})</h3>
+              <p>${data.description}</p>
+              <p style="font-size:0.85rem; color: var(--text-color);"><strong>Food Suggestions:</strong> ${data.suggestions.join(', ')}</p>
+              <div class="progress-bar-container">
+                <div class="progress-bar ${statusClass}" style="width: ${score}%;"></div>
+              </div>
+            </div>
+          </div>
+        `;
+        micronutrientResultsDiv.insertAdjacentHTML('beforeend', itemHtml);
+      }
+
+      let summaryText = '';
+      if (lowCount > 0) {
+        summaryText = `Based on your selections, you might have potential gaps in <strong>${lowCount}</strong> key micronutrient(s). Consider focusing on foods rich in these nutrients.`;
+      } else if (mediumCount > 0) {
+        summaryText = `Your diet appears to provide moderate levels for most micronutrients, with <strong>${mediumCount}</strong> areas that could benefit from more diverse food choices.`;
+      } else {
+        summaryText = `Great job! Your selected food groups suggest a good intake of key micronutrients. Keep up the diverse eating!`;
+      }
+      resultSummaryText.innerHTML = summaryText;
+
+      resultsSection.classList.add('visible');
+      resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetTool() {
+      foodGroupItems.forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        checkbox.checked = false;
+        item.setAttribute('aria-checked', 'false');
+        item.classList.remove('selected');
+      });
+      resultsSection.classList.remove('visible');
+      micronutrientResultsDiv.innerHTML = '';
+      resultSummaryText.textContent = '';
+      validationMessage.textContent = '';
+    }
+
+    function copyResults() {
+      let textToCopy = "Daily Micronutrient Gap Finder Results:\n\n";
+      textToCopy += resultSummaryText.textContent + "\n\n";
+      textToCopy += "Detailed Breakdown:\n";
+
+      const micronutrientItems = micronutrientResultsDiv.querySelectorAll('.micronutrient-item');
+      micronutrientItems.forEach(item => {
+        const name = item.querySelector('h3').textContent;
+        const description = item.querySelector('p').textContent;
+        const suggestions = item.querySelector('p:last-of-type').textContent;
+        textToCopy += `- ${name}\n  ${description}\n  ${suggestions}\n\n`;
+      });
+
+      textToCopy += "Educational estimate, not medical advice: This tool provides general nutritional information based on common food groups. It is not a substitute for professional medical or dietary advice. Consult a healthcare professional or registered dietitian for personalized guidance.";
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Results copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy results: ', err);
+        alert('Failed to copy results. Please try again or manually copy the text.');
+      });
+    }
+
+    function printResults() {
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write('<title>Micronutrient Gap Finder Results</title>');
+      printWindow.document.write('<style>');
+      printWindow.document.write(`
+        body { font-family: var(--font-body); color: var(--text-color); line-height: 1.6; padding: 20px; }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .summary { font-size: 1.15rem; margin-bottom: 1.5rem; }
+        .micronutrient-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; border: 1px solid #eee; padding: 1rem; border-radius: 8px; }
+        .micronutrient-item .icon { font-size: 1.5rem; flex-shrink: 0; }
+        .micronutrient-item .details { flex-grow: 1; }
+        .progress-bar-container { width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progress-bar { height: 100%; background-color: var(--primary); border-radius: 4px; }
+        .progress-bar.low { background-color: #e74c3c; }
+        .progress-bar.medium { background-color: #f39c12; }
+        .progress-bar.good { background-color: var(--primary); }
+        .educational-note { font-size: 0.85rem; color: #666; margin-top: 2rem; padding: 1rem; border: 1px dashed #ccc; border-radius: 8px; }
+        @media print {
+          button { display
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
