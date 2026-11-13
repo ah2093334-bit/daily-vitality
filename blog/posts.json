@@ -1,13 +1,31 @@
 [
   {
+    "slug": "what-is-nutritional-yeast-used-for",
+    "title": "Nutritional Yeast: What It's Used For & Why You'll Love It",
+    "date": "2026-11-13",
+    "excerpt": "Nutritional yeast is a deactivated yeast prized for its savory, cheesy flavor and impressive nutritional profile, making it a versatile ingredient in plant-based cooking and beyond.",
+    "keyword": "what is nutritional yeast used for",
+    "image": "/blog/img/what-is-nutritional-yeast-used-for-1.jpg",
+    "category": "NUTRITION & FOOD",
+    "pinned": true
+  },
+  {
+    "slug": "how-to-habit-tracker-notion",
+    "title": "Notion Habit Tracker: Build Lasting Habits Easily",
+    "date": "2026-11-13",
+    "excerpt": "Master building consistent habits by creating your own custom habit tracker in Notion.",
+    "keyword": "how to habit tracker notion",
+    "image": "/blog/img/how-to-habit-tracker-notion-1.jpg",
+    "category": "DAILY ROUTINES & HABITS"
+  },
+  {
     "slug": "tips-for-healthy-hair-growth",
     "title": "Tips For Healthy Hair Growth: Your Daily Vitality Guide",
     "date": "2026-11-12",
     "excerpt": "Achieving healthy hair growth is a journey that involves more than just topical products; it's deeply connected to your overall well-being.",
     "keyword": "tips for healthy hair growth",
     "image": "/blog/img/tips-for-healthy-hair-growth-hero.svg",
-    "category": "SKIN, HAIR & BEAUTY",
-    "pinned": true
+    "category": "SKIN, HAIR & BEAUTY"
   },
   {
     "slug": "sweet-potato-health-facts-daily-vitality",
