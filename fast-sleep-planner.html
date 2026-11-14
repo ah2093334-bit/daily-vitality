@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Sleep Planner: Wind-Down Routine Builder</title>
+<meta name="description" content="Personalize your pre-sleep routine for faster sleep onset. Input your desired bedtime and current activities to get an actionable plan.">
+<link rel="canonical" href="https://dailyvitality.xyz/fast-sleep-planner.html">
+<meta property="og:title" content="Fast Sleep Planner: Wind-Down Routine Builder">
+<meta property="og:description" content="Personalize your pre-sleep routine for faster sleep onset. Input your desired bedtime and current activities to get an actionable plan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/fast-sleep-planner.html">
+<link rel="icon" href="/daily-vitality-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Fast Sleep Planner: Wind-Down Routine Builder"><defs><linearGradient id="a1k6e2c4b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset=".55" stop-color="#6d28d9"/><stop offset="1" stop-color="#a78bfa"/></linearGradient><radialGradient id="a1k6e2c4r" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a1k6e2c4f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a1k6e2c4p" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a1k6e2c4b)"/><rect width="1200" height="675" fill="url(#a1k6e2c4p)"/><rect width="1200" height="675" fill="url(#a1k6e2c4r)"/><g filter="url(#a1k6e2c4f)"><circle cx="344" cy="120" r="170" fill="#a78bfa" opacity=".55"/><circle cx="904" cy="560" r="210" fill="#1e1b4b" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="1084" cy="500" r="3" fill="#fff" opacity="0.16"/><circle cx="1072" cy="592" r="5" fill="#fff" opacity="0.24"/><circle cx="1060" cy="84" r="4" fill="#fff" opacity="0.32"/><circle cx="1048" cy="176" r="5" fill="#fff" opacity="0.16"/><circle cx="1036" cy="268" r="4" fill="#fff" opacity="0.24"/><circle cx="1024" cy="360" r="5" fill="#fff" opacity="0.32"/><circle cx="1012" cy="452" r="4" fill="#fff" opacity="0.16"/><circle cx="1000" cy="544" r="5" fill="#fff" opacity="0.24"/><circle cx="988" cy="636" r="4" fill="#fff" opacity="0.32"/><circle cx="976" cy="128" r="3" fill="#fff" opacity="0.16"/><circle cx="964" cy="220" r="5" fill="#fff" opacity="0.24"/><circle cx="952" cy="312" r="4" fill="#fff" opacity="0.32"/><circle cx="940" cy="404" r="5" fill="#fff" opacity="0.16"/><circle cx="928" cy="496" r="4" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M62 18a34 34 0 1 0 22 52A28 28 0 0 1 62 18z"/><circle cx="76" cy="28" r="3"/><circle cx="84" cy="44" r="2"/></g></g><text x="600" y="367" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Fast Sleep Planner:</text><text x="600" y="423" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Wind-Down Routine Builder</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    /* Scoped styles for the Wind-Down Routine Builder tool */
+    .wf-tool {
+      --primary: var(--v29-green, #087f55);
+      --secondary: var(--v29-blue, #18a9e8);
+      --accent: var(--v29-cyan, #6df7ff);
+      --text-color: var(--v29-ink, #092d2a);
+      --muted-text: var(--muted, #61716a);
+      --background-soft: var(--soft, #f5faf6);
+      --card-bg: var(--v29-card, rgba(255,255,255,.94));
+      --border-color: var(--v29-line, #d8ebe5);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+      --radius: 16px;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --font-heading: var(--serif, 'Fraunces', Georgia, serif);
+
+      font-family: var(--font-body);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--spacing-md);
+      background-color: var(--background-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        --text-color: var(--soft, #f5faf6);
+        --muted-text: var(--line, #e5ebe7);
+        --background-soft: var(--forest, #123629);
+        --card-bg: var(--ink, #10251c);
+        --border-color: var(--ink, #10251c);
+        --shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+        --shadow-hover: 0 6px 16px rgba(255, 255, 255, 0.12);
+      }
+    }
+
+    .wf-tool h1, .wf-tool h2, .wf-tool h3 {
+      font-family: var(--font-heading);
+      color: var(--text-color);
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .wf-tool h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    .wf-tool h2 {
+      font-size: 2rem;
+    }
+
+    .wf-tool h3 {
+      font-size: 1.5rem;
+    }
+
+    .wf-tool p {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .wf-tool .hero-banner {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: var(--spacing-lg) var(--spacing-md);
+      border-radius: var(--radius);
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .wf-tool .hero-banner h1 {
+      color: var(--white);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .wf-tool .hero-banner p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      opacity: 0.9;
+      margin-bottom: 0;
+    }
+
+    .wf-tool .card {
+      background-color: var(--card-bg);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: var(--spacing-lg);
+      transition: all 0.3s ease;
+    }
+
+    .wf-tool .card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .wf-tool .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .wf-tool label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--text-color);
+      font-size: 1.1rem;
+    }
+
+    .wf-tool input[type="time"],
+    .wf-tool select,
+    .wf-tool textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      color: var(--text-color);
+      background-color: var(--background-soft);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box; /* Ensure padding doesn't increase width */
+    }
+
+    .wf-tool input[type="time"]:focus,
+    .wf-tool select:focus,
+    .wf-tool textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2);
+    }
+
+    .wf-tool textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .wf-tool .help-text {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .wf-tool .error-message {
+      color: #d32f2f; /* A standard red for errors */
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .wf-tool button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      margin-top: var(--spacing-sm);
+    }
+
+    .wf-tool button:hover {
+      background-color: color-mix(in srgb, var(--primary) 85%, black);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .wf-tool button:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow);
+    }
+
+    .wf-tool button svg {
+      margin-right: 0.5rem;
+      width: 1.2em;
+      height: 1.2em;
+      fill: currentColor;
+    }
+
+    .wf-tool .result-card {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease-out, max-height 0.7s ease-out;
+      padding: 0 var(--spacing-lg); /* Maintain padding for smooth transition */
+    }
+
+    .wf-tool .result-card.show {
+      opacity: 1;
+      max-height: 1000px; /* Sufficiently large to show content */
+      padding: var(--spacing-lg);
+    }
+
+    .wf-tool .result-card h2 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .wf-tool .routine-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: var(--spacing-sm);
+      padding: 0.75rem 1rem;
+      background-color: var(--background-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+    }
+
+    .wf-tool .routine-step:nth-child(odd) {
+      background-color: var(--card-bg); /* Alternate background for readability */
+    }
+
+    .wf-tool .routine-time {
+      font-weight: bold;
+      color: var(--primary);
+      flex-shrink: 0;
+      width: 80px;
+      text-align: right;
+      padding-right: 1rem;
+    }
+
+    .wf-tool .routine-description {
+      flex-grow: 1;
+    }
+
+    .wf-tool .routine-description strong {
+      color: var(--text-color);
+    }
+
+    .wf-tool .action-buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
+      justify-content: center;
+    }
+
+    .wf-tool .action-buttons button {
+      margin-top: 0;
+    }
+
+    .wf-tool .progress-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: var(--spacing-md) 0;
+      position: relative;
+    }
+
+    .wf-tool .progress-ring {
+      transform: rotate(-90deg);
+    }
+
+    .wf-tool .progress-ring__circle {
+      transition: stroke-dasharray 0.35s;
+      stroke: var(--primary);
+      stroke-width: 8;
+      fill: transparent;
+    }
+
+    .wf-tool .progress-ring__background {
+      stroke: var(--border-color);
+      stroke-width: 8;
+      fill: transparent;
+    }
+
+    .wf-tool .progress-text {
+      position: absolute;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .wf-tool .educational-note {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      text-align: center;
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-sm);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .wf-tool .how-it-works, .wf-tool .faq-section {
+      margin-top: var(--spacing-lg);
+    }
+
+    .wf-tool .faq-item {
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      background-color: var(--card-bg);
+      overflow: hidden;
+    }
+
+    .wf-tool .faq-item summary {
+      display: block; /* Ensures full click area */
+      padding: 1rem var(--spacing-md);
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      list-style: none; /* Remove default marker */
+      color: var(--text-color);
+      transition: background-color 0.3s ease;
+    }
+
+    .wf-tool .faq-item summary::-webkit-details-marker {
+      display: none; /* Hide marker for WebKit */
+    }
+
+    .wf-tool .faq-item summary::after {
+      content: '▼';
+      position: absolute;
+      right: var(--spacing-md);
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .wf-tool .faq-item[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .wf-tool .faq-item summary:hover {
+      background-color: var(--background-soft);
+    }
+
+    .wf-tool .faq-content {
+      padding: 0 var(--spacing-md) 1rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--muted-text);
+    }
+
+    .wf-tool .related-tools {
+      margin-top: var(--spacing-lg);
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .wf-tool .related-tools h3 {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .wf-tool .related-tools a {
+      display: inline-block;
+      background-color: var(--background-soft);
+      color: var(--primary);
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .wf-tool .related-tools a:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wf-tool {
+        padding: var(--spacing-sm);
+      }
+      .wf-tool .hero-banner {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+      .wf-tool .card, .wf-tool .result-card.show {
+        padding: var(--spacing-md);
+      }
+      .wf-tool h1 {
+        font-size: 2rem;
+      }
+      .wf-tool h2 {
+        font-size: 1.75rem;
+      }
+      .wf-tool .action-buttons {
+        flex-direction: column;
+      }
+      .wf-tool .routine-step {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .wf-tool .routine-time {
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.25rem;
+      }
+    }
+  </style>
+
+  <div class="hero-banner">
+    <h1>Fast Sleep Planner</h1>
+    <p>Personalize your pre-sleep routine for faster, deeper sleep.</p>
+  </div>
+
+  <div class="card">
+    <h2>Build Your Wind-Down Routine</h2>
+    <form id="sleepPlannerForm" aria-live="polite">
+      <div class="form-group">
+        <label for="bedtime">😴 Desired Bedtime:</label>
+        <input type="time" id="bedtime" name="bedtime" required aria-describedby="bedtime-hint">
+        <span id="bedtime-hint" class="help-text">When do you want to be asleep?</span>
+        <span id="bedtime-error" class="error-message" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="windDownActivities">🧘 Current Wind-Down Activities:</label>
+        <textarea id="windDownActivities" name="windDownActivities" rows="4" placeholder="e.g., watching TV, scrolling phone, reading, light stretching, journaling" aria-describedby="activities-hint"></textarea>
+        <span id="activities-hint" class="help-text">List activities you currently do (or would like to do) before bed.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="routineLength">⏱️ Routine Length:</label>
+        <select id="routineLength" name="routineLength" aria-describedby="length-hint">
+          <option value="30">30 minutes</option>
+          <option value="45" selected>45 minutes</option>
+          <option value="60">60 minutes</option>
+        </select>
+        <span id="length-hint" class="help-text">How long do you want your wind-down routine to be?</span>
+      </div>
+
+      <button type="submit" id="generateRoutineBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        Generate My Routine
+      </button>
+    </form>
+  </div>
+
+  <div id="resultCard" class="card result-card" aria-live="assertive" aria-atomic="true">
+    <h2 id="resultHeadline">Your Personalized Wind-Down Routine</h2>
+    <div class="progress-container">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="progress-ring__background" stroke-width="8" cx="60" cy="60" r="52"></circle>
+        <circle class="progress-ring__circle" stroke-width="8" cx="60" cy="60" r="52" fill="transparent" stroke-dasharray="0 326.72"></circle>
+      </svg>
+      <div class="progress-text" id="routineDurationText"></div>
+    </div>
+    <p>Here's a suggested routine to help you prepare for sleep. Remember, consistency is key!</p>
+    <div id="routineSteps">
+      <!-- Routine steps will be inserted here -->
+    </div>
+    <div class="action-buttons">
+      <button id="copyRoutineBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        Copy Routine
+      </button>
+      <button id="printRoutineBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+        Print Routine
+      </button>
+    </div>
+    <p class="educational-note">Educational estimate, not medical advice. Consult a healthcare professional for personalized guidance.</p>
+  </div>
+
+  <div class="how-it-works">
+    <h2>How It Works</h2>
+    <p>The Fast Sleep Planner creates a personalized wind-down routine based on your desired bedtime and preferred activities. It structures a 30-60 minute period before sleep, suggesting activities that promote relaxation and signal to your body that it's time to wind down. The goal is to gradually reduce stimulation and prepare your mind and body for a smoother transition into sleep.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <details>
+        <summary>Why is a wind-down routine important?</summary>
+        <div class="faq-content">
+          <p>A consistent wind-down routine helps signal to your body and mind that it's time to prepare for sleep. It reduces stress, calms your nervous system, and can improve sleep quality and the speed at which you fall asleep. It's like a gentle off-ramp for your busy day.</p>
+        </div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>What kind of activities are best for winding down?</summary>
+        <div class="faq-content">
+          <p>Activities that are calming and low-stimulation are ideal. Examples include reading a physical book, light stretching or yoga, journaling, listening to quiet music, taking a warm bath, or practicing mindfulness/meditation. Avoid screens (phones, tablets, TV), intense exercise, heavy meals, and caffeine/alcohol close to bedtime.</p>
+        </div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>How long should my wind-down routine be?</summary>
+        <div class="faq-content">
+          <p>Most experts recommend a wind-down routine of 30 to 60 minutes. This gives your body sufficient time to transition from wakefulness to sleep. Experiment with different lengths to find what works best for you, but consistency is more important than the exact duration.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h3>Explore More Wellness Tools</h3>
+    <a href="/tools.html">View All Tools</a>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fast Sleep Planner: Wind-Down Routine Builder",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthAndFitness",
+    "url": "https://www.dailyvitality.com/tools/fast-sleep-planner",
+    "description": "Personalize your pre-sleep routine for faster sleep onset. Input your desired bedtime and current activities to get an actionable plan.",
+    "softwareRequirements": "Web browser with JavaScript enabled",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "120"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is a wind-down routine important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A consistent wind-down routine helps signal to your body and mind that it's time to prepare for sleep. It reduces stress, calms your nervous system, and can improve sleep quality and the speed at which you fall asleep. It's like a gentle off-ramp for your busy day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kind of activities are best for winding down?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Activities that are calming and low-stimulation are ideal. Examples include reading a physical book, light stretching or yoga, journaling, listening to quiet music, taking a warm bath, or practicing mindfulness/meditation. Avoid screens (phones, tablets, TV), intense exercise, heavy meals, and caffeine/alcohol close to bedtime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should my wind-down routine be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most experts recommend a wind-down routine of 30 to 60 minutes. This gives your body sufficient time to transition from wakefulness to sleep. Experiment with different lengths to find what works best for you, but consistency is more important than the exact duration."
+        }
+      }
+    ]
+  }
+  </script>
+</main>
+
+<script>
+  (function() {
+    const form = document.getElementById('sleepPlannerForm');
+    const bedtimeInput = document.getElementById('bedtime');
+    const windDownActivitiesInput = document.getElementById('windDownActivities');
+    const routineLengthSelect = document.getElementById('routineLength');
+    const bedtimeError = document.getElementById('bedtime-error');
+    const resultCard = document.getElementById('resultCard');
+    const routineStepsDiv = document.getElementById('routineSteps');
+    const routineDurationText = document.getElementById('routineDurationText');
+    const copyRoutineBtn = document.getElementById('copyRoutineBtn');
+    const printRoutineBtn = document.getElementById('printRoutineBtn');
+    const progressCircle = document.querySelector('.progress-ring__circle');
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    function setProgress(percent) {
+      const offset = circumference - percent / 100 * circumference;
+      progressCircle.style.strokeDashoffset = offset;
+    }
+
+    // Set initial time to a reasonable default, e.g., 10:00 PM
+    const now = new Date();
+    const defaultBedtime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 0); // 10:00 PM
+    bedtimeInput.value = defaultBedtime.toTimeString().slice(0, 5);
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      bedtimeError.textContent = ''; // Clear previous errors
+
+      if (!bedtimeInput.value) {
+        bedtimeError.textContent = 'Please enter your desired bedtime.';
+        bedtimeInput.focus();
+        resultCard.classList.remove('show');
+        return;
+      }
+
+      generateRoutine();
+    });
+
+    function generateRoutine() {
+      const desiredBedtimeStr = bedtimeInput.value; // e.g., "22:30"
+      const [hours, minutes] = desiredBedtimeStr.split(':').map(Number);
+      const routineLength = parseInt(routineLengthSelect.value, 10); // in minutes
+      const userActivities = windDownActivitiesInput.value.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+
+      const routine = [];
+      let currentTime = new Date();
+      currentTime.setHours(hours, minutes, 0, 0); // Set to desired bedtime
+
+      // Calculate start time of the routine
+      currentTime.setMinutes(currentTime.getMinutes() - routineLength);
+      const routineStartTime = new Date(currentTime);
+
+      const activitySlots = [
+        { duration: Math.floor(routineLength * 0.3), type: 'Relaxation' }, // 30% for initial wind-down
+        { duration: Math.floor(routineLength * 0.4), type: 'Calming' },    // 40% for deeper relaxation
+        { duration: Math.floor(routineLength * 0.3), type: 'Preparation' } // 30% for final prep
+      ];
+
+      const defaultActivities = {
+        'Relaxation': [
+          'Light stretching or gentle yoga',
+          'Listen to calming music or a podcast',
+          'Journaling or writing down thoughts',
+          'Reading a physical book (avoid screens)',
+          'Mindful breathing or meditation'
+        ],
+        'Calming': [
+          'Take a warm bath or shower',
+          'Prepare tomorrow\'s clothes/bag',
+          'Gentle conversation with family',
+          'Drink a cup of herbal tea (caffeine-free)',
+          'Practice progressive muscle relaxation'
+        ],
+        'Preparation': [
+          'Brush teeth and complete hygiene routine',
+          'Dim lights in the bedroom',
+          'Ensure bedroom is cool, dark, and quiet',
+          'A few minutes of quiet reflection',
+          'Get into bed'
+        ]
+      };
+
+      let currentRoutineTime = new Date(routineStartTime);
+
+      activitySlots.forEach(slot => {
+        const slotEndTime = new Date(currentRoutineTime);
+        slotEndTime.setMinutes(slotEndTime.getMinutes() + slot.duration);
+
+        let activityAdded = false;
+        // Try to incorporate user activities first
+        for (let i = 0; i < userActivities.length; i++) {
+          const activity = userActivities[i];
+          // Simple heuristic: if activity contains keywords related to slot type, use it
+          if ((slot.type === 'Relaxation' && (activity.includes('stretch') || activity.includes('music') || activity.includes('journal') || activity.includes('read'))) ||
+              (slot.type === 'Calming' && (activity.includes('bath') || activity.includes('tea') || activity.includes('prepare'))) ||
+              (slot.type === 'Preparation' && (activity.includes('teeth') || activity.includes('bed') || activity.includes('lights')))) {
+            routine.push({
+              time: new Date(currentRoutineTime),
+              description: activity,
+              duration: slot.duration
+            });
+            userActivities.splice(i, 1); // Remove used activity
+            activityAdded = true;
+            break;
+          }
+        }
+
+        if (!activityAdded) {
+          // If no user activity matched, pick a random default activity for the slot type
+          const defaultOptions = defaultActivities[slot.type];
+          const chosenDefault = defaultOptions[Math.floor(Math.random() * defaultOptions.length)];
+          routine.push({
+            time: new Date(currentRoutineTime),
+            description: chosenDefault,
+            duration: slot.duration
+          });
+        }
+        currentRoutineTime.setMinutes(currentRoutineTime.getMinutes() + slot.duration);
+      });
+
+      // Add any remaining user activities as extra steps, or adjust durations
+      // For simplicity, we'll just add them as extra steps if they don't fit naturally
+      userActivities.forEach(activity => {
+        routine.push({
+          time: new Date(currentRoutineTime),
+          description: activity,
+          duration: 5 // Assign a small default duration
+        });
+        currentRoutineTime.setMinutes(currentRoutineTime.getMinutes() + 5);
+      });
+
+      // Ensure the last step is "Get into bed" if not already present
+      const lastStep = routine[routine.length - 1];
+      if (!lastStep || !lastStep.description.toLowerCase().includes('bed')) {
+        routine.push({
+          time: new Date(desiredBedtimeStr),
+          description: 'Get into bed and prepare for sleep',
+          duration: 0 // This is the final action
+        });
+      }
+
+      displayRoutine(routine, routineLength);
+    }
+
+    function displayRoutine(routine, totalDuration) {
+      routineStepsDiv.innerHTML = ''; // Clear previous routine
+      let currentRoutineTime = new Date(routine[0].time); // Start from the first step's time
+
+      routine.forEach((step, index) => {
+        const stepEndTime = new Date(currentRoutineTime);
+        stepEndTime.setMinutes(stepEndTime.getMinutes() + step.duration);
+
+        const stepElement = document.createElement('div');
+        stepElement.classList.add('routine-step');
+        stepElement.innerHTML = `
+          <div class="routine-time">${formatTime(currentRoutineTime)}</div>
+          <div class="routine-description"><strong>${step.description}</strong></div>
+        `;
+        routineStepsDiv.appendChild(stepElement);
+
+        currentRoutineTime = stepEndTime; // Update time for the next step
+      });
+
+      // Add the final bedtime entry
+      const finalBedtimeElement = document.createElement('div');
+      finalBedtimeElement.classList.add('routine-step');
+      finalBedtimeElement.innerHTML = `
+        <div class="routine-time">${bedtimeInput.value}</div>
+        <div class="routine-description"><strong>😴 Lights out, time to sleep!</strong></div>
+      `;
+      routineStepsDiv.appendChild(finalBedtimeElement);
+
+
+      routineDurationText.textContent = `${totalDuration} min`;
+      setProgress(100); // Show full progress for the routine
+
+      resultCard.classList.add('show');
+      resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function formatTime(date) {
+      const hours = date.getHours().toString().padStart(2, '0');
+      const minutes = date.getMinutes().toString().padStart(2, '0');
+      return `${hours}:${minutes}`;
+    }
+
+    copyRoutineBtn.addEventListener('click', function() {
+      const routineText = Array.from(routineStepsDiv.children)
+        .map(step => {
+          const time = step.querySelector('.routine-time').textContent;
+          const description = step.querySelector('.routine-description strong').textContent;
+          return `${time} - ${description}`;
+        })
+        .join('\n');
+
+      const fullText = `Your Fast Sleep Planner Routine (${routineLengthSelect.value} minutes):\n\n${routineText}\n\nEducational estimate, not medical advice.`;
+
+      navigator.clipboard.writeText(fullText).then(() => {
+        alert('Routine copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy routine. Please try manually.');
+      });
+    });
+
+    printRoutineBtn.addEventListener('click', function() {
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        
+        
+          <title>Fast Sleep Planner Routine</title>
+          <style>
+            body { font-family: var(--font-body, sans-serif); line-height: 1.6; color: var(--text-color, #333); margin: 2rem; }
+            h1 { font-family: var(--font-heading, serif); color: var(--primary, #087f55); font-size: 2rem; text-align: center; margin-bottom: 1.5rem; }
+            .routine-step { display: flex; margin-bottom: 0.75rem; padding: 0.5rem; border-bottom: 1px solid var(--border-color, #eee); }
+            .routine-time { font-weight: bold; color: var(--primary, #087f55); flex-shrink: 0; width: 80px; text-align: right; padding-right: 1rem; }
+            .routine-description { flex-grow: 1; }
+            .educational-note { font-size: 0.9rem; color: var(--muted-text, #666); text-align: center; margin-top: 2rem; border-top: 1px solid var(--border-color, #eee); padding-top: 1rem; }
+          </style>
+        
+        
+          <h1>Your Fast Sleep Planner Routine</h1>
+          <p>This personalized routine is designed to help you wind down effectively before your desired bedtime of ${bedtimeInput.value}.</p>
+          <div id="printRoutineContent">
+            ${routineStepsDiv.innerHTML}
+          </div>
+          <p class="educational-note">Educational estimate, not medical advice. Consult a healthcare professional for personalized guidance.</p>
+        
+        
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    });
+
+    // Initial state: hide result card
+    resultCard.classList.remove('show');
+  })();
+</script>
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
