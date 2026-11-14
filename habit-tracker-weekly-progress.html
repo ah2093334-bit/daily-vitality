@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habit Tracker: Weekly Progress &amp; Streak Visualizer</title>
+<meta name="description" content="Track up to 5 habits daily, visualize weekly progress, and see your current streak. Build consistent routines for better health.">
+<link rel="canonical" href="https://dailyvitality.xyz/habit-tracker-weekly-progress.html">
+<meta property="og:title" content="Habit Tracker: Weekly Progress &amp; Streak Visualizer">
+<meta property="og:description" content="Track up to 5 habits daily, visualize weekly progress, and see your current streak. Build consistent routines for better health.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/habit-tracker-weekly-progress.html">
+<link href="daily-vitality-icon.png" rel="icon"/>
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Habit Tracker: Weekly Progress &amp; Streak Visualizer"><defs><linearGradient id="a1wwk6ibb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#ea580c"/><stop offset="1" stop-color="#fde047"/></linearGradient><radialGradient id="a1wwk6ibr" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a1wwk6ibf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a1wwk6ibp" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a1wwk6ibb)"/><rect width="1200" height="675" fill="url(#a1wwk6ibp)"/><rect width="1200" height="675" fill="url(#a1wwk6ibr)"/><g filter="url(#a1wwk6ibf)"><circle cx="215" cy="120" r="170" fill="#fde047" opacity=".55"/><circle cx="935" cy="560" r="210" fill="#7c2d12" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="1085" cy="315" r="6" fill="#fff" opacity="0.16"/><circle cx="380" cy="370" r="4" fill="#fff" opacity="0.24"/><circle cx="715" cy="425" r="3" fill="#fff" opacity="0.32"/><circle cx="1050" cy="480" r="5" fill="#fff" opacity="0.16"/><circle cx="345" cy="535" r="6" fill="#fff" opacity="0.24"/><circle cx="680" cy="590" r="6" fill="#fff" opacity="0.32"/><circle cx="1015" cy="45" r="6" fill="#fff" opacity="0.16"/><circle cx="310" cy="100" r="6" fill="#fff" opacity="0.24"/><circle cx="645" cy="155" r="4" fill="#fff" opacity="0.32"/><circle cx="980" cy="210" r="5" fill="#fff" opacity="0.16"/><circle cx="275" cy="265" r="6" fill="#fff" opacity="0.24"/><circle cx="610" cy="320" r="4" fill="#fff" opacity="0.32"/><circle cx="945" cy="375" r="3" fill="#fff" opacity="0.16"/><circle cx="240" cy="430" r="3" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M58 8L24 56h22l-6 36 36-52H54z"/></g></g><text x="600" y="339" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Habit Tracker: Weekly</text><text x="600" y="395" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Progress &amp; Streak</text><text x="600" y="451" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Visualizer</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    /* Scoped styles for the Habit Tracker tool */
+    .wf-tool {
+      --primary: var(--v29-green, #087f55);
+      --secondary: var(--v29-blue, #18a9e8);
+      --accent: var(--v29-cyan, #6df7ff);
+      --text-color: var(--v29-ink, #092d2a);
+      --muted-text: var(--muted, #61716a);
+      --background-soft: var(--soft, #f5faf6);
+      --card-background: var(--v29-card, rgba(255,255,255,.94));
+      --line-color: var(--v29-line, #d8ebe5);
+      --white: var(--white, #fff);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --border-radius: 16px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --font-serif: var(--serif, 'Fraunces', Georgia, serif);
+
+      font-family: var(--font-sans);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        --text-color: var(--white, #fff);
+        --muted-text: #a0b0a8;
+        --background-soft: var(--forest, #123629);
+        --card-background: var(--ink, #10251c);
+        --line-color: var(--forest, #123629);
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .wf-tool * {
+      box-sizing: border-box;
+    }
+
+    .wf-tool h1, .wf-tool h2, .wf-tool h3 {
+      font-family: var(--font-serif);
+      color: var(--text-color);
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
+    .wf-tool h1 {
+      font-size: clamp(2em, 5vw, 3.5em);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .wf-tool h2 {
+      font-size: clamp(1.6em, 4vw, 2.5em);
+      margin-bottom: 1em;
+    }
+
+    .wf-tool h3 {
+      font-size: clamp(1.3em, 3vw, 1.8em);
+      margin-bottom: 0.8em;
+    }
+
+    .wf-tool p {
+      margin-bottom: 1em;
+    }
+
+    /* Hero Banner */
+    .wf-tool__hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 40px 20px;
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .wf-tool__hero p {
+      font-size: clamp(1em, 2.5vw, 1.3em);
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Card Styling */
+    .wf-tool__card {
+      background-color: var(--card-background);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wf-tool__card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Input Card */
+    .wf-tool__input-group {
+      margin-bottom: 20px;
+    }
+
+    .wf-tool__input-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--text-color);
+      font-size: 1.1em;
+    }
+
+    .wf-tool__input-group input[type="text"] {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--line-color);
+      border-radius: 8px;
+      font-size: 1em;
+      color: var(--text-color);
+      background-color: var(--background-soft);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wf-tool__input-group input[type="text"]:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2);
+    }
+
+    .wf-tool__input-group input::placeholder {
+      color: var(--muted-text);
+    }
+
+    .wf-tool__hint {
+      font-size: 0.9em;
+      color: var(--muted-text);
+      margin-top: 5px;
+      display: block;
+    }
+
+    .wf-tool__habit-list {
+      display: grid;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .wf-tool__habit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--background-soft);
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid var(--line-color);
+    }
+
+    .wf-tool__habit-item input[type="text"] {
+      flex-grow: 1;
+      border: none;
+      background: transparent;
+      padding: 5px 0;
+    }
+
+    .wf-tool__habit-item button {
+      background: none;
+      border: none;
+      color: var(--muted-text);
+      cursor: pointer;
+      font-size: 1.2em;
+      padding: 5px;
+      border-radius: 4px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .wf-tool__habit-item button:hover {
+      color: var(--text-color);
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .wf-tool__add-habit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 12px 20px;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+    }
+
+    .wf-tool__add-habit-btn:hover {
+      background-color: var(--green2, #0f9150);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool__add-habit-btn:disabled {
+      background-color: var(--muted, #61716a);
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .wf-tool__daily-tracker {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-color);
+    }
+
+    .wf-tool__daily-tracker h3 {
+      margin-bottom: 15px;
+    }
+
+    .wf-tool__day-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .wf-tool__day-label {
+      font-weight: bold;
+      color: var(--text-color);
+      font-size: 0.9em;
+    }
+
+    .wf-tool__habit-row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--line-color);
+    }
+
+    .wf-tool__habit-row:last-child {
+      border-bottom: none;
+    }
+
+    .wf-tool__habit-name {
+      grid-column: span 7;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: var(--text-color);
+      font-size: 1em;
+    }
+
+    .wf-tool__checkbox-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .wf-tool__checkbox {
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border: 2px solid var(--primary);
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wf-tool__checkbox:checked {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .wf-tool__checkbox:checked::after {
+      content: '✔';
+      color: var(--white);
+      font-size: 1.2em;
+      line-height: 1;
+    }
+
+    .wf-tool__checkbox:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.3);
+    }
+
+    .wf-tool__checkbox:hover {
+      background-color: rgba(var(--primary-rgb, 8, 127, 85), 0.1);
+    }
+
+    .wf-tool__checkbox:checked:hover {
+      background-color: var(--primary);
+      opacity: 0.9;
+    }
+
+    /* Result Card */
+    .wf-tool__result-card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      pointer-events: none; /* Initially prevent interaction */
+    }
+
+    .wf-tool__result-card.wf-tool__result-card--visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .wf-tool__result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .wf-tool__metric {
+      text-align: center;
+      background-color: var(--background-soft);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      border: 1px solid var(--line-color);
+    }
+
+    .wf-tool__metric h3 {
+      font-size: 1.2em;
+      color: var(--muted-text);
+      margin-bottom: 10px;
+    }
+
+    .wf-tool__metric-value {
+      font-family: var(--font-serif);
+      font-size: 3em;
+      font-weight: bold;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .wf-tool__metric-description {
+      font-size: 0.9em;
+      color: var(--muted-text);
+    }
+
+    .wf-tool__progress-chart {
+      margin-top: 20px;
+    }
+
+    .wf-tool__progress-bar-container {
+      background-color: var(--line-color);
+      border-radius: 8px;
+      height: 16px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .wf-tool__progress-bar {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 8px;
+      width: 0%;
+      transition: width 0.8s ease-out;
+    }
+
+    .wf-tool__progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9em;
+      color: var(--muted-text);
+      margin-bottom: 5px;
+    }
+
+    .wf-tool__action-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+
+    .wf-tool__action-buttons button {
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .wf-tool__action-buttons .wf-tool__btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+    }
+
+    .wf-tool__action-buttons .wf-tool__btn-primary:hover {
+      background-color: var(--green2, #0f9150);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool__action-buttons .wf-tool__btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .wf-tool__action-buttons .wf-tool__btn-secondary:hover {
+      background-color: rgba(var(--primary-rgb, 8, 127, 85), 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* How it Works & FAQ */
+    .wf-tool__section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .wf-tool__details {
+      background-color: var(--card-background);
+      border: 1px solid var(--line-color);
+      border-radius: var(--border-radius);
+      margin-bottom: 15px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .wf-tool__details summary {
+      padding: 20px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .wf-tool__details summary:hover {
+      background-color: var(--background-soft);
+    }
+
+    .wf-tool__details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .wf-tool__details summary::after {
+      content: '▼';
+      font-size: 0.8em;
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .wf-tool__details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .wf-tool__details-content {
+      padding: 0 25px 20px;
+      color: var(--muted-text);
+    }
+
+    /* Related Tools */
+    .wf-tool__related-tools {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .wf-tool__related-tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .wf-tool__related-tool-item {
+      display: block;
+      background-color: var(--card-background);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 180px;
+      flex: 1 1 auto;
+      max-width: 250px;
+    }
+
+    .wf-tool__related-tool-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      color: var(--primary);
+    }
+
+    .wf-tool__related-tool-item span {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: var(--muted-text);
+      font-weight: normal;
+    }
+
+    /* Utility */
+    .wf-tool__text-center {
+      text-align: center;
+    }
+
+    .wf-tool__error-message {
+      color: #e03131;
+      font-size: 0.9em;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .wf-tool__sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .wf-tool__educational-note {
+      font-size: 0.85em;
+      color: var(--muted-text);
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-color);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wf-tool {
+        padding: 15px;
+      }
+      .wf-tool__hero {
+        padding: 30px 15px;
+      }
+      .wf-tool__card {
+        padding: 20px;
+      }
+      .wf-tool__result-grid {
+        grid-template-columns: 1fr;
+      }
+      .wf-tool__action-buttons {
+        flex-direction: column;
+      }
+      .wf-tool__action-buttons button {
+        width: 100%;
+      }
+      .wf-tool__day-grid {
+        grid-template-columns: repeat(7, 1fr); /* Keep 7 columns for days */
+        font-size: 0.8em;
+      }
+      .wf-tool__habit-row {
+        grid-template-columns: repeat(7, 1fr);
+      }
+      .wf-tool__habit-name {
+        grid-column: span 7;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .wf-tool__checkbox-wrapper {
+        margin-bottom: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wf-tool__hero h1 {
+        font-size: 2.5em;
+      }
+      .wf-tool__hero p {
+        font-size: 1em;
+      }
+      .wf-tool__metric-value {
+        font-size: 2.5em;
+      }
+      .wf-tool__related-tools-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .wf-tool__related-tool-item {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Habit Tracker: Weekly Progress & Streak Visualizer",
+      "applicationCategory": "HealthAndFitness",
+      "operatingSystem": "Web",
+      "url": "https://www.example.com/tools/habit-tracker",
+      "description": "Track up to 5 habits daily, visualize weekly progress, and see your current streak. Build consistent routines for better health.",
+      "featureList": [
+        "Track up to 5 habits",
+        "Mark daily completion",
+        "Visual weekly progress chart",
+        "Current streak count",
+        "Responsive design",
+        "Light/Dark mode support"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many habits can I track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can track up to 5 habits simultaneously with this tool. This helps you focus on a manageable number of goals for better consistency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the streak calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The streak is calculated for each individual habit based on consecutive days of completion. If you miss a day, the streak for that habit resets. The overall streak shown is the longest current streak among all your habits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, this tool does not save your data. All habit inputs and daily progress are stored only in your browser's local storage. If you clear your browser data or use a different browser/device, your progress will be lost. This ensures your privacy and keeps the tool lightweight."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <div class="wf-tool__hero">
+    <h1>Habit Tracker: Weekly Progress & Streak Visualizer</h1>
+    <p>Build consistent routines, visualize your weekly progress, and celebrate your streaks for lasting wellness.</p>
+  </div>
+
+  <div class="wf-tool__card">
+    <h2>Set Your Habits & Track Progress</h2>
+    <p class="wf-tool__hint">Enter up to 5 habits you want to track daily. Then, simply check off each day you complete them!</p>
+
+    <div class="wf-tool__habit-list" id="habitList">
+      <!-- Habit input fields will be added here by JS -->
+    </div>
+    <button type="button" class="wf-tool__add-habit-btn" id="addHabitBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      Add New Habit
+    </button>
+    <p class="wf-tool__error-message" id="habitError" aria-live="polite"></p>
+
+    <div class="wf-tool__daily-tracker" id="dailyTrackerSection">
+      <h3>Daily Completion</h3>
+      <div class="wf-tool__day-grid" id="dayLabels">
+        <!-- Day labels will be added here by JS -->
+      </div>
+      <div id="habitDailyTracker">
+        <!-- Daily checkboxes for habits will be added here by JS -->
+      </div>
+    </div>
+  </div>
+
+  <div class="wf-tool__card wf-tool__result-card" id="resultCard" aria-live="polite">
+    <h2>Your Weekly Habits Snapshot</h2>
+    <div class="wf-tool__result-grid">
+      <div class="wf-tool__metric">
+        <h3>Longest Current Streak</h3>
+        <div class="wf-tool__metric-value" id="longestStreak">0</div>
+        <p class="wf-tool__metric-description">Days of consistent habit completion across all habits.</p>
+      </div>
+      <div class="wf-tool__metric">
+        <h3>Weekly Completion Rate</h3>
+        <div class="wf-tool__metric-value" id="weeklyCompletionRate">0%</div>
+        <p class="wf-tool__metric-description">Average percentage of habits completed this week.</p>
+      </div>
+    </div>
+
+    <div class="wf-tool__progress-chart" id="progressChart">
+      <h3>Habit Progress This Week</h3>
+      <!-- Individual habit progress bars will be added here by JS -->
+    </div>
+
+    <div class="wf-tool__action-buttons">
+      <button type="button" class="wf-tool__btn-primary" id="copyResultBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copy Results
+      </button>
+      <button type="button" class="wf-tool__btn-secondary" id="printResultBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8" rx="1"></rect></svg>
+        Print Results
+      </button>
+    </div>
+  </div>
+
+  <h2 class="wf-tool__section-title">How It Works</h2>
+  <div class="wf-tool__card">
+    <p>The Daily Vitality Habit Tracker helps you build and maintain healthy routines. Simply list up to five habits you want to cultivate, then mark them as complete each day of the week. The tool visualizes your weekly progress with clear charts and calculates your current streak, motivating you to stay consistent. All your data is stored locally in your browser for privacy and ease of use.</p>
+  </div>
+
+  <h2 class="wf-tool__section-title">Frequently Asked Questions</h2>
+  <div class="wf-tool__faq-section">
+    <details class="wf-tool__details">
+      <summary>How many habits can I track?</summary>
+      <div class="wf-tool__details-content">
+        <p>You can track up to 5 habits simultaneously with this tool. We recommend focusing on a small number of habits to maximize your chances of success and build strong foundations.</p>
+      </div>
+    </details>
+    <details class="wf-tool__details">
+      <summary>How is the streak calculated?</summary>
+      <div class="wf-tool__details-content">
+        <p>The streak is calculated for each individual habit based on consecutive days of completion. If you miss a day for a specific habit, its streak resets. The "Longest Current Streak" displayed is the highest current streak among all your active habits.</p>
+      </div>
+    </details>
+    <details class="wf-tool__details">
+      <summary>Is my data saved?</summary>
+      <div class="wf-tool__details-content">
+        <p>No, this tool does not save your data on our servers. All habit inputs and daily progress are stored only in your browser's local storage. This means your data is private to you, but if you clear your browser data, use a different browser, or switch devices, your progress will be lost.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="wf-tool__related-tools">
+    <h2 class="wf-tool__section-title">Explore More Daily Vitality Tools</h2>
+    <div class="wf-tool__related-tools-grid">
+      <a href="/tools.html#sleep-calculator" class="wf-tool__related-tool-item">
+        Sleep Cycle Calculator
+        <span>Optimize your sleep schedule.</span>
+      </a>
+      <a href="/tools.html#hydration-tracker" class="wf-tool__related-tool-item">
+        Hydration Tracker
+        <span>Calculate daily water intake.</span>
+      </a>
+      <a href="/tools.html#mindfulness-timer" class="wf-tool__related-tool-item">
+        Mindfulness Timer
+        <span>Guided meditation sessions.</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="wf-tool__educational-note"><strong>Educational only, not medical advice:</strong> This tool provides general wellness information and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns.</p>
+</main>
+
+<script>
+  (function() {
+    const MAX_HABITS = 5;
+    const habitList = document.getElementById('habitList');
+    const addHabitBtn = document.getElementById('addHabitBtn');
+    const habitError = document.getElementById('habitError');
+    const dailyTrackerSection = document.getElementById('dailyTrackerSection');
+    const dayLabelsContainer = document.getElementById('dayLabels');
+    const habitDailyTracker = document.getElementById('habitDailyTracker');
+    const resultCard = document.getElementById('resultCard');
+    const longestStreakElem = document.getElementById('longestStreak');
+    const weeklyCompletionRateElem = document.getElementById('weeklyCompletionRate');
+    const progressChart = document.getElementById('progressChart');
+    const copyResultBtn = document.getElementById('copyResultBtn');
+    const printResultBtn = document.getElementById('printResultBtn');
+
+    let habits = []; // { id: string, name: string, days: { [dayIndex: number]: boolean } }
+    let currentWeekStart = getStartOfWeek(new Date()); // Monday of the current week
+
+    // Helper to get Monday of the current week
+    function getStartOfWeek(date) {
+      const d = new Date(date);
+      const day = d.getDay(); // Sunday - 0, Monday - 1, ..., Saturday - 6
+      const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Adjust for Sunday (0) to be last day of prev week
+      d.setDate(diff);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    }
+
+    // Generate day labels (Mon, Tue, Wed...)
+    function renderDayLabels() {
+      dayLabelsContainer.innerHTML = '';
+      const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      days.forEach(day => {
+        const div = document.createElement('div');
+        div.className = 'wf-tool__day-label';
+        div.textContent = day;
+        dayLabelsContainer.appendChild(div);
+      });
+    }
+
+    // Load habits from local storage
+    function loadHabits() {
+      const storedHabits = localStorage.getItem('dailyVitalityHabits');
+      const storedWeekStart = localStorage.getItem('dailyVitalityWeekStart');
+
+      if (storedHabits) {
+        habits = JSON.parse(storedHabits);
+      } else {
+        habits = [];
+      }
+
+      // Check if the stored week is the current week, otherwise reset daily progress
+      if (!storedWeekStart || new Date(storedWeekStart).getTime() !== currentWeekStart.getTime()) {
+        habits.forEach(habit => habit.days = {});
+        localStorage.setItem('dailyVitalityWeekStart', currentWeekStart.toISOString());
+      }
+    }
+
+    // Save habits to local storage
+    function saveHabits() {
+      localStorage.setItem('dailyVitalityHabits', JSON.stringify(habits));
+      localStorage.setItem('dailyVitalityWeekStart', currentWeekStart.toISOString());
+    }
+
+    // Render habit input fields
+    function renderHabitInputs() {
+      habitList.innerHTML = '';
+      habits.forEach((habit, index) => {
+        const div = document.createElement('div');
+        div.className = 'wf-tool__habit-item';
+        div.innerHTML = `
+          <input type="text" id="habit-${habit.id}" value="${escapeHtml(habit.name)}" placeholder="e.g., Drink 8 glasses of water" aria-label="Habit ${index + 1} name" data-id="${habit.id}">
+          <button type="button" data-id="${habit.id}" aria-label="Remove habit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </button>
+        `;
+        habitList.appendChild(div);
+      });
+
+      // Add event listeners for input changes
+      habitList.querySelectorAll('input[type="text"]').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const id = e.target.dataset.id;
+          const habit = habits.find(h => h.id === id);
+          if (habit) {
+            habit.name = e.target.value.trim();
+            saveHabits();
+            renderDailyTracker(); // Re-render tracker to update habit names
+            updateResults();
+          }
+        });
+      });
+
+      // Add event listeners for remove buttons
+      habitList.querySelectorAll('button[data-id]').forEach(button => {
+        button.addEventListener('click', (e) => {
+          const id = e.currentTarget.dataset.id;
+          habits = habits.filter(h => h.id !== id);
+          saveHabits();
+          renderHabitInputs();
+          renderDailyTracker();
+          updateAddButtonState();
+          updateResults();
+        });
+      });
+
+      updateAddButtonState();
+      toggleDailyTrackerVisibility();
+    }
+
+    // Render daily tracker checkboxes
+    function renderDailyTracker() {
+      habitDailyTracker.innerHTML = '';
+      if (habits.length === 0) {
+        habitDailyTracker.innerHTML = '<p class="wf-tool__text-center wf-tool__muted-text">Add some habits to start tracking!</p>';
+        return;
+      }
+
+      const today = new Date();
+      const currentDayIndex = (today.getDay() === 0 ? 6 : today.getDay() - 1); // 0=Mon, 6=Sun
+
+      habits.forEach((habit) => {
+        const div = document.createElement('div');
+        div.className = 'wf-tool__habit-row';
+        div.innerHTML = `<div class="wf-tool__habit-name">${escapeHtml(habit.name)}</div>`;
+
+        for (let i = 0; i < 7; i++) {
+          const dayDate = new Date(currentWeekStart);
+          dayDate.setDate(currentWeekStart.getDate() + i);
+          const isChecked = habit.days[i] || false;
+          const isFutureDay = dayDate > today;
+
+          const checkboxWrapper = document.createElement('div');
+          checkboxWrapper.className = 'wf-tool__checkbox-wrapper';
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.className = 'wf-tool__checkbox';
+          checkbox.id = `habit-${habit.id}-day-${i}`;
+          checkbox.checked = isChecked;
+          checkbox.dataset.habitId = habit.id;
+          checkbox.dataset.dayIndex = i;
+          checkbox.setAttribute('aria-label', `${habit.name} completed on ${dayLabelsContainer.children[i].textContent}`);
+
+          if (isFutureDay) {
+            checkbox.disabled = true; // Disable future days
+            checkbox.style.opacity = 0.5;
+            checkbox.style.cursor = 'not-allowed';
+          }
+
+          checkbox.addEventListener('change', (e) => {
+            const hId = e.target.dataset.habitId;
+            const dIndex = parseInt(e.target.dataset.dayIndex);
+            const h = habits.find(h => h.id === hId);
+            if (h) {
+              h.days[dIndex] = e.target.checked;
+              saveHabits();
+              updateResults();
+            }
+          });
+          checkboxWrapper.appendChild(checkbox);
+          div.appendChild(checkboxWrapper);
+        }
+        habitDailyTracker.appendChild(div);
+      });
+      updateResults();
+    }
+
+    // Add new habit
+    addHabitBtn.addEventListener('click', () => {
+      if (habits.length < MAX_HABITS) {
+        const newHabit = {
+          id: Date.now().toString(),
+          name: '',
+          days: {}
+        };
+        habits.push(newHabit);
+        saveHabits();
+        renderHabitInputs();
+        renderDailyTracker();
+        // Focus on the new input field
+        document.getElementById(`habit-${newHabit.id}`).focus();
+        habitError.textContent = '';
+      } else {
+        habitError.textContent = `You can track a maximum of ${MAX_HABITS} habits.`;
+      }
+      updateAddButtonState();
+    });
+
+    function updateAddButtonState() {
+      addHabitBtn.disabled = habits.length >= MAX_HABITS;
+      if (habits.length >= MAX_HABITS) {
+        addHabitBtn.setAttribute('aria-disabled', 'true');
+      } else {
+        addHabitBtn.removeAttribute('aria-disabled');
+      }
+    }
+
+    function toggleDailyTrackerVisibility() {
+      if (habits.length > 0) {
+        dailyTrackerSection.style.display = 'block';
+      } else {
+        dailyTrackerSection.style.display = 'none';
+      }
+    }
+
+    // Calculate and display results
+    function updateResults() {
+      if (habits.length === 0) {
+        resultCard.classList.remove('wf-tool__result-card--visible');
+        return;
+      }
+
+      let totalCompletedDays = 0;
+      let totalPossibleDays = habits.length * 7;
+      let overallLongestStreak = 0;
+
+      progressChart.innerHTML = '<h3>Habit Progress This Week</h3>';
+
+      habits.forEach(habit => {
+        let habitCompletedDays = 0;
+        let currentHabitStreak = 0;
+        let maxHabitStreak = 0;
+
+        for (let i = 0; i < 7; i++) {
+          if (habit.days[i]) {
+            habitCompletedDays++;
+            totalCompletedDays++;
+            currentHabitStreak++;
+          } else {
+            maxHabitStreak = Math.max(maxHabitStreak, currentHabitStreak);
+            currentHabitStreak = 0;
+          }
+        }
+        maxHabitStreak = Math.max(maxHabitStreak, currentHabitStreak); // Check streak at end of week
+
+        // If the last day tracked is today and it's completed, consider it for overall streak
+        const today = new Date();
+        const currentDayIndex = (today.getDay() === 0 ? 6 : today.getDay() - 1);
+        if (habit.days[currentDayIndex]) {
+          // Calculate streak backwards from today
+          let streakCount = 0;
+          for (let i = currentDayIndex; i >= 0; i--) {
+            if (habit.days[i]) {
+              streakCount++;
+            } else {
+              break;
+            }
+          }
+          overallLongestStreak = Math.max(overallLongestStreak, streakCount);
+        }
+
+
+        const completionPercentage = habits.length > 0 ? ((habitCompletedDays / 7) * 100).toFixed(0) : 0;
+
+        const progressBarHtml = `
+          <div class="wf-tool__progress-item" style="margin-bottom: 15px;">
+            <div class="wf-tool__progress-label">
+              <span>${escapeHtml(habit.name)}</span>
+              <span>${completionPercentage}%</span>
+            </div>
+            <div class="wf-tool__progress-bar-container">
+              <div class="wf-tool__progress-bar" style="width: ${completionPercentage}%;"></div>
+            </div>
+          </div>
+        `;
+        progressChart.innerHTML += progressBarHtml;
+      });
+
+      const overallCompletionRate = totalPossibleDays > 0 ? ((totalCompletedDays / totalPossibleDays) * 100).toFixed(0) : 0;
+
+      longestStreakElem.textContent = overallLongestStreak;
+      weeklyCompletionRateElem.textContent = `${overallCompletionRate}%`;
+
+      resultCard.classList.add('wf-tool__result-card--visible');
+    }
+
+    // Copy results to clipboard
+    copyResultBtn.addEventListener('click', async () => {
+      let resultText = `Daily Vitality Habit Tracker Results:\n\n`;
+      resultText += `Longest Current Streak: ${longestStreakElem.textContent} days\n`;
+      resultText += `Weekly Completion Rate: ${weeklyCompletionRateElem.textContent}\n\n`;
+      resultText += `Habit Progress This Week:\n`;
+
+      habits.forEach(habit => {
+        let completedDays = 0;
+        for (let i = 0; i < 7; i++) {
+          if (habit.days[i]) {
+            completedDays++;
+          }
+        }
+        const completionPercentage = ((completedDays / 7) * 100).toFixed(0);
+        resultText += `- ${habit.name}: ${completionPercentage}% completed\n`;
+      });
+
+      resultText += `\nEducational only, not medical advice.`;
+
+      try {
+        await navigator.clipboard.writeText(resultText);
+        alert('Results copied to clipboard!');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy results. Please try again or copy manually.');
+      }
+    });
+
+    // Print results
+    printResultBtn.addEventListener('click', () => {
+      const printContent = document.getElementById('resultCard').outerHTML;
+      const originalBody = document.body.innerHTML;
+      document.body.innerHTML = printContent;
+      window.print();
+      document.body.innerHTML = originalBody;
+      // Re-initialize tool after print to restore event listeners etc.
+      init();
+    });
+
+    // Escape HTML for safe rendering
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.appendChild(document.createTextNode(text));
+      return div.innerHTML;
+    }
+
+    // Initialize the tool
+    function init() {
+      renderDayLabels();
+      loadHabits();
+      renderHabitInputs();
+      renderDailyTracker();
+      updateResults();
+    }
+
+    init();
+  })();
+</script>
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
