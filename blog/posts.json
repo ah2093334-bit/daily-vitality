@@ -1,13 +1,31 @@
 [
   {
+    "slug": "how-to-sleep-on-your-back",
+    "title": "How to Sleep on Your Back for Better Rest",
+    "date": "2026-11-14",
+    "excerpt": "Mastering back sleeping can unlock deeper, more restorative rest by promoting better spinal alignment and reducing pressure points.",
+    "keyword": "how to sleep on your back",
+    "image": "/blog/img/how-to-sleep-on-your-back-1.jpg",
+    "category": "SLEEP & RECOVERY",
+    "pinned": true
+  },
+  {
+    "slug": "baby-sleep-training-practical-guide",
+    "title": "Baby Sleep Training: A Practical Guide for Parents",
+    "date": "2026-11-14",
+    "excerpt": "Mastering baby sleep training is achievable with the right approach, leading to more rest for everyone.",
+    "keyword": "how to sleep train a baby",
+    "image": "/blog/img/baby-sleep-training-practical-guide-1.jpg",
+    "category": "SLEEP & RECOVERY"
+  },
+  {
     "slug": "tips-for-healthy-hair-growth",
     "title": "Tips For Healthy Hair Growth: Your Daily Vitality Guide",
     "date": "2026-11-12",
     "excerpt": "Achieving healthy hair growth is a journey that involves more than just topical products; it's deeply connected to your overall well-being.",
     "keyword": "tips for healthy hair growth",
     "image": "/blog/img/tips-for-healthy-hair-growth-hero.svg",
-    "category": "SKIN, HAIR & BEAUTY",
-    "pinned": true
+    "category": "SKIN, HAIR & BEAUTY"
   },
   {
     "slug": "sweet-potato-health-facts-daily-vitality",
