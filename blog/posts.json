@@ -1,13 +1,31 @@
 [
   {
+    "slug": "how-to-sleep-on-your-back",
+    "title": "How to Sleep on Your Back: 5 Steps to Better Rest",
+    "date": "2026-11-14",
+    "excerpt": "Sleeping on your back can offer significant benefits for spinal health and overall comfort, and with a few adjustments, it's a position many can adopt successfully.",
+    "keyword": "how to sleep on your back",
+    "image": "/blog/img/how-to-sleep-on-your-back-1.jpg",
+    "category": "SLEEP & RECOVERY",
+    "pinned": true
+  },
+  {
+    "slug": "how-to-sleep-train-a-baby",
+    "title": "How to Sleep Train a Baby: Your Gentle Guide to Restful Nights",
+    "date": "2026-11-14",
+    "excerpt": "Sleep training a baby involves teaching them to fall asleep independently and resettle themselves during the night, leading to more restful sleep for everyone.",
+    "keyword": "how to sleep train a baby",
+    "image": "/blog/img/how-to-sleep-train-a-baby-1.jpg",
+    "category": "SLEEP & RECOVERY"
+  },
+  {
     "slug": "what-is-nutritional-yeast-used-for",
     "title": "Nutritional Yeast: What It's Used For & Why You'll Love It",
     "date": "2026-11-13",
     "excerpt": "Nutritional yeast is a deactivated yeast prized for its cheesy, nutty flavor and nutritional value, commonly used in vegan cooking and as a dietary supplement.",
     "keyword": "what is nutritional yeast used for",
     "image": "/blog/img/what-is-nutritional-yeast-used-for-1.jpg",
-    "category": "NUTRITION & FOOD",
-    "pinned": true
+    "category": "NUTRITION & FOOD"
   },
   {
     "slug": "how-to-habit-tracker-notion",
