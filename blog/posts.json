@@ -1,13 +1,31 @@
 [
   {
+    "slug": "how-to-sleep-with-a-stuffy-nose",
+    "title": "How To Sleep With A Stuffy Nose: 7 Practical Steps",
+    "date": "2026-11-14",
+    "excerpt": "A stuffy nose can significantly disrupt sleep, but simple, actionable steps can help you breathe easier and rest better.",
+    "keyword": "how to sleep with a stuffy nose",
+    "image": "/blog/img/how-to-sleep-with-a-stuffy-nose-1.jpg",
+    "category": "SLEEP & RECOVERY",
+    "pinned": true
+  },
+  {
+    "slug": "how-to-sleep-train-a-baby",
+    "title": "How To Sleep Train A Baby: Your Guide to Restful Nights",
+    "date": "2026-11-14",
+    "excerpt": "Sleep training a baby can lead to more restful nights for everyone, and this guide provides clear, actionable steps to help you achieve it.",
+    "keyword": "how to sleep train a baby",
+    "image": "/blog/img/how-to-sleep-train-a-baby-1.jpg",
+    "category": "SLEEP & RECOVERY"
+  },
+  {
     "slug": "what-is-nutritional-yeast-used-for",
     "title": "Nutritional Yeast: What It's Used For & Why You'll Love It",
     "date": "2026-11-13",
     "excerpt": "Nutritional yeast is a deactivated yeast prized for its cheesy, nutty flavor and nutritional value, commonly used in vegan cooking and as a dietary supplement.",
     "keyword": "what is nutritional yeast used for",
     "image": "/blog/img/what-is-nutritional-yeast-used-for-1.jpg",
-    "category": "NUTRITION & FOOD",
-    "pinned": true
+    "category": "NUTRITION & FOOD"
   },
   {
     "slug": "how-to-habit-tracker-notion",
