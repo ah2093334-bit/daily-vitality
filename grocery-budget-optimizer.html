@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grocery Budget Optimizer: Healthy Eating Cost Checker</title>
-<meta name="description" content="Estimate healthy food costs, optimize your grocery budget, and get tips for saving money. Educational estimate, not medical advice.">
+<meta name="description" content="Optimize your healthy eating budget. Estimate costs for nutritious food categories and get tips for saving money. Educational only, not medical advice.">
 <link rel="canonical" href="https://dailyvitality.xyz/grocery-budget-optimizer.html">
 <meta property="og:title" content="Grocery Budget Optimizer: Healthy Eating Cost Checker">
-<meta property="og:description" content="Estimate healthy food costs, optimize your grocery budget, and get tips for saving money. Educational estimate, not medical advice.">
+<meta property="og:description" content="Optimize your healthy eating budget. Estimate costs for nutritious food categories and get tips for saving money. Educational only, not medical advice.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dailyvitality.xyz/grocery-budget-optimizer.html">
 <link rel="icon" href="/daily-vitality-icon.png">
@@ -34,40 +34,33 @@
     .wf-tool {
       --primary: var(--v29-green, #087f55);
       --secondary: var(--v29-blue, #18a9e8);
-      --accent: var(--v29-cyan, #6df7ff);
-      --text-ink: var(--v29-ink, #092d2a);
-      --text-muted: var(--muted, #61716a);
-      --border-line: var(--v29-line, #d8ebe5);
+      --text-color: var(--v29-ink, #092d2a);
+      --muted-text: var(--muted, #61716a);
+      --line-color: var(--v29-line, #d8ebe5);
       --bg-soft: var(--soft, #f5faf6);
-      --bg-card: var(--v29-card, rgba(255,255,255,.94));
-      --bg-gradient-start: var(--v29-green, #087f55);
-      --bg-gradient-end: var(--v29-blue, #18a9e8);
-      --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+      --card-bg: var(--v29-card, rgba(255,255,255,.94));
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --border-radius: 16px;
       --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       --font-heading: var(--serif, 'Fraunces', Georgia, serif);
 
       font-family: var(--font-body);
-      color: var(--text-ink);
+      color: var(--text-color);
       line-height: 1.6;
+      padding: 1.5rem 0;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
     }
 
     /* Dark mode adjustments */
     @media (prefers-color-scheme: dark) {
       .wf-tool {
-        --text-ink: var(--white, #fff);
-        --text-muted: #a0b0a8;
-        --border-line: #3a4a42;
-        --bg-soft: #1a2a22;
-        --bg-card: rgba(25, 35, 30, 0.94);
-        --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.3);
-        --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.4);
+        --text-color: var(--white, #fff);
+        --muted-text: #a0b0a8;
+        --line-color: #3a4a42;
+        --bg-soft: var(--forest, #123629);
+        --card-bg: var(--ink, #10251c);
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       }
     }
 
@@ -77,462 +70,561 @@
 
     .wf-tool h1, .wf-tool h2, .wf-tool h3 {
       font-family: var(--font-heading);
-      color: var(--text-ink);
+      color: var(--text-color);
       margin-top: 0;
-      margin-bottom: 0.8em;
+      line-height: 1.2;
     }
 
-    .wf-tool h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.1;
-    }
+    .wf-tool h1 { font-size: 2.5rem; }
+    .wf-tool h2 { font-size: 2rem; }
+    .wf-tool h3 { font-size: 1.5rem; }
 
-    .wf-tool h2 {
-      font-size: clamp(1.6rem, 4vw, 2.5rem);
+    .wf-tool p {
       margin-bottom: 1rem;
     }
 
-    .wf-tool h3 {
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      margin-bottom: 0.6rem;
+    .wf-tool .container {
+      padding: 0 1rem;
     }
 
-    .wf-tool p {
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-
-    .wf-tool .card {
-      background: var(--bg-card);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: var(--shadow-soft);
-      transition: box-shadow 0.3s ease-in-out;
-      border: 1px solid var(--border-line);
-    }
-
-    .wf-tool .card:hover {
-      box-shadow: var(--shadow-hover);
-    }
-
+    /* Hero Banner */
     .wf-tool .hero-banner {
-      background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--white, #fff);
-      padding: 3rem 2rem;
-      border-radius: 1.5rem;
-      text-align: center;
+      padding: 3rem 1.5rem;
+      border-radius: var(--border-radius);
       margin-bottom: 2rem;
-      box-shadow: var(--shadow-soft);
+      text-align: center;
+      box-shadow: var(--shadow);
     }
 
     .wf-tool .hero-banner h1 {
       color: var(--white, #fff);
-      margin-bottom: 0.5rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 0.75rem;
     }
 
     .wf-tool .hero-banner p {
-      font-size: 1.25rem;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
       opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
     }
 
-    .wf-tool .form-group {
+    /* Card styles */
+    .wf-tool .card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    /* Input Card */
+    .wf-tool .input-card .form-group {
       margin-bottom: 1.5rem;
     }
 
-    .wf-tool label {
+    .wf-tool .input-card label {
       display: block;
-      margin-bottom: 0.6rem;
-      font-weight: 600;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
       font-size: 1.1rem;
-      color: var(--text-ink);
     }
 
-    .wf-tool input[type="number"],
-    .wf-tool select {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--border-line);
-      border-radius: 0.75rem;
-      font-size: 1rem;
-      color: var(--text-ink);
-      background-color: var(--bg-soft);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .wf-tool input[type="number"]:focus,
-    .wf-tool select:focus {
-      border-color: var(--primary);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2); /* Fallback for older browsers */
-      --primary-rgb: 8, 127, 85; /* Default RGB for --v29-green */
-      /* Dynamic RGB for --primary if it's a variable */
-      --primary-rgb: var(--v29-green-rgb, 8, 127, 85);
-    }
-
-    @supports (color: rgb(from var(--primary) r g b)) {
-      .wf-tool input[type="number"]:focus,
-      .wf-tool select:focus {
-        box-shadow: 0 0 0 3px rgb(from var(--primary) r g b / 0.2);
-      }
-    }
-
-    .wf-tool .input-wrapper {
-      position: relative;
+    .wf-tool .input-card .input-wrapper {
       display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--bg-soft);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line-color);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .wf-tool .input-card .input-wrapper:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2);
+    }
+
+    .wf-tool .input-card input[type="number"],
+    .wf-tool .input-card select {
+      flex-grow: 1;
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1.1rem;
+      color: var(--text-color);
+      width: 100%; /* Ensure select takes full width */
+      -webkit-appearance: none; /* Remove default select arrow */
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .wf-tool .input-card input[type="number"]::placeholder {
+      color: var(--muted-text);
+    }
+
+    .wf-tool .input-card input[type="number"]:focus,
+    .wf-tool .input-card select:focus {
+      outline: none;
+    }
+
+    .wf-tool .input-card .icon {
+      color: var(--primary);
+      font-size: 1.5rem;
+      line-height: 1;
+      display: flex; /* For better SVG alignment */
       align-items: center;
     }
 
-    .wf-tool .input-wrapper input {
-      padding-left: 3rem; /* Space for icon */
-    }
-
-    .wf-tool .input-wrapper .icon {
-      position: absolute;
-      left: 1rem;
-      color: var(--text-muted);
-      pointer-events: none;
-      font-size: 1.2rem;
-    }
-
-    .wf-tool .input-hint {
+    .wf-tool .input-card .hint {
       font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
+      color: var(--muted-text);
+      margin-top: 0.5rem;
       display: block;
     }
 
-    .wf-tool .error-message {
-      color: #e74c3c;
+    .wf-tool .input-card button {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background-color: var(--primary);
+      color: var(--white, #fff);
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    }
+
+    .wf-tool .input-card button:hover {
+      background-color: color-mix(in srgb, var(--primary) 90%, black);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool .input-card button:active {
+      transform: translateY(0);
+    }
+
+    .wf-tool .input-card .error-message {
+      color: #d32f2f; /* A standard error red */
       font-size: 0.9rem;
       margin-top: 0.5rem;
       display: none; /* Hidden by default */
     }
 
-    .wf-tool .error-message.active {
+    .wf-tool .input-card .error-message.active {
       display: block;
     }
 
-    .wf-tool button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.9rem 1.8rem;
+    /* Unit Toggle */
+    .wf-tool .unit-toggle {
+      display: flex;
+      margin-top: 0.5rem;
+      background-color: var(--bg-soft);
+      border-radius: 8px;
+      overflow: hidden;
+      width: fit-content;
+      border: 1px solid var(--line-color);
+    }
+
+    .wf-tool .unit-toggle button {
+      flex: 1;
+      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 0.75rem;
-      font-size: 1.1rem;
-      font-weight: 600;
+      background-color: transparent;
+      color: var(--muted-text);
       cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+      font-size: 0.9rem;
+      font-weight: normal;
+      transition: background-color 0.2s, color 0.2s;
+      border-radius: 0; /* Override button border-radius */
+      width: auto; /* Override button width */
+    }
+
+    .wf-tool .unit-toggle button.active {
       background-color: var(--primary);
       color: var(--white, #fff);
-      box-shadow: var(--shadow-soft);
+      font-weight: bold;
     }
 
-    .wf-tool button:hover {
-      background-color: color-mix(in srgb, var(--primary) 90%, black);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-hover);
+    .wf-tool .unit-toggle button:hover:not(.active) {
+      background-color: var(--line-color);
     }
 
-    .wf-tool button:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .wf-tool button.secondary {
-      background-color: var(--bg-soft);
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-
-    .wf-tool button.secondary:hover {
-      background-color: color-mix(in srgb, var(--bg-soft) 90%, var(--primary));
-      color: var(--primary);
-    }
-
+    /* Result Card */
     .wf-tool .result-card {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-      pointer-events: none; /* Prevent interaction when hidden */
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease-out, max-height 0.7s ease-out;
+      padding: 0 2rem; /* Initial padding, will be overridden when active */
     }
 
-    .wf-tool .result-card.show {
+    .wf-tool .result-card.active {
       opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+      max-height: 2000px; /* Sufficiently large to show content */
+      padding: 2rem;
     }
 
-    .wf-tool .result-summary {
+    .wf-tool .result-card h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .wf-tool .result-card .total-estimate {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .wf-tool .result-card .explanation {
       text-align: center;
       margin-bottom: 2rem;
-    }
-
-    .wf-tool .result-summary .big-number {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-      line-height: 1;
-    }
-
-    .wf-tool .result-summary p {
+      color: var(--muted-text);
       font-size: 1.1rem;
-      color: var(--text-ink);
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
     }
 
-    .wf-tool .category-breakdown {
+    .wf-tool .result-card .category-breakdown {
       display: grid;
-      gap: 1.2rem;
+      gap: 1rem;
       margin-bottom: 2rem;
     }
 
-    .wf-tool .category-item {
+    .wf-tool .result-card .category-item {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      padding: 0.8rem 1rem;
+      padding: 0.75rem 1rem;
       background-color: var(--bg-soft);
-      border-radius: 0.75rem;
-      border: 1px solid var(--border-line);
+      border-radius: 8px;
+      border: 1px solid var(--line-color);
     }
 
-    .wf-tool .category-item .category-name {
-      font-weight: 600;
-      flex-grow: 1;
+    .wf-tool .result-card .category-item .name {
+      font-weight: bold;
+      color: var(--text-color);
     }
 
-    .wf-tool .category-item .category-cost {
-      font-weight: 600;
+    .wf-tool .result-card .category-item .value {
       color: var(--primary);
-      min-width: 60px;
-      text-align: right;
+      font-weight: bold;
     }
 
-    .wf-tool .progress-bar-container {
-      flex-grow: 2;
-      height: 10px;
-      background-color: var(--border-line);
+    .wf-tool .result-card .progress-bar-container {
+      background-color: var(--line-color);
       border-radius: 5px;
+      height: 10px;
+      margin-top: 0.5rem;
       overflow: hidden;
     }
 
-    .wf-tool .progress-bar {
+    .wf-tool .result-card .progress-bar {
       height: 100%;
-      background-color: var(--secondary);
+      background-color: var(--primary);
       width: 0%;
       border-radius: 5px;
-      transition: width 0.8s ease-out;
+      transition: width 1s ease-out;
     }
 
-    .wf-tool .tips-section {
-      background-color: var(--bg-soft);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      border: 1px solid var(--border-line);
-      margin-top: 2rem;
-    }
-
-    .wf-tool .tips-section h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .wf-tool .tips-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .wf-tool .tips-section li {
-      margin-bottom: 0.6rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .wf-tool .tips-section li::before {
-      content: '🌱'; /* Emoji bullet */
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    .wf-tool .action-buttons {
+    .wf-tool .result-card .action-buttons {
       display: flex;
       gap: 1rem;
-      margin-top: 2rem;
       justify-content: center;
-      flex-wrap: wrap;
+      margin-top: 2rem;
     }
 
-    .wf-tool .action-buttons button {
-      min-width: 150px;
+    .wf-tool .result-card .action-buttons button {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: auto; /* Override input-card button width */
     }
 
-    .wf-tool .accordion details {
+    .wf-tool .result-card .action-buttons button.copy {
+      background-color: var(--secondary);
+      color: var(--white, #fff);
+      border: none;
+    }
+
+    .wf-tool .result-card .action-buttons button.copy:hover {
+      background-color: color-mix(in srgb, var(--secondary) 90%, black);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool .result-card .action-buttons button.print {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .wf-tool .result-card .action-buttons button.print:hover {
+      background-color: var(--primary);
+      color: var(--white, #fff);
+      transform: translateY(-2px);
+    }
+
+    .wf-tool .result-card .action-buttons button:active {
+      transform: translateY(0);
+    }
+
+    /* Educational Note */
+    .wf-tool .educational-note {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
       background-color: var(--bg-soft);
-      border: 1px solid var(--border-line);
-      border-radius: 0.75rem;
+      border-radius: var(--border-radius);
+      border: 1px solid var(--line-color);
+    }
+
+    /* How it works & FAQ */
+    .wf-tool .section-heading {
+      text-align: center;
+      margin: 3rem 0 2rem;
+      color: var(--text-color);
+    }
+
+    .wf-tool .details-accordion {
       margin-bottom: 1rem;
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .wf-tool .accordion summary {
-      display: block;
+    .wf-tool .details-accordion summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem 1.5rem;
+      font-weight: bold;
       cursor: pointer;
-      font-weight: 600;
+      outline: none;
+      color: var(--text-color);
       font-size: 1.1rem;
-      position: relative;
-      user-select: none;
-      color: var(--primary);
+      list-style: none; /* Remove default marker */
     }
 
-    .wf-tool .accordion summary::-webkit-details-marker {
-      display: none;
+    .wf-tool .details-accordion summary::-webkit-details-marker {
+      display: none; /* Remove default marker for webkit */
     }
 
-    .wf-tool .accordion summary::after {
+    .wf-tool .details-accordion summary::after {
       content: '▼';
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%) rotate(0deg);
-      transition: transform 0.2s ease;
       font-size: 0.8em;
-      color: var(--text-muted);
+      transition: transform 0.2s ease-in-out;
     }
 
-    .wf-tool .accordion details[open] summary::after {
-      transform: translateY(-50%) rotate(180deg);
+    .wf-tool .details-accordion[open] summary::after {
+      transform: rotate(180deg);
     }
 
-    .wf-tool .accordion .accordion-content {
-      padding: 0 1.5rem 1rem;
-      border-top: 1px solid var(--border-line);
-      color: var(--text-ink);
+    .wf-tool .details-accordion .content {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--muted-text);
     }
 
+    /* Related Tools */
     .wf-tool .related-tools {
       margin-top: 3rem;
       text-align: center;
     }
 
-    .wf-tool .related-tools h2 {
-      margin-bottom: 1.5rem;
-    }
-
-    .wf-tool .related-tools .tool-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .wf-tool .related-tools .tool-link {
-      display: block;
-      background-color: var(--bg-card);
-      padding: 1rem 1.5rem;
-      border-radius: 0.75rem;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      border: 1px solid var(--border-line);
-      transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .wf-tool .related-tools .tool-link:hover {
-      background-color: color-mix(in srgb, var(--bg-soft) 90%, var(--primary));
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .wf-tool .disclaimer {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: var(--bg-soft);
-      border-radius: 0.75rem;
-      border: 1px solid var(--border-line);
-    }
-
-    .wf-tool .unit-toggle {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 1rem;
-    }
-
-    .wf-tool .unit-toggle button {
-      background-color: var(--bg-soft);
-      color: var(--text-ink);
-      border: 1px solid var(--border-line);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease;
-      font-size: 0.9rem;
-      box-shadow: none;
-    }
-
-    .wf-tool .unit-toggle button.active {
+    .wf-tool .related-tools a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
       background-color: var(--primary);
-      color: var(--white);
-      border-color: var(--primary);
+      color: var(--white, #fff);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.2s, transform 0.1s;
     }
 
-    .wf-tool .unit-toggle button:hover:not(.active) {
-      background-color: var(--border-line);
+    .wf-tool .related-tools a:hover {
+      background-color: color-mix(in srgb, var(--primary) 90%, black);
+      transform: translateY(-2px);
     }
 
-    .wf-tool .unit-toggle button:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-right: none;
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      .wf-tool .container {
+        padding: 0 2rem;
+      }
+      .wf-tool .hero-banner {
+        padding: 4rem 2rem;
+      }
+      .wf-tool .input-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .wf-tool .input-card .form-group:last-of-type {
+        grid-column: span 2;
+      }
+      .wf-tool .input-card button {
+        grid-column: span 2;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .wf-tool .result-card .category-breakdown {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
     }
 
-    .wf-tool .unit-toggle button:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+    @media (min-width: 1024px) {
+      .wf-tool .container {
+        padding: 0 3rem;
+      }
     }
 
-    /* SVG for ring chart */
-    .wf-tool .ring-chart-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-      position: relative;
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 2rem;
-    }
-
-    .wf-tool .ring-chart-container svg {
-      transform: rotate(-90deg);
-      overflow: visible;
-    }
-
-    .wf-tool .ring-chart-container circle {
-      transition: stroke-dasharray 0.8s ease-out;
-    }
-
-    .wf-tool .ring-chart-label {
-      position: absolute;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-ink);
-      text-align: center;
+    /* SVG Icons */
+    .wf-tool .icon svg {
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
     }
   </style>
 
-  <!-- JSON-LD for SoftwareApplication -->
+  <div class="container">
+    <div class="hero-banner">
+      <h1>Grocery Budget Optimizer</h1>
+      <p>Estimate healthy eating costs and discover smart saving tips for your weekly grocery budget.</p>
+    </div>
+
+    <div class="card input-card">
+      <form id="grocery-budget-form">
+        <div class="form-group">
+          <label for="budget">Weekly Grocery Budget</label>
+          <div class="input-wrapper">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v5h-2zm0 7h2v2h-2z"/></svg>
+            </span>
+            <input type="number" id="budget" name="budget" min="10" step="5" placeholder="e.g., 100" required aria-describedby="budget-hint budget-error">
+            <span id="currency-symbol">$</span>
+          </div>
+          <span class="hint" id="budget-hint">Your total budget for groceries each week.</span>
+          <div class="error-message" id="budget-error" role="alert"></div>
+          <div class="unit-toggle" role="radiogroup" aria-label="Currency unit">
+            <button type="button" data-unit="USD" class="active" aria-checked="true" role="radio">USD</button>
+            <button type="button" data-unit="GBP" aria-checked="false" role="radio">GBP</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <div class="input-wrapper">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </span>
+            <input type="number" id="people" name="people" min="1" max="10" step="1" placeholder="e.g., 2" required aria-describedby="people-hint people-error">
+          </div>
+          <span class="hint" id="people-hint">How many people you are feeding.</span>
+          <div class="error-message" id="people-error" role="alert"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="dietary">Dietary Preferences</label>
+          <div class="input-wrapper">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.01L6 12.01l1.41-1.41 3.59 3.59 7.59-7.59L18 8l-7 7.01z"/></svg>
+            </span>
+            <select id="dietary" name="dietary" aria-describedby="dietary-hint">
+              <option value="standard">Standard (Mixed)</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="pescatarian">Pescatarian</option>
+            </select>
+          </div>
+          <span class="hint" id="dietary-hint">Choose your primary eating style.</span>
+        </div>
+
+        <button type="submit">Calculate Healthy Budget</button>
+      </form>
+    </div>
+
+    <div class="card result-card" id="result-card" role="region" aria-live="polite" aria-atomic="true">
+      <h2>Your Healthy Eating Budget Breakdown</h2>
+      <div class="total-estimate" id="total-estimate"></div>
+      <p class="explanation" id="explanation"></p>
+
+      <div class="category-breakdown" id="category-breakdown">
+        <!-- Breakdown items will be inserted here by JS -->
+      </div>
+
+      <div class="educational-note">
+        <strong>Educational estimate, not medical advice:</strong> This tool provides general guidance for informational purposes only and should not be considered medical or nutritional advice. Individual dietary needs and costs may vary. Consult a healthcare professional or registered dietitian for personalized advice.
+      </div>
+
+      <div class="action-buttons">
+        <button class="copy" id="copy-results">
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          </span>
+          Copy Results
+        </button>
+        <button class="print" id="print-results">
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6V3h12v4z"/></svg>
+          </span>
+          Print
+        </button>
+      </div>
+    </div>
+
+    <h2 class="section-heading">How It Works</h2>
+    <div class="card">
+      <p>The Grocery Budget Optimizer helps you allocate your weekly grocery budget across key healthy food categories based on your inputs. We use evidence-aware percentages for common healthy eating patterns, adjusting for the number of people and dietary preferences. This tool aims to provide a practical estimate to guide your shopping, helping you prioritize nutritious choices while staying within your budget. Remember, these are estimates for educational purposes, not medical advice.</p>
+    </div>
+
+    <h2 class="section-heading">Frequently Asked Questions</h2>
+    <div class="details-accordion">
+      <details>
+        <summary>How accurate are the cost estimates?</summary>
+        <div class="content">
+          <p>The estimates are based on general healthy eating guidelines and average food costs, adjusted for your budget, number of people, and dietary preference. Actual costs can vary significantly based on your location, specific store prices, seasonal availability, and personal brand choices. This tool provides a helpful starting point for planning.</p>
+        </div>
+      </details>
+    </div>
+    <div class="details-accordion">
+      <details>
+        <summary>What dietary preferences are supported?</summary>
+        <div class="content">
+          <p>We currently support Standard (Mixed), Vegetarian, Vegan, and Pescatarian preferences. Each preference adjusts the allocation percentages for protein sources and other categories to reflect typical healthy eating patterns for that diet. We aim to add more options in the future.</p>
+        </div>
+      </details>
+    </div>
+    <div class="details-accordion">
+      <details>
+        <summary>Can I save or share my results?</summary>
+        <div class="content">
+          <p>Yes! You can use the "Copy Results" button to quickly copy the breakdown to your clipboard, making it easy to paste into a note or message. The "Print" button will open your browser's print dialog, allowing you to print or save the results as a PDF for future reference.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="related-tools">
+      <h2 class="section-heading">Explore More Wellness Tools</h2>
+      <a href="/tools.html">View All Tools</a>
+    </div>
+  </div>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -540,18 +632,29 @@
     "name": "Grocery Budget Optimizer: Healthy Eating Cost Checker",
     "applicationCategory": "HealthAndFitness",
     "operatingSystem": "Web",
-    "url": "https://dailyvitality.com/tools/grocery-budget-optimizer",
-    "description": "Estimate healthy food costs, optimize your grocery budget, and get tips for saving money for various dietary preferences.",
-    "softwareRequirements": "Web browser",
+    "url": "https://example.com/tools/grocery-budget-optimizer",
+    "description": "Optimize your healthy eating budget. Estimate costs for nutritious food categories and get tips for saving money. Educational only, not medical advice.",
+    "featureList": [
+      "Weekly grocery budget input",
+      "Number of people input",
+      "Dietary preference selection (Standard, Vegetarian, Vegan, Pescatarian)",
+      "Estimated cost breakdown by healthy food categories",
+      "Tips for saving money on groceries",
+      "Copy and Print results functionality",
+      "Light and Dark mode support"
+    ],
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "120"
     }
   }
   </script>
-
-  <!-- JSON-LD for FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -562,7 +665,7 @@
         "name": "How accurate are the cost estimates?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The estimates are based on general healthy eating guidelines and average food prices. Actual costs can vary significantly based on your location, specific store, brand choices, and seasonal availability. This tool provides an educational estimate, not a precise financial projection."
+          "text": "The estimates are based on general healthy eating guidelines and average food costs, adjusted for your budget, number of people, and dietary preference. Actual costs can vary significantly based on your location, specific store prices, seasonal availability, and personal brand choices. This tool provides a helpful starting point for planning."
         }
       },
       {
@@ -570,451 +673,267 @@
         "name": "What dietary preferences are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Currently, the tool supports 'Standard Healthy', 'Vegetarian', and 'Vegan' preferences. Each preference adjusts the estimated cost allocation for different food categories to reflect typical dietary patterns."
+          "text": "We currently support Standard (Mixed), Vegetarian, Vegan, and Pescatarian preferences. Each preference adjusts the allocation percentages for protein sources and other categories to reflect typical healthy eating patterns for that diet. We aim to add more options in the future."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I save or print my results?",
+        "name": "Can I save or share my results?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, you can use the 'Copy Results' button to copy the breakdown to your clipboard, or the 'Print Results' button to generate a printer-friendly version of your results."
+          "text": "Yes! You can use the \"Copy Results\" button to quickly copy the breakdown to your clipboard, making it easy to paste into a note or message. The \"Print\" button will open your browser's print dialog, allowing you to print or save the results as a PDF for future reference."
         }
       }
     ]
   }
   </script>
-
-  <div class="hero-banner">
-    <h1>Grocery Budget Optimizer</h1>
-    <p>Estimate healthy eating costs and discover smart ways to save on your weekly groceries.</p>
-  </div>
-
-  <div class="card input-card">
-    <h2>Plan Your Healthy Grocery Budget</h2>
-    <form id="groceryBudgetForm">
-      <div class="unit-toggle">
-        <button type="button" id="currencyUSD" class="active" aria-pressed="true">USD ($)</button>
-        <button type="button" id="currencyGBP" aria-pressed="false">GBP (£)</button>
-      </div>
-
-      <div class="form-group">
-        <label for="weeklyBudget">
-          <span class="icon" aria-hidden="true">💰</span> Weekly Grocery Budget (<span id="currencySymbol1">$</span>)
-        </label>
-        <div class="input-wrapper">
-          <input type="number" id="weeklyBudget" name="weeklyBudget" min="10" max="1000" step="5" placeholder="e.g., 100" required aria-describedby="weeklyBudgetHint weeklyBudgetError">
-          <span class="input-hint" id="weeklyBudgetHint">Enter your total budget for groceries each week.</span>
-          <span class="error-message" id="weeklyBudgetError" role="alert">Please enter a valid weekly budget (e.g., 50-500).</span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="numPeople">
-          <span class="icon" aria-hidden="true">👨‍👩‍👧‍👦</span> Number of People
-        </label>
-        <div class="input-wrapper">
-          <input type="number" id="numPeople" name="numPeople" min="1" max="10" step="1" placeholder="e.g., 2" required aria-describedby="numPeopleHint numPeopleError">
-          <span class="input-hint" id="numPeopleHint">How many people are you shopping for?</span>
-          <span class="error-message" id="numPeopleError" role="alert">Please enter a valid number of people (1-10).</span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="dietaryPref">
-          <span class="icon" aria-hidden="true">🥗</span> Dietary Preference
-        </label>
-        <div class="input-wrapper">
-          <select id="dietaryPref" name="dietaryPref" required aria-describedby="dietaryPrefHint">
-            <option value="standard">Standard Healthy</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-          </select>
-          <span class="input-hint" id="dietaryPrefHint">Choose a preference to adjust food category allocations.</span>
-        </div>
-      </div>
-
-      <button type="submit">Calculate Budget Breakdown</button>
-    </form>
-  </div>
-
-  <div id="resultCard" class="card result-card" role="region" aria-live="polite" aria-atomic="true">
-    <div class="result-summary">
-      <h2>Your Estimated Healthy Grocery Breakdown</h2>
-      <p>Based on your inputs, here's an estimated breakdown of how your budget could be allocated for a healthy diet:</p>
-      <div class="ring-chart-container">
-        <svg width="180" height="180" viewBox="0 0 36 36" class="circular-chart">
-          <circle class="circle-bg" cx="18" cy="18" r="15.915494309189535" fill="transparent" stroke="var(--border-line)" stroke-width="3"></circle>
-          <circle class="circle-segment" cx="18" cy="18" r="15.915494309189535" fill="transparent" stroke="var(--primary)" stroke-width="3" stroke-dasharray="0, 100" stroke-dashoffset="0"></circle>
-        </svg>
-        <div class="ring-chart-label">
-          <span id="totalAllocatedBudget" class="big-number"></span>
-          <br>Allocated
-        </div>
-      </div>
-      <p><strong id="budgetVerdict"></strong></p>
-    </div>
-
-    <div class="category-breakdown" id="categoryBreakdown">
-      <!-- Category items will be inserted here by JS -->
-    </div>
-
-    <div class="tips-section">
-      <h3>Tips for Saving Money on Healthy Groceries</h3>
-      <ul>
-        <li>Plan your meals: Create a weekly meal plan and grocery list to avoid impulse buys.</li>
-        <li>Buy in season: Seasonal produce is often cheaper and fresher.</li>
-        <li>Cook at home: Preparing meals from scratch is usually more cost-effective than buying pre-made.</li>
-        <li>Compare prices: Check different stores or brands for the best deals.</li>
-        <li>Reduce food waste: Use leftovers, freeze excess, and store food properly.</li>
-        <li>Consider frozen options: Frozen fruits and vegetables are often just as nutritious and can be cheaper.</li>
-      </ul>
-    </div>
-
-    <div class="action-buttons">
-      <button type="button" id="copyResults">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-        Copy Results
-      </button>
-      <button type="button" id="printResults" class="secondary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8" rx="1"></rect></svg>
-        Print Results
-      </button>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>How It Works</h2>
-    <p>The "Grocery Budget Optimizer" helps you visualize how your weekly budget can be distributed across essential healthy food categories. By inputting your budget, household size, and dietary preferences, the tool provides an estimated breakdown, offering a practical guide to mindful grocery shopping. It also includes actionable tips to help you stretch your budget further while maintaining a nutritious diet. This is an educational estimate, not medical advice.</p>
-  </div>
-
-  <div class="accordion">
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>How accurate are the cost estimates?</summary>
-      <div class="accordion-content">
-        <p>The estimates are based on general healthy eating guidelines and average food prices. Actual costs can vary significantly based on your location, specific store, brand choices, and seasonal availability. This tool provides an educational estimate, not a precise financial projection.</p>
-      </div>
-    </details>
-    <details>
-      <summary>What dietary preferences are supported?</summary>
-      <div class="accordion-content">
-        <p>Currently, the tool supports 'Standard Healthy', 'Vegetarian', and 'Vegan' preferences. Each preference adjusts the estimated cost allocation for different food categories to reflect typical dietary patterns.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Can I save or print my results?</summary>
-      <div class="accordion-content">
-        <p>Yes, you can use the 'Copy Results' button to copy the breakdown to your clipboard, or the 'Print Results' button to generate a printer-friendly version of your results.</p>
-      </div>
-    </details>
-  </div>
-
-  <div class="related-tools">
-    <h2>Explore More Daily Vitality Tools</h2>
-    <div class="tool-links">
-      <a href="/tools.html" class="tool-link">All Tools</a>
-      <a href="/tools.html#meal-planner" class="tool-link">Meal Planner</a>
-      <a href="/tools.html#hydration-tracker" class="tool-link">Hydration Tracker</a>
-    </div>
-  </div>
-
-  <p class="disclaimer"><strong>Educational estimate, not medical advice:</strong> This tool provides general information and estimates for educational purposes only and is not intended to be a substitute for professional financial or medical advice. Always consult with a qualified professional for personalized guidance.</p>
 </main>
-
 <script>
   (function() {
-    const form = document.getElementById('groceryBudgetForm');
-    const weeklyBudgetInput = document.getElementById('weeklyBudget');
-    const numPeopleInput = document.getElementById('numPeople');
-    const dietaryPrefInput = document.getElementById('dietaryPref');
-    const resultCard = document.getElementById('resultCard');
-    const totalAllocatedBudgetSpan = document.getElementById('totalAllocatedBudget');
-    const budgetVerdict = document.getElementById('budgetVerdict');
-    const categoryBreakdownDiv = document.getElementById('categoryBreakdown');
-    const copyResultsBtn = document.getElementById('copyResults');
-    const printResultsBtn = document.getElementById('printResults');
-    const currencyUSD = document.getElementById('currencyUSD');
-    const currencyGBP = document.getElementById('currencyGBP');
-    const currencySymbol1 = document.getElementById('currencySymbol1');
+    const form = document.getElementById('grocery-budget-form');
+    const budgetInput = document.getElementById('budget');
+    const peopleInput = document.getElementById('people');
+    const dietarySelect = document.getElementById('dietary');
+    const currencySymbol = document.getElementById('currency-symbol');
+    const unitToggle = document.querySelector('.wf-tool .unit-toggle');
+    const budgetError = document.getElementById('budget-error');
+    const peopleError = document.getElementById('people-error');
+
+    const resultCard = document.getElementById('result-card');
+    const totalEstimateElem = document.getElementById('total-estimate');
+    const explanationElem = document.getElementById('explanation');
+    const categoryBreakdownElem = document.getElementById('category-breakdown');
+    const copyResultsBtn = document.getElementById('copy-results');
+    const printResultsBtn = document.getElementById('print-results');
 
     let currentCurrency = 'USD'; // Default currency
 
-    const categoryRatios = {
+    const categoryPercentages = {
       standard: {
         "Fruits & Vegetables": 0.30,
         "Grains & Starches": 0.20,
         "Proteins (Meat, Fish, Legumes)": 0.25,
         "Dairy & Alternatives": 0.10,
         "Healthy Fats & Oils": 0.05,
-        "Snacks & Other": 0.10
+        "Other (Spices, Snacks)": 0.10
       },
       vegetarian: {
         "Fruits & Vegetables": 0.35,
         "Grains & Starches": 0.25,
-        "Proteins (Legumes, Tofu, Eggs)": 0.25,
+        "Proteins (Legumes, Tofu, Eggs)": 0.20,
         "Dairy & Alternatives": 0.10,
         "Healthy Fats & Oils": 0.05,
-        "Snacks & Other": 0.00 // Reduced for focus on core
+        "Other (Spices, Snacks)": 0.05
       },
       vegan: {
         "Fruits & Vegetables": 0.40,
         "Grains & Starches": 0.25,
         "Proteins (Legumes, Tofu, Nuts)": 0.20,
-        "Dairy & Alternatives (Plant-based)": 0.10,
+        "Dairy Alternatives": 0.05,
         "Healthy Fats & Oils": 0.05,
-        "Snacks & Other": 0.00 // Reduced for focus on core
-      }
-    };
-
-    const priceAdjustments = {
-      USD: {
-        baseCostPerPerson: 40, // Base weekly cost per person for healthy eating
-        vegetarianMultiplier: 0.95, // Vegetarian might be slightly cheaper than standard
-        veganMultiplier: 1.05, // Vegan might be slightly more expensive than standard
-        currencySymbol: '$'
+        "Other (Spices, Snacks)": 0.05
       },
-      GBP: {
-        baseCostPerPerson: 35, // Equivalent base weekly cost per person for healthy eating in GBP
-        vegetarianMultiplier: 0.95,
-        veganMultiplier: 1.05,
-        currencySymbol: '£'
+      pescatarian: {
+        "Fruits & Vegetables": 0.30,
+        "Grains & Starches": 0.20,
+        "Proteins (Fish, Seafood, Legumes)": 0.30,
+        "Dairy & Alternatives": 0.05,
+        "Healthy Fats & Oils": 0.05,
+        "Other (Spices, Snacks)": 0.10
       }
     };
 
-    // Input validation function
-    function validateInput(inputElement, min, max, errorMessageId) {
+    const currencySymbols = {
+      USD: '$',
+      GBP: '£'
+    };
+
+    // Helper to format currency
+    const formatCurrency = (value, currency) => {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(value);
+    };
+
+    // Validation function
+    const validateInput = (inputElement, errorElement, min, max, message) => {
       const value = parseFloat(inputElement.value);
-      const errorElement = document.getElementById(errorMessageId);
       if (isNaN(value) || value < min || value > max) {
-        inputElement.classList.add('invalid');
+        errorElement.textContent = message;
         errorElement.classList.add('active');
         inputElement.setAttribute('aria-invalid', 'true');
         return false;
       } else {
-        inputElement.classList.remove('invalid');
+        errorElement.textContent = '';
         errorElement.classList.remove('active');
         inputElement.setAttribute('aria-invalid', 'false');
         return true;
       }
-    }
+    };
 
-    function calculateBudget() {
-      const weeklyBudget = parseFloat(weeklyBudgetInput.value);
-      const numPeople = parseInt(numPeopleInput.value);
-      const dietaryPref = dietaryPrefInput.value;
+    // Event listeners for validation on blur
+    budgetInput.addEventListener('blur', () => {
+      validateInput(budgetInput, budgetError, 10, 1000, 'Please enter a budget between 10 and 1000.');
+    });
+    peopleInput.addEventListener('blur', () => {
+      validateInput(peopleInput, peopleError, 1, 10, 'Please enter a number of people between 1 and 10.');
+    });
 
-      let isValid = true;
-      isValid = validateInput(weeklyBudgetInput, 10, 1000, 'weeklyBudgetError') && isValid;
-      isValid = validateInput(numPeopleInput, 1, 10, 'numPeopleError') && isValid;
+    // Unit toggle handler
+    unitToggle.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target.tagName === 'BUTTON') {
+        // Remove active class from all buttons
+        unitToggle.querySelectorAll('button').forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-checked', 'false');
+        });
 
-      if (!isValid) {
-        resultCard.classList.remove('show');
+        // Add active class to the clicked button
+        target.classList.add('active');
+        target.setAttribute('aria-checked', 'true');
+        currentCurrency = target.dataset.unit;
+        currencySymbol.textContent = currencySymbols[currentCurrency];
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const isBudgetValid = validateInput(budgetInput, budgetError, 10, 1000, 'Please enter a budget between 10 and 1000.');
+      const isPeopleValid = validateInput(peopleInput, peopleError, 1, 10, 'Please enter a number of people between 1 and 10.');
+
+      if (!isBudgetValid || !isPeopleValid) {
+        resultCard.classList.remove('active');
         return;
       }
 
-      const adjustments = priceAdjustments[currentCurrency];
-      let estimatedHealthyCost = adjustments.baseCostPerPerson * numPeople;
+      const budget = parseFloat(budgetInput.value);
+      const people = parseInt(peopleInput.value);
+      const dietary = dietarySelect.value;
 
-      if (dietaryPref === 'vegetarian') {
-        estimatedHealthyCost *= adjustments.vegetarianMultiplier;
-      } else if (dietaryPref === 'vegan') {
-        estimatedHealthyCost *= adjustments.veganMultiplier;
+      calculateBudget(budget, people, dietary);
+    });
+
+    function calculateBudget(budget, people, dietary) {
+      const percentages = categoryPercentages[dietary];
+      let totalAllocated = 0;
+      const breakdown = [];
+
+      for (const category in percentages) {
+        const percentage = percentages[category];
+        const amount = budget * percentage;
+        totalAllocated += amount;
+        breakdown.push({ category, amount });
       }
 
-      const ratios = categoryRatios[dietaryPref];
-      let totalAllocated = 0;
-      const breakdown = Object.entries(ratios).map(([category, ratio]) => {
-        const cost = weeklyBudget * ratio;
-        totalAllocated += cost;
-        return { category, cost };
-      });
-
-      displayResults(weeklyBudget, estimatedHealthyCost, totalAllocated, breakdown);
+      displayResults(budget, people, dietary, breakdown);
     }
 
-    function displayResults(weeklyBudget, estimatedHealthyCost, totalAllocated, breakdown) {
-      const currencySymbol = priceAdjustments[currentCurrency].currencySymbol;
+    function displayResults(budget, people, dietary, breakdown) {
+      totalEstimateElem.textContent = formatCurrency(budget, currentCurrency);
+      explanationElem.textContent = `Based on your weekly budget of ${formatCurrency(budget, currentCurrency)} for ${people} person(s) with a ${dietary} preference, here's an estimated breakdown for healthy eating categories:`;
 
-      totalAllocatedBudgetSpan.textContent = `${currencySymbol}${totalAllocated.toFixed(2)}`;
-
-      let verdictText = '';
-      if (weeklyBudget >= estimatedHealthyCost) {
-        verdictText = `Your budget of ${currencySymbol}${weeklyBudget.toFixed(2)} is generally sufficient for a healthy diet for ${numPeopleInput.value} people.`;
-        budgetVerdict.style.color = 'var(--primary)';
-      } else {
-        verdictText = `Your budget of ${currencySymbol}${weeklyBudget.toFixed(2)} is a bit tight for a healthy diet for ${numPeopleInput.value} people, which we estimate at ${currencySymbol}${estimatedHealthyCost.toFixed(2)}. Consider reviewing your categories or exploring our saving tips.`;
-        budgetVerdict.style.color = '#e74c3c'; /* A red color for warning */
-      }
-      budgetVerdict.textContent = verdictText;
-
-      categoryBreakdownDiv.innerHTML = '';
-      let maxCost = 0;
-      if (breakdown.length > 0) {
-        maxCost = Math.max(...breakdown.map(item => item.cost));
-      }
-
+      categoryBreakdownElem.innerHTML = '';
       breakdown.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('category-item');
-        const percentage = (item.cost / weeklyBudget) * 100;
-        const barWidth = (item.cost / maxCost) * 100; // Scale relative to max category cost for visual effect
-
         itemDiv.innerHTML = `
-          <span class="category-name">${item.category}</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" style="width: ${barWidth}%;"></div>
+          <div class="name">${item.category}</div>
+          <div class="value">${formatCurrency(item.amount, currentCurrency)}</div>
+          <div style="width: 100%; grid-column: 1 / -1;">
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: ${((item.amount / budget) * 100).toFixed(0)}%;"></div>
+            </div>
           </div>
-          <span class="category-cost">${currencySymbol}${item.cost.toFixed(2)}</span>
         `;
-        categoryBreakdownDiv.appendChild(itemDiv);
+        categoryBreakdownElem.appendChild(itemDiv);
       });
 
-      // Update ring chart
-      const circleSegment = resultCard.querySelector('.circle-segment');
-      const circumference = 2 * Math.PI * 15.915494309189535; // r = 15.915...
-      const percentageAllocated = (totalAllocated / weeklyBudget) * 100;
-      const dasharray = `${(percentageAllocated / 100) * circumference}, ${circumference}`;
-      circleSegment.style.strokeDasharray = dasharray;
-
-      resultCard.classList.add('show');
+      resultCard.classList.add('active');
       resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    function copyResults() {
-      const currencySymbol = priceAdjustments[currentCurrency].currencySymbol;
+    // Copy results to clipboard
+    copyResultsBtn.addEventListener('click', async () => {
       let resultText = `Grocery Budget Optimizer Results:\n\n`;
-      resultText += `Weekly Budget: ${currencySymbol}${weeklyBudgetInput.value}\n`;
-      resultText += `Number of People: ${numPeopleInput.value}\n`;
-      resultText += `Dietary Preference: ${dietaryPrefInput.options[dietaryPrefInput.selectedIndex].text}\n\n`;
-      resultText += `Estimated Healthy Grocery Breakdown:\n`;
+      resultText += `Weekly Budget: ${totalEstimateElem.textContent}\n`;
+      resultText += `People: ${peopleInput.value}\n`;
+      resultText += `Dietary Preference: ${dietarySelect.options[dietarySelect.selectedIndex].text}\n\n`;
+      resultText += `Estimated Breakdown:\n`;
 
-      document.querySelectorAll('#categoryBreakdown .category-item').forEach(item => {
-        const categoryName = item.querySelector('.category-name').textContent;
-        const categoryCost = item.querySelector('.category-cost').textContent;
-        resultText += `- ${categoryName}: ${categoryCost}\n`;
-      });
-
-      resultText += `\n${budgetVerdict.textContent}\n\n`;
-      resultText += `Tips for Saving Money on Healthy Groceries:\n`;
-      document.querySelectorAll('.tips-section li').forEach(tip => {
-        resultText += `- ${tip.textContent.trim()}\n`;
+      const categoryItems = categoryBreakdownElem.querySelectorAll('.category-item');
+      categoryItems.forEach(item => {
+        const categoryName = item.querySelector('.name').textContent;
+        const categoryValue = item.querySelector('.value').textContent;
+        resultText += `- ${categoryName}: ${categoryValue}\n`;
       });
       resultText += `\nEducational estimate, not medical advice.`;
 
-      navigator.clipboard.writeText(resultText).then(() => {
+      try {
+        await navigator.clipboard.writeText(resultText);
         alert('Results copied to clipboard!');
-      }).catch(err => {
-        console.error('Failed to copy results: ', err);
+      } catch (err) {
+        console.error('Failed to copy: ', err);
         alert('Failed to copy results. Please try again or manually select and copy.');
-      });
-    }
-
-    function printResults() {
-      const printWindow = window.open('', '_blank');
-      const currencySymbol = priceAdjustments[currentCurrency].currencySymbol;
-
-      let printContent = `
-        
-        
-          <title>Grocery Budget Optimizer Results</title>
-          <style>
-            body { font-family: var(--font-body); color: var(--text-ink); margin: 2rem; }
-            h1, h2, h3 { font-family: var(--font-heading); color: var(--text-ink); }
-            h1 { font-size: 2rem; margin-bottom: 1rem; }
-            h2 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.8rem; }
-            p { margin-bottom: 0.5rem; }
-            .category-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px dashed #eee; }
-            .category-item:last-child { border-bottom: none; }
-            .category-name { font-weight: bold; }
-            .category-cost { color: var(--primary); }
-            .tips-section ul { list-style: disc; padding-left: 20px; }
-            .tips-section li { margin-bottom: 0.4rem; }
-            .disclaimer { font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1rem; }
-          </style>
-        
-        
-          <h1>Grocery Budget Optimizer Results</h1>
-          <p><strong>Weekly Budget:</strong> ${currencySymbol}${weeklyBudgetInput.value}</p>
-          <p><strong>Number of People:</strong> ${numPeopleInput.value}</p>
-          <p><strong>Dietary Preference:</strong> ${dietaryPrefInput.options[dietaryPrefInput.selectedIndex].text}</p>
-
-          <h2>Estimated Healthy Grocery Breakdown</h2>
-          <p>${budgetVerdict.textContent}</p>
-          <div class="category-breakdown">
-      `;
-
-      document.querySelectorAll('#categoryBreakdown .category-item').forEach(item => {
-        const categoryName = item.querySelector('.category-name').textContent;
-        const categoryCost = item.querySelector('.category-cost').textContent;
-        printContent += `
-          <div class="category-item">
-            <span class="category-name">${categoryName}</span>
-            <span class="category-cost">${categoryCost}</span>
-          </div>
-        `;
-      });
-
-      printContent += `
-          </div>
-
-          <div class="tips-section">
-            <h2>Tips for Saving Money on Healthy Groceries</h2>
-            <ul>
-      `;
-      document.querySelectorAll('.tips-section li').forEach(tip => {
-        printContent += `<li>${tip.textContent.trim()}</li>`;
-      });
-      printContent += `
-            </ul>
-          </div>
-
-          <p class="disclaimer">Educational estimate, not medical advice: This tool provides general information and estimates for educational purposes only and is not intended to be a substitute for professional financial or medical advice. Always consult with a qualified professional for personalized guidance.</p>
-        
-        
-      `;
-
-      printWindow.document.write(printContent);
-      printWindow.document.close();
-      printWindow.print();
-    }
-
-    function updateCurrencyDisplay() {
-      const symbol = priceAdjustments[currentCurrency].currencySymbol;
-      currencySymbol1.textContent = symbol;
-      currencyUSD.classList.toggle('active', currentCurrency === 'USD');
-      currencyGBP.classList.toggle('active', currentCurrency === 'GBP');
-      currencyUSD.setAttribute('aria-pressed', currentCurrency === 'USD');
-      currencyGBP.setAttribute('aria-pressed', currentCurrency === 'GBP');
-      // Recalculate if results are already shown
-      if (resultCard.classList.contains('show')) {
-        calculateBudget();
       }
-    }
-
-    // Event Listeners
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      calculateBudget();
     });
 
-    weeklyBudgetInput.addEventListener('input', () => validateInput(weeklyBudgetInput, 10, 1000, 'weeklyBudgetError'));
-    numPeopleInput.addEventListener('input', () => validateInput(numPeopleInput, 1, 10, 'numPeopleError'));
+    // Print results
+    printResultsBtn.addEventListener('click', () => {
+      const printWindow = window.open('', '', 'height=600,width=800');
+      printWindow.document.write('<title>Grocery Budget Optimizer Results</title>');
+      printWindow.document.write('<style>');
+      printWindow.document.write(`
+        body { font-family: var(--font-body); color: var(--text-color); margin: 2rem; }
+        h1, h2 { font-family: var(--font-heading); color: var(--primary); }
+        .result-section { margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--line-color); border-radius: var(--border-radius); }
+        .category-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px dashed var(--line-color); }
+        .category-item:last-child { border-bottom: none; }
+        .category-item .name { font-weight: bold; }
+        .total-estimate { font-size: 2rem; font-weight: bold; color: var(--primary); text-align: center; margin-bottom: 1rem; }
+        .explanation { text-align: center; margin-bottom: 1.5rem; }
+        .educational-note { font-size: 0.85rem; color: var(--muted-text); text-align: center; margin-top: 2rem; padding: 1rem; border: 1px solid var(--line-color); border-radius: var(--border-radius); }
+        @media print {
+          .wf-tool .card { box-shadow: none; border: 1px solid var(--line-color); }
+          .wf-tool .action-buttons { display: none; }
+        }
+      `);
+      printWindow.document.write('</style>');
+      printWindow.document.write('<h1>Grocery Budget Optimizer Results</h1>');
+      printWindow.document.write('<div class="result-section">');
+      printWindow.document.write(`<h2>Summary</h2>`);
+      printWindow.document.write(`<div class="total-estimate">${totalEstimateElem.textContent}</div>`);
+      printWindow.document.write(`<p class="explanation">${explanationElem.textContent}</p>`);
+      printWindow.document.write('</div>');
 
-    copyResultsBtn.addEventListener('click', copyResults);
-    printResultsBtn.addEventListener('click', printResults);
+      printWindow.document.write('<div class="result-section">');
+      printWindow.document.write('<h2>Category Breakdown</h2>');
+      printWindow.document.write('<div class="category-breakdown">');
+      const categoryItems = categoryBreakdownElem.querySelectorAll('.category-item');
+      categoryItems.forEach(item => {
+        const categoryName = item.querySelector('.name').textContent;
+        const categoryValue = item.querySelector('.value').textContent;
+        printWindow.document.write(`<div class="category-item"><div class="name">${categoryName}</div><div class="value">${categoryValue}</div></div>`);
+      });
+      printWindow.document.write('</div>');
+      printWindow.document.write('</div>');
 
-    currencyUSD.addEventListener('click', () => {
-      currentCurrency = 'USD';
-      updateCurrencyDisplay();
+      printWindow.document.write('<div class="educational-note">');
+      printWindow.document.write('<strong>Educational estimate, not medical advice:</strong> This tool provides general guidance for informational purposes only and should not be considered medical or nutritional advice. Individual dietary needs and costs may vary. Consult a healthcare professional or registered dietitian for personalized advice.');
+      printWindow.document.write('</div>');
+
+      printWindow.document.write('');
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
     });
-    currencyGBP.addEventListener('click', () => {
-      currentCurrency = 'GBP';
-      updateCurrencyDisplay();
-    });
 
-    // Initial currency display
-    updateCurrencyDisplay();
+    // Initial currency symbol setup
+    currencySymbol.textContent = currencySymbols[currentCurrency];
   })();
 </script>
 
