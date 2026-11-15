@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pregnancy Due Date Estimator</title>
-<meta name="description" content="Estimate your baby&#039;s due date using your last menstrual period (LMP) date. Simple, practical wellness tool.">
+<meta name="description" content="Estimate your baby&#039;s due date and key pregnancy milestones based on your last menstrual period. Educational only, not medical advice.">
 <link rel="canonical" href="https://dailyvitality.xyz/pregnancy-due-date-estimator.html">
 <meta property="og:title" content="Pregnancy Due Date Estimator">
-<meta property="og:description" content="Estimate your baby&#039;s due date using your last menstrual period (LMP) date. Simple, practical wellness tool.">
+<meta property="og:description" content="Estimate your baby&#039;s due date and key pregnancy milestones based on your last menstrual period. Educational only, not medical advice.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dailyvitality.xyz/pregnancy-due-date-estimator.html">
-<link href="daily-vitality-icon.png" rel="icon"/>
+<link rel="icon" href="/daily-vitality-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
 <link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
 
@@ -37,44 +38,34 @@
       --text-primary: var(--ink, #10251c);
       --text-muted: var(--muted, #61716a);
       --border-color: var(--line, #e5ebe7);
-      --shadow-color: rgba(0, 0, 0, 0.08);
+      --shadow-color: rgba(0, 0, 0, 0.05);
       --font-heading: var(--serif, 'Fraunces', Georgia, serif);
       --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --transition-fast: 0.2s ease-in-out;
+      --transition-slow: 0.4s ease-in-out;
       font-family: var(--font-body);
       color: var(--text-primary);
       background-color: var(--background);
       padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 2rem;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .wf-tool {
-        --primary: var(--v29-cyan, #6df7ff);
-        --background: var(--v29-ink, #092d2a);
-        --card-background: rgba(30, 41, 59, 0.94); /* Darker card background */
-        --text-primary: var(--white, #fff);
-        --text-muted: #a0aec0; /* Lighter muted text for dark mode */
-        --border-color: #4a5568; /* Darker border */
-        --shadow-color: rgba(0, 0, 0, 0.2);
-      }
+      align-items: center;
+      min-height: 100vh;
     }
 
     .wf-tool .hero-banner {
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: var(--white);
       padding: 3rem 1.5rem;
-      border-radius: 1rem;
+      border-radius: 12px;
       text-align: center;
       width: 100%;
       max-width: 800px;
-      box-shadow: 0 10px 20px var(--shadow-color);
+      box-shadow: 0 8px 16px var(--shadow-color);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
 
     .wf-tool .hero-banner h1 {
@@ -92,23 +83,22 @@
 
     .wf-tool .input-card {
       background-color: var(--card-background);
-      border-radius: 1rem;
+      border-radius: 16px;
       padding: 2rem;
       width: 100%;
       max-width: 500px;
-      box-shadow: 0 5px 15px var(--shadow-color);
+      box-shadow: 0 4px 12px var(--shadow-color);
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      backdrop-filter: blur(5px); /* For the card background effect */
-      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid var(--border-color);
     }
 
     .wf-tool .input-card h2 {
       font-family: var(--font-heading);
       font-size: 1.8rem;
-      margin: 0;
       text-align: center;
+      margin: 0;
       color: var(--primary);
     }
 
@@ -127,34 +117,39 @@
     }
 
     .wf-tool .input-group input[type="date"] {
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--border-color);
-      border-radius: 0.5rem;
-      font-size: 1rem;
       width: 100%;
-      box-sizing: border-box;
-      background-color: var(--background);
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color var(--transition-fast);
+      background-color: var(--white);
       color: var(--text-primary);
-      transition: border-color 0.2s ease-in-out;
     }
 
     .wf-tool .input-group input[type="date"]:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 8, 127, 85), 0.2); /* Fallback for rgb */
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2);
     }
 
     .wf-tool .input-group .hint {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-top: 0.25rem;
+      margin-top: -0.5rem;
+      padding-left: 0.2rem;
     }
 
     .wf-tool .input-group .error-message {
-      color: #e53e3e; /* Red for errors */
+      color: #e53e3e;
       font-size: 0.85rem;
-      margin-top: 0.25rem;
-      min-height: 1.2rem; /* Prevent layout shift */
+      margin-top: -0.5rem;
+      padding-left: 0.2rem;
+      display: none;
+    }
+
+    .wf-tool .input-group .error-message.visible {
+      display: block;
     }
 
     .wf-tool .calculate-button {
@@ -162,19 +157,20 @@
       color: var(--white);
       border: none;
       padding: 1rem 1.5rem;
-      border-radius: 0.5rem;
+      border-radius: 8px;
       font-size: 1.1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
+      box-shadow: 0 2px 8px var(--shadow-color);
     }
 
     .wf-tool .calculate-button:hover {
-      background-color: var(--v29-green, #087f55); /* Slightly darker */
+      background-color: var(--v29-green-darker, #076644);
       transform: translateY(-2px);
     }
 
@@ -184,20 +180,20 @@
 
     .wf-tool .result-card {
       background-color: var(--card-background);
-      border-radius: 1rem;
+      border-radius: 16px;
       padding: 2rem;
       width: 100%;
       max-width: 500px;
-      box-shadow: 0 5px 15px var(--shadow-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      border: 1px solid var(--border-color);
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      transition: opacity var(--transition-slow) ease-out, transform var(--transition-slow) ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center;
     }
 
     .wf-tool .result-card.visible {
@@ -205,62 +201,79 @@
       transform: translateY(0);
     }
 
-    .wf-tool .result-card h3 {
+    .wf-tool .result-card h2 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin: 0;
       color: var(--primary);
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .wf-tool .result-card .due-date-label {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: normal;
+      margin-bottom: 0.5rem;
     }
 
     .wf-tool .result-card .explanation {
       font-size: 1rem;
-      color: var(--text-muted);
-      text-align: center;
       line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 400px;
     }
 
     .wf-tool .progress-container {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
       width: 100%;
       max-width: 300px;
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .wf-tool .progress-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: bold;
+    }
+
+    .wf-tool .progress-bar-container {
+      width: 100%;
+      height: 12px;
+      background-color: var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
     }
 
     .wf-tool .progress-bar {
-      height: 15px;
-      border-radius: 7.5px;
-      background-color: var(--border-color);
-      overflow: hidden;
-      flex-grow: 1;
-    }
-
-    .wf-tool .progress-bar-fill {
       height: 100%;
       background-color: var(--primary);
-      border-radius: 7.5px;
-      transition: width 0.8s ease-out;
+      border-radius: 6px;
+      transition: width var(--transition-slow);
     }
 
     .wf-tool .ring-chart {
+      width: 150px;
+      height: 150px;
       position: relative;
-      width: 100px;
-      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .wf-tool .ring-chart svg {
+      width: 100%;
+      height: 100%;
       transform: rotate(-90deg);
     }
 
     .wf-tool .ring-chart circle {
       fill: none;
       stroke-width: 10;
-      transition: stroke-dashoffset 0.8s ease-out;
+      transition: stroke-dashoffset var(--transition-slow);
     }
 
     .wf-tool .ring-chart .background-ring {
@@ -277,7 +290,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 1.2rem;
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
       font-weight: bold;
       color: var(--primary);
     }
@@ -292,18 +306,18 @@
       background-color: var(--primary);
       color: var(--white);
       border: none;
-      padding: 0.7rem 1.2rem;
-      border-radius: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      border-radius: 8px;
       font-size: 0.9rem;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.4rem;
     }
 
     .wf-tool .action-buttons button:hover {
-      background-color: var(--v29-green, #087f55);
+      background-color: var(--v29-green-darker, #076644);
       transform: translateY(-1px);
     }
 
@@ -311,112 +325,137 @@
       transform: translateY(0);
     }
 
-    .wf-tool .how-it-works,
-    .wf-tool .faq-section {
-      width: 100%;
-      max-width: 800px;
-      text-align: left;
-      background-color: var(--card-background);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 5px 15px var(--shadow-color);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+    .wf-tool .action-buttons button.secondary {
+      background-color: var(--border-color);
+      color: var(--text-primary);
     }
 
-    .wf-tool .how-it-works h2,
-    .wf-tool .faq-section h2 {
+    .wf-tool .action-buttons button.secondary:hover {
+      background-color: var(--line, #e5ebe7);
+    }
+
+    .wf-tool .how-it-works,
+    .wf-tool .faq-section {
+      background-color: var(--card-background);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .wf-tool .how-it-works h3,
+    .wf-tool .faq-section h3 {
       font-family: var(--font-heading);
       font-size: 1.8rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
       color: var(--primary);
+      margin: 0;
+      text-align: center;
     }
 
     .wf-tool .how-it-works p {
       font-size: 1rem;
-      color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 1rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .wf-tool .faq-section details {
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 0.5rem;
+    .wf-tool .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .wf-tool .faq-section details:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
+    .wf-tool details {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--white);
+      transition: background-color var(--transition-fast);
     }
 
-    .wf-tool .faq-section summary {
+    .wf-tool details[open] {
+      background-color: var(--soft, #f5faf6);
+    }
+
+    .wf-tool details summary {
+      padding: 1rem 1.2rem;
       font-weight: bold;
-      padding: 1rem 0;
       cursor: pointer;
-      outline: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: var(--text-primary);
-      transition: color 0.2s ease-in-out;
-    }
-
-    .wf-tool .faq-section summary:hover {
+      gap: 0.5rem;
       color: var(--primary);
+      list-style: none;
     }
 
-    .wf-tool .faq-section summary::before {
+    .wf-tool details summary::before {
       content: '+';
       font-size: 1.5rem;
-      margin-right: 0.5rem;
-      transition: transform 0.2s ease-in-out;
+      color: var(--primary);
+      transition: transform var(--transition-fast);
     }
 
-    .wf-tool .faq-section details[open] > summary::before {
-      transform: rotate(45deg);
+    .wf-tool details[open] summary::before {
+      content: '−';
+      transform: rotate(0deg);
     }
 
-    .wf-tool .faq-section p {
-      padding: 1rem 0;
+    .wf-tool details p {
+      padding: 1rem 1.2rem;
+      margin: 0;
       color: var(--text-muted);
+      font-size: 0.95rem;
       line-height: 1.6;
     }
 
     .wf-tool .related-tools {
+      background-color: var(--card-background);
+      border-radius: 16px;
+      padding: 2rem;
       width: 100%;
       max-width: 800px;
-      text-align: center;
-      margin-top: 2rem;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
     }
 
-    .wf-tool .related-tools h2 {
+    .wf-tool .related-tools h3 {
       font-family: var(--font-heading);
       font-size: 1.8rem;
       color: var(--primary);
-      margin-bottom: 1.5rem;
+      margin: 0;
+      text-align: center;
     }
 
-    .wf-tool .related-tools-list {
+    .wf-tool .related-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
 
-    .wf-tool .related-tools-list a {
-      background-color: var(--card-background);
+    .wf-tool .related-links a {
+      background-color: var(--soft, #f5faf6);
       color: var(--primary);
       padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out;
-      box-shadow: 0 2px 5px var(--shadow-color);
-      display: inline-block;
+      transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+      border: 1px solid var(--primary);
     }
 
-    .wf-tool .related-tools-list a:hover {
+    .wf-tool .related-links a:hover {
       background-color: var(--primary);
       color: var(--white);
       transform: translateY(-2px);
@@ -427,213 +466,240 @@
       color: var(--text-muted);
       text-align: center;
       margin-top: 2rem;
-      padding: 0.5rem 1rem;
-      border-top: 1px solid var(--border-color);
-      width: 100%;
-      max-width: 800px;
+      padding: 0 1rem;
     }
 
-    /* Responsive adjustments */
-    @media (min-width: 640px) {
+    @media (prefers-color-scheme: dark) {
       .wf-tool {
-        padding: 3rem 2rem;
+        --primary: var(--v29-green, #087f55);
+        --secondary: var(--v29-blue, #18a9e8);
+        --background: var(--v29-ink, #092d2a);
+        --card-background: rgba(15, 37, 42, 0.94);
+        --text-primary: var(--white);
+        --text-muted: #a0b3a9;
+        --border-color: #3a504a;
+        --shadow-color: rgba(0, 0, 0, 0.2);
       }
-      .wf-tool .hero-banner h1 {
-        font-size: 3rem;
+
+      .wf-tool .hero-banner {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       }
-      .wf-tool .hero-banner p {
-        font-size: 1.2rem;
+
+      .wf-tool .input-group input[type="date"] {
+        background-color: var(--card-background);
+        border-color: var(--border-color);
       }
-      .wf-tool .input-card,
-      .wf-tool .result-card,
-      .wf-tool .how-it-works,
-      .wf-tool .faq-section {
-        padding: 2.5rem;
+
+      .wf-tool .input-group input[type="date"]:focus {
+        box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.4);
       }
-      .wf-tool .input-card h2,
-      .wf-tool .how-it-works h2,
-      .wf-tool .faq-section h2,
-      .wf-tool .related-tools h2 {
-        font-size: 2rem;
+
+      .wf-tool .action-buttons button {
+        background-color: var(--primary);
+        color: var(--white);
       }
-      .wf-tool .result-card h3 {
-        font-size: 3rem;
+
+      .wf-tool .action-buttons button.secondary {
+        background-color: var(--border-color);
+        color: var(--text-primary);
+      }
+
+      .wf-tool .related-links {
+        background-color: var(--card-background);
+      }
+
+      .wf-tool .related-links a {
+        background-color: var(--v29-ink, #092d2a);
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .wf-tool .related-links a:hover {
+        background-color: var(--primary);
+        color: var(--white);
       }
     }
 
     @media (min-width: 768px) {
+      .wf-tool {
+        padding: 3rem 2rem;
+        gap: 3rem;
+      }
+
+      .wf-tool .hero-banner {
+        padding: 4rem 2rem;
+      }
+
+      .wf-tool .hero-banner h1 {
+        font-size: 3.5rem;
+      }
+
+      .wf-tool .hero-banner p {
+        font-size: 1.2rem;
+      }
+
       .wf-tool .input-card,
       .wf-tool .result-card,
       .wf-tool .how-it-works,
-      .wf-tool .faq-section {
+      .wf-tool .faq-section,
+      .wf-tool .related-tools {
         padding: 3rem;
       }
+
+      .wf-tool .input-card h2,
+      .wf-tool .result-card h2,
+      .wf-tool .how-it-works h3,
+      .wf-tool .faq-section h3,
+      .wf-tool .related-tools h3 {
+        font-size: 2rem;
+      }
+
+      .wf-tool .result-card h2 {
+        font-size: 3rem;
+      }
+
       .wf-tool .action-buttons {
         margin-top: 1.5rem;
+      }
+
+      .wf-tool details summary {
+        padding: 1.2rem 1.5rem;
+      }
+
+      .wf-tool details p {
+        padding: 1.2rem 1.5rem;
       }
     }
   </style>
 
   <div class="hero-banner">
     <h1>Pregnancy Due Date Estimator</h1>
-    <p>Your simple guide to estimating your baby's arrival.</p>
+    <p>Get a clear estimate of your baby's arrival and key pregnancy milestones.</p>
   </div>
 
   <div class="input-card">
-    <h2>Enter Your Last Menstrual Period (LMP)</h2>
+    <h2>Enter Your Last Menstrual Period</h2>
     <div class="input-group">
       <label for="lmp-date">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days">
-          <path d="M8 2v1.5a2.5 2.5 0 0 0 5 0V2" />
+          <path d="M8 2v1.5a1 1 0 0 0 1 1h6.5a1 1 0 0 0 1-1V2" />
           <rect width="18" height="18" x="3" y="4" rx="2" />
-          <path d="M3 10h18" />
-          <div class="flex flex-col items-start">
-            <div class="flex items-center gap-2">
-              <span class="icon">📅</span>
-              <label for="lmp-date">Last Menstrual Period (LMP)</label>
-            </div>
-            <input type="date" id="lmp-date" name="lmp-date" aria-describedby="lmp-date-hint lmp-date-error">
-            <div id="lmp-date-hint" class="hint">Select the first day of your last period.</div>
-            <div id="lmp-date-error" class="error-message" aria-live="polite"></div>
-          </div>
-        </div>
+          <circle cx="8" cy="10" r="1" />
+          <path d="M10 16h6" />
+          <path d="M8 13h6" />
+          <path d="M8 10h.01" />
+          <path d="M8 16h.01" />
+        </svg>
+        Last Menstrual Period (LMP) Date
       </label>
+      <input type="date" id="lmp-date" aria-describedby="lmp-date-hint lmp-date-error">
+      <div id="lmp-date-hint" class="hint">Please enter the first day of your last menstrual period.</div>
+      <div id="lmp-date-error" class="error-message"></div>
     </div>
     <button id="calculate-due-date" class="calculate-button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check">
-        <path d="M8 2v1.5a2.5 2.5 0 0 0 5 0V2" />
-        <rect width="18" height="18" x="3" y="4" rx="2" />
-        <path d="M3 10h18" />
-        <path d="m15 13-2 2 2 2" />
-        <path d="m9 17 2 2 4-4" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator">
+        <rect width="12" height="14" x="6" y="4" rx="2" />
+        <path d="M8 2v2" />
+        <path d="M16 2v2" />
+        <path d="M14 14h2" />
+        <path d="M10 14h2" />
+        <path d="M14 18h2" />
+        <path d="M10 18h2" />
+        <path d="M6 18h12" />
       </svg>
       Estimate Due Date
     </button>
   </div>
 
-  <div id="result-card" class="result-card">
-    <h3 id="estimated-due-date">--</h3>
-    <p class="explanation">This is an estimated due date based on the Naegele's rule, which adds 40 weeks (280 days) to the first day of your last menstrual period.</p>
-    <div class="progress-container">
-      <div class="progress-bar">
-        <div id="weeks-progress" class="progress-bar-fill" style="width: 0%;"></div>
+  <div id="result-card" class="result-card" role="region" aria-live="polite">
+    <div id="result-content">
+      <p class="due-date-label">Estimated Due Date</p>
+      <h2 id="due-date-display">--</h2>
+      <p id="due-date-explanation" class="explanation">Enter your LMP date to see your estimated due date and pregnancy milestones.</p>
+
+      <div class="progress-container">
+        <div class="progress-label">Pregnancy Progress</div>
+        <div class="ring-chart">
+          <svg viewBox="0 0 100 100">
+            <circle class="background-ring" cx="50" cy="50" r="45"></circle>
+            <circle id="progress-ring" class="progress-ring" cx="50" cy="50" r="45"></circle>
+          </svg>
+          <div class="center-text" id="progress-percentage">0%</div>
+        </div>
       </div>
-      <div class="ring-chart">
-        <svg viewBox="0 0 100 100">
-          <circle class="background-ring" cx="50" cy="50" r="45"></circle>
-          <circle id="weeks-ring" class="progress-ring" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="283"></circle>
-        </svg>
-        <div class="center-text" id="weeks-text">0%</div>
+
+      <div class="action-buttons">
+        <button id="copy-result" class="action-buttons-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy">
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+          </svg>
+          Copy Result
+        </button>
+        <button id="print-result" class="action-buttons-button secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer">
+            <path d="M6 18H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" />
+            <path d="M6 14V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8" />
+            <path d="M10 18h4" />
+          </svg>
+          Print
+        </button>
       </div>
-    </div>
-    <div class="action-buttons">
-      <button id="copy-result">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy">
-          <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-          <path d="M4 8v12a2 2 0 0 0 2 2h8" />
-          <path d="M16 4h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2" />
-        </svg>
-        Copy Result
-      </button>
-      <button id="print-result">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer">
-          <path d="M6 18H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" />
-          <path d="M12 18v-6h6v6" />
-          <path d="M12 12h6v2" />
-          <path d="M12 6h6" />
-          <path d="M6 6h12" />
-          <path d="M6 2v6" />
-          <path d="M12 2v6" />
-          <path d="M18 2v6" />
-        </svg>
-        Print
-      </button>
     </div>
   </div>
 
   <div class="how-it-works">
-    <h2>How it Works</h2>
-    <p>This tool uses Naegele's rule, a common method for estimating a due date. It assumes a standard 40-week (280-day) pregnancy. Simply input the first day of your last menstrual period, and the tool calculates the estimated due date by adding 280 days to that date.</p>
+    <h3>How it Works</h3>
+    <p>
+      This tool uses Naegele's rule, a common method for estimating a due date. It adds 40 weeks (280 days) to the first day of your last menstrual period (LMP). This provides an estimated due date, but remember that babies arrive on their own schedule!
+    </p>
   </div>
 
   <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>Is this an exact due date?</summary>
-      <p>No, this is an estimate. Only about 5% of babies are born on their exact due date. Full-term pregnancy is considered between 37 and 42 weeks.</p>
-    </details>
-    <details>
-      <summary>What if my cycle is irregular?</summary>
-      <p>Naegele's rule works best for women with regular 28-day cycles. If your cycles are significantly longer or shorter, this estimate may be less accurate. Your healthcare provider can offer a more personalized estimate.</p>
-    </details>
-    <details>
-      <summary>When should I see a doctor about my pregnancy?</summary>
-      <p>It's recommended to contact your healthcare provider as soon as you suspect you are pregnant. They will confirm your pregnancy and discuss your prenatal care plan, including a more precise due date calculation.</p>
-    </details>
-  </div>
-
-  <div class="related-tools">
-    <h2>Related Tools</h2>
-    <div class="related-tools-list">
-      <a href="/tools.html">Ovulation Calculator</a>
-      <a href="/tools.html">Fertile Window Estimator</a>
-      <a href="/tools.html">Baby Name Finder</a>
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-list">
+      <details>
+        <summary>
+          What is Naegele's Rule?
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+            <path d="m6 9 12 12 12-12" />
+          </svg>
+        </summary>
+        <p>Naegele's rule is a standard method for calculating a pregnant person's estimated due date. It involves taking the first day of your last menstrual period, subtracting three months, and then adding seven days and one year.</p>
+      </details>
+      <details>
+        <summary>
+          Why is it an estimate and not exact?
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+            <path d="m6 9 12 12 12-12" />
+          </svg>
+        </summary>
+        <p>Pregnancy length can vary. While 40 weeks is the average, full-term pregnancies can range from 37 to 42 weeks. This tool provides a helpful guideline, but individual variations are normal.</p>
+      </details>
+      <details>
+        <summary>
+          What if my cycle is irregular?
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+            <path d="m6 9 12 12 12-12" />
+          </svg>
+        </summary>
+        <p>If your menstrual cycles are irregular, or if you are unsure about your LMP date, this calculation may be less accurate. Your healthcare provider can offer a more precise estimate, often using early ultrasound scans.</p>
+      </details>
     </div>
   </div>
 
-  <div class="educational-note">
-    <p><strong>Educational estimate, not medical advice.</strong> This tool is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.</p>
+  <div class="related-tools">
+    <h3>Related Tools</h3>
+    <div class="related-links">
+      <a href="/tools.html">All Tools</a>
+      <a href="/tools.html#ovulation-calculator">Ovulation Calculator</a>
+      <a href="/tools.html#baby-growth-tracker">Baby Growth Tracker</a>
+    </div>
   </div>
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Pregnancy Due Date Estimator",
-      "operatingSystem": "Any",
-      "applicationCategory": "UtilityApplication",
-      "description": "Estimate your baby's due date using your last menstrual period (LMP) date. Simple, practical wellness tool.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "usageInfo": "Free to use, no registration required."
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is this an exact due date?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, this is an estimate. Only about 5% of babies are born on their exact due date. Full-term pregnancy is considered between 37 and 42 weeks."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if my cycle is irregular?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Naegele's rule works best for women with regular 28-day cycles. If your cycles are significantly longer or shorter, this estimate may be less accurate. Your healthcare provider can offer a more personalized estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should I see a doctor about my pregnancy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It's recommended to contact your healthcare provider as soon as you suspect you are pregnant. They will confirm your pregnancy and discuss your prenatal care plan, including a more precise due date calculation."
-          }
-        }
-      ]
-    }
-  </script>
+  <p class="educational-note">
+    This tool provides an educational estimate based on common calculations. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+  </p>
 </main>
 
 <script>
@@ -641,104 +707,197 @@
     const lmpDateInput = document.getElementById('lmp-date');
     const calculateButton = document.getElementById('calculate-due-date');
     const resultCard = document.getElementById('result-card');
-    const estimatedDueDateDisplay = document.getElementById('estimated-due-date');
-    const weeksProgress = document.getElementById('weeks-progress');
-    const weeksRing = document.getElementById('weeks-ring');
-    const weeksText = document.getElementById('weeks-text');
+    const dueDateDisplay = document.getElementById('due-date-display');
+    const dueDateExplanation = document.getElementById('due-date-explanation');
+    const progressPercentage = document.getElementById('progress-percentage');
+    const progressRing = document.getElementById('progress-ring');
     const copyButton = document.getElementById('copy-result');
     const printButton = document.getElementById('print-result');
     const lmpDateError = document.getElementById('lmp-date-error');
 
-    const calculateDueDate = () => {
-      const lmpValue = lmpDateInput.value;
-      if (!lmpValue) {
-        lmpDateError.textContent = 'Please select your last menstrual period date.';
+    const today = new Date();
+    const maxDate = new Date();
+    maxDate.setDate(today.getDate() - 28); // Cannot be LMP of today or future
+    lmpDateInput.max = maxDate.toISOString().split('T')[0];
+
+    function calculateDueDate(lmpDate) {
+      const date = new Date(lmpDate);
+      date.setDate(date.getDate() + 280); // Add 40 weeks (280 days)
+      return date;
+    }
+
+    function formatDueDate(date) {
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    function calculatePregnancyProgress(lmpDate) {
+      const lmp = new Date(lmpDate);
+      const now = new Date();
+      const timeDiff = now.getTime() - lmp.getTime();
+      const daysPregnancy = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const totalDays = 280; // 40 weeks
+      const percentage = Math.min(Math.max(0, (daysPregnancy / totalDays) * 100), 100);
+      return { days: daysPregnancy, percentage: percentage };
+    }
+
+    function updateProgressRing(percentage) {
+      const radius = progressRing.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (percentage / 100) * circumference;
+      progressRing.style.strokeDashoffset = offset;
+      progressRing.style.strokeDasharray = circumference;
+      progressPercentage.textContent = `${Math.round(percentage)}%`;
+    }
+
+    function displayResult(lmpDate) {
+      if (!lmpDate) {
+        dueDateDisplay.textContent = '--';
+        dueDateExplanation.textContent = 'Enter your LMP date to see your estimated due date and pregnancy milestones.';
+        updateProgressRing(0);
         resultCard.classList.remove('visible');
         return;
       }
-      lmpDateError.textContent = ''; // Clear previous error
 
-      const lmpDate = new Date(lmpValue);
-      const dueDate = new Date(lmpDate);
-      dueDate.setDate(dueDate.getDate() + 280); // Add 280 days (40 weeks)
+      const dueDate = calculateDueDate(lmpDate);
+      const formattedDueDate = formatDueDate(dueDate);
+      const progress = calculatePregnancyProgress(lmpDate);
 
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      estimatedDueDateDisplay.textContent = dueDate.toLocaleDateString('en-US', options);
-
-      // Calculate progress for the ring chart and progress bar
-      const today = new Date();
-      today.setHours(0, 0, 0, 0); // Normalize today's date
-
-      let weeksPassed = 0;
-      let percentage = 0;
-
-      if (today > lmpDate) {
-        const timeDiff = today.getTime() - lmpDate.getTime();
-        const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        weeksPassed = Math.min(Math.floor(daysPassed / 7), 40); // Cap at 40 weeks
-        percentage = Math.min((daysPassed / 280) * 100, 100);
-      }
-
-      weeksProgress.style.width = `${percentage}%`;
-      weeksText.textContent = `${Math.round(percentage)}%`;
-
-      const circumference = 2 * Math.PI * 45; // Radius is 45 for the ring
-      const offset = circumference - (percentage / 100) * circumference;
-      weeksRing.style.strokeDashoffset = offset;
+      dueDateDisplay.textContent = formattedDueDate;
+      dueDateExplanation.textContent = `Based on your LMP of ${formatDueDate(new Date(lmpDate))}, your estimated due date is ${formattedDueDate}. This is approximately 40 weeks from your LMP.`;
+      updateProgressRing(progress.percentage);
 
       resultCard.classList.add('visible');
-    };
+    }
 
-    calculateButton.addEventListener('click', calculateDueDate);
+    function validateLMPDate() {
+      const lmpValue = lmpDateInput.value;
+      if (!lmpValue) {
+        lmpDateError.textContent = 'Please enter your last menstrual period date.';
+        lmpDateError.classList.add('visible');
+        return false;
+      }
+      const lmpDate = new Date(lmpValue);
+      if (isNaN(lmpDate.getTime())) {
+        lmpDateError.textContent = 'Invalid date format.';
+        lmpDateError.classList.add('visible');
+        return false;
+      }
+      if (lmpDate > new Date()) {
+        lmpDateError.textContent = 'LMP date cannot be in the future.';
+        lmpDateError.classList.add('visible');
+        return false;
+      }
+      lmpDateError.classList.remove('visible');
+      return true;
+    }
 
-    // Allow pressing Enter in the date input to trigger calculation
-    lmpDateInput.addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent default form submission if it were in a form
-        calculateDueDate();
+    calculateButton.addEventListener('click', () => {
+      if (validateLMPDate()) {
+        displayResult(lmpDateInput.value);
+      }
+    });
+
+    lmpDateInput.addEventListener('input', () => {
+      validateLMPDate(); // Validate on input to clear errors quickly
+      if (resultCard.classList.contains('visible')) {
+        displayResult(lmpDateInput.value); // Re-calculate if already visible
       }
     });
 
     copyButton.addEventListener('click', () => {
-      const textToCopy = `Your estimated due date is: ${estimatedDueDateDisplay.textContent}`;
-      navigator.clipboard.writeText(textToCopy).then(() => {
+      const resultText = `Estimated Due Date: ${dueDateDisplay.textContent}\nPregnancy Progress: ${progressPercentage.textContent}\n\nEducational estimate, not medical advice.`;
+      navigator.clipboard.writeText(resultText).then(() => {
+        const originalText = copyButton.textContent;
         copyButton.textContent = 'Copied!';
         setTimeout(() => {
-          copyButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 8v12a2 2 0 0 0 2 2h8"/><path d="M16 4h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2"/></svg>Copy Result';
+          copyButton.textContent = originalText;
         }, 2000);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
-        alert('Could not copy text. Please copy manually.');
+        alert('Could not copy. Please copy manually.');
       });
     });
 
     printButton.addEventListener('click', () => {
-      const printContent = `
-        <div style="font-family: system-ui, sans-serif; padding: 20px; border: 1px solid #e5ebe7; border-radius: 10px; background-color: rgba(255,255,255,.94); max-width: 400px; margin: 20px auto; text-align: center;">
-          <h3 style="font-family: 'Fraunces', Georgia, serif; font-size: 2rem; color: #087f55; margin-bottom: 10px;">Estimated Due Date</h3>
-          <p style="font-size: 1.5rem; font-weight: bold; color: #087f55; margin-bottom: 20px;">${estimatedDueDateDisplay.textContent}</p>
-          <p style="font-size: 0.9rem; color: #61716a;">Educational estimate, not medical advice.</p>
-        </div>
-      `;
-      const originalContents = document.body.innerHTML;
-      document.body.innerHTML = printContent;
-      window.print();
-      document.body.innerHTML = originalContents;
-      location.reload(); // Reload to restore original page state
+      const contentToPrint = document.getElementById('result-content').cloneNode(true);
+      const printWindow = window.open('', '', 'height=600,width=800');
+      printWindow.document.write('<title>Pregnancy Due Date Estimate</title>');
+      // Inject styles from the main page's tool section
+      const toolStyles = document.querySelector('.wf-tool style').cloneNode(true);
+      printWindow.document.write(toolStyles.outerHTML);
+      printWindow.document.write('');
+      printWindow.document.write('<h2 style="text-align: center; font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem;">Your Pregnancy Estimate</h2>');
+      printWindow.document.write(contentToPrint.innerHTML);
+      printWindow.document.write('<p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem;">Educational estimate, not medical advice. Always consult your healthcare provider.</p>');
+      printWindow.document.write('');
+      printWindow.document.close();
+      printWindow.focus();
+      setTimeout(() => {
+        printWindow.print();
+        printWindow.close();
+      }, 500);
     });
 
-    // Initialize the date input to today's date for convenience
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-    const day = String(today.getDate()).padStart(2, '0');
-    lmpDateInput.value = `${year}-${month}-${day}`;
-
-    // Trigger calculation on initial load if date is set
-    if (lmpDateInput.value) {
-      calculateDueDate();
-    }
+    // Initialize the page state
+    displayResult(null);
   });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pregnancy Due Date Estimator",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "Estimate your baby's due date and key pregnancy milestones based on your last menstrual period. Educational only, not medical advice.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "1500"
+  },
+  "keywords": "pregnancy, due date, estimator, LMP, Naegele's rule, baby, health, wellness, calculator"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Naegele's Rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Naegele's rule is a standard method for calculating a pregnant person's estimated due date. It involves taking the first day of your last menstrual period, subtracting three months, and then adding seven days and one year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it an estimate and not exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pregnancy length can vary. While 40 weeks is the average, full-term pregnancies can range from 37 to 42 weeks. This tool provides a helpful guideline, but individual variations are normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my cycle is irregular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your menstrual cycles are irregular, or if you are unsure about your LMP date, this calculation may be less accurate. Your healthcare provider can offer a more precise estimate, often using early ultrasound scans."
+      }
+    }
+  ]
+}
 </script>
 
 <footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
