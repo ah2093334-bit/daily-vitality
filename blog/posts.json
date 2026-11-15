@@ -1,13 +1,31 @@
 [
   {
+    "slug": "why-healthcare-should-be-free-vitality-perspective",
+    "title": "Why Healthcare Should Be Free: A Vitality Perspective",
+    "date": "2026-11-15",
+    "excerpt": "Many argue that healthcare should be free, driven by the belief that access to medical care is a fundamental human right and a cornerstone of a healthy society.",
+    "keyword": "why healthcare should be free",
+    "image": "/blog/img/why-healthcare-should-be-free-vitality-perspective-1.jpg",
+    "category": "DAILY ROUTINES & HABITS",
+    "pinned": true
+  },
+  {
+    "slug": "why-health-insurance-so-expensive",
+    "title": "Why Health Insurance So Expensive: Your US Guide",
+    "date": "2026-11-15",
+    "excerpt": "Understanding why health insurance costs so much in the US involves looking at the complex interplay of healthcare prices, administrative overhead, and market dynamics.",
+    "keyword": "why health insurance so expensive",
+    "image": "/blog/img/why-health-insurance-so-expensive-1.jpg",
+    "category": "DAILY ROUTINES & HABITS"
+  },
+  {
     "slug": "how-to-sleep-with-a-stuffy-nose",
     "title": "Stuffy Nose? Sleep Better Tonight With These Tips",
     "date": "2026-11-14",
     "excerpt": "Struggling to sleep with a blocked nose is frustrating, but simple strategies can help you breathe easier and achieve restful sleep.",
     "keyword": "how to sleep with a stuffy nose",
     "image": "/blog/img/how-to-sleep-with-a-stuffy-nose-1.jpg",
-    "category": "SLEEP & RECOVERY",
-    "pinned": true
+    "category": "SLEEP & RECOVERY"
   },
   {
     "slug": "how-to-sleep-train-a-baby",
