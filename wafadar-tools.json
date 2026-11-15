@@ -1,7 +1,7 @@
 [
  {
-  "slug": "sleep-aid-finder",
-  "title": "Sleep Aid Finder",
+  "slug": "sleep-position-advisor",
+  "title": "Sleep Position Advisor",
   "date": "2026-11-14"
  },
  {
@@ -10,34 +10,14 @@
   "date": "2026-11-14"
  },
  {
-  "slug": "sciatica-sleep-position-guide",
-  "title": "Sciatica Sleep Position Guide",
+  "slug": "fast-sleep-technique-selector",
+  "title": "Fast Sleep Technique Selector",
   "date": "2026-11-14"
  },
  {
-  "slug": "baby-sleep-training-stage-guide",
-  "title": "Baby Sleep Training Stage Guide",
+  "slug": "better-sleep-environment-checker",
+  "title": "Better Sleep Environment Checker",
   "date": "2026-11-14"
- },
- {
-  "slug": "habit-tracker-weekly-progress",
-  "title": "Habit Tracker: Weekly Progress & Streak Visualizer",
-  "date": "2026-11-13"
- },
- {
-  "slug": "nutritional-yeast-recipe-generator",
-  "title": "Nutritional Yeast: Recipe & Usage Idea Generator",
-  "date": "2026-11-13"
- },
- {
-  "slug": "meal-prep-planner-weekly",
-  "title": "Meal Prep Planner: Weekly Ingredient & Time Saver",
-  "date": "2026-11-13"
- },
- {
-  "slug": "sleep-quality-score-assessor",
-  "title": "Sleep Quality Score: Evening Routine Impact Assessor",
-  "date": "2026-11-13"
  },
  {
   "slug": "hair-health-nutrient-checker",
