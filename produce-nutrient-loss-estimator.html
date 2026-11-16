@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Produce Nutrient Loss Estimator</title>
-<meta name="description" content="Estimate potential nutrient loss in fruits and vegetables based on storage method and time, with best-practice tips.">
+<meta name="description" content="Estimate potential nutrient degradation in fruits/vegetables based on storage method and time. Get tips to preserve nutritional value.">
 <link rel="canonical" href="https://dailyvitality.xyz/produce-nutrient-loss-estimator.html">
 <meta property="og:title" content="Produce Nutrient Loss Estimator">
-<meta property="og:description" content="Estimate potential nutrient loss in fruits and vegetables based on storage method and time, with best-practice tips.">
+<meta property="og:description" content="Estimate potential nutrient degradation in fruits/vegetables based on storage method and time. Get tips to preserve nutritional value.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dailyvitality.xyz/produce-nutrient-loss-estimator.html">
 <link rel="icon" href="/daily-vitality-icon.png">
@@ -30,37 +30,35 @@
 <div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Produce Nutrient Loss Estimator"><defs><linearGradient id="a1ayc1crb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset=".55" stop-color="#6d28d9"/><stop offset="1" stop-color="#a78bfa"/></linearGradient><radialGradient id="a1ayc1crr" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a1ayc1crf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a1ayc1crp" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a1ayc1crb)"/><rect width="1200" height="675" fill="url(#a1ayc1crp)"/><rect width="1200" height="675" fill="url(#a1ayc1crr)"/><g filter="url(#a1ayc1crf)"><circle cx="247" cy="120" r="170" fill="#a78bfa" opacity=".55"/><circle cx="927" cy="560" r="210" fill="#1e1b4b" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="997" cy="595" r="6" fill="#fff" opacity="0.16"/><circle cx="956" cy="346" r="4" fill="#fff" opacity="0.24"/><circle cx="915" cy="97" r="5" fill="#fff" opacity="0.32"/><circle cx="874" cy="448" r="6" fill="#fff" opacity="0.16"/><circle cx="833" cy="199" r="4" fill="#fff" opacity="0.24"/><circle cx="792" cy="550" r="5" fill="#fff" opacity="0.32"/><circle cx="751" cy="301" r="6" fill="#fff" opacity="0.16"/><circle cx="710" cy="52" r="6" fill="#fff" opacity="0.24"/><circle cx="669" cy="403" r="6" fill="#fff" opacity="0.32"/><circle cx="628" cy="154" r="4" fill="#fff" opacity="0.16"/><circle cx="587" cy="505" r="5" fill="#fff" opacity="0.24"/><circle cx="546" cy="256" r="4" fill="#fff" opacity="0.32"/><circle cx="505" cy="607" r="5" fill="#fff" opacity="0.16"/><circle cx="464" cy="358" r="6" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M50 8l10 30 30 12-30 12-10 30-10-30-30-12 30-12z"/></g></g><text x="600" y="367" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Produce Nutrient Loss</text><text x="600" y="423" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Estimator</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
 <main class="wf-tool">
   <style>
-    /* Scoped styles for the Produce Nutrient Loss Estimator tool */
+    /* Scoped styles for .wf-tool */
     .wf-tool {
       --primary: var(--v29-green, #087f55);
       --secondary: var(--v29-blue, #18a9e8);
+      --accent: var(--v29-cyan, #6df7ff);
       --text-color: var(--v29-ink, #092d2a);
       --muted-text: var(--muted, #61716a);
       --background-soft: var(--soft, #f5faf6);
       --card-background: var(--v29-card, rgba(255,255,255,.94));
       --border-color: var(--v29-line, #d8ebe5);
       --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --radius: 1.5rem;
-      --spacing-lg: 2rem;
-      --spacing-md: 1.5rem;
-      --spacing-sm: 1rem;
-      --font-family: sans-serif; /* Default, will be overridden by site */
-      --heading-font: var(--serif, 'Fraunces', Georgia, serif);
+      --border-radius-lg: 1.5rem;
+      --border-radius-md: 0.75rem;
+      --font-body: sans-serif; /* Assuming site provides a sans-serif */
+      --font-heading: var(--serif, 'Fraunces', Georgia, serif);
 
-      font-family: var(--font-family);
+      font-family: var(--font-body);
       color: var(--text-color);
       line-height: 1.6;
-      max-width: 1000px;
+      padding: 1.5rem 0; /* Adjust padding as needed for site integration */
+      max-width: 1200px;
       margin: 0 auto;
-      padding: var(--spacing-md);
-      box-sizing: border-box;
     }
 
-    /* Dark Mode Adjustments */
+    /* Dark mode adjustments */
     @media (prefers-color-scheme: dark) {
       .wf-tool {
-        --text-color: var(--soft, #f5faf6);
-        --muted-text: var(--line, #e5ebe7);
+        --text-color: var(--white, #fff);
+        --muted-text: #a0b0a8;
         --background-soft: var(--forest, #123629);
         --card-background: var(--ink, #10251c);
         --border-color: var(--forest, #123629);
@@ -73,54 +71,71 @@
     }
 
     .wf-tool h1, .wf-tool h2, .wf-tool h3 {
-      font-family: var(--heading-font);
+      font-family: var(--font-heading);
       color: var(--text-color);
       margin-top: 0;
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: 1rem;
     }
 
+    .wf-tool h1 { font-size: 2.5rem; line-height: 1.2; }
+    .wf-tool h2 { font-size: 2rem; line-height: 1.3; }
+    .wf-tool h3 { font-size: 1.5rem; line-height: 1.4; }
+
+    .wf-tool p {
+      margin-bottom: 1rem;
+    }
+
+    .wf-tool .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Banner */
     .wf-tool .hero-banner {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: var(--white, #fff);
-      padding: var(--spacing-lg) var(--spacing-md);
-      border-radius: var(--radius);
+      padding: 4rem 1rem;
       text-align: center;
-      margin-bottom: var(--spacing-lg);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 2rem;
       box-shadow: var(--shadow);
     }
 
     .wf-tool .hero-banner h1 {
       color: var(--white, #fff);
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
     .wf-tool .hero-banner p {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       max-width: 700px;
       margin: 0 auto;
       opacity: 0.9;
     }
 
+    /* Card Styling */
     .wf-tool .card {
       background-color: var(--card-background);
-      border-radius: var(--radius);
-      padding: var(--spacing-lg);
-      margin-bottom: var(--spacing-lg);
+      border-radius: var(--border-radius-lg);
+      padding: 2.5rem;
       box-shadow: var(--shadow);
+      margin-bottom: 2rem;
       border: 1px solid var(--border-color);
     }
 
-    .wf-tool .input-group {
-      margin-bottom: var(--spacing-md);
+    /* Form Controls */
+    .wf-tool .form-group {
+      margin-bottom: 1.5rem;
     }
 
     .wf-tool label {
       display: block;
       font-weight: bold;
-      margin-bottom: 0.5rem;
-      color: var(--text-color);
+      margin-bottom: 0.75rem;
       font-size: 1.1rem;
+      color: var(--text-color);
     }
 
     .wf-tool select,
@@ -128,19 +143,25 @@
       width: 100%;
       padding: 0.8rem 1rem;
       border: 1px solid var(--border-color);
-      border-radius: 0.75rem;
+      border-radius: var(--border-radius-md);
       font-size: 1rem;
       background-color: var(--white, #fff);
       color: var(--text-color);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      appearance: none; /* Remove default arrow */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2361716a'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1.25rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     @media (prefers-color-scheme: dark) {
       .wf-tool select,
       .wf-tool input[type="number"] {
         background-color: var(--ink, #10251c);
-        color: var(--soft, #f5faf6);
         border-color: var(--forest, #123629);
+        color: var(--white, #fff);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0b0a8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
       }
     }
 
@@ -151,261 +172,327 @@
       outline: none;
     }
 
-    .wf-tool .hint {
+    .wf-tool .help-text {
       font-size: 0.9rem;
       color: var(--muted-text);
-      margin-top: 0.4rem;
+      margin-top: 0.5rem;
       display: block;
     }
 
+    .wf-tool .input-icon {
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      font-size: 1.2em; /* Adjust emoji size */
+    }
+
     .wf-tool button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.8rem;
       background-color: var(--primary);
       color: var(--white, #fff);
-      padding: 1rem 1.5rem;
       border: none;
-      border-radius: 0.75rem;
+      border-radius: var(--border-radius-md);
       font-size: 1.1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      margin-top: 1rem;
     }
 
     .wf-tool button:hover {
-      background-color: color-mix(in srgb, var(--primary) 90%, black);
-      transform: translateY(-2px);
+      background-color: color-mix(in srgb, var(--primary) 85%, black);
+      transform: translateY(-1px);
     }
 
     .wf-tool button:active {
       transform: translateY(0);
     }
 
-    .wf-tool .result-card {
+    .wf-tool button svg {
+      margin-right: 0.5rem;
+    }
+
+    /* Result Card */
+    .wf-tool #result-card {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
       transition: opacity 0.5s ease-out, max-height 0.7s ease-out;
-      padding: 0 var(--spacing-lg); /* Padding controlled by JS for transition */
-      margin-bottom: 0; /* Margin controlled by JS for transition */
+      padding-top: 0; /* Initially no padding */
+      padding-bottom: 0;
     }
 
-    .wf-tool .result-card.show {
+    .wf-tool #result-card.show {
       opacity: 1;
-      max-height: 1000px; /* Sufficiently large to show content */
-      padding: var(--spacing-lg);
-      margin-bottom: var(--spacing-lg);
+      max-height: 1000px; /* A value large enough to contain content */
+      padding-top: 2.5rem; /* Restore padding */
+      padding-bottom: 2.5rem;
     }
 
-    .wf-tool .result-card h2 {
+    .wf-tool #result-card h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
       color: var(--primary);
-      font-size: 2rem;
-      margin-bottom: var(--spacing-sm);
     }
 
-    .wf-tool .result-value {
-      font-size: 3rem;
+    .wf-tool .result-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .wf-tool .result-summary .big-number {
+      font-size: 4rem;
+      font-weight: bold;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .wf-tool .result-summary .verdict {
+      font-size: 1.5rem;
       font-weight: bold;
       color: var(--text-color);
-      margin-bottom: var(--spacing-sm);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
-    .wf-tool .result-value svg {
-      width: 3rem;
-      height: 3rem;
-      color: var(--primary);
+    .wf-tool .result-explanation {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .wf-tool .progress-container {
       display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-      margin-top: var(--spacing-md);
-      margin-bottom: var(--spacing-md);
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
-    .wf-tool .progress-bar {
-      flex-grow: 1;
-      height: 1.2rem;
-      background-color: var(--border-color);
-      border-radius: 0.6rem;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .wf-tool .progress-fill {
-      height: 100%;
-      background-color: var(--primary);
-      width: 0%;
-      border-radius: 0.6rem;
-      transition: width 1s ease-out;
+    .wf-tool .progress-item {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      padding-right: 0.5rem;
-      color: var(--white, #fff);
-      font-weight: bold;
-      font-size: 0.9rem;
+      gap: 1rem;
     }
 
     .wf-tool .progress-label {
-      min-width: 4rem;
-      text-align: right;
       font-weight: bold;
-      color: var(--text-color);
+      min-width: 120px;
+    }
+
+    .wf-tool .progress-bar-wrapper {
+      flex-grow: 1;
+      height: 1rem;
+      background-color: var(--border-color);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+    }
+
+    .wf-tool .progress-bar {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: var(--border-radius-md);
+      width: 0%;
+      transition: width 1s ease-out;
+    }
+
+    .wf-tool .progress-value {
+      font-weight: bold;
+      min-width: 50px;
+      text-align: right;
     }
 
     .wf-tool .result-actions {
       display: flex;
-      gap: var(--spacing-sm);
-      margin-top: var(--spacing-md);
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .wf-tool .result-actions button {
-      flex: 1;
+      margin-top: 0;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .wf-tool .result-actions button.secondary {
       background-color: var(--muted-text);
     }
 
-    .wf-tool .result-actions button:hover {
-      background-color: color-mix(in srgb, var(--muted-text) 90%, black);
+    .wf-tool .result-actions button.secondary:hover {
+      background-color: color-mix(in srgb, var(--muted-text) 85%, black);
     }
 
-    .wf-tool .result-actions button.primary-action {
-      background-color: var(--primary);
-    }
-
-    .wf-tool .result-actions button.primary-action:hover {
-      background-color: color-mix(in srgb, var(--primary) 90%, black);
-    }
-
+    /* Educational Note */
     .wf-tool .educational-note {
       font-size: 0.9rem;
       color: var(--muted-text);
-      margin-top: var(--spacing-md);
       text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px dashed var(--border-color);
     }
 
-    .wf-tool .how-it-works h2,
-    .wf-tool .faq h2 {
+    /* How it Works & FAQ */
+    .wf-tool .section-title {
       text-align: center;
-      margin-bottom: var(--spacing-md);
-      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: var(--text-color);
+    }
+
+    .wf-tool .how-it-works {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: var(--card-background);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .wf-tool .faq-item {
+      margin-bottom: 1rem;
     }
 
     .wf-tool details {
       background-color: var(--card-background);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      margin-bottom: var(--spacing-sm);
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
+      border-radius: var(--border-radius-md);
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
     }
 
     .wf-tool details[open] {
-      background-color: var(--background-soft);
-      border-color: var(--primary);
+      box-shadow: var(--shadow);
     }
 
     .wf-tool summary {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: var(--spacing-sm) var(--spacing-md);
+      padding: 1rem 1.5rem;
       font-weight: bold;
       cursor: pointer;
+      outline: none;
       color: var(--text-color);
-      list-style: none; /* Remove default marker */
-      font-size: 1.1rem;
+      position: relative;
     }
 
-    .wf-tool summary::-webkit-details-marker {
-      display: none; /* Remove default marker for Webkit */
+    .wf-tool summary::marker {
+      display: none;
     }
 
     .wf-tool summary::after {
       content: '▼';
       font-size: 0.8em;
-      transition: transform 0.3s ease;
+      margin-left: auto;
+      transition: transform 0.2s ease;
     }
 
     .wf-tool details[open] summary::after {
       transform: rotate(180deg);
     }
 
-    .wf-tool .details-content {
-      padding: 0 var(--spacing-md) var(--spacing-md);
+    .wf-tool .faq-content {
+      padding: 0.5rem 1.5rem 1.5rem;
+      border-top: 1px solid var(--border-color);
       color: var(--muted-text);
     }
 
+    /* Related Tools */
     .wf-tool .related-tools {
       text-align: center;
-      margin-top: var(--spacing-lg);
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background-color: var(--background-soft);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--border-color);
     }
 
-    .wf-tool .related-tools h2 {
-      margin-bottom: var(--spacing-md);
+    .wf-tool .related-tools h3 {
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
     }
 
-    .wf-tool .related-tools a {
+    .wf-tool .related-tools-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .wf-tool .related-tool-link {
       display: inline-block;
-      background-color: var(--primary);
-      color: var(--white, #fff);
+      background-color: var(--card-background);
+      color: var(--primary);
       padding: 0.8rem 1.5rem;
-      border-radius: 0.75rem;
+      border-radius: var(--border-radius-md);
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .wf-tool .related-tools a:hover {
-      background-color: color-mix(in srgb, var(--primary) 90%, black);
+    .wf-tool .related-tool-link:hover {
+      background-color: var(--primary);
+      color: var(--white, #fff);
       transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .wf-tool .error-message {
-      color: #d32f2f; /* A standard error red */
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      display: none; /* Hidden by default */
-    }
-
-    .wf-tool .input-group.error input,
-    .wf-tool .input-group.error select {
-      border-color: #d32f2f;
-    }
-
-    .wf-tool .input-group.error .error-message {
-      display: block;
-    }
-
-    /* Responsive adjustments */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
+      .wf-tool .hero-banner {
+        padding: 3rem 1rem;
+      }
       .wf-tool .hero-banner h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       .wf-tool .hero-banner p {
         font-size: 1rem;
       }
-      .wf-tool .result-value {
-        font-size: 2.5rem;
+      .wf-tool .card {
+        padding: 1.5rem;
+      }
+      .wf-tool h1 { font-size: 2rem; }
+      .wf-tool h2 { font-size: 1.7rem; }
+      .wf-tool h3 { font-size: 1.3rem; }
+      .wf-tool .result-summary .big-number {
+        font-size: 3rem;
+      }
+      .wf-tool .result-summary .verdict {
+        font-size: 1.2rem;
+      }
+      .wf-tool .result-explanation {
+        font-size: 1rem;
+      }
+      .wf-tool .progress-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .wf-tool .progress-label {
+        width: 100%;
+        text-align: left;
+      }
+      .wf-tool .progress-value {
+        width: 100%;
+        text-align: left;
       }
       .wf-tool .result-actions {
         flex-direction: column;
       }
-      .wf-tool .card {
-        padding: var(--spacing-md);
-      }
-      .wf-tool summary {
-        padding: var(--spacing-sm);
-        font-size: 1rem;
-      }
-      .wf-tool .details-content {
-        padding: 0 var(--spacing-sm) var(--spacing-sm);
+      .wf-tool .result-actions button {
+        width: 100%;
       }
     }
 
@@ -416,441 +503,482 @@
       .wf-tool .hero-banner p {
         font-size: 0.9rem;
       }
-      .wf-tool .result-value {
-        font-size: 2rem;
+      .wf-tool .card {
+        padding: 1rem;
+      }
+      .wf-tool label {
+        font-size: 1rem;
+      }
+      .wf-tool select,
+      .wf-tool input[type="number"] {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
       }
       .wf-tool button {
-        padding: 0.8rem 1rem;
+        padding: 0.7rem 1.2rem;
         font-size: 1rem;
       }
     }
   </style>
 
-  <div class="hero-banner">
-    <h1>Produce Nutrient Loss Estimator</h1>
-    <p>Discover how storage choices impact the nutritional value of your fruits and vegetables and learn best practices.</p>
-  </div>
-
-  <div class="card input-card">
-    <h2>Your Storage Choices</h2>
-    <form id="nutrientLossForm">
-      <div class="input-group">
-        <label for="produceSelect">
-          <span role="img" aria-label="fruit and vegetable icon">🍎🥦</span> Select Fruit/Vegetable:
-        </label>
-        <select id="produceSelect" name="produce" required aria-describedby="produceHint">
-          <option value="">-- Choose one --</option>
-          <option value="spinach">Spinach</option>
-          <option value="broccoli">Broccoli</option>
-          <option value="apples">Apples</option>
-          <option value="carrots">Carrots</option>
-          <option value="tomatoes">Tomatoes</option>
-          <option value="strawberries">Strawberries</option>
-          <option value="potatoes">Potatoes</option>
-          <option value="bananas">Bananas</option>
-          <option value="bell_peppers">Bell Peppers</option>
-          <option value="blueberries">Blueberries</option>
-        </select>
-        <span id="produceHint" class="hint">Different produce loses nutrients at different rates.</span>
-        <div class="error-message" id="produceError">Please select a fruit or vegetable.</div>
-      </div>
-
-      <div class="input-group">
-        <label for="storageMethod">
-          <span role="img" aria-label="storage box icon">📦</span> Storage Method:
-        </label>
-        <select id="storageMethod" name="method" required aria-describedby="methodHint">
-          <option value="">-- Choose one --</option>
-          <option value="refrigerated_sealed">Refrigerated (sealed container)</option>
-          <option value="refrigerated_open">Refrigerated (open/crisper)</option>
-          <option value="room_temp_open">Room Temperature (open air)</option>
-          <option value="room_temp_dark">Room Temperature (cool, dark place)</option>
-          <option value="frozen">Frozen (blanched)</option>
-        </select>
-        <span id="methodHint" class="hint">How you store it significantly impacts nutrient retention.</span>
-        <div class="error-message" id="methodError">Please select a storage method.</div>
-      </div>
-
-      <div class="input-group">
-        <label for="storageTime">
-          <span role="img" aria-label="clock icon">⏰</span> Storage Time (days):
-        </label>
-        <input type="number" id="storageTime" name="time" min="0" max="365" value="7" required aria-describedby="timeHint">
-        <span id="timeHint" class="hint">Enter the number of days the produce has been stored.</span>
-        <div class="error-message" id="timeError">Please enter a valid storage time (0-365 days).</div>
-      </div>
-
-      <button type="submit" id="calculateBtn">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M8 10h8"/><path d="M8 14h8"/><path d="M8 18h8"/></svg>
-        Estimate Loss
-      </button>
-    </form>
-  </div>
-
-  <div id="resultCard" class="card result-card" role="region" aria-live="polite" aria-atomic="true">
-    <h2>Your Nutrient Loss Estimate</h2>
-    <div class="result-value" id="lossPercentage">
-      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.32 0z"/></svg>
-      --%
-    </div>
-    <p id="lossExplanation"></p>
-
-    <div class="progress-container">
-      <span class="progress-label">Retained</span>
-      <div class="progress-bar">
-        <div class="progress-fill" id="retainedProgress"></div>
-      </div>
-      <span class="progress-label" id="retainedPercentage">--%</span>
-    </div>
-
-    <div class="progress-container">
-      <span class="progress-label">Lost</span>
-      <div class="progress-bar">
-        <div class="progress-fill" id="lostProgress" style="background-color: #ef4444;"></div>
-      </div>
-      <span class="progress-label" id="lostPercentage">--%</span>
-    </div>
-
-    <h3>Best Practice Storage Tips:</h3>
-    <p id="storageTips"></p>
-
-    <div class="result-actions">
-      <button id="copyResultBtn" class="primary-action">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-        Copy Result
-      </button>
-      <button id="printResultBtn">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14H3v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4h-3"/><path d="M18 14H6"/></svg>
-        Print
-      </button>
-    </div>
-    <p class="educational-note">Educational estimate, not medical advice.</p>
-  </div>
-
-  <div class="how-it-works">
-    <h2>How It Works</h2>
-    <p>This tool estimates nutrient loss based on general scientific understanding of how different storage conditions affect common vitamins and minerals in produce. Factors like light, temperature, oxygen, and moisture all contribute to nutrient degradation. Our estimates are simplified for clarity and provide a practical guide, not precise laboratory measurements. Always prioritize fresh consumption for maximum nutrient intake.</p>
-    <p class="educational-note">Educational estimate, not medical advice.</p>
-  </div>
-
-  <div class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>What causes nutrient loss in produce?</summary>
-      <div class="details-content">
-        <p>Nutrient loss is primarily caused by exposure to heat, light, air (oxygen), and water. Enzymes naturally present in produce also contribute to degradation over time. For example, Vitamin C is highly susceptible to heat and oxidation.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Is freezing produce good for nutrient retention?</summary>
-      <div class="details-content">
-        <p>Yes, freezing is an excellent method for preserving nutrients, especially if produce is blanched first. Blanching (briefly boiling then chilling) deactivates enzymes that cause nutrient degradation. While some initial loss occurs during blanching, freezing then locks in most remaining nutrients for extended periods.</p>
-      </div>
-    </details>
-    <details>
-      <summary>How can I minimize nutrient loss?</summary>
-      <div class="details-content">
-        <p>To minimize nutrient loss, consume produce as fresh as possible. Store items properly (e.g., refrigeration for most, cool dark places for others like potatoes). Avoid excessive washing or cutting before storage, and cook with minimal water and shorter times when possible.</p>
-      </div>
-    </details>
-  </div>
-
-  <div class="related-tools">
-    <h2>Explore More Daily Vitality Tools</h2>
-    <a href="/tools.html">View All Tools</a>
-  </div>
-
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Produce Nutrient Loss Estimator",
-      "applicationCategory": "HealthAndFitness",
-      "operatingSystem": "Web",
-      "url": "https://dailyvitality.com/tools.html#produce-nutrient-loss-estimator",
-      "description": "Estimate potential nutrient loss in fruits and vegetables based on storage method and time, with best-practice tips.",
-      "featureList": [
-        "Nutrient loss estimation",
-        "Storage tips",
-        "Interactive selection",
-        "Printable results",
-        "Copyable results"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "120"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Daily Vitality"
-      }
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Produce Nutrient Loss Estimator",
+    "operatingSystem": "Any",
+    "applicationCategory": "HealthApplication",
+    "description": "Estimate potential nutrient degradation in fruits and vegetables based on storage method and time, and get tips to preserve nutritional value.",
+    "url": "/tools/produce-nutrient-loss-estimator.html",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "120"
     }
+  }
   </script>
+
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What causes nutrient loss in produce?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nutrient loss is primarily caused by exposure to heat, light, air (oxygen), and water. Enzymes naturally present in produce also contribute to degradation over time. For example, Vitamin C is highly susceptible to heat and oxidation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is freezing produce good for nutrient retention?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, freezing is an excellent method for preserving nutrients, especially if produce is blanched first. Blanching (briefly boiling then chilling) deactivates enzymes that cause nutrient degradation. While some initial loss occurs during blanching, freezing then locks in most remaining nutrients for extended periods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I minimize nutrient loss?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To minimize nutrient loss, consume produce as fresh as possible. Store items properly (e.g., refrigeration for most, cool dark places for others like potatoes). Avoid excessive washing or cutting before storage, and cook with minimal water and shorter times when possible."
-          }
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is this estimator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This tool provides an educational estimate based on general scientific understanding of nutrient degradation. Actual nutrient loss can vary significantly due to factors like initial ripeness, specific cultivar, temperature fluctuations, and light exposure. It's a guide, not a precise measurement."
         }
-      ]
-    }
+      },
+      {
+        "@type": "Question",
+        "name": "Which nutrients are most affected by storage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Water-soluble vitamins (like Vitamin C and B vitamins) are generally the most susceptible to degradation during storage, especially with exposure to heat, light, and oxygen. Fat-soluble vitamins (A, D, E, K) and minerals tend to be more stable, though some loss can still occur over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this for cooked foods?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This estimator is primarily designed for fresh produce storage. Cooking methods themselves cause significant nutrient changes. While general principles of storage (e.g., refrigeration slows degradation) still apply to cooked foods, the specific estimates from this tool may not be directly applicable."
+        }
+      }
+    ]
+  }
   </script>
+
+  <div class="container">
+    <div class="hero-banner">
+      <h1>Produce Nutrient Loss Estimator</h1>
+      <p>Discover how your storage choices impact the nutritional value of your fresh fruits and vegetables.</p>
+    </div>
+
+    <div class="card" id="input-card">
+      <h2>Calculate Potential Nutrient Loss</h2>
+      <form id="nutrient-loss-form">
+        <div class="form-group">
+          <label for="produce-type">
+            <span class="input-icon">🍎</span> Select Fruit or Vegetable:
+          </label>
+          <select id="produce-type" name="produce-type" required>
+            <option value="">-- Choose one --</option>
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="broccoli">Broccoli</option>
+            <option value="carrot">Carrot</option>
+            <option value="spinach">Spinach</option>
+            <option value="tomato">Tomato</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="potato">Potato</option>
+            <option value="orange">Orange</option>
+            <option value="bell_pepper">Bell Pepper</option>
+          </select>
+          <span class="help-text">Different produce types have varying nutrient stability.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="storage-method">
+            <span class="input-icon">📦</span> Storage Method:
+          </label>
+          <select id="storage-method" name="storage-method" required>
+            <option value="">-- Choose one --</option>
+            <option value="counter_room_temp">Counter (Room Temp)</option>
+            <option value="refrigerator_crisper">Refrigerator (Crisper Drawer)</option>
+            <option value="refrigerator_open">Refrigerator (Open Shelf)</option>
+            <option value="freezer">Freezer</option>
+          </select>
+          <span class="help-text">Temperature and environment significantly affect degradation.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="storage-time">
+            <span class="input-icon">⏳</span> Storage Time (Days):
+          </label>
+          <input type="number" id="storage-time" name="storage-time" min="0" max="365" value="7" required>
+          <span class="help-text">Enter how many days the produce has been stored.</span>
+        </div>
+
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Estimate Loss
+        </button>
+      </form>
+      <div class="educational-note">
+        <strong>Educational estimate, not medical advice.</strong> This tool provides general information and should not replace professional medical or nutritional guidance.
+      </div>
+    </div>
+
+    <div class="card" id="result-card" aria-live="polite">
+      <h2>Your Nutrient Loss Estimate</h2>
+      <div class="result-summary">
+        <div class="big-number" id="overall-loss-percentage">0%</div>
+        <div class="verdict" id="overall-verdict">Minimal Loss</div>
+      </div>
+      <p class="result-explanation" id="result-explanation">
+        Based on your selections, the overall potential nutrient degradation is estimated to be minimal. Keep up the good storage habits!
+      </p>
+
+      <div class="progress-container">
+        <div class="progress-item">
+          <span class="progress-label">Vitamin C</span>
+          <div class="progress-bar-wrapper"><div class="progress-bar" id="progress-vitc"></div></div>
+          <span class="progress-value" id="value-vitc">0%</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-label">B Vitamins</span>
+          <div class="progress-bar-wrapper"><div class="progress-bar" id="progress-bvit"></div></div>
+          <span class="progress-value" id="value-bvit">0%</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-label">Antioxidants</span>
+          <div class="progress-bar-wrapper"><div class="progress-bar" id="progress-antiox"></div></div>
+          <span class="progress-value" id="value-antiox">0%</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-label">Minerals</span>
+          <div class="progress-bar-wrapper"><div class="progress-bar" id="progress-minerals"></div></div>
+          <span class="progress-value" id="value-minerals">0%</span>
+        </div>
+      </div>
+
+      <h3>Tips for Preservation:</h3>
+      <ul id="preservation-tips">
+        <li>Store in a cool, dark place.</li>
+        <li>Consume fresh produce as soon as possible.</li>
+      </ul>
+
+      <div class="result-actions">
+        <button onclick="copyResults()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy Results
+        </button>
+        <button onclick="window.print()" class="secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+      </div>
+      <div class="educational-note">
+        <strong>Educational estimate, not medical advice.</strong> This tool provides general information and should not replace professional medical or nutritional guidance.
+      </div>
+    </div>
+
+    <h2 class="section-title">How It Works</h2>
+    <div class="how-it-works">
+      <p>
+        Our Produce Nutrient Loss Estimator provides an educated guess on how much nutritional value your fruits and vegetables might lose during storage. We consider the type of produce, its storage environment (like refrigeration or room temperature), and the duration of storage. Different nutrients degrade at different rates under various conditions.
+      </p>
+      <p>
+        The estimates are based on general scientific literature regarding nutrient stability. For example, Vitamin C is highly sensitive to heat, light, and oxygen, while minerals are generally more stable. This tool helps you understand the impact of your storage choices and offers practical tips to maximize the freshness and nutrient content of your food.
+      </p>
+    </div>
+
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <details class="faq-item">
+        <summary>How accurate is this estimator?</summary>
+        <div class="faq-content">
+          <p>This tool provides an educational estimate based on general scientific understanding of nutrient degradation. Actual nutrient loss can vary significantly due to factors like initial ripeness, specific cultivar, temperature fluctuations, and light exposure. It's a guide, not a precise measurement.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Which nutrients are most affected by storage?</summary>
+        <div class="faq-content">
+          <p>Water-soluble vitamins (like Vitamin C and B vitamins) are generally the most susceptible to degradation during storage, especially with exposure to heat, light, and oxygen. Fat-soluble vitamins (A, D, E, K) and minerals tend to be more stable, though some loss can still occur over time.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use this for cooked foods?</summary>
+        <div class="faq-content">
+          <p>This estimator is primarily designed for fresh produce storage. Cooking methods themselves cause significant nutrient changes. While general principles of storage (e.g., refrigeration slows degradation) still apply to cooked foods, the specific estimates from this tool may not be directly applicable.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="related-tools">
+      <h3>Explore More Daily Vitality Tools</h3>
+      <div class="related-tools-grid">
+        <a href="/tools.html#hydration-tracker" class="related-tool-link">💧 Hydration Tracker</a>
+        <a href="/tools.html#sleep-quality-analyzer" class="related-tool-link">😴 Sleep Quality Analyzer</a>
+        <a href="/tools.html#meal-prep-planner" class="related-tool-link">🍽️ Meal Prep Planner</a>
+      </div>
+    </div>
+
+  </div>
 </main>
 
 <script>
   (function() {
-    const form = document.getElementById('nutrientLossForm');
-    const produceSelect = document.getElementById('produceSelect');
-    const storageMethodSelect = document.getElementById('storageMethod');
-    const storageTimeInput = document.getElementById('storageTime');
-    const resultCard = document.getElementById('resultCard');
-    const lossPercentageDisplay = document.getElementById('lossPercentage');
-    const lossExplanation = document.getElementById('lossExplanation');
-    const storageTips = document.getElementById('storageTips');
-    const retainedProgress = document.getElementById('retainedProgress');
-    const lostProgress = document.getElementById('lostProgress');
-    const retainedPercentageDisplay = document.getElementById('retainedPercentage');
-    const lostPercentageDisplay = document.getElementById('lostPercentage');
-    const copyResultBtn = document.getElementById('copyResultBtn');
-    const printResultBtn = document.getElementById('printResultBtn');
+    const form = document.getElementById('nutrient-loss-form');
+    const resultCard = document.getElementById('result-card');
+    const overallLossPercentage = document.getElementById('overall-loss-percentage');
+    const overallVerdict = document.getElementById('overall-verdict');
+    const resultExplanation = document.getElementById('result-explanation');
+    const preservationTipsList = document.getElementById('preservation-tips');
 
-    // Simplified nutrient loss data (illustrative, not exhaustive scientific data)
-    // Loss rates are % per day for a base nutrient (e.g., Vitamin C)
-    // Factors: base_loss_rate_per_day, method_multiplier, time_multiplier
+    const progressBars = {
+      vitc: document.getElementById('progress-vitc'),
+      bvit: document.getElementById('progress-bvit'),
+      antiox: document.getElementById('progress-antiox'),
+      minerals: document.getElementById('progress-minerals')
+    };
+    const progressValues = {
+      vitc: document.getElementById('value-vitc'),
+      bvit: document.getElementById('value-bvit'),
+      antiox: document.getElementById('value-antiox'),
+      minerals: document.getElementById('value-minerals')
+    };
+
+    // Data for nutrient degradation (simplified for estimation)
+    // Values represent daily percentage degradation under ideal conditions (refrigerator crisper)
+    // Multipliers adjust for less ideal conditions and time
     const nutrientData = {
-      spinach: {
-        base_loss_rate_per_day: 0.08, // 8% per day
-        best_method: 'refrigerated_sealed',
-        tips: 'Store unwashed spinach in an airtight container or bag in the crisper drawer. Avoid excess moisture.',
-        vulnerable_nutrients: 'Vitamin C, Folate, some B vitamins'
+      apple: {
+        baseLoss: { vitc: 0.02, bvit: 0.01, antiox: 0.005, minerals: 0.001 },
+        tips: [
+          "Store in the refrigerator crisper drawer.",
+          "Keep away from ethylene-producing fruits like bananas.",
+          "Wash just before eating, not before storing."
+        ]
+      },
+      banana: {
+        baseLoss: { vitc: 0.03, bvit: 0.02, antiox: 0.01, minerals: 0.002 },
+        tips: [
+          "Store at room temperature until ripe, then refrigerate to slow ripening (skin will blacken but fruit is fine).",
+          "Keep away from other fruits to prevent premature ripening."
+        ]
       },
       broccoli: {
-        base_loss_rate_per_day: 0.07, // 7% per day
-        best_method: 'refrigerated_open',
-        tips: 'Store broccoli in an open plastic bag in the crisper drawer. Do not wash until ready to use.',
-        vulnerable_nutrients: 'Vitamin C, Glucosinolates'
+        baseLoss: { vitc: 0.05, bvit: 0.03, antiox: 0.02, minerals: 0.003 },
+        tips: [
+          "Store unwashed in an open plastic bag in the refrigerator crisper.",
+          "Consume within 3-5 days for best nutrient retention.",
+          "Blanch and freeze for longer storage."
+        ]
       },
-      apples: {
-        base_loss_rate_per_day: 0.01, // 1% per day (slower loss)
-        best_method: 'refrigerated_open',
-        tips: 'Store apples in the refrigerator crisper drawer to slow ripening and nutrient loss. Keep away from other produce.',
-        vulnerable_nutrients: 'Vitamin C, Antioxidants'
+      carrot: {
+        baseLoss: { vitc: 0.01, bvit: 0.005, antiox: 0.003, minerals: 0.001 },
+        tips: [
+          "Remove green tops (if present) to prevent moisture loss.",
+          "Store in a plastic bag or container in the refrigerator crisper.",
+          "Can last for several weeks with proper storage."
+        ]
       },
-      carrots: {
-        base_loss_rate_per_day: 0.02, // 2% per day
-        best_method: 'refrigerated_sealed',
-        tips: 'Remove green tops (if any) to prevent moisture loss. Store carrots in a sealed bag or container with a little water in the crisper.',
-        vulnerable_nutrients: 'Beta-carotene (Vitamin A precursor), Vitamin K'
+      spinach: {
+        baseLoss: { vitc: 0.08, bvit: 0.05, antiox: 0.04, minerals: 0.005 },
+        tips: [
+          "Wash and dry thoroughly, then store in a sealed container lined with paper towels in the refrigerator.",
+          "Highly perishable, consume within 3-7 days.",
+          "Avoid crushing leaves."
+        ]
       },
-      tomatoes: {
-        base_loss_rate_per_day: 0.03, // 3% per day
-        best_method: 'room_temp_open',
-        tips: 'Store ripe tomatoes at room temperature, stem-side down, away from direct sunlight. Refrigeration can affect texture and flavor.',
-        vulnerable_nutrients: 'Vitamin C, Lycopene'
+      tomato: {
+        baseLoss: { vitc: 0.03, bvit: 0.015, antiox: 0.01, minerals: 0.002 },
+        tips: [
+          "Store ripe tomatoes at room temperature away from direct sunlight.",
+          "Refrigerate only if very ripe to extend shelf life (can affect texture and flavor).",
+          "Use within a week of ripening."
+        ]
       },
-      strawberries: {
-        base_loss_rate_per_day: 0.10, // 10% per day (high loss)
-        best_method: 'refrigerated_open',
-        tips: 'Store unwashed strawberries in a single layer on a paper towel in a breathable container in the refrigerator. Wash just before eating.',
-        vulnerable_nutrients: 'Vitamin C, Antioxidants'
+      strawberry: {
+        baseLoss: { vitc: 0.07, bvit: 0.04, antiox: 0.03, minerals: 0.004 },
+        tips: [
+          "Store unwashed in a single layer in a shallow container lined with paper towels in the refrigerator.",
+          "Wash just before eating.",
+          "Highly perishable, consume within 3-5 days."
+        ]
       },
-      potatoes: {
-        base_loss_rate_per_day: 0.005, // 0.5% per day (very slow loss)
-        best_method: 'room_temp_dark',
-        tips: 'Store potatoes in a cool, dark, well-ventilated place (like a pantry), away from onions and direct sunlight.',
-        vulnerable_nutrients: 'Vitamin C, B vitamins'
+      potato: {
+        baseLoss: { vitc: 0.01, bvit: 0.005, antiox: 0.002, minerals: 0.001 },
+        tips: [
+          "Store in a cool, dark, well-ventilated place (not the refrigerator).",
+          "Keep away from onions, which can accelerate sprouting.",
+          "Can last for several weeks to months."
+        ]
       },
-      bananas: {
-        base_loss_rate_per_day: 0.04, // 4% per day
-        best_method: 'room_temp_open',
-        tips: 'Store unripe bananas at room temperature. Once ripe, they can be refrigerated for a few days to slow further ripening, though skins may darken.',
-        vulnerable_nutrients: 'Vitamin B6, Vitamin C'
+      orange: {
+        baseLoss: { vitc: 0.02, bvit: 0.01, antiox: 0.005, minerals: 0.001 },
+        tips: [
+          "Store at room temperature for up to a week, or in the refrigerator for 3-4 weeks.",
+          "Do not store in airtight bags, as they need air circulation.",
+          "Wash before peeling or eating."
+        ]
       },
-      bell_peppers: {
-        base_loss_rate_per_day: 0.05, // 5% per day
-        best_method: 'refrigerated_open',
-        tips: 'Store unwashed bell peppers in the crisper drawer of the refrigerator.',
-        vulnerable_nutrients: 'Vitamin C, Vitamin A'
-      },
-      blueberries: {
-        base_loss_rate_per_day: 0.06, // 6% per day
-        best_method: 'refrigerated_open',
-        tips: 'Store unwashed blueberries in their original container or a breathable container in the refrigerator. Wash just before eating.',
-        vulnerable_nutrients: 'Vitamin C, Antioxidants'
+      bell_pepper: {
+        baseLoss: { vitc: 0.04, bvit: 0.02, antiox: 0.015, minerals: 0.002 },
+        tips: [
+          "Store unwashed in a plastic bag in the refrigerator crisper drawer.",
+          "Consume within 1-2 weeks.",
+          "Avoid storing near ethylene-producing fruits."
+        ]
       }
     };
 
-    // Multipliers for storage methods (higher means more loss)
-    const methodMultipliers = {
-      refrigerated_sealed: 0.8, // Best for many
-      refrigerated_open: 1.0,   // Standard
-      room_temp_open: 1.5,    // Faster loss
-      room_temp_dark: 0.9,    // Good for some (potatoes, onions)
-      frozen: 0.1             // Very low loss after initial blanching
+    const storageMultipliers = {
+      counter_room_temp: { vitc: 3, bvit: 2.5, antiox: 2, minerals: 1.5 }, // Higher degradation
+      refrigerator_crisper: { vitc: 1, bvit: 1, antiox: 1, minerals: 1 }, // Base degradation
+      refrigerator_open: { vitc: 1.5, bvit: 1.2, antiox: 1.1, minerals: 1.05 }, // Slightly higher than crisper
+      freezer: { vitc: 0.5, bvit: 0.5, antiox: 0.5, minerals: 0.5 } // Significantly slower degradation after initial blanching/freezing
     };
 
-    function validateInput(inputElement, errorElementId, validationFn) {
-      const parentGroup = inputElement.closest('.input-group');
-      const errorElement = document.getElementById(errorElementId);
-      if (validationFn(inputElement.value)) {
-        parentGroup.classList.remove('error');
-        errorElement.style.display = 'none';
-        return true;
-      } else {
-        parentGroup.classList.add('error');
-        errorElement.style.display = 'block';
-        return false;
-      }
-    }
-
-    function calculateNutrientLoss() {
-      let isValid = true;
-
-      isValid = validateInput(produceSelect, 'produceError', (val) => val !== '') && isValid;
-      isValid = validateInput(storageMethodSelect, 'methodError', (val) => val !== '') && isValid;
-      isValid = validateInput(storageTimeInput, 'timeError', (val) => {
-        const time = parseInt(val, 10);
-        return !isNaN(time) && time >= 0 && time <= 365;
-      }) && isValid;
-
-      if (!isValid) {
-        resultCard.classList.remove('show');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
         return;
       }
 
-      const produceType = produceSelect.value;
-      const storageMethod = storageMethodSelect.value;
-      const storageTime = parseInt(storageTimeInput.value, 10);
+      const produceType = document.getElementById('produce-type').value;
+      const storageMethod = document.getElementById('storage-method').value;
+      const storageTime = parseInt(document.getElementById('storage-time').value, 10);
+
+      if (!produceType || !storageMethod || isNaN(storageTime) || storageTime < 0) {
+        alert('Please fill in all fields correctly.');
+        return;
+      }
 
       const produceInfo = nutrientData[produceType];
-      if (!produceInfo) {
-        console.error("Produce type not found:", produceType);
-        resultCard.classList.remove('show');
+      const methodMultipliers = storageMultipliers[storageMethod];
+
+      if (!produceInfo || !methodMultipliers) {
+        alert('Invalid selection. Please choose from the available options.');
         return;
       }
 
-      const baseLossRate = produceInfo.base_loss_rate_per_day;
-      const methodMultiplier = methodMultipliers[storageMethod] || 1.0;
+      let totalLoss = 0;
+      const nutrientLosses = {};
 
-      // Calculate total loss percentage
-      // Simplified model: loss = 1 - ( (1 - base_loss_rate * method_multiplier) ^ storage_time )
-      // Capped at 95% max loss for realism
-      let dailyLossFactor = baseLossRate * methodMultiplier;
-      let retainedFactor = Math.pow(Math.max(0, 1 - dailyLossFactor), storageTime);
-      let totalLossPercentage = Math.min(0.95, 1 - retainedFactor); // Cap loss at 95%
+      for (const nutrient in produceInfo.baseLoss) {
+        let dailyLossRate = produceInfo.baseLoss[nutrient];
+        let multiplier = methodMultipliers[nutrient];
 
-      const lossPercent = Math.round(totalLossPercentage * 100);
-      const retainedPercent = 100 - lossPercent;
+        // Special handling for freezer: initial loss then very slow
+        let effectiveTime = storageTime;
+        if (storageMethod === 'freezer' && storageTime > 0) {
+            // Assume an initial 10-20% loss upon freezing/blanching, then very slow daily loss
+            let initialLoss = (nutrient === 'vitc' || nutrient === 'bvit') ? 0.15 : 0.05; // Higher initial for sensitive
+            let frozenDailyLoss = dailyLossRate * multiplier * 0.1; // 10% of the already reduced daily rate
+            nutrientLosses[nutrient] = Math.min(100, (initialLoss * 100) + (frozenDailyLoss * (effectiveTime -1) * 100));
+        } else {
+            nutrientLosses[nutrient] = Math.min(100, dailyLossRate * multiplier * effectiveTime * 100);
+        }
+        totalLoss += nutrientLosses[nutrient];
+      }
 
-      lossPercentageDisplay.innerHTML = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.32 0z"/></svg> ${lossPercent}% Loss`;
-      lossExplanation.textContent = `Based on your selection, approximately ${lossPercent}% of key nutrients (like ${produceInfo.vulnerable_nutrients}) in your ${produceType} may have been lost. This is an estimate for educational purposes.`;
-      storageTips.textContent = produceInfo.tips;
+      const averageLoss = totalLoss / Object.keys(nutrientLosses).length;
 
-      retainedProgress.style.width = `${retainedPercent}%`;
-      retainedProgress.textContent = `${retainedPercent}%`;
-      retainedPercentageDisplay.textContent = `${retainedPercent}%`;
+      overallLossPercentage.textContent = `${Math.round(averageLoss)}%`;
+      overallLossPercentage.style.color = getLossColor(averageLoss);
 
-      lostProgress.style.width = `${lossPercent}%`;
-      lostProgress.textContent = `${lossPercent}%`;
-      lostPercentageDisplay.textContent = `${lossPercent}%`;
+      let verdictText = '';
+      let explanationText = '';
+      if (averageLoss < 10) {
+        verdictText = 'Minimal Loss';
+        explanationText = 'Great news! Your storage method and duration are likely preserving most of the nutrients. Keep up the excellent work!';
+      } else if (averageLoss < 30) {
+        verdictText = 'Moderate Loss';
+        explanationText = 'There\'s some nutrient degradation, which is normal over time. Consider optimizing your storage or consuming this produce sooner to maximize nutrient intake.';
+      } else if (averageLoss < 60) {
+        verdictText = 'Significant Loss';
+        explanationText = 'Your produce may be experiencing significant nutrient loss. Review the tips below and consider alternative storage methods or quicker consumption to retain more value.';
+      } else {
+        verdictText = 'High Loss Expected';
+        explanationText = 'At this level, much of the original nutrient content may be gone. It\'s highly recommended to adjust your storage practices or consume this produce much sooner.';
+      }
+      overallVerdict.textContent = verdictText;
+      resultExplanation.textContent = explanationText;
 
+      // Update progress bars and values
+      for (const nutrient in nutrientLosses) {
+        const percentage = Math.round(nutrientLosses[nutrient]);
+        progressBars[nutrient].style.width = `${percentage}%`;
+        progressBars[nutrient].style.backgroundColor = getLossColor(percentage);
+        progressValues[nutrient].textContent = `${percentage}%`;
+        progressValues[nutrient].style.color = getLossColor(percentage);
+      }
+
+      // Update preservation tips
+      preservationTipsList.innerHTML = '';
+      produceInfo.tips.forEach(tip => {
+        const li = document.createElement('li');
+        li.textContent = tip;
+        preservationTipsList.appendChild(li);
+      });
+
+      // Show result card with animation
       resultCard.classList.add('show');
       resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    function getLossColor(percentage) {
+      if (percentage < 10) return 'var(--primary)'; // Green
+      if (percentage < 30) return 'orange'; // Orange
+      if (percentage < 60) return 'var(--secondary)'; // Blue (or a warning red if preferred)
+      return 'red'; // Red for high loss
     }
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      calculateNutrientLoss();
-    });
+    window.copyResults = function() {
+      const produceType = document.getElementById('produce-type').value;
+      const storageMethod = document.getElementById('storage-method').value;
+      const storageTime = document.getElementById('storage-time').value;
 
-    // Initial validation setup for real-time feedback
-    produceSelect.addEventListener('change', () => validateInput(produceSelect, 'produceError', (val) => val !== ''));
-    storageMethodSelect.addEventListener('change', () => validateInput(storageMethodSelect, 'methodError', (val) => val !== ''));
-    storageTimeInput.addEventListener('input', () => validateInput(storageTimeInput, 'timeError', (val) => {
-      const time = parseInt(val, 10);
-      return !isNaN(time) && time >= 0 && time <= 365;
-    }));
+      let textToCopy = `Produce Nutrient Loss Estimate for ${produceType.replace('_', ' ')}:\n\n`;
+      textToCopy += `Storage Method: ${document.querySelector(`#storage-method option[value="${storageMethod}"]`).textContent}\n`;
+      textToCopy += `Storage Time: ${storageTime} days\n\n`;
+      textToCopy += `Overall Estimated Loss: ${overallLossPercentage.textContent} (${overallVerdict.textContent})\n`;
+      textToCopy += `Explanation: ${resultExplanation.textContent}\n\n`;
+      textToCopy += `Detailed Nutrient Loss:\n`;
+      textToCopy += `  Vitamin C: ${progressValues.vitc.textContent}\n`;
+      textToCopy += `  B Vitamins: ${progressValues.bvit.textContent}\n`;
+      textToCopy += `  Antioxidants: ${progressValues.antiox.textContent}\n`;
+      textToCopy += `  Minerals: ${progressValues.minerals.textContent}\n\n`;
+      textToCopy += `Preservation Tips:\n`;
+      Array.from(preservationTipsList.children).forEach((li, index) => {
+        textToCopy += `  ${index + 1}. ${li.textContent}\n`;
+      });
+      textToCopy += `\nEducational estimate, not medical advice.`;
 
-    copyResultBtn.addEventListener('click', async () => {
-      const resultText = `Produce Nutrient Loss Estimate for ${produceSelect.value} stored for ${storageTimeInput.value} days using ${storageMethodSelect.value.replace(/_/g, ' ')}:\n\n` +
-                         `Estimated Loss: ${lossPercentageDisplay.textContent}\n` +
-                         `Nutrients Retained: ${retainedPercentageDisplay.textContent}\n` +
-                         `Nutrients Lost: ${lostPercentageDisplay.textContent}\n\n` +
-                         `Best Practice Tips: ${storageTips.textContent}\n\n` +
-                         `Educational estimate, not medical advice.`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-        alert('Result copied to clipboard!');
-      } catch (err) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Results copied to clipboard!');
+      }).catch(err => {
         console.error('Failed to copy: ', err);
-        alert('Failed to copy result. Please try again or copy manually.');
-      }
-    });
+        alert('Failed to copy results. Please try again or manually select and copy.');
+      });
+    };
 
-    printResultBtn.addEventListener('click', () => {
-      const printWindow = window.open('', '_blank');
-      printWindow.document.write(`
-        
-        
-          <title>Produce Nutrient Loss Estimate</title>
-          <style>
-            body { font-family: sans-serif; margin: 20px; color: #333; }
-            h1 { color: var(--primary, #087f55); }
-            .result-section { margin-bottom: 20px; padding: 15px; border: 1px solid #eee; border-radius: 8px; }
-            .percentage { font-size: 1.5em; font-weight: bold; color: var(--text-color, #092d2a); }
-            .note { font-size: 0.9em; color: #666; margin-top: 20px; }
-          </style>
-        
-        
-          <h1>Produce Nutrient Loss Estimate</h1>
-          <div class="result-section">
-            <p><strong>Produce:</strong> ${produceSelect.value}</p>
-            <p><strong>Storage Method:</strong> ${storageMethodSelect.value.replace(/_/g, ' ')}</p>
-            <p><strong>Storage Time:</strong> ${storageTimeInput.value} days</p>
-            <p><strong>Estimated Nutrient Loss:</strong> <span class="percentage">${lossPercentageDisplay.textContent}</span></p>
-            <p><strong>Estimated Nutrients Retained:</strong> <span class="percentage">${retainedPercentageDisplay.textContent}</span></p>
-            <p>${lossExplanation.textContent}</p>
-          </div>
-          <div class="result-section">
-            <h2>Best Practice Storage Tips:</h2>
-            <p>${storageTips.textContent}</p>
-          </div>
-          <p class="note">This is an educational estimate, not medical advice. For precise nutritional information, consult a professional.</p>
-        
-        
-      `);
-      printWindow.document.close();
-      printWindow.print();
-    });
+    // Initialize the result card to be hidden
+    resultCard.classList.remove('show');
+    resultCard.style.maxHeight = '0';
+    resultCard.style.paddingTop = '0';
+    resultCard.style.paddingBottom = '0';
   })();
 </script>
 
