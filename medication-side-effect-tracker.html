@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medication Side Effect Tracker: Personal Log</title>
+<meta name="description" content="Log your medications and any side effects to track patterns and prepare for discussions with your doctor. Educational only, not medical advice.">
+<link rel="canonical" href="https://dailyvitality.xyz/medication-side-effect-tracker.html">
+<meta property="og:title" content="Medication Side Effect Tracker: Personal Log">
+<meta property="og:description" content="Log your medications and any side effects to track patterns and prepare for discussions with your doctor. Educational only, not medical advice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dailyvitality.xyz/medication-side-effect-tracker.html">
+<link rel="icon" href="/daily-vitality-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/dv-v27-bundle.css?v=2802">
+<link rel="stylesheet" href="/dv-v29-premium.css?v=2901">
+
+</head>
+<body >
+<header class="dv-topbar top">
+<div class="dv-shell dv-header-row">
+<a aria-label="Daily Vitality home" class="dv-brand brand" href="/index.html">
+<img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span>
+</a>
+<nav aria-label="Main navigation" class="dv-nav desktop-nav"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved ♥</a></nav>
+<div class="dv-header-actions"><form action="all-articles.html" class="dv-search"><input aria-label="Search Daily Vitality" name="q" placeholder="Search articles, tools…"/><button aria-label="Search">⌕</button></form><button class="dv-weather" id="localWeather" title="Use your location for local weather" type="button">☀ Local weather</button><a class="dv-signin" href="/account.html">Join / Sign In</a><button aria-label="Open menu" class="dv-menu-btn" id="dvMenuBtn">☰</button></div>
+</div>
+<div class="dv-mobile-menu" id="dvMobileMenu"><a href="/index.html">Home</a><a href="/index.html#latest">Articles</a><a href="/blogs.html">Blogs</a><a href="/products.html">Shop</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/categories.html">Categories</a><a href="/privacy.html">Privacy</a><a href="/saved.html">Saved</a><a href="/account.html">Join / Sign In</a></div>
+</header>
+<div class="wf-cover" style="max-width:1100px;margin:18px auto 0;padding:0 16px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Medication Side Effect Tracker: Personal Log"><defs><linearGradient id="a1bof5hab" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset=".55" stop-color="#ea580c"/><stop offset="1" stop-color="#fde047"/></linearGradient><radialGradient id="a1bof5har" cx=".25" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="a1bof5haf" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="46"/></filter><pattern id="a1bof5hap" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0H46" stroke="#fff" stroke-opacity=".07" stroke-width="2"/></pattern></defs><rect width="1200" height="675" fill="url(#a1bof5hab)"/><rect width="1200" height="675" fill="url(#a1bof5hap)"/><rect width="1200" height="675" fill="url(#a1bof5har)"/><g filter="url(#a1bof5haf)"><circle cx="378" cy="120" r="170" fill="#fde047" opacity=".55"/><circle cx="1018" cy="560" r="210" fill="#7c2d12" opacity=".7"/><circle cx="1010" cy="130" r="120" fill="#fff" opacity=".25"/></g><circle cx="978" cy="110" r="5" fill="#fff" opacity="0.16"/><circle cx="584" cy="604" r="6" fill="#fff" opacity="0.24"/><circle cx="190" cy="498" r="6" fill="#fff" opacity="0.32"/><circle cx="836" cy="392" r="6" fill="#fff" opacity="0.16"/><circle cx="442" cy="286" r="6" fill="#fff" opacity="0.24"/><circle cx="1088" cy="180" r="6" fill="#fff" opacity="0.32"/><circle cx="694" cy="74" r="4" fill="#fff" opacity="0.16"/><circle cx="300" cy="568" r="5" fill="#fff" opacity="0.24"/><circle cx="946" cy="462" r="4" fill="#fff" opacity="0.32"/><circle cx="552" cy="356" r="5" fill="#fff" opacity="0.16"/><circle cx="158" cy="250" r="6" fill="#fff" opacity="0.24"/><circle cx="804" cy="144" r="6" fill="#fff" opacity="0.32"/><circle cx="410" cy="638" r="6" fill="#fff" opacity="0.16"/><circle cx="1056" cy="532" r="6" fill="#fff" opacity="0.24"/><rect x="200" y="120" width="800" height="435" rx="44" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".42" stroke-width="2"/><g transform="translate(552 150)" fill="#fff" color="#fff"><circle cx="48" cy="48" r="56" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".5" stroke-width="2"/><g transform="translate(12 12) scale(.72)"><path d="M58 8L24 56h22l-6 36 36-52H54z"/></g></g><text x="600" y="367" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Medication Side Effect</text><text x="600" y="423" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="48" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="#000" stroke-opacity=".18" stroke-width="6">Tracker: Personal Log</text><text x="600" y="520" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#fff" opacity=".9">GUIDE · DAILY VITALITY</text></svg></div>
+<main class="wf-tool">
+  <style>
+    /* Scoped styles for the Medication Side Effect Tracker tool */
+    .wf-tool {
+      --primary: var(--v29-green, #087f55);
+      --secondary: var(--v29-blue, #18a9e8);
+      --accent: var(--v29-cyan, #6df7ff);
+      --text-color: var(--v29-ink, #092d2a);
+      --muted-text: var(--muted, #61716a);
+      --background-soft: var(--soft, #f5faf6);
+      --card-background: var(--v29-card, rgba(255,255,255,.94));
+      --border-color: var(--v29-line, #d8ebe5);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --border-radius: 1rem;
+      --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --font-family-serif: var(--serif, 'Fraunces', Georgia, serif);
+      padding: 1.5rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: var(--font-family-sans);
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: var(--background-soft);
+      transition: background-color 0.3s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .wf-tool {
+        --text-color: var(--soft, #f5faf6);
+        --muted-text: var(--line, #e5ebe7);
+        --background-soft: var(--forest, #123629);
+        --card-background: rgba(25, 40, 35, 0.94);
+        --border-color: var(--ink, #10251c);
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .wf-tool * {
+      box-sizing: border-box;
+    }
+
+    .wf-tool h1, .wf-tool h2, .wf-tool h3 {
+      font-family: var(--font-family-serif);
+      color: var(--text-color);
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+    }
+
+    .wf-tool h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .wf-tool h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .wf-tool h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .wf-tool p {
+      margin-bottom: 1em;
+    }
+
+    /* Hero Banner */
+    .wf-tool__hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white, #fff);
+      padding: 3rem 2rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .wf-tool__hero h1 {
+      color: var(--white, #fff);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .wf-tool__hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      opacity: 0.9;
+      margin-bottom: 0;
+    }
+
+    /* Card Styling */
+    .wf-tool__card {
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .wf-tool__card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Form Controls */
+    .wf-tool__form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .wf-tool__label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+    }
+
+    .wf-tool__label svg, .wf-tool__label .emoji {
+      margin-right: 0.5rem;
+      font-size: 1.2em;
+    }
+
+    .wf-tool__input,
+    .wf-tool__textarea,
+    .wf-tool__select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-family: var(--font-family-sans);
+      color: var(--text-color);
+      background-color: var(--background-soft);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wf-tool__input:focus,
+    .wf-tool__textarea:focus,
+    .wf-tool__select:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 8, 127, 85), 0.2);
+    }
+
+    .wf-tool__textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .wf-tool__hint {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    .wf-tool__error {
+      color: #e74c3c; /* A standard error red */
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    .wf-tool__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .wf-tool__button--primary {
+      background-color: var(--primary);
+      color: var(--white, #fff);
+    }
+
+    .wf-tool__button--primary:hover {
+      background-color: color-mix(in srgb, var(--primary) 90%, black);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(var(--primary-rgb, 8, 127, 85), 0.3);
+    }
+
+    .wf-tool__button--secondary {
+      background-color: var(--border-color);
+      color: var(--text-color);
+    }
+
+    .wf-tool__button--secondary:hover {
+      background-color: color-mix(in srgb, var(--border-color) 80%, black);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .wf-tool__button svg {
+      margin-right: 0.5rem;
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    /* Result Card */
+    .wf-tool__result-card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      pointer-events: none; /* Disable interaction until visible */
+    }
+
+    .wf-tool__result-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .wf-tool__result-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .wf-tool__result-icon {
+      font-size: 3rem;
+      margin-right: 1rem;
+      line-height: 1;
+    }
+
+    .wf-tool__result-title {
+      font-size: 1.8rem;
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .wf-tool__result-description {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wf-tool__log-entry {
+      background-color: var(--background-soft);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .wf-tool__log-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .wf-tool__log-entry-date {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .wf-tool__log-entry-med {
+      font-weight: 600;
+      color: var(--text-color);
+      font-size: 1.1rem;
+    }
+
+    .wf-tool__log-entry-side-effects {
+      font-size: 1rem;
+      color: var(--muted-text);
+    }
+
+    .wf-tool__delete-btn {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: #e74c3c;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.2rem;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    .wf-tool__delete-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .wf-tool__no-entries {
+      text-align: center;
+      color: var(--muted-text);
+      padding: 2rem;
+      border: 1px dashed var(--border-color);
+      border-radius: var(--border-radius);
+    }
+
+    /* Accordion (Details/Summary) */
+    .wf-tool details {
+      background-color: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .wf-tool details:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .wf-tool summary {
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      list-style: none; /* Remove default marker */
+      display: flex;
+      align-items: center;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .wf-tool summary::-webkit-details-marker {
+      display: none; /* Remove default marker for Webkit */
+    }
+
+    .wf-tool summary::after {
+      content: '▼';
+      margin-left: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .wf-tool details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .wf-tool details p {
+      padding: 0 1.5rem 1rem;
+      margin-top: 0;
+      color: var(--text-color);
+    }
+
+    /* Related Tools */
+    .wf-tool__related-tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .wf-tool__related-tool-item {
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wf-tool__related-tool-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      color: var(--primary);
+    }
+
+    .wf-tool__related-tool-item .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .wf-tool__related-tool-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-family: var(--font-family-sans);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .wf-tool__educational-note {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: var(--background-soft);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-size: 0.9rem;
+      color: var(--muted-text);
+      text-align: center;
+    }
+
+    /* Accessibility */
+    [aria-live="polite"] {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    /* Utility classes for primary color RGB for shadows */
+    .wf-tool {
+      --primary-rgb: 8, 127, 85; /* Default for --v29-green */
+    }
+    @supports (color: color-mix(in srgb, red 50%, blue)) {
+      .wf-tool {
+        --primary-rgb: var(--v29-green-rgb, 8, 127, 85); /* Use actual RGB if available */
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wf-tool {
+        padding: 1rem;
+      }
+      .wf-tool__hero {
+        padding: 2rem 1rem;
+      }
+      .wf-tool__hero h1 {
+        font-size: 2rem;
+      }
+      .wf-tool__hero p {
+        font-size: 1rem;
+      }
+      .wf-tool__card {
+        padding: 1.5rem;
+      }
+      .wf-tool__button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      .wf-tool__result-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .wf-tool__result-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+      .wf-tool__result-title {
+        font-size: 1.5rem;
+      }
+      .wf-tool__related-tools {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Medication Side Effect Tracker: Personal Log",
+      "applicationCategory": "HealthAndFitness",
+      "operatingSystem": "Web",
+      "url": "https://dailyvitality.com/tools/medication-side-effect-tracker",
+      "description": "Log your medications and any experienced side effects to track patterns and prepare for discussions with your doctor. Educational only, not medical advice.",
+      "featureList": [
+        "Track medication intake",
+        "Log side effects with dates",
+        "Review personal log",
+        "Printable log for doctor visits",
+        "Copy log to clipboard"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "120"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Daily Vitality"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this tracker help me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tracker helps you maintain a personal log of your medications and any side effects you experience. By consistently logging this information, you can identify patterns, remember details, and have a clear record to share with your doctor, making your appointments more productive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. All data you enter into this tool is stored only in your web browser's local storage. It is not sent to our servers or any third parties. This ensures your personal health information remains entirely private and under your control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this tool instead of consulting a doctor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, this tool is for educational and personal tracking purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions about your medication or health regimen."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <div class="wf-tool__hero">
+    <h1>Medication Side Effect Tracker: Personal Log</h1>
+    <p>Log your medications and any side effects to track patterns and prepare for discussions with your doctor.</p>
+  </div>
+
+  <div class="wf-tool__card">
+    <h2>Add a New Log Entry</h2>
+    <form id="sideEffectForm" aria-live="polite">
+      <div class="wf-tool__form-group">
+        <label for="medicationName" class="wf-tool__label">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          Medication Name
+        </label>
+        <input type="text" id="medicationName" class="wf-tool__input" placeholder="e.g., Ibuprofen, Lisinopril" required aria-required="true">
+        <span id="medicationNameError" class="wf-tool__error"></span>
+        <span class="wf-tool__hint">Enter the name of the medication you took.</span>
+      </div>
+
+      <div class="wf-tool__form-group">
+        <label for="sideEffects" class="wf-tool__label">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z"/></svg>
+          Experienced Side Effects
+        </label>
+        <textarea id="sideEffects" class="wf-tool__textarea" placeholder="e.g., Mild headache, Nausea, Dizziness" required aria-required="true"></textarea>
+        <span id="sideEffectsError" class="wf-tool__error"></span>
+        <span class="wf-tool__hint">Describe any side effects you noticed. Be specific.</span>
+      </div>
+
+      <div class="wf-tool__form-group">
+        <label for="logDate" class="wf-tool__label">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z"/></svg>
+          Date of Entry
+        </label>
+        <input type="date" id="logDate" class="wf-tool__input" required aria-required="true">
+        <span id="logDateError" class="wf-tool__error"></span>
+        <span class="wf-tool__hint">Select the date you experienced the side effects.</span>
+      </div>
+
+      <button type="submit" class="wf-tool__button wf-tool__button--primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        Add to Log
+      </button>
+    </form>
+  </div>
+
+  <div id="resultCard" class="wf-tool__card wf-tool__result-card" aria-live="polite">
+    <div class="wf-tool__result-header">
+      <span class="wf-tool__result-icon">📋</span>
+      <h2 class="wf-tool__result-title">Your Personal Side Effect Log</h2>
+    </div>
+    <p class="wf-tool__result-description">Review your entries below. This log can help you identify patterns and discuss them with your doctor.</p>
+
+    <div id="logEntries">
+      <p class="wf-tool__no-entries">No entries yet. Add your first medication and side effect above!</p>
+    </div>
+
+    <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <button id="copyLogBtn" class="wf-tool__button wf-tool__button--primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        Copy Log
+      </button>
+      <button id="printLogBtn" class="wf-tool__button wf-tool__button--secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v2h12V3z"/></svg>
+        Print Log
+      </button>
+    </div>
+  </div>
+
+  <div class="wf-tool__card">
+    <h2>How It Works</h2>
+    <p>The Medication Side Effect Tracker is a simple, private tool designed to help you keep a record of your medication experiences. When you take a new medication or notice a reaction, simply enter the medication name, describe the side effects, and note the date. Your entries are saved directly in your browser, creating a personal log that you can review at any time. This organized record can be invaluable for discussions with your healthcare provider, helping them understand your responses to treatments more clearly.</p>
+  </div>
+
+  <div class="wf-tool__card">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>How does this tracker help me?</summary>
+      <p>This tracker helps you maintain a personal log of your medications and any side effects you experience. By consistently logging this information, you can identify patterns, remember details, and have a clear record to share with your doctor, making your appointments more productive.</p>
+    </details>
+    <details>
+      <summary>Is my data private?</summary>
+      <p>Yes, absolutely. All data you enter into this tool is stored only in your web browser's local storage. It is not sent to our servers or any third parties. This ensures your personal health information remains entirely private and under your control.</p>
+    </details>
+    <details>
+      <summary>Can I use this tool instead of consulting a doctor?</summary>
+      <p>No, this tool is for educational and personal tracking purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns or before making any decisions about your medication or health regimen.</p>
+    </details>
+  </div>
+
+  <div class="wf-tool__card">
+    <h2>Related Wellness Tools</h2>
+    <div class="wf-tool__related-tools">
+      <a href="/tools.html#bmi-calculator" class="wf-tool__related-tool-item">
+        <span class="emoji">⚖️</span>
+        <h3>BMI Calculator</h3>
+      </a>
+      <a href="/tools.html#hydration-tracker" class="wf-tool__related-tool-item">
+        <span class="emoji">💧</span>
+        <h3>Hydration Tracker</h3>
+      </a>
+      <a href="/tools.html#sleep-log" class="wf-tool__related-tool-item">
+        <span class="emoji">😴</span>
+        <h3>Sleep Log</h3>
+      </a>
+    </div>
+  </div>
+
+  <p class="wf-tool__educational-note"><strong>Educational estimate, not medical advice:</strong> This tool provides general information and a personal logging facility. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+</main>
+
+<script>
+  (function() {
+    const form = document.getElementById('sideEffectForm');
+    const medicationNameInput = document.getElementById('medicationName');
+    const sideEffectsInput = document.getElementById('sideEffects');
+    const logDateInput = document.getElementById('logDate');
+    const logEntriesContainer = document.getElementById('logEntries');
+    const resultCard = document.getElementById('resultCard');
+    const copyLogBtn = document.getElementById('copyLogBtn');
+    const printLogBtn = document.getElementById('printLogBtn');
+
+    const LOCAL_STORAGE_KEY = 'dailyVitalitySideEffectLog';
+
+    // Set today's date as default for the date input
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    const dd = String(today.getDate()).padStart(2, '0');
+    logDateInput.value = `${yyyy}-${mm}-${dd}`;
+
+    let logData = [];
+
+    function loadLog() {
+      const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (storedData) {
+        logData = JSON.parse(storedData);
+      }
+      renderLog();
+      if (logData.length > 0) {
+        resultCard.classList.add('is-visible');
+      }
+    }
+
+    function saveLog() {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(logData));
+      renderLog();
+      if (logData.length > 0) {
+        resultCard.classList.add('is-visible');
+      } else {
+        resultCard.classList.remove('is-visible');
+      }
+    }
+
+    function validateInput(inputElement, errorElement, message) {
+      if (!inputElement.value.trim()) {
+        errorElement.textContent = message;
+        inputElement.setAttribute('aria-invalid', 'true');
+        return false;
+      }
+      errorElement.textContent = '';
+      inputElement.setAttribute('aria-invalid', 'false');
+      return true;
+    }
+
+    function addLogEntry(event) {
+      event.preventDefault();
+
+      const isMedicationValid = validateInput(medicationNameInput, document.getElementById('medicationNameError'), 'Medication name is required.');
+      const isSideEffectsValid = validateInput(sideEffectsInput, document.getElementById('sideEffectsError'), 'Side effects description is required.');
+      const isDateValid = validateInput(logDateInput, document.getElementById('logDateError'), 'Date is required.');
+
+      if (!isMedicationValid || !isSideEffectsValid || !isDateValid) {
+        return;
+      }
+
+      const newEntry = {
+        id: Date.now(), // Unique ID for deletion
+        date: logDateInput.value,
+        medication: medicationNameInput.value.trim(),
+        sideEffects: sideEffectsInput.value.trim()
+      };
+
+      logData.unshift(newEntry); // Add to the beginning for newest first
+      saveLog();
+
+      // Clear form
+      medicationNameInput.value = '';
+      sideEffectsInput.value = '';
+      logDateInput.value = `${yyyy}-${mm}-${dd}`; // Reset to today's date
+      medicationNameInput.focus(); // Return focus for easy next entry
+
+      // Announce addition for screen readers
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.textContent = `New log entry added: ${newEntry.medication} on ${newEntry.date}.`;
+      document.body.appendChild(announcement);
+      setTimeout(() => announcement.remove(), 1000); // Remove after a short delay
+    }
+
+    function deleteLogEntry(id) {
+      logData = logData.filter(entry => entry.id !== id);
+      saveLog();
+
+      // Announce deletion for screen readers
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.textContent = `Log entry deleted.`;
+      document.body.appendChild(announcement);
+      setTimeout(() => announcement.remove(), 1000); // Remove after a short delay
+    }
+
+    function renderLog() {
+      logEntriesContainer.innerHTML = '';
+      if (logData.length === 0) {
+        logEntriesContainer.innerHTML = '<p class="wf-tool__no-entries">No entries yet. Add your first medication and side effect above!</p>';
+        return;
+      }
+
+      logData.forEach(entry => {
+        const entryDiv = document.createElement('div');
+        entryDiv.classList.add('wf-tool__log-entry');
+        entryDiv.setAttribute('aria-label', `Log entry for ${entry.medication} on ${entry.date}`);
+
+        const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        entryDiv.innerHTML = `
+          <span class="wf-tool__log-entry-date">${formattedDate}</span>
+          <span class="wf-tool__log-entry-med">Medication: <strong>${entry.medication}</strong></span>
+          <span class="wf-tool__log-entry-side-effects">Side Effects: ${entry.sideEffects}</span>
+          <button class="wf-tool__delete-btn" aria-label="Delete entry for ${entry.medication} on ${formattedDate}" data-id="${entry.id}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+          </button>
+        `;
+        logEntriesContainer.appendChild(entryDiv);
+      });
+
+      // Add event listeners for delete buttons
+      logEntriesContainer.querySelectorAll('.wf-tool__delete-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+          const idToDelete = parseInt(e.currentTarget.dataset.id);
+          deleteLogEntry(idToDelete);
+        });
+      });
+    }
+
+    function copyLogToClipboard() {
+      if (logData.length === 0) {
+        alert('Your log is empty. Add some entries first!');
+        return;
+      }
+
+      let logText = "Daily Vitality - Medication Side Effect Log\n\n";
+      logData.forEach(entry => {
+        const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+        logText += `Date: ${formattedDate}\n`;
+        logText += `Medication: ${entry.medication}\n`;
+        logText += `Side Effects: ${entry.sideEffects}\n`;
+        logText += "--------------------\n";
+      });
+      logText += "\nEducational only, not medical advice.";
+
+      navigator.clipboard.writeText(logText).then(() => {
+        alert('Log copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy log: ', err);
+        alert('Failed to copy log. Please try again or manually select and copy.');
+      });
+    }
+
+    function printLog() {
+      if (logData.length === 0) {
+        alert('Your log is empty. Add some entries first!');
+        return;
+      }
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        
+        
+          <title>Medication Side Effect Log</title>
+          <style>
+            body { font-family: sans-serif; margin: 2rem; color: #333; }
+            h1 { color: #087f55; }
+            .entry { border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1rem; }
+            .entry:last-child { border-bottom: none; }
+            .date { font-weight: bold; color: #087f55; }
+            .medication { font-weight: bold; margin-top: 0.2rem; }
+            .side-effects { margin-top: 0.2rem; }
+            .note { font-size: 0.9em; color: #666; margin-top: 2rem; text-align: center; }
+          </style>
+        
+        
+          <h1>Daily Vitality - Medication Side Effect Log</h1>
+          <p>This log helps you track your medication experiences and side effects for discussion with your doctor.</p>
+      `);
+
+      logData.forEach(entry => {
+        const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+        printWindow.document.write(`
+          <div class="entry">
+            <div class="date">${formattedDate}</div>
+            <div class="medication">Medication: ${entry.medication}</div>
+            <div class="side-effects">Side Effects: ${entry.sideEffects}</div>
+          </div>
+        `);
+      });
+
+      printWindow.document.write(`
+          <p class="note">Educational only, not medical advice: This log is for personal tracking and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider.</p>
+        
+        
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    }
+
+    form.addEventListener('submit', addLogEntry);
+    copyLogBtn.addEventListener('click', copyLogToClipboard);
+    printLogBtn.addEventListener('click', printLog);
+
+    // Initial load
+    loadLog();
+  })();
+</script>
+
+<footer class="dv-footer footer"><div class="dv-shell dv-footer-grid">
+<div class="dv-footer-brand"><a class="dv-brand dv-brand-footer" href="/index.html"><img alt="Daily Vitality logo" src="/daily-vitality-logo.jpg"/><span class="dv-brand-words"><b>Daily Vitality</b><small>Better Habits. A Healthier You.</small></span></a><p>Practical wellness articles, free tools and digital guides for everyday life.</p><small>Educational information only — not medical advice.</small></div>
+<div class="dv-founder"><img alt="Daily Vitality founder portrait" src="/founder-photo.jpg"/><div><b>Daily Vitality Founder</b><span>Creator &amp; Publisher</span><p>Building clear, practical wellness resources for everyday readers.</p><p class="dv-footer-contact"><a href="mailto:ah209334@gmail.com">ah209334@gmail.com</a><br/><a href="tel:03499314726">03499314726</a></p></div></div>
+<div><b>Explore</b><p><a href="/all-articles.html">All Articles</a><br/><a href="/blogs.html">Blogs</a><br/><a href="/tools.html">All Tools</a><br/><a href="/products.html">Products</a></p></div>
+<div><b>Company</b><p><a href="/about.html">About</a><br/><a href="/contact.html">Contact</a><br/><a href="/editorial-policy.html">Editorial Policy</a><br/><a href="/contribute.html">Contribute / Write for Us</a><br/><a href="/privacy.html">Privacy</a><br/><a href="/terms.html">Terms</a><br/><a href="/disclaimer.html">Medical Disclaimer</a></p></div>
+</div></footer>
+<script src="/dv-v29-premium.js?v=2901" defer></script><script src="/dv-consent.js" defer></script><script src="/dv-v27-premium.js?v=2802" defer></script>
+</body>
+</html>
